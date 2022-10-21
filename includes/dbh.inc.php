@@ -4,7 +4,7 @@
 $dbServername = "localhost";
 $dbUsername = "root";
 $dbPassword = "";
-$dbName = "NTI-server";
+$dbName = "testt";
 
 //Creates connection to the MySQL database
 $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
