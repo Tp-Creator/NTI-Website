@@ -28,6 +28,16 @@ function addMsg($Content, $Datum, $userID) {
     //Felhantering behövs (om det inte gick att skapa)
 }
 
+function loginValidation($email, $pwd) {
+    //kod för att söka i databasen efter en användare och verifiera om den har anget korrekta inloggningsuppgifter
+    // prepare and bind och gör så att SQL injections inte kan ske.
+    $stmt = $conn->prepare("SELECT * FROM users WHERE pwd = ? AND Email = ?;");
+    $stmt->bind_param("ss", $pwd, $email);
+
+     return $stmt->execute();
+
+}
+
 
 
 ?>
