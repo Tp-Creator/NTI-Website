@@ -1,5 +1,12 @@
 
 <?php
+    // Was displaying all of the users and thier ID in table and had a create new user form
+    // That was able to add new users to the old database
+
+    //Can still be used to see how we can use php and HTML toghether when we want to
+    // display data from the db
+
+
     //Includes the connection to the database
     include_once 'includes/dbh.inc.php';
 ?>

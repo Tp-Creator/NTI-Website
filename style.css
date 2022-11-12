@@ -35,4 +35,15 @@ textarea {
 
 #submit {
     margin-top: 20px;
+    border-radius: 15px;
+    width: 250px;
+    height: 40px;
+    font-weight: 900;
+    font-size: 15px;
+}
+
+#submit:hover {
+    cursor: pointer;
+    background-color: rgb(255, 250, 174);
+
 }
