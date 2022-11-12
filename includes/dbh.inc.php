@@ -4,7 +4,11 @@
 $dbServername = "localhost";
 $dbUsername = "root";
 $dbPassword = "";
+<<<<<<< Updated upstream
 $dbName = "testt";
+=======
+$dbName = "nti_db";
+>>>>>>> Stashed changes
 
 //Creates connection to the MySQL database
 $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);

@@ -2,8 +2,8 @@
 CREATE TABLE Users (
     ID int NOT NULL PRIMARY KEY AUTO_INCREMENT,
     FirstName varchar(30) NOT NULL,
-    Email varchar(100) UNIQE,
-    pwd varchar(255),
+    Email varchar(100) UNIQUE,
+    pwd varchar(255)
 );
 
 /*  Skapar tabellen msg kopplar ihop så att userID måste vara ett värde som finns i columnen ID i tabellen users*/
@@ -18,7 +18,7 @@ CREATE TABLE Msg (
 
 /* Lägger till en user som heter Joel, har en mail och ett lösenord */
 INSERT INTO users (Email, FirstName, pwd)
-VALUES ('hej@hej.com', 'Joel', 'Passwords123')
+VALUES ('hej@hej.com', 'Joel', 'Passwords123');
 
 /* Lägger till ett meddelande med datum och vilken användare som skrev det; user med ID: 1*/
 INSERT INTO msg (Content, Datum, userID)
