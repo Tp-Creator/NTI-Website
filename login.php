@@ -20,7 +20,7 @@
             session_start(); // start the PHP_session function 
             $_SESSION['userID'] = $id;
 
-            header("location:./index.php");
+            header("location:./");
         } else {
             echo "Invalid username or password, try again";
         }

@@ -1,8 +1,8 @@
 CREATE TABLE Users (
     ID int NOT NULL PRIMARY KEY AUTO_INCREMENT,
     FirstName varchar(30) NOT NULL,
-    Email varchar(100) UNIQE,
-    pwd varchar(255),
+    Email varchar(100) UNIQUE,
+    pwd varchar(255)
 );
 
 CREATE TABLE Msg (
@@ -16,7 +16,7 @@ CREATE TABLE Msg (
 
 
 INSERT INTO users (Email, FirstName, pwd)
-VALUES ('hej@hej.com', 'Joel', 'Passwords123')
+VALUES ('hej@hej.com', 'Joel', 'Passwords123');
 
 INSERT INTO msg (Content, Datum, userID)
 VALUES ('Hej, här kommer ett meddelande!', '2022-11-09 10:02:16', 1);
