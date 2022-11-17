@@ -1,4 +1,4 @@
-2022-11-12
+2022-11-17
 
 För att få projektet att snurra måste man:
     skapa en ny databas i phpMyAdmin som heter "nti_db"
@@ -12,6 +12,7 @@ Här kommer en kort sammanfattning om hur projektet ser ut så här långt:
 Huvud mappen innehåller:
     index.php
     login.php
+    sign-up.php
     style.css
     How to
     includes
@@ -23,6 +24,10 @@ index.php är tom just nu och kan fyllas med allt vad vi vill ha där senare
 
 login.php är en sida där man kan logga in och som skapar en session med servern
     så att man förblir inloggad.
+
+sign-up.php är en sida där man kan skapa ett nytt user account och som sedan loggar in en
+    med hjälp av session så att man förblir inloggad.
+    //Finns en bugg med skapandet: Första accountet man försöker skapa säger den att mailen redan används i ett account
 
 style.css är vad du tror att det är
 

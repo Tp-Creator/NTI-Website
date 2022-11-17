@@ -1,9 +1,9 @@
 <?php
-    // login.php
-    // If the user is not logged in, he/she will be redirected to this page.
-    // The page will show a login form and post the data back to this file
-    // If we get posted data, we check if the user exists and if so updates
-    // the session with the user id to keep the user logged in.
+    //  login.php
+    //  If the user is not logged in, he/she will be redirected to this page.
+    //  The page will show a login form and post the data back to this file
+    //  If we get posted data, we check if the user exists and if so updates
+    //  the session with the user id to keep the user logged in.
 
     //Includes the connection to the database
     include_once 'includes/dbh.inc.php';
@@ -22,7 +22,7 @@
 
             header("location:./");
         } else {
-            echo "Invalid username or password, try again";
+            echo "<p id='fail-msg'>Invalid username or password, try again</p>";
         }
     }
 ?>
@@ -53,7 +53,8 @@
 
         <input type="submit" id="submit">
 
-</form>
+    </form>
+    <a href="./sign-up.php">Skapa konto</a>
 </fieldset>
 
 
