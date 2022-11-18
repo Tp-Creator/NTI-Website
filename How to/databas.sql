@@ -11,7 +11,7 @@ CREATE TABLE Msg (
     msgID int NOT NULL PRIMARY KEY AUTO_INCREMENT,
     Content varchar(8000) NOT NULL,
     userID int NOT NULL,
-    Datum datetime,
+    dt datetime,
     CONSTRAINT fk_Users FOREIGN KEY (userID) REFERENCES Users(ID)
 );
 

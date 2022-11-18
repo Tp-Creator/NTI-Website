@@ -20,6 +20,17 @@ $dbName = "nti_db";
 $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
 
 
+//  console_log($output)
+//  Is a function copied from https://stackify.com/how-to-log-to-console-in-php/
+//  It takes on input: $output (the message or variale that should be logged to the js console)
+//  Does not return anything
+function console_log($output) {
+    $js_code = 'console.log(' . json_encode($output, JSON_HEX_TAG) . ');';
+    $js_code = '<script>' . $js_code . '</script>';
+    
+    echo $js_code;
+}
+
 
 //  checkIfUserExists($mail)
 //  This function simply takes on argument (an email)
@@ -78,6 +89,44 @@ function addMsg($Content, $Datum, $userID) {
     $stmt->execute();
     //Felhantering behövs (om det inte gick att skapa)
 }
+
+//  getMsgs()
+//  This function searches through the database and gets all the messages available
+//  It returns an array with all msg columns and their data,
+//  except the userID that is being changed to the username, so that the function can directly be used to
+//  access the name of the user that sent the message
+//  Doesn't take any arguments yet
+function getMsgs(){
+    global $conn;
+
+    $stmt = $conn->prepare("SELECT * FROM msg;");
+    $stmt->execute();
+    $result = $stmt->get_result();
+    
+    $result = $result->fetch_all();
+
+    $realResult = $result;
+
+    for ($i = 0; $i <= sizeof($result)-1; $i++) {
+        $realResult[$i][2] = getUsernameFromId($result[$i][2]);
+    }
+
+    return $realResult;
+}
+
+//  getUsernameFromId($id)
+//  this function takes one argument: the Id of a user
+//  And returns the username of the specific user
+function getUsernameFromId($id) {
+    global $conn;
+
+    $stmt = $conn->prepare("SELECT * FROM users WHERE userID = ?;");
+    $stmt->bind_param("s", $id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    return $result->fetch_column(1);
+}
+
 
 //  loginValidation($email, $pwd)
 //  This is a function that login a user to the website using the email and password input 

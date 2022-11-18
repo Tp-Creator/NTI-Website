@@ -27,7 +27,7 @@
 
     <div id="navbar">
 
-
+    <a href="./msg.php">Forum</a>
 
     </div>
 

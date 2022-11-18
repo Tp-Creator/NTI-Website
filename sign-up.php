@@ -65,7 +65,7 @@
         <input class="normal" name="username"> <br/>
 
         Email: <br/> 
-        <input class="normal" name="email"> <br/>
+        <input class="normal" type="email" name="email"> <br/>
 
         Password: <br/> 
         <input class="normal" type="password" name="pwd"> <br/>

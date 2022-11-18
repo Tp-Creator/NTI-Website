@@ -12,6 +12,7 @@ Här kommer en kort sammanfattning om hur projektet ser ut så här långt:
 Huvud mappen innehåller:
     index.php
     login.php
+    msg.php
     sign-up.php
     style.css
     How to
@@ -25,10 +26,12 @@ index.php är tom just nu och kan fyllas med allt vad vi vill ha där senare
 login.php är en sida där man kan logga in och som skapar en session med servern
     så att man förblir inloggad.
 
+msg.php är den kommande forum sidan, än så länge visar den bara alla meddelanden som finns sparade i msg tabellen
+    samt vilken användare och vilken tid de skickats.
+
 sign-up.php är en sida där man kan skapa ett nytt user account och som sedan loggar in en
     med hjälp av session så att man förblir inloggad.
-    //Finns en bugg med skapandet: Första accountet man försöker skapa säger den att mailen redan används i ett account
-
+    
 style.css är vad du tror att det är
 
 
