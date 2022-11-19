@@ -11,6 +11,9 @@
     //Includes the connection to the database
     include_once 'includes/dbh.inc.php';
 
+    //  A variable for the fail message that can be needed to be displayed
+    $error_message = "";
+
     //Code to add a new user to the db
     //If the form is sent
     if($_POST) {
@@ -32,15 +35,15 @@
 
                     header("location:./");
                 } else {
-                    echo "<p id='fail-msg'>Email already in use. Use another email</p>";
+                    $error_message = "*Email already in use. Use another email";
                 }
 
             } else {
-                echo "<p id='fail-msg'>The passwords are not matching</p>";
+                $error_message = "*The passwords are not matching";
             }
 
         } else {
-            echo "<p id='fail-msg'>All fields most contain information</p>";
+            $error_message = "*All fields most contain information";
         }
     }
 ?>
@@ -56,27 +59,69 @@
 </head>
 <body>
     
-<h1>Skapa ett konto här</h1>
+    <script>
 
-<fieldset>
-    <form name="sign-up" method="post" action="./sign-up.php">
+            //  Checks if the form has valid input and shows fail msg if neccesary
+        function validateForm(form) {
+                //  html path of the p tag element with id: "fail-msg"
+            var failMsgElement = document.getElementById("fail-msg");
 
-        Username: <br/>
-        <input class="normal" name="username"> <br/>
+                //  All fields most contain info
+            if(form['username'].value == "" || form['email'].value == "" || form['pwd'].value == "") {
+                    //  Shows the hidden fail message
+                failMsgElement.style.display = "block";
+                    //  Changes the fail message to the relevant one
+                failMsgElement.innerHTML = "*All fields most contain information";
+                    //  This does so that the form is not posted (the filled in data will not be erased)
+                return false;
+            }
+            
+                //  same thing as above but an other error
+            if(form['pwd'].value != form['re-pwd'].value) {
+                failMsgElement.style.display = "block";
+                failMsgElement.innerHTML = "*The passwords are not matching";
+                return false;
+            }
+        }
 
-        Email: <br/> 
-        <input class="normal" type="email" name="email"> <br/>
+    </script>
 
-        Password: <br/> 
-        <input class="normal" type="password" name="pwd"> <br/>
+    <h1>Skapa ett konto här</h1>
 
-        Retype password: <br/> 
-        <input class="normal" type="password" name="re-pwd"> <br/>
 
-        <input type="submit" id="submit">
+    <?php
+        if ($error_message != "") {
+            //  If posted data is wrong (when checked with the db)
+            //  this will be shown
+            echo "<p id='fail-msg'>$error_message</p>";
+        }
+        else{
+            //  Otherwise this will be added to the html so that the JS can change and show a fail msg
+            //  This will only happen for fails that can be cotrolled on the client by JS
+            echo "<p id='fail-msg' style='display: none'></p>";    
+        }
+    ?>
 
-</form>
-</fieldset>
+
+    <fieldset>
+        <form name="sign-up" method="post" action="./sign-up.php">
+
+            Username: <br/>
+            <input class="normal" name="username"> <br/>
+
+            Email: <br/> 
+            <input class="normal" type="email" name="email"> <br/>
+
+            Password: <br/> 
+            <input class="normal" type="password" name="pwd"> <br/>
+
+            Retype password: <br/> 
+            <input class="normal" type="password" name="re-pwd"> <br/>
+
+            <input type="submit" id="submit" onclick="return validateForm(this.form)">
+
+        </form>
+    </fieldset>
 
 </body>
 </html>

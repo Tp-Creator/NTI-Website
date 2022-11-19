@@ -21,5 +21,5 @@ INSERT INTO users (Email, Username, pwd)
 VALUES ('hej@hej.com', 'Joel', 'Passwords123');
 
 /* Lägger till ett meddelande med datum och vilken användare som skrev det; user med ID: 1*/
-INSERT INTO msg (Content, Datum, userID)
+INSERT INTO msg (Content, dt, userID)
 VALUES ('Hej, här kommer ett meddelande!', '2022-11-09 10:02:16', 1);
