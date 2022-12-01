@@ -12,7 +12,7 @@ CREATE TABLE Msg (
     Content varchar(8000) NOT NULL,
     userID int NOT NULL,
     dt datetime,
-    CONSTRAINT fk_Users FOREIGN KEY (userID) REFERENCES Users(ID)
+    CONSTRAINT fk_Users FOREIGN KEY (userID) REFERENCES Users(userID)
 );
 
 
