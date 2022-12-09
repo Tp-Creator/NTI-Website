@@ -9,6 +9,22 @@
 
     //Checks if the user is logged in and sends them to the login side
     include_once 'includes/loginCheck.php';
+
+    if(isset($_POST['new-msg'])) {
+        
+        $content = $_POST['new-msg'];
+        $nowDate = date("Y-m-d H:i:s");
+        $userID = $_SESSION['userID'];
+
+        sendMsg($content, $nowDate, $userID);
+
+    } else {
+        echo "<p id='fail-msg'>Invalid username or password, try again</p>";
+    }
+    
+
+
+
 ?>
 
 
@@ -38,6 +54,14 @@
             echo "<p class='message'>" . $allMsgs[$i][2] . " - - - - ". $allMsgs[$i][3] . " - - - - " .  $allMsgs[$i][1] . "</p>";
         }
     ?>
+
+    <form name="new-message" method="post" action="./msg.php"> 
+
+        <textarea name="new-msg" id="new-msg" cols="30" rows="10"></textarea>
+
+        <input type="submit" id="send-new-msg">
+
+    </form>
 
 
 </body>

@@ -79,11 +79,11 @@ function addUser($name, $mail, $pwd) {
 
 
 // Will later be used when the user sends a message
-function addMsg($Content, $Datum, $userID) {
+function sendMsg($Content, $Datum, $userID) {
     global $conn;
 
     // creates a call to the database in a safe way so that sql injections should not be able to take place
-    $stmt = $conn->prepare("INSERT INTO msg (Content, Datum, userID) VALUES (?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO msg (Content, dt, userID) VALUES (?, ?, ?)");
     $stmt->bind_param("ssi", $Content, $Datum, $userID);
 
     $stmt->execute();
