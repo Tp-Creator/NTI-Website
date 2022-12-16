@@ -1,0 +1,108 @@
+body{
+    display: grid;
+    gap: 2.5rem;
+
+    grid-template-columns: 1fr min-content 1fr;
+    grid-template-areas: 
+        
+        'navL navM navR'
+        'extL PIN extR'
+        'extL Top extR'
+        'extL mFeed extR'
+    ;
+}
+
+.PIN{
+    grid-area: PIN;
+}
+
+.memeFeed{
+    grid-area: mFeed;
+
+    padding: 2.5rem;
+    border-radius: 2.5rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+
+    background-color: #0c0d10;
+}
+
+.memeCard{
+    padding: 2.5rem;
+
+    border: 0.2rem solid #191a21;
+    border-radius: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+
+    background-color: #101116;
+}
+
+.memeCardFooter{
+    width: 100%;
+
+    display: grid;
+}
+
+.MCardP1{
+    grid-column: 1;
+    justify-self: start;
+}
+.MCardP2{
+    grid-column: 2;
+    justify-self: end;
+}
+
+.memeImg{
+    border-radius: 1rem;
+}
+
+
+
+
+.memeTop3{
+    justify-self: center;
+
+    grid-area: Top;
+
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    gap: 2.5rem;
+}
+
+.TN1{
+    grid-column: 1;
+
+    font-size: 2rem;
+
+    color: #ee9b00;
+}
+
+.TN2{
+    grid-column: 2;
+
+    font-size: 2rem;
+
+    color: #e5e5e5;
+}
+
+.TN3{
+    grid-column: 3;
+
+    font-size: 2rem;
+
+    color: #ca6702;
+}
+
+
+.votesUp{
+    font-size: 1.6rem;
+}
+
+.topImg{
+    width: 22.5rem;
+}

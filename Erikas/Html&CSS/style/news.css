@@ -1,0 +1,96 @@
+body{
+    display: grid;
+    gap: 2.5rem;
+
+    grid-template-columns: 1fr min-content 1fr;
+    grid-template-areas: 
+        
+        'navL navM navR'
+        'extL PIN extR'
+        'Filter conFeed extR'
+    ;
+
+    overflow-y: hidden;
+}
+
+.PIN{
+    grid-area: PIN;
+}
+
+.filP{
+    justify-self: end;
+    grid-area: Filter;
+}
+
+/* -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/
+/* -- -- -- -- -- -- -- -- Content Feed-- -- -- -- -- -- -- -- --*/
+/* -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/
+.conFeed{
+    grid-area: conFeed;
+}
+
+.contentFeed{
+    width: fill;
+    height: 100vh;
+    padding: 2.5rem;
+
+    border-radius: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+
+    background-color: #0c0d10;
+
+    overflow-y: scroll;
+}
+
+.contentFeedDummy{
+    padding-top: 20rem;
+}
+
+  /* -- -- -- -- -- -- -- -- --*/
+ /*- -- -- Scroll Bar -- -- --*/
+/* -- -- -- -- -- -- -- -- --*/
+
+::-webkit-scrollbar-thumb{
+    background-color: #353535;
+    border-radius: 1rem;
+}
+
+::-webkit-scrollbar{
+    width: 1rem;
+}
+
+  /* -- -- -- -- -- -- -- -- --*/
+ /*- -- -- Scroll Bar -- -- --*/
+/* -- -- -- -- -- -- -- -- --*/
+
+/* -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/
+/* -- -- -- -- -- -- -- -- Content Feed-- -- -- -- -- -- -- -- --*/
+/* -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/
+
+
+
+
+/* -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/
+/* -- -- -- -- -- -- -- -- -- -- OPT-- -- -- -- -- -- -- -- -- --*/
+/* -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/
+
+@media all and (max-width: 1175px){
+
+    body{
+        display: grid;
+        gap: 2.5rem;
+    
+        grid-template-columns: 1fr min-content 1fr;
+        grid-template-areas: 
+            
+            'navL navM navR'
+            'extL PIN extR'
+            'extL conFeed conFeed'
+        ;
+        
+    }
+
+}

@@ -1,0 +1,40 @@
+@font-face{
+    font-family: 'Nunito';
+    src: url(../style/font/static/Nunito-Regular.ttf);
+}
+
+@font-face{
+    font-family: 'NunitoBold';
+    src: url(../style/font/static/Nunito-Bold.ttf);
+}
+
+*{
+    margin: 0%;
+    padding: 0%;
+
+    border: none;
+    outline: none;
+    box-sizing: none;
+
+    font-family: 'NunitoBold';
+    font-size: 10px;
+    font-weight: 400;
+    text-decoration: none;
+    letter-spacing: 0.1rem;
+
+    color: #FFFFFF;
+}
+
+body{
+    background-color: #040405;
+}
+
+
+
+/* -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/
+/* -- -- -- -- -- -- -- -- -- -- OPT-- -- -- -- -- -- -- -- -- --*/
+/* -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/
+
+@media all and (max-width: 1175px){
+    
+}

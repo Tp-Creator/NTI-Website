@@ -1,0 +1,159 @@
+body{
+    display: grid;
+    gap: 2.5rem;
+
+    grid-template-columns: 1fr min-content 1fr;
+    grid-template-areas: 
+        
+        'navL navM navR'
+        'extL PIN extR'
+        'Filter conFeed extR'
+    ;
+
+    overflow-y: hidden;
+}
+
+.PIN{
+    grid-area: PIN;
+}
+
+
+
+/* -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/
+/* -- -- -- -- -- -- -- -- Game Card-- -- -- -- -- -- -- -- -- --*/
+/* -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/
+.gamesCard{
+    width: fill;
+    padding: 1.5rem;
+
+    border-radius: 2.5rem;
+
+    display: grid;
+    grid-template-columns: min-content 1fr min-content;
+    gap: 2.5rem;
+    grid-template-areas: 
+    
+        'thumb body play'
+        'thumb footer play'
+
+    ;
+
+    background-color: #0c0d10;
+}
+
+.gameThumbnail{
+    grid-area: thumb;
+
+    border-radius: 1.5rem;
+
+    width: 13.3rem;
+    height: 10rem;
+}
+
+.gameCardBody{
+    grid-area: body;
+
+    display: grid;
+    grid-template-rows: repeat(2, min-content);
+    gap: 1rem;
+}
+
+.gameCardFooter{
+    grid-area: footer;
+    align-self: end;
+
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.gameTitel{
+    grid-row: 1;
+
+    font-size: 1.4rem;
+}
+
+.gameDes{
+    grid-row: 2;
+}
+
+.gamePlayButton{
+    width: 10rem;
+    height: 10rem;
+
+    border-radius: 1.5rem;
+
+    background-color: #38b000;
+}
+
+.gamePlayButton:hover{
+    background-color: #70e000;
+}
+
+.gamePlayButtonPos{
+    grid-area: play;
+    justify-self: end;
+}
+
+.gamePlayButtonText{
+    font-size: 1.5rem;
+}
+/* -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/
+/* -- -- -- -- -- -- -- -- Game Card-- -- -- -- -- -- -- -- -- --*/
+/* -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/
+
+
+
+
+/* -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/
+/* -- -- -- -- -- -- -- -- Content Feed-- -- -- -- -- -- -- -- --*/
+/* -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/
+.contentFeedHeader{
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+}
+
+.conFeed{
+    grid-area: conFeed;
+}
+
+.gamesContentFeed{
+    width: fill;
+    height: 100vh;
+
+    border-radius: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+
+    overflow-y: scroll;
+}
+
+.contentFeedDummy{
+    padding-top: 20rem;
+}
+
+  /* -- -- -- -- -- -- -- -- --*/
+ /*- -- -- Scroll Bar -- -- --*/
+/* -- -- -- -- -- -- -- -- --*/
+
+::-webkit-scrollbar-thumb{
+    background-color: #353535;
+    border-radius: 1rem;
+}
+
+::-webkit-scrollbar{
+    width: 1rem;
+}
+
+  /* -- -- -- -- -- -- -- -- --*/
+ /*- -- -- Scroll Bar -- -- --*/
+/* -- -- -- -- -- -- -- -- --*/
+
+/* -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/
+/* -- -- -- -- -- -- -- -- Content Feed-- -- -- -- -- -- -- -- --*/
+/* -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/

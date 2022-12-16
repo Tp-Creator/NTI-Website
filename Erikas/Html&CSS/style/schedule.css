@@ -1,0 +1,65 @@
+body{
+    display: grid;
+    gap: 2.5rem;
+
+    grid-template-columns: 1fr max-content 1fr;
+    grid-template-areas: 
+        
+        'navL navM navR'
+        'extL PIN extR'
+        'extL SCon extR'
+
+    ;
+
+}
+
+.PIN{
+    grid-area: PIN;
+}
+
+.scheduleCon{
+    grid-area: SCon;
+
+    width: fill;
+    height: max-content;
+    padding: 2.5rem;
+
+    border-radius: 2.5rem;
+
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 2.5rem;
+
+    background-color: #0c0d10;
+}
+
+.SRow{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.SR1{
+    grid-column: 1;
+}
+.SR2{
+    grid-column: 2;
+}
+.SR3{
+    grid-column: 3;
+}
+.SR4{
+    grid-column: 4;
+}
+.SR5{
+    grid-column: 5;
+}
+.SR6{
+    grid-column: 6;
+}
+.SR7{
+    grid-column: 7;
+}
+.SR8{
+    grid-column: 8;
+}

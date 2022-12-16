@@ -1,0 +1,81 @@
+/* -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/
+/* -- -- -- -- -- -- -- -- --Main NavBar- -- -- -- -- -- -- -- --*/
+/* -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/
+.navL{
+    grid-area: navL;
+    justify-self: end;
+}
+
+.navM{
+    grid-area: navM;
+    justify-self: center;
+}
+
+.navR{
+    grid-area: navR;
+    justify-self: start;
+}
+/* -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/
+/* -- -- -- -- -- -- -- -- --Main NavBar- -- -- -- -- -- -- -- --*/
+/* -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/
+
+
+
+
+/* -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/
+/* -- -- -- -- -- -- -- -- -- -Button- -- -- -- -- -- -- -- -- --*/
+/* -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/
+.navButtonText{
+    font-family: 'NunitoBold';
+    font-size: 1.2rem;
+}
+
+.navButCon{
+    width: max-content;
+    padding: 0.5rem;
+    margin-top: 2.5rem;
+
+    border-radius: 3rem;
+
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+    background-color: #0c0d10;
+}
+
+.navButtonCon{
+    display: flex;
+    flex-direction: row;
+}
+
+.navButton{
+    width: 17.5rem;
+    height: 3rem;
+
+    border: none;
+    border-radius: 2rem;
+
+    color: #FFFFFF;
+    background-color: #0c0d10;
+}
+
+.navButton:hover{
+    background-color: #191a22;
+}
+/* -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/
+/* -- -- -- -- -- -- -- -- -- -Button- -- -- -- -- -- -- -- -- --*/
+/* -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/
+
+
+
+
+/* -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/
+/* -- -- -- -- -- -- -- -- -- -- OPT-- -- -- -- -- -- -- -- -- --*/
+/* -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/
+
+@media all and (max-width: 1175px){
+    .navButton{
+        width: 13vw;
+    }
+}

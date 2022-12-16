@@ -1,0 +1,208 @@
+/* -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/
+/* -- -- -- -- -- -- -- -- -- -Main Card- -- -- -- -- -- -- -- --*/
+/* -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/
+.card_V2{
+    padding: 2.5rem;
+    
+    border: 0.2rem solid #191a21;
+    border-radius: 1.5rem;
+    
+    display: grid;
+    gap: 2.5rem;
+    grid-template-columns: min-content 1fr min-content;
+    grid-template-areas:
+    
+        'P1 P2 P3'
+        'P4 P4 P5'
+        'P6 P6 P6'
+        'P7 P7 P7'
+    
+    ;
+    
+    background-color: #101116;
+    }
+    
+    .card_V2:hover{
+        background-color: #151515;
+        }
+    
+    .cardP1{
+        grid-area: P1;
+    
+        justify-self: start;
+    }
+    .cardP2{
+        justify-self: start;
+        grid-area: P2;
+    }
+    .cardP3{
+        grid-area: P3;
+    
+        justify-self: end;
+    }
+    .cardP4{
+        grid-area: P4;
+    }
+    .cardP5{
+        grid-area: P5;
+    
+        justify-self: end;
+    }
+    .cardP6{
+        grid-area: P6;
+    }
+    .cardP7{
+        grid-area: P7;
+    }
+    /* -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/
+    /* -- -- -- -- -- -- -- -- -- -Main Card- -- -- -- -- -- -- -- --*/
+    /* -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/
+
+
+
+
+    /* -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/
+    /* -- -- -- -- -- -- -- -- -- --Answers-- -- -- -- -- -- -- -- --*/
+    /* -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/
+    .answerText{
+        font-size: 1.2rem;
+    }
+
+    .answers{
+        width: fill;
+
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .answerConImage{
+        padding: 1rem;
+
+        border: 0.2rem solid #191a21;
+        border-radius: 1.25rem;
+
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 1fr 1fr min-content min-content;
+        grid-template-areas:
+        
+            'P1 P1 P2 P3'
+            'P1 P1 P4 P4'
+         
+        ;
+
+        background-color: #0c0d10;
+    }
+
+    .answerCon{
+        padding: 1rem;
+
+        border: 0.2rem solid #191a21;
+        border-radius: 1.25rem;
+
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 1fr 1fr min-content min-content;
+        grid-template-areas:
+        
+            'P1 P1 P2 P3'
+        
+        ;
+
+        background-color: #0c0d10;
+    }
+
+    .aCardP1{
+        grid-area: P1;
+    }
+    .aCardP2{
+        grid-area: P2;
+    }
+    .aCardP3{
+        grid-area: P3;
+    }
+    .aCardP4{
+        justify-self: end;
+        grid-area: P4;
+    }
+    /* -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/
+    /* -- -- -- -- -- -- -- -- -- --Answers-- -- -- -- -- -- -- -- --*/
+    /* -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/
+
+
+
+
+    /* -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/
+    /* -- -- -- -- -- -- -- -- -- -Card Text- -- -- -- -- -- -- -- --*/
+    /* -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/
+    .card_Title_V2{
+        font-family: 'NunitoBold';
+        font-size: 1.8rem;
+    
+        align-self: center;
+    }
+    
+    .cardText{
+        flex-grow: 1;
+    
+        font-family: 'NunitoBold';
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+    /* -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/
+    /* -- -- -- -- -- -- -- -- -- -Card Text- -- -- -- -- -- -- -- --*/
+    /* -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/
+    
+    
+    
+    
+    /* -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/
+    /* -- -- -- -- -- -- -- -- -- Card Image- -- -- -- -- -- -- -- --*/
+    /* -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/
+    .cardIncludes{
+        border: 0.2rem solid #1e1e1e;
+        border-radius: 1.5rem;
+    }
+    /* -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/
+    /* -- -- -- -- -- -- -- -- -- Card Image- -- -- -- -- -- -- -- --*/
+    /* -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/
+
+
+
+
+    /* -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/
+    /* -- -- -- -- -- -- -- -- -- --Category- -- -- -- -- -- -- -- --*/
+    /* -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/
+    .CIC1{
+        background-color: #00B4D8;
+    }
+    .CIC2{
+        background-color: #EF233C;
+    }
+    .CIC3{
+        background-color: #FFBA08;
+    }
+    .CIC4{
+        background-color: #52B788;
+    }
+    .CIC5{
+        background-color: #FF7D00;
+    }
+    .CIC6{
+        background-color: #560BAD;
+    }
+    /* -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/
+    /* -- -- -- -- -- -- -- -- -- --Category- -- -- -- -- -- -- -- --*/
+    /* -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/
+    
+    
+    
+    
+    /* -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/
+    /* -- -- -- -- -- -- -- -- -- -- OPT-- -- -- -- -- -- -- -- -- --*/
+    /* -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --*/
+    
+    @media all and (max-width: 1175px){
+        
+    }
