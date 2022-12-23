@@ -18,8 +18,6 @@
 
         sendMsg($content, $nowDate, $userID);
 
-    } else {
-        echo "<p id='fail-msg'>Invalid username or password, try again</p>";
     }
     
 
