@@ -5,7 +5,7 @@
 
 
     //Includes the connection to the database
-    include_once 'includes/dbh.inc.php';
+    //include_once 'includes/dbh/dbh.all.php';
 
     //Checks if the user is logged in and sends them to the login side
     include_once 'includes/loginCheck.php'

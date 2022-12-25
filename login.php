@@ -5,8 +5,8 @@
     //  If we get posted data, we check if the user exists and if so updates
     //  the session with the user id to keep the user logged in.
 
-    //Includes the connection to the database
-    include_once 'includes/dbh.inc.php';
+        //Includes the connection to the database
+    include_once 'includes/dbh/dbh.all.php';
 
     //check if this is a login request
     if(isset($_POST['email']) AND isset($_POST['pwd'])) {

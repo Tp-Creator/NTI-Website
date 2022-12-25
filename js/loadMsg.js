@@ -28,7 +28,7 @@ function showName(str){
 
     }
 
-    xmlhttp.open("GET","/NTI-website/includes/ajax-get.php?name="+str,true);
+    xmlhttp.open("POST","/NTI-website/includes/ajax-get.php", true);
 
     xmlhttp.send();
 

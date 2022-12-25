@@ -9,7 +9,7 @@
 
 
     //Includes the connection to the database
-    include_once 'includes/dbh.inc.php';
+    include_once 'includes/dbh/dbh.all.php';
 
     //  A variable for the fail message that can be needed to be displayed
     $error_message = "";

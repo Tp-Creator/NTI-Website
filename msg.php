@@ -4,8 +4,8 @@
     //  Users will later be able to send messages as well on this page
 
 
-    //Includes the connection to the database
-    include_once 'includes/dbh.inc.php';
+        //Includes the connection to the database
+    include_once 'includes/dbh/dbh.all.php';
 
     //Checks if the user is logged in and sends them to the login side
     include_once 'includes/loginCheck.php';

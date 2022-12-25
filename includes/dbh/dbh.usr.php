@@ -1,35 +1,7 @@
 <?php
-    // dbh.inc.php
-    // This file creates a connection to the database that can be used to make
-    // database calls.
 
-    // The file for now also contains a few functions that can write and or read
-    // the database.
-
-    //The code doesn't display anything for the user to see.
-
-
-
-// Incluces database account, names and pwd:s
-$dbServername = "localhost";
-$dbUsername = "root";
-$dbPassword = "";
-$dbName = "nti_db";
-
-//Creates connection to the MySQL database
-$conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
-
-
-//  console_log($output)
-//  Is a function copied from https://stackify.com/how-to-log-to-console-in-php/
-//  It takes on input: $output (the message or variale that should be logged to the js console)
-//  Does not return anything
-function console_log($output) {
-    $js_code = 'console.log(' . json_encode($output, JSON_HEX_TAG) . ');';
-    $js_code = '<script>' . $js_code . '</script>';
-    
-    echo $js_code;
-}
+//Includes the connection to the database
+include_once 'includes/dbh/dbh.inc.php';
 
 
 //  checkIfUserExists($mail)
@@ -78,41 +50,7 @@ function addUser($name, $mail, $pwd) {
 }
 
 
-// Will later be used when the user sends a message
-function sendMsg($Content, $Datum, $userID) {
-    global $conn;
 
-    // creates a call to the database in a safe way so that sql injections should not be able to take place
-    $stmt = $conn->prepare("INSERT INTO msg (Content, dt, userID) VALUES (?, ?, ?)");
-    $stmt->bind_param("ssi", $Content, $Datum, $userID);
-
-    $stmt->execute();
-    //Felhantering behövs (om det inte gick att skapa)
-}
-
-//  getMsgs()
-//  This function searches through the database and gets all the messages available
-//  It returns an array with all msg columns and their data,
-//  except the userID that is being changed to the username, so that the function can directly be used to
-//  access the name of the user that sent the message
-//  Doesn't take any arguments yet
-function getMsgs(){
-    global $conn;
-
-    $stmt = $conn->prepare("SELECT * FROM msg;");
-    $stmt->execute();
-    $result = $stmt->get_result();
-    
-    $result = $result->fetch_all();
-
-    $realResult = $result;
-
-    for ($i = 0; $i <= sizeof($result)-1; $i++) {
-        $realResult[$i][2] = getUsernameFromId($result[$i][2]);
-    }
-
-    return $realResult;
-}
 
 //  getUsernameFromId($id)
 //  this function takes one argument: the Id of a user
@@ -149,7 +87,5 @@ function loginValidation($email, $pwd) {
         return -1;
     }
 }
-
-
 
 ?>
