@@ -157,22 +157,22 @@
 
                 <!-- ( "Category pill" ) , ( "Style files found in (style/common.css)" -->
 
-                    <div class="P1"> <!-- ( "Pill Shape" ) -->
+                    <div> <!-- ( "Pill Shape" ) -->
                             <!-- the name of the course ex. Programering 1 -->
-                        <p> <?php echo $course[1] ?> </p> <!-- ( "Pill Text (Category Name)" ) -->
+                        <p class="RegularText"> <?php echo $course[1] ?> </p> <!-- ( "Pill Text (Category Name)" ) -->
                     </div>
 
                 <!-- ( "Category pill" ) -->
 
 
-                <h1 class="P2"> Title </h1> <!-- ( "Card Title (The question user is asking)" ) -->
+                <h1 class="TitleText"> Title </h1> <!-- ( "Card Title (The question user is asking)" ) -->
 
 
                 <!-- ( "Vote up - Button" ) , ( "Style files found in (style/common.css)" ) -->
 
-                <button class="P3">
+                <button>
 
-                    <p> 123 </p> <!-- ( "Displays how many have voted up the question" ) -->
+                    <p class="RegularText"> 123 </p> <!-- ( "Displays how many have voted up the question" ) -->
 
                     <div></div> <!-- ( "Section devider (Is seen as a dot, used to more easily distinguish between elements)" ) , ( "Style files found in (style/common.css)" ) -->
 
@@ -185,13 +185,13 @@
 
                 <!-- ( "Card Information Pill" ) -->
 
-                <div class="P4">
+                <div>
 
-                    <p> Username_12345 </p> <!-- ( "Displays the username" ) -->
+                    <p class="RegularText"> Username_12345 </p> <!-- ( "Displays the username" ) -->
 
                     <div></div> <!-- ( "Section devider (Is seen as a dot, used to more easily distinguish between elements)" ) , ( "Style files found in (style/common.css)" ) -->
 
-                    <p> YYYY - MM - DD </p> <!-- ( "Displays the date" ) -->
+                    <p class="RegularText"> YYYY - MM - DD </p> <!-- ( "Displays the date" ) -->
 
                 </div>
                 <!-- ( "Card Information Pill" ) -->
@@ -199,17 +199,17 @@
 
                 <!-- ( "Options" ) , ( "Style files found in (style/common.css)" ) -->
 
-                <button class="P5">
+                <button>
                     <img src="" alt=""> <!-- ( "3 dots icon" ) -->
                 </button>
 
                 <!-- ( "Options" ) -->
 
                 
-                <p class="P6"> Description </p> <!-- ( "Description (User describes their question)" ) -->
+                <p class="MediumText"> Description </p> <!-- ( "Description (User describes their question)" ) -->
 
 
-                <img class="P7" src="" alt=""> <!-- ( "Image added by the user" ) -->
+                <img src="" alt=""> <!-- ( "Image added by the user" ) -->
 
             </section>
 
