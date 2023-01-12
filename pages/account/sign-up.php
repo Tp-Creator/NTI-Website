@@ -9,7 +9,7 @@
 
 
     //Includes the connection to the database
-    include_once 'includes/dbh/dbh.all.php';
+    include_once '/includes/dbh/dbh.all.php';
 
     //  A variable for the fail message that can be needed to be displayed
     $error_message = "";
@@ -33,7 +33,7 @@
                     session_start(); // start the PHP_session function 
                     $_SESSION['userID'] = $id;
 
-                    header("location:./");
+                    header("location:/pages/home/index.php");
                 } else {
                     $error_message = "*Email already in use. Use another email";
                 }
@@ -54,7 +54,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+
+    <!-- ( "Links to style files" ) -->
+
+        <!-- Includes elements such as ( "Font" ) , ( "Navbar" ) , ( "Default settings" ) -->
+        <link rel="stylesheet" href="/style/main.css">
+
+
+     <!-- ( "Links to style files" ) -->
+
     <title>Sign up</title>
 </head>
 <body>

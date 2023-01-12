@@ -6,7 +6,7 @@
     //  the session with the user id to keep the user logged in.
 
         //Includes the connection to the database
-    include_once 'includes/dbh/dbh.all.php';
+    include_once '/includes/dbh/dbh.all.php';
 
     //check if this is a login request
     if(isset($_POST['email']) AND isset($_POST['pwd'])) {
@@ -20,7 +20,7 @@
             session_start(); // start the PHP_session function 
             $_SESSION['userID'] = $id;
 
-            header("location:./");
+            header("location:/pages/home/index.php");
         } else {
             echo "<p id='fail-msg'>Invalid username or password, try again</p>";
         }
