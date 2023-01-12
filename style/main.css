@@ -1,10 +1,82 @@
 /* Includes elements such as ( Font ) , ( Navbar ) , ( Default settings ) */
 
+/* ("Variables with the colors pallette") */
+:root{
+    --background: #17161B ;
+
+    --white: #ffffff ;
+
+    --darkBlue: #101014 ;
+
+    --highlight: #ffffff25 ;
+
+    /*Blue Button*/
+
+    --purple1: #524175 ;
+    --purple2: #252131 ;
+
+    --blue1: #295270 ;
+    --blue2: #1B2530 ;
+
+    /*Blue Button*/
+
+}
+
 * {
 
     margin: 0%;
     padding: 0%;
 
+    font-size: 10px;
+
     text-decoration: none;
 
+    outline: none;
+
 }
+
+/* ( "Navbar" ) */
+
+nav {
+
+    width: max-content;
+
+    padding: 0.5rem;
+
+    border-radius: 2.5rem;
+
+    background-color: var(--darkBlue) ;
+
+}
+
+.navButton {
+
+    width: 15rem;
+    height: 4rem;
+
+    border: none;
+    border-radius: 2rem;
+
+    background-color: var(--darkBlue);
+
+}
+
+.navButton:hover {
+
+    background-color: var(--highlight);
+    cursor: pointer;
+
+}
+
+.navButtonText {
+
+    font-size: 1.4rem;
+    font-weight: bold;
+
+    letter-spacing: 0.025rem;
+
+    color: var(--white);
+
+}
+
+/* ( "Navbar" ) */

@@ -16,10 +16,13 @@
         <!-- ( "Links to style files" ) -->
         
             <!-- Includes elements such as ( "Font" ) , ( "Navbar" ) , ( "Default settings" ) -->
-            <link rel="stylesheet" href="/style/main.css">
+            <link rel="stylesheet" href="../../style/main.css">
 
-            <!-- Includes elements that apear often such as ( "Buttons" ) , ( "Ask a question - Button" ) , ( "Pills" ) , ( "Icons" ) -->
-            <link rel="stylesheet" href="/style/common.css">
+            <!-- Includes elements that apear often such as ( "Buttons" ) , ( "Searchbar" ) , ( "Ask a question - Button" ) , ( "Pills" ) , ( "Icons" ) -->
+            <link rel="stylesheet" href="../../style/common.css">
+
+            <!-- Includes the layout and elements for the "forum" page such as ( "forumCard.css" ) -->
+            <link rel="stylesheet" href="../../style/forum/forum.css">
 
         <!-- ( "Links to style files" ) -->
 
@@ -36,8 +39,8 @@
 
             <!-- ( "Navbar Button" ) -->
                 <a href=""> <!-- ( "Path user is sent to" ) -->
-                    <button> 
-                        <p> Forum </p> <!-- ( "Text that is visible on the button" ) -->
+                    <button class="navButton"> 
+                        <p class="navButtonText"> Forum </p> <!-- ( "Text that is visible on the button" ) -->
                     </button>
                 </a>
             <!-- ( "Navbar Button" ) -->
@@ -51,16 +54,16 @@
 
     <!-- ( "Searchbar" ) -->
 
-        <form action=""> <!-- ( "Container for searchbar" ) -->
+        <form class="searchbarCon" action=""> <!-- ( "Container for searchbar" ) -->
 
-            <label for=""> Search . . . </label> <!-- ( "Pre written text for searchfield" ) -->
+            <!-- <label for=""> Search . . . </label> ( "Pre written text for searchfield" ) -->
 
-            <input type="text"> <!-- ( "Searchfield where user are able to type" ) -->
+            <input class="searchfield" type="text"> <!-- ( "Searchfield where user are able to type" ) -->
 
             <!-- ( "Search Button (Displayed as an icon)" ) -->
 
-                <button>
-                    <img src="" alt="">
+                <button class="searchButton">
+                    <img class="searchButtonIcon" src="" alt="">
                 </button>
 
             <!-- ( "Search Button" ) -->
@@ -74,10 +77,10 @@
 
     <!-- ( "Ask a question Button" ) , ( "Style files found in (style/common.css)" ) -->
 
-        <a href=""> <!-- ( "Takes user to (path)" ) -->
+        <a class="blueButtonCon" href=""> <!-- ( "Takes user to (path)" ) -->
 
-            <Button> <!-- ( "Special button style" ) -->
-                <p></p> <!-- ( "Special text style" ) -->
+            <Button class="blueButton"> <!-- ( "Special button style" ) -->
+                <p class="blueButtonText"> Ask a question </p> <!-- ( "Special text style" ) -->
             </Button>
 
         </a>
@@ -101,12 +104,11 @@
             
         ?>
 
-            <Section>
+            <Section class="forumCard">
 
                 <!-- ( "Category pill" ) , ( "Style files found in (style/common.css)" -->
 
-                    <div> <!-- ( "Pill Shape" ) -->
-
+                    <div class="P1"> <!-- ( "Pill Shape" ) -->
                             <!-- the name of the course ex. Programering 1 -->
                         <p> <?php echo $course[1] ?> </p> <!-- ( "Pill Text (Category Name)" ) -->
                     </div>
@@ -114,12 +116,12 @@
                 <!-- ( "Category pill" ) -->
 
 
-                <h1> Title </h1> <!-- ( "Card Title (The question user is asking)" ) -->
+                <h1 class="P2"> Title </h1> <!-- ( "Card Title (The question user is asking)" ) -->
 
 
                 <!-- ( "Vote up - Button" ) , ( "Style files found in (style/common.css)" ) -->
 
-                <button>
+                <button class="P3">
 
                     <p> 123 </p> <!-- ( "Displays how many have voted up the question" ) -->
 
@@ -134,26 +136,31 @@
 
                 <!-- ( "Card Information Pill" ) -->
 
+                <div class="P4">
+
                     <p> Username_12345 </p> <!-- ( "Displays the username" ) -->
 
                     <div></div> <!-- ( "Section devider (Is seen as a dot, used to more easily distinguish between elements)" ) , ( "Style files found in (style/common.css)" ) -->
 
                     <p> YYYY - MM - DD </p> <!-- ( "Displays the date" ) -->
 
+                </div>
                 <!-- ( "Card Information Pill" ) -->
 
 
                 <!-- ( "Options" ) , ( "Style files found in (style/common.css)" ) -->
 
-                <img src="" alt=""> <!-- ( "3 dots icon" ) -->
+                <button class="P5">
+                    <img src="" alt=""> <!-- ( "3 dots icon" ) -->
+                </button>
 
                 <!-- ( "Options" ) -->
 
                 
-                <p> Description </p> <!-- ( "Description (User describes their question)" ) -->
+                <p class="P6"> Description </p> <!-- ( "Description (User describes their question)" ) -->
 
 
-                <img src="" alt=""> <!-- ( "Image added by the user" ) -->
+                <img class="P7" src="" alt=""> <!-- ( "Image added by the user" ) -->
 
             </Section>
 
