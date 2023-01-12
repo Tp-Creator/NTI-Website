@@ -1,10 +1,10 @@
 <?php
 
 //Includes the connection to the database
-include_once 'includes/dbh/dbh.inc.php';
+include_once 'dbh.inc.php';
 
 //Includes user functions related to the db
-include_once 'includes/dbh/dbh.usr.php';
+include_once 'dbh.usr.php';
 
 
 // Will later be used when the user sends a message

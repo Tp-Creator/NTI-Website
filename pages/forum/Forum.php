@@ -1,3 +1,11 @@
+<?php 
+
+    //Includes functions related to the db
+    include_once '../../includes/dbh.func/dbh.all.php';
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -82,8 +90,14 @@
     <!-- ( "Question Card" ) -->
 
         <?php 
+
+            $questions = getQuestions();
         
-            for($amount_Of_Cards = 0; $amount_Of_Cards < 5; $amount_Of_Cards++){
+                //  Amount of cards is the amount of cards that will be displayed
+            for($currentCard = 0; $currentCard < sizeof($questions); $currentCard++){
+
+                    //  Gets the course we are in
+                $course = getCourseByID($questions[$currentCard][1]);
             
         ?>
 
@@ -92,7 +106,9 @@
                 <!-- ( "Category pill" ) , ( "Style files found in (style/common.css)" -->
 
                     <div> <!-- ( "Pill Shape" ) -->
-                        <p> Category </p> <!-- ( "Pill Text (Category Name)" ) -->
+
+                            <!-- the name of the course ex. Programering 1 -->
+                        <p> <?php echo $course[1] ?> </p> <!-- ( "Pill Text (Category Name)" ) -->
                     </div>
 
                 <!-- ( "Category pill" ) -->

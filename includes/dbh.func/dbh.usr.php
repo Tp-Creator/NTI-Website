@@ -1,7 +1,7 @@
 <?php
 
 //Includes the connection to the database
-include_once 'includes/dbh/dbh.inc.php';
+include_once 'dbh.inc.php';
 
 
 //  checkIfUserExists($mail)
