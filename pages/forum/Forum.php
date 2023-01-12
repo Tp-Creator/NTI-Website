@@ -81,61 +81,74 @@
 
     <!-- ( "Question Card" ) -->
 
-        <Section>
-
-            <!-- ( "Category pill" ) , ( "Style files found in (style/common.css)" -->
-
-                <div> <!-- ( "Pill Shape" ) -->
-                    <p> Category </p> <!-- ( "Pill Text (Category Name)" ) -->
-                </div>
-
-            <!-- ( "Category pill" ) -->
-
-
-            <h1> Title </h1> <!-- ( "Card Title (The question user is asking)" ) -->
-
-
-            <!-- ( "Vote up - Button" ) , ( "Style files found in (style/common.css)" ) -->
-
-            <button>
-
-                <p> 123 </p> <!-- ( "Displays how many have voted up the question" ) -->
-
-                <div></div> <!-- ( "Section devider (Is seen as a dot, used to more easily distinguish between elements)" ) , ( "Style files found in (style/common.css)" ) -->
-
-                <img src="" alt=""> <!-- ( "Arrow icon" ) -->
-
-            </button>
-
-            <!-- ( "Vote up - Button" ) -->
-
-
-            <!-- ( "Card Information Pill" ) -->
-
-                <p> Username_12345 </p> <!-- ( "Displays the username" ) -->
-
-                <div></div> <!-- ( "Section devider (Is seen as a dot, used to more easily distinguish between elements)" ) , ( "Style files found in (style/common.css)" ) -->
-
-                <p> YYYY - MM - DD </p> <!-- ( "Displays the date" ) -->
-
-            <!-- ( "Card Information Pill" ) -->
-
-
-            <!-- ( "Options" ) , ( "Style files found in (style/common.css)" ) -->
-
-            <img src="" alt=""> <!-- ( "3 dots icon" ) -->
-
-            <!-- ( "Options" ) -->
-
+        <?php 
+        
+            for($amount_Of_Cards = 0; $amount_Of_Cards < 5; $amount_Of_Cards++){
             
-            <p> Description </p> <!-- ( "Description (User describes their question)" ) -->
+        ?>
+
+            <Section>
+
+                <!-- ( "Category pill" ) , ( "Style files found in (style/common.css)" -->
+
+                    <div> <!-- ( "Pill Shape" ) -->
+                        <p> Category </p> <!-- ( "Pill Text (Category Name)" ) -->
+                    </div>
+
+                <!-- ( "Category pill" ) -->
 
 
-            <img src="" alt=""> <!-- ( "Image added by the user" ) -->
+                <h1> Title </h1> <!-- ( "Card Title (The question user is asking)" ) -->
 
-        </Section>
+
+                <!-- ( "Vote up - Button" ) , ( "Style files found in (style/common.css)" ) -->
+
+                <button>
+
+                    <p> 123 </p> <!-- ( "Displays how many have voted up the question" ) -->
+
+                    <div></div> <!-- ( "Section devider (Is seen as a dot, used to more easily distinguish between elements)" ) , ( "Style files found in (style/common.css)" ) -->
+
+                    <img src="" alt=""> <!-- ( "Arrow icon" ) -->
+
+                </button>
+
+                <!-- ( "Vote up - Button" ) -->
+
+
+                <!-- ( "Card Information Pill" ) -->
+
+                    <p> Username_12345 </p> <!-- ( "Displays the username" ) -->
+
+                    <div></div> <!-- ( "Section devider (Is seen as a dot, used to more easily distinguish between elements)" ) , ( "Style files found in (style/common.css)" ) -->
+
+                    <p> YYYY - MM - DD </p> <!-- ( "Displays the date" ) -->
+
+                <!-- ( "Card Information Pill" ) -->
+
+
+                <!-- ( "Options" ) , ( "Style files found in (style/common.css)" ) -->
+
+                <img src="" alt=""> <!-- ( "3 dots icon" ) -->
+
+                <!-- ( "Options" ) -->
+
+                
+                <p> Description </p> <!-- ( "Description (User describes their question)" ) -->
+
+
+                <img src="" alt=""> <!-- ( "Image added by the user" ) -->
+
+            </Section>
+
+        <?php
+
+            }
+
+        ?>
 
     <!-- ( "Question Card" ) -->
+
 
 </body>
 </html>
