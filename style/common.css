@@ -1,58 +1,59 @@
 /* Includes elements that apear often such as ( "Buttons" ) , ( "Searchbar" ) , ( "Ask a question - Button" ) , ( "Pills" ) , ( "Icons" ) */
 
+
+
+
 /* ( "Searchbar" ) */
 
     .searchbarCon {
 
-        width: max-content;
+        width: fill;
+        height: 5rem;
+        padding-left: 2.5rem;
+
+        border-radius: 2.5rem;
 
         display: flex;
-        flex-direction: row;
+        justify-content: center;
+
+        box-shadow: 0rem 0rem 1.5rem var( --Shadow );
+        background-color: var( --MainC2 );
 
     }
 
     .searchfield {
 
-        width: 58rem;
-        height: 3rem;
-
-        padding: 1rem 2rem;
+        width: 100%;
 
         border: none;
-        border-radius: 2.5rem 0rem 0rem 2.5rem;
 
-        color: var(--white);
-        font-size: 1.2rem;
+        font-size: 1.6rem;
 
-        background-color: var(--darkBlue);
+        color: #FFFFFF75;
+        background-color: var( --Trans );
 
     }
 
     .searchButton {
 
-        width: 5rem;
-        height: 5rem;
+        width: 10rem;
+        height: fill;
+        margin: 0.5rem;
 
         border: none;
-        border-radius: 0rem 2.5rem 2.5rem 0rem;
+        border-radius: 2.5rem;
 
-        background-color: var(--darkBlue);
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
+        background-color: var( --Trans );
     }
 
     .searchButton:hover {
 
-        background-color: var(--highlight);
+        background-color: var( --Highlight2 );
         cursor: pointer;
-
-    }
-
-    .searchButtonIcon {
-
-        width: 3rem;
-        height: 3rem;
-
-        src: url(Icons/searchbar/SearchButtonArrow.svg);
 
     }
 
@@ -63,42 +64,26 @@
 
 /* Blue button  */
 
-    .blueButtonCon {
-
-        width: max-content;
-
-        padding: 0.4rem;
-
-        border-radius: 2.5rem;
-
-        background-image: linear-gradient(45deg, var( --purple1 ) , var( --blue1 ) );
-
-    }
-
     .blueButton {
 
-        width: 15rem;
-
-        padding: 1.4rem;
+        width: 17.5rem;
+        height: 5rem;
 
         border: none;
         border-radius: 2.5rem;
 
+        box-shadow: 0rem 0rem 1.5rem var( --Shadow );
+        background-color: #0000008A;
+        background-image: linear-gradient(45deg, var( --Purple ) , var( --Blue ) );
+
         text-align: center;
-
-        background-image: linear-gradient(45deg, var( --purple2 ) , var( --blue2 ) );
-
 
     }
 
-    .blueButtonText {
+    .blueButton:hover {
 
-        font-size: 1.2rem;
-        font-weight: bold;
-
-        color: var(--white);
-        /* background-color: linear-gradient(45deg, var( --purple1 ) , var( --blue1 ) ); */
-
+        cursor: pointer;
+        background-color: var( --Highlight2 );
 
     }
 

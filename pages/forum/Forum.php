@@ -15,7 +15,7 @@
 
         <!-- ( "Links to style files" ) -->
         
-            <!-- Includes elements such as ( "Font" ) , ( "Navbar" ) , ( "Default settings" ) -->
+            <!-- Includes elements such as ( "Colors" ) , ( "Font" ) , ( "Navbar" ) , ( "Default Style Settings" ) -->
             <link rel="stylesheet" href="../../style/main.css">
 
             <!-- Includes elements that apear often such as ( "Buttons" ) , ( "Searchbar" ) , ( "Ask a question - Button" ) , ( "Pills" ) , ( "Icons" ) -->
@@ -38,11 +38,73 @@
         <nav>
 
             <!-- ( "Navbar Button" ) -->
-                <a href=""> <!-- ( "Path user is sent to" ) -->
+
+                <a href="../home/index.php"> <!-- ( "Path user is sent to" ) -->
                     <button class="navButton"> 
-                        <p class="navButtonText"> Forum </p> <!-- ( "Text that is visible on the button" ) -->
+                        <p class="MediumText"> Home </p> <!-- ( "Text that is visible on the button" ) -->
                     </button>
                 </a>
+
+            <!-- ( "Navbar Button" ) -->
+
+            <!-- ( "Navbar Button" ) -->
+
+                <a href=""> <!-- ( "Path user is sent to" ) -->
+                    <button class="navButton"> 
+                        <p class="MediumText"> News </p> <!-- ( "Text that is visible on the button" ) -->
+                    </button>
+                </a>
+
+            <!-- ( "Navbar Button" ) -->
+
+            <!-- ( "Navbar Button" ) -->
+
+                <a href="forum.php"> <!-- ( "Path user is sent to" ) -->
+                    <button class="navButton"> 
+                        <p class="MediumText"> Forum </p> <!-- ( "Text that is visible on the button" ) -->
+                    </button>
+                </a>
+
+            <!-- ( "Navbar Button" ) -->
+
+            <!-- ( "Navbar Button" ) -->
+
+                <a href=""> <!-- ( "Path user is sent to" ) -->
+                    <button class="navButton"> 
+                        <p class="MediumText"> Schedule </p> <!-- ( "Text that is visible on the button" ) -->
+                    </button>
+                </a>
+
+            <!-- ( "Navbar Button" ) -->
+
+            <!-- ( "Navbar Button" ) -->
+
+                <a href=""> <!-- ( "Path user is sent to" ) -->
+                    <button class="navButton"> 
+                        <p class="MediumText"> Memes </p> <!-- ( "Text that is visible on the button" ) -->
+                    </button>
+                </a>
+
+            <!-- ( "Navbar Button" ) -->
+
+            <!-- ( "Navbar Button" ) -->
+
+                <a href=""> <!-- ( "Path user is sent to" ) -->
+                    <button class="navButton"> 
+                        <p class="MediumText"> Games </p> <!-- ( "Text that is visible on the button" ) -->
+                    </button>
+                </a>
+
+            <!-- ( "Navbar Button" ) -->
+
+            <!-- ( "Navbar Button" ) -->
+
+                <a href=""> <!-- ( "Path user is sent to" ) -->
+                    <button class="navButton"> 
+                        <p class="MediumText"> Account </p> <!-- ( "Text that is visible on the button" ) -->
+                    </button>
+                </a>
+
             <!-- ( "Navbar Button" ) -->
 
         </nav>
@@ -51,42 +113,29 @@
 
 
 
-
+    
     <!-- ( "Searchbar" ) -->
-
         <form class="searchbarCon" action=""> <!-- ( "Container for searchbar" ) -->
-
             <!-- <label for=""> Search . . . </label> ( "Pre written text for searchfield" ) -->
-
             <input class="searchfield" type="text"> <!-- ( "Searchfield where user are able to type" ) -->
-
             <!-- ( "Search Button (Displayed as an icon)" ) -->
-
                 <button class="searchButton">
-                    <img class="searchButtonIcon" src="" alt="">
+                    <img class="searchButtonIcon" src="../../style/icons/searchbar/searchIcon.svg" alt="">
                 </button>
-
             <!-- ( "Search Button" ) -->
-
         </form>
-
     <!-- ( "Searchbar" ) -->
 
 
 
 
     <!-- ( "Ask a question Button" ) , ( "Style files found in (style/common.css)" ) -->
-
-        <a class="blueButtonCon" href=""> <!-- ( "Takes user to (path)" ) -->
-
+        <a class="AskAQuestion" href=""> <!-- ( "Takes user to (path)" ) -->
             <Button class="blueButton"> <!-- ( "Special button style" ) -->
-                <p class="blueButtonText"> Ask a question </p> <!-- ( "Special text style" ) -->
+                <p class="MediumText"> Ask a question </p> <!-- ( "Special text style" ) -->
             </Button>
-
         </a>
-
     <!-- ( "Ask a question Button" ) -->
-
 
 
 

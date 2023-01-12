@@ -1,82 +1,179 @@
-/* Includes elements such as ( Font ) , ( Navbar ) , ( Default settings ) */
+/* Includes elements such as ( "Colors" ) , ( "Font" ) , ( "Navbar" ) , ( "Default Style Settings" ) */
 
-/* ("Variables with the colors pallette") */
-:root{
-    --background: #17161B ;
 
-    --white: #ffffff ;
 
-    --darkBlue: #101014 ;
 
-    --highlight: #ffffff25 ;
+/* ( "Font" ) */
 
-    /*Blue Button*/
+    @font-face {
 
-    --purple1: #524175 ;
-    --purple2: #252131 ;
+        font-family: 'Nunito-Regular';
+        src: url(font/static/Regular/Nunito-Regular.ttf);
 
-    --blue1: #295270 ;
-    --blue2: #1B2530 ;
+    }
 
-    /*Blue Button*/
+    @font-face {
 
-}
+        font-family: 'Nunito-Medium';
+        src: url(font/static/Regular/Nunito-Medium.ttf);
+
+    }
+
+    @font-face {
+
+        font-family: 'Nunito-Bold';
+        src: url(font/static/Regular/Nunito-Bold.ttf);
+
+    }
+
+/* ( "Font" ) */
+
+
+
+
+/* ( "Text Styles" ) */
+
+    .TitleText {
+
+        font-size: 1.6rem;
+        font-family: 'Nunito-bold';
+
+    }
+
+    .MediumText {
+
+        font-size: 1.4rem;
+        font-family: 'Nunito-Medium';
+
+    }
+
+    .RegularText {
+
+        font-size: 1.2rem;
+        font-family: 'Nunito-Regular';
+
+    }
+
+/* ( "Text Styles" ) */
+
+
+
+
+/* ( "Color Palette" ) */
+
+    :root {
+        
+        /* ( "Filter" ) */
+
+            --YourQuestion: #9D4EDD; 
+
+            --Popular: #EF233C;
+
+            --Latest: #00B4D8;
+
+        /* ( "Filter" ) */
+
+
+        /* ( "Corses" )  */
+
+            --Fysik: #00B4D8;
+
+            --Matte: #EF233C;
+
+            --Svenska: #52B788;
+
+            --Engelska: #FFBA08;
+
+            --Programmering: #FF7D00;
+
+            --Webbutveckling: #560BAD;
+
+        /* ( "Corses" )  */
+
+
+        /* ( "Main Colors" ) */
+        
+            --MainC1: #17161B;
+            --MainC2: #101014; 
+            --MainC3: #4F545C; 
+
+        /* ( "Main Colors" ) */
+
+
+        /* ( "Hover & Other" ) */
+
+            --Trans: #00000000;
+            --Shadow: #00000050;
+            --Highlight1: #ffffff25;
+            --Highlight2: #00000075;
+
+        /* ( "Hover & Other" ) */
+
+
+        /* ( "Gradient" ) */
+
+            --Purple: #524175;
+            --Blue: #295270;
+
+        /* ( "Gradient" ) */
+
+    }
+
+/* ( "Color Palette" ) */
+
+
+
 
 * {
 
     margin: 0%;
     padding: 0%;
 
+    border: none;
+    outline: none;
+
     font-size: 10px;
+    font-family: 'Nunito-Regular';
 
     text-decoration: none;
 
-    outline: none;
-
+    color: #FFFFFF;
 }
+
+
+
 
 /* ( "Navbar" ) */
 
-nav {
+    nav {
 
-    width: max-content;
+        width: max-content;
+        padding: 0.5rem;
 
-    padding: 0.5rem;
+        border-radius: 2.5rem;
 
-    border-radius: 2.5rem;
+        box-shadow: 0rem 0rem 1.5rem var( --Shadow );
+        background-color: var( --MainC2 );
 
-    background-color: var(--darkBlue) ;
+    }
 
-}
+    .navButton {
 
-.navButton {
+        width: 15rem;
+        height: 4rem;
 
-    width: 15rem;
-    height: 4rem;
+        border: none;
+        border-radius: 2rem;
 
-    border: none;
-    border-radius: 2rem;
+        background-color: var( --MainC2 );
 
-    background-color: var(--darkBlue);
+    }
 
-}
+    .navButton:hover {
 
-.navButton:hover {
+        background-color: var( --Highlight2 );
+        cursor: pointer;
 
-    background-color: var(--highlight);
-    cursor: pointer;
-
-}
-
-.navButtonText {
-
-    font-size: 1.4rem;
-    font-weight: bold;
-
-    letter-spacing: 0.025rem;
-
-    color: var(--white);
-
-}
+    }
 
 /* ( "Navbar" ) */

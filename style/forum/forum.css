@@ -1,117 +1,30 @@
 body {
 
-    background-color: var(--background);
+    background-color: var( --MainC1 ) ;
 
-    /* Controll for children */
-    display: grid;
-    gap: 2.5rem;
-    grid-template-columns: 1fr max-content max-content 1fr;
-    grid-template-rows: max-content;
+    display: grid ;
+    gap: 3rem ;
+    grid-template-columns: 1fr 1fr min-content 1fr ;
 
 }
 
-/* elemnet placement */
+nav {
 
-    nav {
-
-        grid-column: 2;
-        grid-row: 1;
-
-    }
-
-    .searchbarCon {
-
-        grid-column: 2;
-        grid-row: 2;
-
-    }
-
-    .blueButtonCon {
-
-        grid-column: 3;
-        grid-row: 2;
-
-    }
-
-    .contentFeed {
-
-        grid-column: 2 / span 2 ;
-        grid-row: 3;
-
-    }
-
-/* elemnet placement */
-
-
-
-
-/* forum Card */
-
-.forumCard {
-
-    padding: 2.5rem;
-
-    border-radius: 2.5rem;
-
-    background-color: var(--darkBlue);
-
-    display: grid;
-    gap: 2.5rem;
-    grid-template-columns: 1fr;
-
-    grid-template-areas: 
-    
-        'P1 P2 P3 P4 P5'
-        'P6 P6 P6 P6 P7'
-
-    ;
+    grid-column: 2 / span 2;
+    grid-row: 2;
 
 }
 
-    /* Card Parts ( "P:Number" ) */
+.searchbarCon {
 
-        .P1 {
+    grid-column: 2;
+    grid-row: 3;
 
-            grid-area: P1;
+}
 
-        }
+.AskAQuestion {
 
-        .P2 {
+    grid-column: 3;
+    grid-row: 3;
 
-            grid-area: P2;
-
-        }
-
-        .P3 {
-
-            grid-area: P3;
-
-        }
-
-        .P4 {
-
-            grid-area: P4;
-
-        }
-
-        .P5 {
-
-            grid-area: P5;
-
-        }
-
-        .P6 {
-
-            grid-area: P6;
-
-        }
-
-        .P7 {
-
-            grid-area: P7;
-
-        }
-
-    /* Card Parts ( "P:Number" ) */
-
-/* forum Card */
+}
