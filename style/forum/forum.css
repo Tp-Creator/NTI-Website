@@ -18,21 +18,21 @@ nav {
 .searchbarCon {
 
     grid-column: 2;
-    grid-row: 3;
+    grid-row: 5;
 
 }
 
 .AskAQuestion {
 
     grid-column: 3;
-    grid-row: 3;
+    grid-row: 5;
 
 }
 
 .forumCard {
 
     grid-column: 2 / span 2;
-    grid-row: 4;
+    grid-row: 6;
     
     padding: 2.5rem;
     border-radius: 2.5rem;
