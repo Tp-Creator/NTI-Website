@@ -153,7 +153,7 @@
             
         ?>
 
-            <Section class="forumCard">
+            <section class="forumCard">
 
                 <!-- ( "Category pill" ) , ( "Style files found in (style/common.css)" -->
 
@@ -211,7 +211,7 @@
 
                 <img class="P7" src="" alt=""> <!-- ( "Image added by the user" ) -->
 
-            </Section>
+            </section>
 
         <?php
 
