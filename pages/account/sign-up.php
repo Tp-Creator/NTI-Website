@@ -33,7 +33,7 @@
                     session_start(); // start the PHP_session function 
                     $_SESSION['userID'] = $id;
 
-                    header("location:/pages/home/index.php");
+                    header("location:/NTI-website/pages/forum/forum.php");
                 } else {
                     $error_message = "*Email already in use. Use another email";
                 }

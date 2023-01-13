@@ -45,7 +45,7 @@ function addUser($name, $mail, $pwd) {
             $stmt->execute();
             return loginValidation($mail, $pwd);
         } else {
-            console_log("User already exists")
+            console_log("User already exists");
             return -1;
         }
 }
@@ -63,13 +63,8 @@ function getUserFromId($id) {
     $stmt->bind_param("s", $id);
     $stmt->execute();
     $result = $stmt->get_result();
-<<<<<<< HEAD
-    
-    return $result->fetch_all()[0][1];
-=======
     return $result->fetch_all()[0];
     // return $result;
->>>>>>> 77e65e6724dcb051429126754814732711c0ff95
 }
 
 
