@@ -150,7 +150,7 @@
 
                     //  Gets the course we are in
                 $course = getCourseByID($questions[$current][1]);
-            
+                $user = getUserFromId($questions[$current][2]);
         ?>
 
 
@@ -191,11 +191,11 @@
 
                     <div>
 
-                        <p class="RegularText"> <?php echo getUsernameFromId($questions[$current][2]) ?> </p> <!-- ( "Displays the username" ) -->
+                        <p class="RegularText"> <?php echo $user[1]; ?> </p> <!-- ( "Displays the username" ) -->
 
                         <div></div> <!-- ( "Section devider (Is seen as a dot, used to more easily distinguish between elements)" ) , ( "Style files found in (style/common.css)" ) -->
 
-                        <p class="RegularText"> <?php echo $questions[$current][5] ?> </p> <!-- ( "Displays the date" ) -->
+                        <p class="RegularText"> <?php echo $questions[$current][5]; ?> </p> <!-- ( "Displays the date" ) -->
 
                     </div>
                     <!-- ( "Card Information Pill" ) -->
@@ -223,6 +223,8 @@
         <?php
 
             }
+
+            // postQuestion(1, 1, "fråga", "dfvbskjvbsjbv", "2023-01-13 03:04:11", 0);
 
         ?>
 

@@ -14,14 +14,16 @@
         
         $result = $result->fetch_all();
     
-            //  Returnerar en array med alla rader där man kan nå datan genom att ta $result[i]
+        //  return an array with all rows where you can reach the data by taking $result[i]
         return $result;
 
     }
 
+
+    //function to get the course by id
     function getCourseByID($id){
         global $conn;
-
+    //
         $stmt = $conn->prepare("SELECT * FROM course WHERE CourseID = ?;");
         $stmt->bind_param("s", $id);
         $stmt->execute();
@@ -35,6 +37,21 @@
             //  Returns the specific course and all it's content
         return $result;
 
+    }
+
+
+        //
+        //  function to post a question to the forum
+        //
+    function postQuestion($courseID, $userID, $title, $content, $datetime, $upvote){
+        global $conn;
+
+        // creates a call to the database in a safe way so that sql injections should not be able to take place
+        $stmt = $conn->prepare("INSERT INTO forum_question (CourseID, userID, Title, Content, dt, Upvote) VALUES (?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("iisssi", $courseID, $userID, $title, $content, $datetime, $upvote);
+
+        $stmt->execute();
+        //Felhantering behövs (om det inte gick att skapa)
     }
 
 ?>
