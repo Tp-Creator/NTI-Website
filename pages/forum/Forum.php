@@ -147,23 +147,25 @@
 
             <select name="" id=""> <!-- choose a corese the question is related to -->
 
-                <option value="">Category 1</option> 
+                <option value="">Fysik</option> 
 
-                <option value="">Category 2</option>
+                <option value="">Matte</option>
 
-                <option value="">Category 3</option>
+                <option value="">Svenska</option>
+
+                <option value="">Engelska</option>
+
+                <option value="">Programmering</option>
+
+                <option value="">Webbutveckling</option>
 
             </select>
 
         <!-- chose a category pill  -->
 
-            <input type="text"> <!-- Input for title(The Question) -->
+            <input class="cardInput" placehoder="My question is . . ." type="text"> <!-- Input for title(The Question) -->
 
-            <input type="text"> <!-- Input for Description(The description of the question) -->
-
-            <button> <!-- ( "Post Question Button" ) -->
-                <p>Post question</p>
-            </button>
+            <input class="cardInput" placehoder="I would describe my question . . ." type="text"> <!-- Input for Description(The description of the question) -->
 
         </form>
 
@@ -199,8 +201,6 @@
                         </div>
 
                     <!-- ( "Category pill" ) -->
-
-                    <h1 class="TitleText"> <?php echo $questions[$current][3] ?> </h1> <!-- ( "Card Title (The question user is asking)" ) -->
 
 
                     <!-- ( "Vote up - Button" ) , ( "Style files found in (style/common.css)" ) -->
@@ -240,8 +240,7 @@
 
                     <!-- ( "Options" ) -->
 
-
-                    <!-- <p class="MediumText"> Description </p> ( "Description (User describes their question)" ) -->
+                    <h1 class="TitleText"> <?php echo $questions[$current][3] ?> </h1> <!-- ( "Card Title (The question user is asking)" ) -->
 
 
                 </button>
