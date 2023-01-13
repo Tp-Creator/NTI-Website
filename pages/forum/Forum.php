@@ -153,67 +153,73 @@
             
         ?>
 
-            <section class="forumCard">
 
-                <!-- ( "Category pill" ) , ( "Style files found in (style/common.css)" -->
+            <a class="forumCard" href="">
 
-                    <div class="CategoryPill"> <!-- ( "Pill Shape" ) -->
+                <button>
 
-                        <p class="RegularText"> <?php echo $course[1] ?> </p> <!-- The name of the course ex. Programering 1 -->
-                        
+                    <!-- ( "Category pill" ) , ( "Style files found in (style/common.css)" -->
+
+                        <div class="CategoryPill"> <!-- ( "Pill Shape" ) -->
+
+                            <p class="RegularText"> <?php echo $course[1] ?> </p> <!-- The name of the course ex. Programering 1 -->
+
+                        </div>
+
+                    <!-- ( "Category pill" ) -->
+
+
+                    <h1 class="TitleText"> Title </h1> <!-- ( "Card Title (The question user is asking)" ) -->
+
+
+                    <!-- ( "Vote up - Button" ) , ( "Style files found in (style/common.css)" ) -->
+
+                    <button class="VotePill">
+
+                        <p class="RegularText"> 123 </p> <!-- ( "Displays how many have voted up the question" ) -->
+
+                        <div class="SectionDevider"></div> <!-- ( "Section devider (Is seen as a dot, used to more easily distinguish between elements)" ) , ( "Style files found in (style/common.css)" ) -->
+
+                        <img class="voteButtonIcon" src="../../style/icons/voteArrow.svg" alt=""> <!-- ( "Arrow icon" ) -->
+
+                    </button>
+
+                    <!-- ( "Vote up - Button" ) -->
+
+
+                    <!-- ( "Card Information Pill" ) -->
+
+                    <div>
+
+                        <p class="RegularText"> Username_12345 </p> <!-- ( "Displays the username" ) -->
+
+                        <div></div> <!-- ( "Section devider (Is seen as a dot, used to more easily distinguish between elements)" ) , ( "Style files found in (style/common.css)" ) -->
+
+                        <p class="RegularText"> YYYY - MM - DD </p> <!-- ( "Displays the date" ) -->
+
                     </div>
-
-                <!-- ( "Category pill" ) -->
-
-
-                <h1 class="TitleText"> Title </h1> <!-- ( "Card Title (The question user is asking)" ) -->
+                    <!-- ( "Card Information Pill" ) -->
 
 
-                <!-- ( "Vote up - Button" ) , ( "Style files found in (style/common.css)" ) -->
+                    <!-- ( "Options" ) , ( "Style files found in (style/common.css)" ) -->
 
-                <button>
+                    <button>
+                        <img src="" alt=""> <!-- ( "3 dots icon" ) -->
+                    </button>
 
-                    <p class="RegularText"> 123 </p> <!-- ( "Displays how many have voted up the question" ) -->
+                    <!-- ( "Options" ) -->
 
-                    <div></div> <!-- ( "Section devider (Is seen as a dot, used to more easily distinguish between elements)" ) , ( "Style files found in (style/common.css)" ) -->
 
-                    <img src="" alt=""> <!-- ( "Arrow icon" ) -->
+                    <!-- <p class="MediumText"> Description </p> ( "Description (User describes their question)" ) -->
+
+
+                    <img src="" alt=""> <!-- ( "Image added by the user" ) -->
+
 
                 </button>
 
-                <!-- ( "Vote up - Button" ) -->
-
-
-                <!-- ( "Card Information Pill" ) -->
-
-                <div>
-
-                    <p class="RegularText"> Username_12345 </p> <!-- ( "Displays the username" ) -->
-
-                    <div></div> <!-- ( "Section devider (Is seen as a dot, used to more easily distinguish between elements)" ) , ( "Style files found in (style/common.css)" ) -->
-
-                    <p class="RegularText"> YYYY - MM - DD </p> <!-- ( "Displays the date" ) -->
-
-                </div>
-                <!-- ( "Card Information Pill" ) -->
-
-
-                <!-- ( "Options" ) , ( "Style files found in (style/common.css)" ) -->
-
-                <button>
-                    <img src="" alt=""> <!-- ( "3 dots icon" ) -->
-                </button>
-
-                <!-- ( "Options" ) -->
-
-                
-                <!-- <p class="MediumText"> Description </p> ( "Description (User describes their question)" ) -->
-
-
-                <img src="" alt=""> <!-- ( "Image added by the user" ) -->
-
-            </section>
-
+            </a>
+            
         <?php
 
             }
