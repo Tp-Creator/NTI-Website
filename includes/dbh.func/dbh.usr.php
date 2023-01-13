@@ -56,15 +56,20 @@ function addUser($name, $mail, $pwd) {
 //  getUsernameFromId($id)
 //  this function takes one argument: the Id of a user
 //  And returns the username of the specific user
-function getUsernameFromId($id) {
+function getUserFromId($id) {
     global $conn;
     
     $stmt = $conn->prepare("SELECT * FROM users WHERE userID = ?;");
     $stmt->bind_param("s", $id);
     $stmt->execute();
     $result = $stmt->get_result();
+<<<<<<< HEAD
     
     return $result->fetch_all()[0][1];
+=======
+    return $result->fetch_all()[0];
+    // return $result;
+>>>>>>> 77e65e6724dcb051429126754814732711c0ff95
 }
 
 

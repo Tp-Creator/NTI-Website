@@ -118,7 +118,7 @@
     <!-- ( "Searchbar" ) -->
         <form class="searchbarCon" action=""> <!-- ( "Container for searchbar" ) -->
             <!-- <label for=""> Search . . . </label> ( "Pre written text for searchfield" ) -->
-            <input class="searchfield" type="text"> <!-- ( "Searchfield where user are able to type" ) -->
+            <input class="searchfield" placeholder="Search . . ." type="text"> <!-- ( "Searchfield where user are able to type" ) -->
             <!-- ( "Search Button (Displayed as an icon)" ) -->
                 <button class="searchButton">
                     <img class="searchButtonIcon" src="../../style/icons/searchbar/searchIcon.svg" alt="">
@@ -139,6 +139,37 @@
     <!-- ( "Ask a question Button" ) -->
 
 
+    <!-- ( "New card" ) -->
+
+        <form class="newQuestionCard" action="">
+
+        <!-- chose a category pill  -->
+
+            <select name="" id=""> <!-- choose a corese the question is related to -->
+
+                <option value="">Category 1</option> 
+
+                <option value="">Category 2</option>
+
+                <option value="">Category 3</option>
+
+            </select>
+
+        <!-- chose a category pill  -->
+
+            <input type="text"> <!-- Input for title(The Question) -->
+
+            <input type="text"> <!-- Input for Description(The description of the question) -->
+
+            <button> <!-- ( "Post Question Button" ) -->
+                <p>Post question</p>
+            </button>
+
+        </form>
+
+    <!-- ( "New card" ) -->
+
+
 
     <!-- ( "Question Card" ) -->
 
@@ -151,7 +182,7 @@
 
                     //  Gets the course we are in
                 $course = getCourseByID($questions[$current][1]);
-            
+                $user = getUserFromId($questions[$current][2]);
         ?>
 
 
@@ -168,7 +199,6 @@
                         </div>
 
                     <!-- ( "Category pill" ) -->
-
 
                     <h1 class="TitleText"> <?php echo $questions[$current][3] ?> </h1> <!-- ( "Card Title (The question user is asking)" ) -->
 
@@ -192,11 +222,11 @@
 
                     <div>
 
-                        <p class="RegularText"> <?php echo getUsernameFromId($questions[$current][2]) ?> </p> <!-- ( "Displays the username" ) -->
+                        <p class="RegularText"> <?php echo $user[1]; ?> </p> <!-- ( "Displays the username" ) -->
 
                         <div></div> <!-- ( "Section devider (Is seen as a dot, used to more easily distinguish between elements)" ) , ( "Style files found in (style/common.css)" ) -->
 
-                        <p class="RegularText"> <?php echo $questions[$current][5] ?> </p> <!-- ( "Displays the date" ) -->
+                        <p class="RegularText"> <?php echo $questions[$current][5]; ?> </p> <!-- ( "Displays the date" ) -->
 
                     </div>
                     <!-- ( "Card Information Pill" ) -->
@@ -214,9 +244,6 @@
                     <!-- <p class="MediumText"> Description </p> ( "Description (User describes their question)" ) -->
 
 
-                    <img src="" alt=""> <!-- ( "Image added by the user" ) -->
-
-
                 </button>
 
             </a>
@@ -224,6 +251,8 @@
         <?php
 
             }
+
+            // postQuestion(1, 1, "fråga", "dfvbskjvbsjbv", "2023-01-13 03:04:11", 0);
 
         ?>
 
