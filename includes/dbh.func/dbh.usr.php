@@ -62,7 +62,14 @@ function getUsernameFromId($id) {
     $stmt->bind_param("s", $id);
     $stmt->execute();
     $result = $stmt->get_result();
-    return $result->fetch_column(1);
+
+    // console_log($result->fetch_all());
+    
+    $result = $result->fetch_all();
+    $result = $result[0];
+
+        //  Returnerar bara namnet
+    return $result[1];
 }
 
 
