@@ -45,6 +45,7 @@ function addUser($name, $mail, $pwd) {
             $stmt->execute();
             return loginValidation($mail, $pwd);
         } else {
+            console_log("User already exists")
             return -1;
         }
 }
@@ -57,12 +58,13 @@ function addUser($name, $mail, $pwd) {
 //  And returns the username of the specific user
 function getUsernameFromId($id) {
     global $conn;
-
+    
     $stmt = $conn->prepare("SELECT * FROM users WHERE userID = ?;");
     $stmt->bind_param("s", $id);
     $stmt->execute();
     $result = $stmt->get_result();
-    return $result->fetch_column(1);
+    
+    return $result->fetch_all()[0][1];
 }
 
 

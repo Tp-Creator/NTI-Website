@@ -9,7 +9,7 @@
 
 
     //Includes the connection to the database
-    include_once '/includes/dbh/dbh.all.php';
+    include_once '../../includes/dbh.func/dbh.all.php';
 
     //  A variable for the fail message that can be needed to be displayed
     $error_message = "";
@@ -58,7 +58,8 @@
     <!-- ( "Links to style files" ) -->
 
         <!-- Includes elements such as ( "Font" ) , ( "Navbar" ) , ( "Default settings" ) -->
-        <link rel="stylesheet" href="/style/main.css">
+        <link rel="stylesheet" href="../../style/main.css">
+        <link rel="stylesheet" href="../../style/account/style.css">
 
 
      <!-- ( "Links to style files" ) -->
@@ -115,10 +116,10 @@
         <form name="sign-up" method="post" action="./sign-up.php">
 
             Username: <br/>
-            <input class="normal" name="username"> <br/>
+            <input type="text" class="normal" name="username"> <br/>
 
             Email: <br/> 
-            <input class="normal" type="email" name="email"> <br/>
+            <input type="text" class="normal" type="email" name="email"> <br/>
 
             Password: <br/> 
             <input class="normal" type="password" name="pwd"> <br/>

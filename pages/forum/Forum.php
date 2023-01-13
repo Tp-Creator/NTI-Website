@@ -2,6 +2,7 @@
 
     //Includes functions related to the db
     include_once '../../includes/dbh.func/dbh.all.php';
+    include_once '../../includes/loginCheck.php';
 
 ?>
 
