@@ -169,14 +169,14 @@
                     <!-- ( "Category pill" ) -->
 
 
-                    <h1 class="TitleText"> Title </h1> <!-- ( "Card Title (The question user is asking)" ) -->
+                    <h1 class="TitleText"> <?php echo $questions[$current][3] ?> </h1> <!-- ( "Card Title (The question user is asking)" ) -->
 
 
                     <!-- ( "Vote up - Button" ) , ( "Style files found in (style/common.css)" ) -->
 
                     <button class="VotePill">
 
-                        <p class="RegularText"> 123 </p> <!-- ( "Displays how many have voted up the question" ) -->
+                        <p class="RegularText"> <?php echo $questions[$current][6] ?> </p> <!-- ( "Displays how many have voted up the question" ) -->
 
                         <div class="SectionDevider"></div> <!-- ( "Section devider (Is seen as a dot, used to more easily distinguish between elements)" ) , ( "Style files found in (style/common.css)" ) -->
 
@@ -191,11 +191,11 @@
 
                     <div>
 
-                        <p class="RegularText"> Username_12345 </p> <!-- ( "Displays the username" ) -->
+                        <p class="RegularText"> <?php echo getUsernameFromId($questions[$current][2]) ?> </p> <!-- ( "Displays the username" ) -->
 
                         <div></div> <!-- ( "Section devider (Is seen as a dot, used to more easily distinguish between elements)" ) , ( "Style files found in (style/common.css)" ) -->
 
-                        <p class="RegularText"> YYYY - MM - DD </p> <!-- ( "Displays the date" ) -->
+                        <p class="RegularText"> <?php echo $questions[$current][5] ?> </p> <!-- ( "Displays the date" ) -->
 
                     </div>
                     <!-- ( "Card Information Pill" ) -->
