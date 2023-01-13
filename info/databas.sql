@@ -38,7 +38,8 @@ CREATE TABLE Forum_question (
     userID int NOT NULL,
     Title varchar(80),
     Content varchar(1000),
-    dt datetime
+    dt datetime,
+    Upvote int
 );
 
 CREATE TABLE Forum_answer (
@@ -68,8 +69,8 @@ INSERT INTO Course (CourseName, CourseColor)
 VALUES ('Programering 1', '#FF7D00');
 
 /* Lägger till en fråga i databasen */
-INSERT INTO Forum_question (CourseID, userID, Title, Content, dt)
-VALUES (1, 1, 'Hur gör man en webbsida i Javascript?', 'Jag har precis börjat 2:an och har kommit på att jag vill göra en webbsida. Jag tänker mig att den ska använda sig av php och en databas, men har inga förkunskaper. Hur gör man egentligen?', '2022-09-09 03:02:16');
+INSERT INTO Forum_question (CourseID, userID, Title, Content, dt, Upvote)
+VALUES (1, 1, 'Hur gör man en webbsida i Javascript?', 'Jag har precis börjat 2:an och har kommit på att jag vill göra en webbsida. Jag tänker mig att den ska använda sig av php och en databas, men har inga förkunskaper. Hur gör man egentligen?', '2022-09-09 03:02:16', 12345);
 
 /* Lägger till ett svar på frågan ovan i databasen */
 INSERT INTO Forum_answer (Forum_questionID, userID, Content, dt, Upvote)
