@@ -56,9 +56,10 @@ CREATE TABLE Forum_answer (
 INSERT INTO users (Email, Username, pwd)
 VALUES ('hej@hej.com', 'Joel', 'Passwords123');
 
-/* Lägger till en user som heter Joel, har en mail och ett lösenord */
+/* Lägger till en user som heter Niklas, har en mail och ett lösenord */
 INSERT INTO users (Email, Username, pwd)
 VALUES ('hej@hejj.com', 'Niklas', 'Passwords123');
+
 
 /* Lägger till ett meddelande med datum och vilken användare som skrev det; user med ID: 1*/
 INSERT INTO msg (Content, dt, userID)
