@@ -146,10 +146,10 @@
             $questions = getQuestions();
         
                 //  Amount of cards is the amount of cards that will be displayed
-            for($currentCard = 0; $currentCard < sizeof($questions); $currentCard++){
+            for($current = 0; $current < sizeof($questions); $current++){
 
                     //  Gets the course we are in
-                $course = getCourseByID($questions[$currentCard][1]);
+                $course = getCourseByID($questions[$current][1]);
             
         ?>
 
