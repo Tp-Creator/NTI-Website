@@ -157,9 +157,10 @@
 
                 <!-- ( "Category pill" ) , ( "Style files found in (style/common.css)" -->
 
-                    <div> <!-- ( "Pill Shape" ) -->
-                            <!-- the name of the course ex. Programering 1 -->
-                        <p class="RegularText"> <?php echo $course[1] ?> </p> <!-- ( "Pill Text (Category Name)" ) -->
+                    <div class="CategoryPill"> <!-- ( "Pill Shape" ) -->
+
+                        <p class="RegularText"> <?php echo $course[1] ?> </p> <!-- The name of the course ex. Programering 1 -->
+                        
                     </div>
 
                 <!-- ( "Category pill" ) -->
@@ -206,7 +207,7 @@
                 <!-- ( "Options" ) -->
 
                 
-                <p class="MediumText"> Description </p> <!-- ( "Description (User describes their question)" ) -->
+                <!-- <p class="MediumText"> Description </p> ( "Description (User describes their question)" ) -->
 
 
                 <img src="" alt=""> <!-- ( "Image added by the user" ) -->
