@@ -117,7 +117,7 @@
     <!-- ( "Searchbar" ) -->
         <form class="searchbarCon" action=""> <!-- ( "Container for searchbar" ) -->
             <!-- <label for=""> Search . . . </label> ( "Pre written text for searchfield" ) -->
-            <input class="searchfield" type="text"> <!-- ( "Searchfield where user are able to type" ) -->
+            <input class="searchfield" placeholder="Search . . ." type="text"> <!-- ( "Searchfield where user are able to type" ) -->
             <!-- ( "Search Button (Displayed as an icon)" ) -->
                 <button class="searchButton">
                     <img class="searchButtonIcon" src="../../style/icons/searchbar/searchIcon.svg" alt="">
@@ -136,6 +136,37 @@
             </Button>
         </a>
     <!-- ( "Ask a question Button" ) -->
+
+
+    <!-- ( "New card" ) -->
+
+        <form class="newQuestionCard" action="">
+
+        <!-- chose a category pill  -->
+
+            <select name="" id=""> <!-- choose a corese the question is related to -->
+
+                <option value="">Category 1</option> 
+
+                <option value="">Category 2</option>
+
+                <option value="">Category 3</option>
+
+            </select>
+
+        <!-- chose a category pill  -->
+
+            <input type="text"> <!-- Input for title(The Question) -->
+
+            <input type="text"> <!-- Input for Description(The description of the question) -->
+
+            <button> <!-- ( "Post Question Button" ) -->
+                <p>Post question</p>
+            </button>
+
+        </form>
+
+    <!-- ( "New card" ) -->
 
 
 
@@ -167,7 +198,6 @@
                         </div>
 
                     <!-- ( "Category pill" ) -->
-
 
                     <h1 class="TitleText"> <?php echo $questions[$current][3] ?> </h1> <!-- ( "Card Title (The question user is asking)" ) -->
 
@@ -211,9 +241,6 @@
 
 
                     <!-- <p class="MediumText"> Description </p> ( "Description (User describes their question)" ) -->
-
-
-                    <img src="" alt=""> <!-- ( "Image added by the user" ) -->
 
 
                 </button>
