@@ -19,7 +19,7 @@
     
     <link rel="stylesheet" href="../../style/pages/forum/forum.css">
 
-    <title>temp: Forum</title>
+    <title>Forum</title>
 </head>
 <body>
 
