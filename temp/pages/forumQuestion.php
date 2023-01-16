@@ -81,14 +81,13 @@
     <section class="contentFeed FP7">
         <?php 
 
-        $questions = getQuestions();
+        $question = getQuestionByID($_GET["question"]);
+        console_log($question);
 
-        //  Amount of cards is the amount of cards that will be displayed
-        for($current = 0; $current < sizeof($questions); $current++){
         
             //  Gets the course we are in
-            $course = getCourseByID($questions[$current][1]);
-            $user = getUserFromId($questions[$current][2]);
+            $course = getCourseByID($question[1]);
+            $user = getUserFromId($question[2]);
         ?>
 
 
@@ -99,7 +98,7 @@
             </div>
             <!-- Vote -->
             <button class="pill QCP2">
-                <?php echo $questions[$current][6] ?>
+                <?php echo $question[6] ?>
                 <!-- <img class="icon" src="" alt=""> -->
             </button>
             <!-- Card information -->
@@ -107,22 +106,14 @@
                 <!-- Username -->
                 <p><?php echo $user[1]; ?></p>
                 <!-- Date -->
-                <p><?php echo $questions[$current][5]; ?></p>
+                <p><?php echo $question[5]; ?></p>
             </div>
             <!-- Card title/question -->
-            <p class="RegularText QCP4"><?php echo $questions[$current][3] ?></p>
+            <p class="RegularText QCP4"><?php echo $question[3] ?></p>
             <!-- Question description -->
-            <p class="RegularText QCP5"><?php echo $questions[$current][4] ?></p>
+            <p class="RegularText QCP5"><?php echo $question[4] ?></p>
         </div>
         
-
-        <?php
-
-            }
-
-            // postQuestion(1, 1, "fråga", "dfvbskjvbsjbv", "2023-01-13 03:04:11", 0);
-
-        ?>
     </section>
 
 

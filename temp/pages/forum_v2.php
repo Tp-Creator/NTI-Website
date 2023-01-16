@@ -107,7 +107,8 @@
         ?>
 
 
-        <a href="forumQuestion.php">
+                        <!-- hämtar id:t på frågan och lägger till den i url:en -->
+        <a href="forumQuestion.php?question=<?php echo $questions[$current][0] ?>">
             <div class="forumCard">
                 <!-- Corse pill -->
                 <div class="pill QCP1">
