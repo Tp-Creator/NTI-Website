@@ -172,8 +172,8 @@
 
     .navButton:hover {
 
-        background-color: var( --Highlight2 );
         cursor: pointer;
+        background-color: var( --Highlight2 );
 
     }
 

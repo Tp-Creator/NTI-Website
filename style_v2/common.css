@@ -1,0 +1,88 @@
+/* Buttons  */
+.buttonType1 {
+
+    width: 200px;
+    height: 40px;
+
+    background-color: lightcoral;
+
+}
+
+.buttonType2 {
+
+    width: 150px;
+    height: 40px;
+
+    background-color: lightcoral;
+
+}
+
+
+
+
+/* searchbar  */
+.searchbar {
+    flex-grow: 1;
+
+    width: fill;
+    height: 40px;
+    padding-left: 25px;
+
+    display: flex;
+    justify-content: center;
+
+    background-color: #101014;
+
+}
+
+.searchfield {
+
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    color: #FFFFFF;
+    background-color: #101014;
+
+}
+
+.searchButton {
+
+    width: 75px;
+    height: fill;
+    margin: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: lightcoral;
+}
+
+.searchButton:hover {
+
+    cursor: pointer;
+
+}
+
+
+
+
+/* Pill */
+.pill {
+
+    width: max-content;
+    padding: 5px 10px;
+
+    font-size: 12px;
+
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+    gap: 10px;
+
+    color: #FFF;
+    background-color: #4F545C75;
+
+}

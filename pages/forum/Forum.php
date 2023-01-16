@@ -23,7 +23,7 @@
             <link rel="stylesheet" href="../../style/common.css">
 
             <!-- Includes the layout and elements for the "forum" page such as ( "forumCard.css" ) -->
-            <link rel="stylesheet" href="../../style/forum/forum.css">
+            <link rel="stylesheet" href="../../style/pages/forum.css">
 
         <!-- ( "Links to style files" ) -->
 
@@ -137,6 +137,30 @@
             </Button>
         </a>
     <!-- ( "Ask a question Button" ) -->
+
+
+    <!-- ( "Filter" ) -->
+
+        <select class="Filter" name="" id="">
+
+            <option value="">Latest</option>
+
+            <option value="">Popular</option>
+
+            <option value="">My questions</option>
+
+        </select>
+
+    <!-- ( "Filter" ) -->
+
+
+    <!-- ( "trafic" ) -->
+    
+        <p class="RegularText">Today there is '12345' new questions</p> <!-- ( "Should be used if "Latest or popular" is selected in Filter" ) --> 
+
+        <!-- <p>You have '12345' question answered</p> ( "Should be used if "My questions" is selected in Filter" ) -->
+
+    <!-- ( "trafic" ) -->
 
 
     <!-- ( "New card" ) -->

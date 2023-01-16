@@ -1,0 +1,37 @@
+* {
+
+    margin: 0%;
+    padding: 0%;
+
+    color: #fff;
+
+    text-decoration: none;
+
+}
+
+
+
+
+/* Navigation bar  */
+nav {
+
+    width: max-content;
+    height: min-content;
+    padding: 5px;
+
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+
+    background-color: #101014;
+
+}
+
+.navButton {
+
+    width: 125px;
+    height: 40px;
+
+    background-color: lightcoral;
+
+}
