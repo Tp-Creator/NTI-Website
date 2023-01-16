@@ -35,15 +35,15 @@
 
                     header("location:/NTI-website/pages/forum/forum.php");
                 } else {
-                    $error_message = "*Email already in use. Use another email";
+                    $error_message = "Email is already in use. Use another email";
                 }
 
             } else {
-                $error_message = "*The passwords are not matching";
+                $error_message = "*Passwords are not matching";
             }
 
         } else {
-            $error_message = "*All fields most contain information";
+            $error_message = "All fields should contain information";
         }
     }
 ?>
@@ -55,14 +55,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- ( "Links to style files" ) -->
-
-        <!-- Includes elements such as ( "Font" ) , ( "Navbar" ) , ( "Default settings" ) -->
-        <link rel="stylesheet" href="../../style/main.css">
-        <link rel="stylesheet" href="../../style/account/style.css">
-
-
-     <!-- ( "Links to style files" ) -->
+    <!-- style links  -->
+    <link rel="stylesheet" href="../../style/pages/account/account.css">
+    <link rel="stylesheet" href="../../style/main.css">
 
     <title>Sign up</title>
 </head>
@@ -80,7 +75,7 @@
                     //  Shows the hidden fail message
                 failMsgElement.style.display = "block";
                     //  Changes the fail message to the relevant one
-                failMsgElement.innerHTML = "*All fields most contain information";
+                failMsgElement.innerHTML = "All fields should contain information";
                     //  This does so that the form is not posted (the filled in data will not be erased)
                 return false;
             }
@@ -88,15 +83,12 @@
                 //  same thing as above but an other error
             if(form['pwd'].value != form['re-pwd'].value) {
                 failMsgElement.style.display = "block";
-                failMsgElement.innerHTML = "*The passwords are not matching";
+                failMsgElement.innerHTML = "Passwords are not matching";
                 return false;
             }
         }
 
     </script>
-
-    <h1>Skapa ett konto här</h1>
-
 
     <?php
         if ($error_message != "") {
@@ -111,26 +103,27 @@
         }
     ?>
 
+    <section>
 
-    <fieldset>
+        <h1>Create account</h1>
+
         <form name="sign-up" method="post" action="./sign-up.php">
 
-            Username: <br/>
-            <input type="text" class="normal" name="username"> <br/>
+            <input placeholder="Username" type="text" name="username">
 
-            Email: <br/> 
-            <input type="text" class="normal" type="email" name="email"> <br/>
+            <input placeholder="Email" type="text" type="email" name="email">
 
-            Password: <br/> 
-            <input class="normal" type="password" name="pwd"> <br/>
+            <input placeholder="Password" type="password" name="pwd">
 
-            Retype password: <br/> 
-            <input class="normal" type="password" name="re-pwd"> <br/>
+            <input placeholder="Retype Password" type="password" name="re-pwd">
 
-            <input type="submit" id="submit" onclick="return validateForm(this.form)">
+            <button type="submit" id="submit" onclick="return validateForm(this.form)">Create your account</button>
 
         </form>
-    </fieldset>
+
+        <p>Already have an account? <a href="login.php">Return to log in</a></p>
+
+    </section>
 
 </body>
 </html>

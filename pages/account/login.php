@@ -5,8 +5,8 @@
     //  If we get posted data, we check if the user exists and if so updates
     //  the session with the user id to keep the user logged in.
 
-        //Includes the connection to the database
-        include_once '../../includes/dbh.func/dbh.all.php';
+    //Includes the connection to the database
+    include_once '../../includes/dbh.func/dbh.all.php';
 
 
     //check if this is a login request
@@ -35,29 +35,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../style/account/style.css">
-    <title>Document</title>
+    
+    <!-- style links  -->
+    <link rel="stylesheet" href="../../style/pages/account/account.css">
+    <link rel="stylesheet" href="../../style/main.css">
+
+    <title>Log in</title>
 </head>
 <body>
     
+<section>
 
-<h1>Hej! DU måste logga in!</h1>
+    <h1>Welcome, consider logging in.</h1>
 
-<fieldset>
-    <form name="login" method="post" action="./login.php">
+        <form name="login" method="post" action="./login.php">
 
-        Email: <br/> 
-        <input type="text" class="normal" name="email"> <br/>
+            <input placeholder="Email" type="text" name="email">
 
-        Password: <br/> 
-        <input class="normal" type="password" name="pwd"> <br/>
+            <input placeholder="Password" type="password" name="pwd">
 
-        <input type="submit" id="submit" style="margin-top:10px">
+            <button type="submit" id="submit">Log in</button>
 
-    </form>
-    <a href="./sign-up.php">Skapa konto</a>
-</fieldset>
+        </form>
 
+        <p>Dont have any account? No problem, <a href="sign-up.php">create one here!</a></p>
+
+</section>
 
 </body>
 </html>

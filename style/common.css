@@ -1,164 +1,88 @@
-/* Includes elements that apear often such as ( "Buttons" ) , ( "Searchbar" ) , ( "Ask a question - Button" ) , ( "Pills" ) , ( "Icons" ) */
+/* Buttons  */
+.buttonType1 {
 
+    width: 200px;
+    height: 40px;
 
+    background-color: lightcoral;
 
+}
 
-/* ( "Searchbar" ) */
+.buttonType2 {
 
-    .searchbarCon {
+    width: 150px;
+    height: 40px;
 
-        width: fill;
-        height: 5rem;
-        padding-left: 2.5rem;
+    background-color: lightcoral;
 
-        border-radius: 2.5rem;
+}
 
-        display: flex;
-        justify-content: center;
 
-        box-shadow: 0rem 0rem 1.5rem var( --Shadow );
-        background-color: var( --MainC2 );
 
-    }
 
-    .searchfield {
+/* searchbar  */
+.searchbar {
+    flex-grow: 1;
 
-        width: 100%;
+    width: fill;
+    height: 40px;
+    padding-left: 25px;
 
-        border: none;
+    display: flex;
+    justify-content: center;
 
-        font-size: 1.6rem;
+    background-color: #101014;
 
-        color: #FFFFFF;
-        background-color: var( --Trans );
+}
 
-    }
+.searchfield {
 
-    .searchButton {
+    width: 100%;
 
-        width: 10rem;
-        height: fill;
-        margin: 0.5rem;
+    border: none;
+    outline: none;
 
-        border: none;
-        border-radius: 2.5rem;
+    color: #FFFFFF;
+    background-color: #101014;
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
+}
 
-        background-color: var( --Trans );
-    }
+.searchButton {
 
-    .searchButton:hover {
+    width: 75px;
+    height: fill;
+    margin: 5px;
 
-        background-color: var( --Highlight2 );
-        cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    }
+    background-color: lightcoral;
+}
 
-/* ( "Searchbar" ) */
+.searchButton:hover {
 
+    cursor: pointer;
 
+}
 
 
-/* Blue button  */
 
-    .blueButton {
 
-        width: 17.5rem;
-        height: 5rem;
+/* Pill */
+.pill {
 
-        border: none;
-        border-radius: 2.5rem;
+    width: max-content;
+    padding: 5px 10px;
 
-        box-shadow: 0rem 0rem 1.5rem var( --Shadow );
-        background-color: #0000008A;
-        background-image: linear-gradient(45deg, var( --Purple ) , var( --Blue ) );
+    font-size: 12px;
 
-        text-align: center;
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+    gap: 10px;
 
-    }
+    color: #FFF;
+    background-color: #4F545C75;
 
-    .blueButton:hover {
-
-        cursor: pointer;
-        background-color: var( --Highlight2 );
-
-    }
-
-/* Blue button  */
-
-
-
-
-/* Category Pill  */
-
-    .CategoryPill p{
-
-        width: max-content;
-        padding: 0.5rem 1.5rem;
-
-        border-radius: 1.25rem;
-
-        color: var( --MainC2 );
-        background-color: var( --Programmering );
-
-    }
-
-/* Category Pill  */
-
-
-
-
-/* Vote Pill  */
-
-    .VotePill {
-
-        width: min-content;
-        padding: 0.5rem 1.5rem;
-
-        border-radius: 1.25rem;
-
-        background-color: var(--MainC4) ;
-
-
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-        align-items: center;
-
-    }
-
-    .VotePill p{
-
-       color: var(--MainC3);
-
-    }
-
-    .voteButtonIcon {
-
-        width: 1.6rem;
-        height: 1.6rem;
-
-    }
-
-/* Vote Pill  */
-
-
-
-
-/* Section Devider  */
-
-    .SectionDevider {
-
-        width: 0.3rem;
-        height: 0.3rem;
-
-        border-radius: 0.15rem;
-
-        background-color: var( --MainC3 );
-
-    }
-
-/* Section Devider  */
+}

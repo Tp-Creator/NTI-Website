@@ -1,180 +1,37 @@
-/* Includes elements such as ( "Colors" ) , ( "Font" ) , ( "Navbar" ) , ( "Default Style Settings" ) */
-
-
-
-
-/* ( "Font" ) */
-
-    @font-face {
-
-        font-family: 'Nunito-Regular';
-        src: url(font/static/Regular/Nunito-Regular.ttf);
-
-    }
-
-    @font-face {
-
-        font-family: 'Nunito-Medium';
-        src: url(font/static/Regular/Nunito-Medium.ttf);
-
-    }
-
-    @font-face {
-
-        font-family: 'Nunito-Bold';
-        src: url(font/static/Regular/Nunito-Bold.ttf);
-
-    }
-
-/* ( "Font" ) */
-
-
-
-
-/* ( "Text Styles" ) */
-
-    .TitleText {
-
-        font-size: 1.6rem;
-        font-family: 'Nunito-bold';
-
-    }
-
-    .MediumText {
-
-        font-size: 1.4rem;
-        font-family: 'Nunito-Medium';
-
-    }
-
-    .RegularText {
-
-        font-size: 1.2rem;
-        font-family: 'Nunito-Regular';
-
-    }
-
-/* ( "Text Styles" ) */
-
-
-
-
-/* ( "Color Palette" ) */
-
-    :root {
-        
-        /* ( "Filter" ) */
-
-            --YourQuestion: #9D4EDD; 
-
-            --Popular: #EF233C;
-
-            --Latest: #00B4D8;
-
-        /* ( "Filter" ) */
-
-
-        /* ( "Corses" )  */
-
-            --Fysik: #00B4D8;
-
-            --Matte: #EF233C;
-
-            --Svenska: #52B788;
-
-            --Engelska: #FFBA08;
-
-            --Programmering: #FF7D00;
-
-            --Webbutveckling: #560BAD;
-
-        /* ( "Corses" )  */
-
-
-        /* ( "Main Colors" ) */
-        
-            --MainC1: #17161B;
-            --MainC2: #101014; 
-            --MainC3: #4F545C; 
-            --MainC4: #4F545C25;
-
-        /* ( "Main Colors" ) */
-
-
-        /* ( "Hover & Other" ) */
-
-            --Trans: #00000000;
-            --Shadow: #00000000;
-            --Highlight1: #ffffff25;
-            --Highlight2: #00000050;
-
-        /* ( "Hover & Other" ) */
-
-
-        /* ( "Gradient" ) */
-
-            --Purple: #524175;
-            --Blue: #295270;
-
-        /* ( "Gradient" ) */
-
-    }
-
-/* ( "Color Palette" ) */
-
-
-
-
 * {
 
     margin: 0%;
     padding: 0%;
 
-    border: none;
-    outline: none;
-
-    font-size: 10px;
-    font-family: 'Nunito-Regular';
+    color: #fff;
 
     text-decoration: none;
 
-    color: #FFFFFF;
 }
 
 
 
 
-/* ( "Navbar" ) */
+/* Navigation bar  */
+nav {
 
-    nav {
+    width: max-content;
+    height: min-content;
+    padding: 5px;
 
-        width: max-content;
-        padding: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
 
-        border-radius: 2.5rem;
+    background-color: #101014;
 
-        box-shadow: 0rem 0rem 1.5rem var( --Shadow );
-        background-color: var( --MainC2 );
+}
 
-    }
+.navButton {
 
-    .navButton {
+    width: 125px;
+    height: 40px;
 
-        width: 15rem;
-        height: 4rem;
+    background-color: lightcoral;
 
-        border: none;
-        border-radius: 2rem;
-
-        background-color: var( --MainC2 );
-
-    }
-
-    .navButton:hover {
-
-        cursor: pointer;
-        background-color: var( --Highlight2 );
-
-    }
-
-/* ( "Navbar" ) */
+}
