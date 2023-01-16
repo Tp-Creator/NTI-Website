@@ -82,12 +82,11 @@
         <?php 
 
         $question = getQuestionByID($_GET["question"]);
-        console_log($question);
 
         
             //  Gets the course we are in
-            $course = getCourseByID($question[1]);
-            $user = getUserFromId($question[2]);
+            $course = getCourseByID($question->CourseID);
+            $user = getUserFromId($question->UserID);
         ?>
 
 
@@ -98,7 +97,7 @@
             </div>
             <!-- Vote -->
             <button class="pill QCP2">
-                <?php echo $question[6] ?>
+                <?php echo $question->Upvote ?>
                 <!-- <img class="icon" src="" alt=""> -->
             </button>
             <!-- Card information -->
@@ -106,12 +105,12 @@
                 <!-- Username -->
                 <p><?php echo $user[1]; ?></p>
                 <!-- Date -->
-                <p><?php echo $question[5]; ?></p>
+                <p><?php echo $question->dt; ?></p>
             </div>
             <!-- Card title/question -->
-            <p class="RegularText QCP4"><?php echo $question[3] ?></p>
+            <p class="RegularText QCP4"><?php echo $question->Title ?></p>
             <!-- Question description -->
-            <p class="RegularText QCP5"><?php echo $question[4] ?></p>
+            <p class="RegularText QCP5"><?php echo $question->Content ?></p>
         </div>
         
     </section>

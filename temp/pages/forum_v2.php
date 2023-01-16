@@ -79,13 +79,28 @@
     <div class="corses FP3">
         <p>Courses</p>
 
+        <?php 
+        
+            $courses = getCourses();
+
+            for($i = 0; $i < sizeof($courses); $i++){
+
+            
+        
+        ?>
         <!-- Course Button -->
         <button class="buttonType2">
             <!-- Course name -->
-            <p>course 1</p> 
+            <p><?php echo $courses[$i][1] ?></p> 
             <!-- Course color -->
             <div class="courseMark"></div>
         </button>
+
+        <?php 
+        
+            }
+        
+        ?>
 
     </div>
 

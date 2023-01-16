@@ -19,6 +19,21 @@
 
     }
 
+    function getCourses(){
+
+        global $conn;
+    
+        $stmt = $conn->prepare("SELECT * FROM course;");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        
+        $result = $result->fetch_all();
+    
+        //  return an array with all rows where you can reach the data by taking $result[i]
+        return $result;
+
+    }
+
 
     //function to get the course by id
     function getCourseByID($id){
@@ -46,11 +61,11 @@
         $stmt->bind_param("s", $id);
         $stmt->execute();
 
-        $result = $stmt->get_result();
-        $result = $result->fetch_all();
+        $stmt = $stmt->get_result();
+        $result = $stmt->fetch_object();
 
             //  Because we dont want an array in an array we just take out the info before we return it
-        $result = $result[0];
+        // $result = $result[0];
 
             //  Returns the specific course and all it's content
         return $result;
