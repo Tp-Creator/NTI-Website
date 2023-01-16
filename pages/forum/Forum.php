@@ -16,14 +16,14 @@
     <!-- style links -->
     <link rel="stylesheet" href="../../style/main.css">
     <link rel="stylesheet" href="../../style/common.css">
-
+    
     <link rel="stylesheet" href="../../style/pages/forum/forum.css">
 
     <title>Forum</title>
 </head>
 <body>
 
-    <header class="FP1">
+<header class="FP1">
         <!-- Navigation bar -->
         <nav>
             <!-- Navbar button -->
@@ -56,7 +56,6 @@
             </a>
         </nav>
 
-
         <!-- searchbar -->
         <form class="searchbar" action="">
             
@@ -69,9 +68,9 @@
             </button>
         </form>
 
-
         <!-- "ask a question" button -->
-        <button class="buttonType1">Ask a question</button>
+        <button class="buttonType1">ask a question</button>
+
     </header>
 
 
@@ -122,7 +121,7 @@
         ?>
 
 
-                        <!-- hämtar id:t på frågan och lägger till den i url:en -->
+        <!-- hämtar id:t på frågan och lägger till den i url:en -->
         <a href="forumQuestion.php?question=<?php echo $questions[$current][0] ?>">
             <div class="forumCard">
                 <!-- Corse pill -->

@@ -16,7 +16,7 @@
     <!-- style links -->
     <link rel="stylesheet" href="../../style/main.css">
     <link rel="stylesheet" href="../../style/common.css">
-
+    
     <link rel="stylesheet" href="../../style/pages/forum/forum.css">
 
     <title>temp: Forum</title>

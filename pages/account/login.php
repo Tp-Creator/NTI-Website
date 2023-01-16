@@ -21,7 +21,7 @@
             session_start(); // start the PHP_session function 
             $_SESSION['userID'] = $id;
 
-            header("location:/NTI-website/pages/forum/forum.php");
+            header("location:../forum/forum.php");
         } else {
             echo "<p id='fail-msg'>Invalid username or password, try again</p>";
         }
