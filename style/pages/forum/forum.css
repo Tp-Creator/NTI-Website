@@ -36,6 +36,7 @@ footer {
 
 }
 
+/* Question Card Position */
 .QCP1 {
     grid-column: 1;
     grid-row: 1;
@@ -74,6 +75,7 @@ footer {
 
 
 /* Main Forum Page */
+/* Forum Position */
 .FP1 {
     grid-column: 2;
     grid-row: 2;
@@ -96,6 +98,22 @@ footer {
     grid-row: 4;
 }
 
+/* Ask A Question Card Position */
+.AQCP1 {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.AQCP2 {
+    grid-column: 1 / span 4 ;
+    grid-row: 2;
+}
+
+.AQCP3 {
+    grid-column: 1 / span 4 ;
+    grid-row: 3;
+}
+
 .contentFeed {
 
     display: grid;
@@ -114,6 +132,31 @@ footer {
     gap: 25px;
 
     background-color: #101014;
+
+}
+
+.forumCard select {
+
+    padding: 10px 15px;
+
+    border: none;
+
+    background-color: #202126;
+
+}
+
+.forumCard textarea {
+
+    width: fill;
+    padding: 25px;
+    resize: vertical;
+
+    border: none;
+    outline: none;
+
+    font-size: 14px;
+
+    background-color: #202126;
 
 }
 

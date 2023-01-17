@@ -95,7 +95,7 @@
 
             <!-- Course color -->
             <div class="courseMark"></div>
-        </button>¨
+        </button>
 
 
         <?php 
@@ -108,17 +108,26 @@
 
     <!-- Content feed -->
     <section class="contentFeed FP2">
-
-        <div>
-
-            <input placeholder="Question . ." type="text">
-
-            <input placeholder="Description . . ." type="text">
-
+        
+        <!-- Create question card -->
+        <div class="forumCard">
+            <!-- choose course -->
+            <select class="AQCP1" name="" id="">
+                <!-- course -->
+                <option value="">Course 1</option>
+                <!-- course -->
+                <option value="">Course 2</option>
+                <!-- course -->
+                <option value="">Course 3</option>
+            </select>
+            <!-- Input question -->
+            <textarea class="AQCP2" placeholder="Question . . ." name="" rows="1"></textarea>
+            <!-- Input description -->
+            <textarea class="AQCP3" placeholder="Description . . ." name="" rows="10"></textarea>
         </div>
 
-        <?php 
 
+        <?php 
         $questions = getQuestions();
 
         //  Amount of cards is the amount of cards that will be displayed
@@ -160,11 +169,9 @@
 
 
         <?php
-
             }
 
             // postQuestion(1, 1, "fråga", "dfvbskjvbsjbv", "2023-01-13 03:04:11", 0);
-
         ?>
 
 
