@@ -67,14 +67,14 @@
 
             <!-- ( "Search Button" ) -->
             <button class="searchButton">
-                <img class="icon" src="" alt="">
+                <img class="icon" src="../../style/includes/icons/searchIcon.svg" alt="">
             </button>
         </form>
 
     </header>
 
 
-    <p class="FP6">Question</p>
+    <p class="titleText FP6">Question</p>
 
 
     <!-- Question card -->
@@ -90,41 +90,42 @@
         ?>
 
 
+        <!-- Question card  -->
         <div class="forumCard">
             <!-- Corse pill -->
             <div class="pill QCP1">
-                <p><?php echo $course[1] ?></p>
+                <p class="infoText"><?php echo $course[1] ?></p>
             </div>
             <!-- Vote -->
             <button class="pill QCP2">
-                <?php echo $question->Upvote ?>
+                <p class="infoText"><?php echo $question->Upvote ?></p>
                 <!-- <img class="icon" src="" alt=""> -->
             </button>
             <!-- Card information -->
             <div class="pill QCP3">
                 <!-- Username -->
-                <p><?php echo $user[1]; ?></p>
+                <p class="infoText"><?php echo $user[1]; ?></p>
                 <!-- Date -->
-                <p><?php echo $question->dt; ?></p>
+                <p class="infoText"><?php echo $question->dt; ?></p>
             </div>
             <!-- Card title/question -->
-            <p class="RegularText QCP4"><?php echo $question->Title ?></p>
+            <p class="titleText QCP4"><?php echo $question->Title ?></p>
             <!-- Question description -->
-            <p class="RegularText QCP5"><?php echo $question->Content ?></p>
+            <p class="regularText QCP5"><?php echo $question->Content ?></p>
         </div>
         
     </section>
 
 
-    <p class="FP8">Answers</p>
+    <p class="titleText FP8">Answers</p>
 
 
     <!-- Answer question -->
-    <div class="searchbar FP9">
+    <div class="forumCard FP9">
         <!-- ( "Searchfield where user are able to type" ) -->
-        <input class="searchfield" placeholder="Answer 'Username_12345' question . . ." type="text">
+        <input class="searchfield AQP1" placeholder="Answer 'Username_12345' question . . ." type="text">
 
-        <button class="buttonType1">post</button>
+        <button class="buttonType1 AQP2">Post</button>
     </div>
 
 
@@ -135,9 +136,9 @@
             <!-- Card information -->
             <div class="pill QCP1">
                 <!-- Username -->
-                <p>Username_12345</p>
+                <p class="infoText">Username_12345</p>
                 <!-- Date -->
-                <p>YY - MM - DD</p>
+                <p class="infoText">YY - MM - DD</p>
             </div>
 
             <!-- Reply button -->
@@ -145,12 +146,12 @@
             
             <!-- Vote -->
             <button class="pill QCP7">
-                12345
+                <p class="infoText">12345</p>
                 <!-- <img class="icon" src="" alt=""> -->
             </button>
 
             <!-- Card title/answer -->
-            <p class="RegularText QCP4">Answer</p>
+            <p class="regularText QCP4">Answer</p>
         </div>
 
         <!-- Arrow icon  -->
@@ -161,9 +162,9 @@
             <!-- Card information -->
             <div class="pill QCP1">
                 <!-- Username -->
-                <p>Username_12345</p>
+                <p class="infoText">Username_12345</p>
                 <!-- Date -->
-                <p>YY - MM - DD</p>
+                <p class="infoText">YY - MM - DD</p>
             </div>
 
             <!-- Reply button -->
@@ -171,12 +172,12 @@
             
             <!-- Vote -->
             <button class="pill QCP7">
-                12345
+                <p class="infoText">12345</p>
                 <!-- <img class="icon" src="" alt=""> -->
             </button>
 
             <!-- Card title/answer -->
-            <p class="RegularText QCP4">Answer</p>
+            <p class="regularText QCP4">Answer</p>
         </div>
 
     </section>
