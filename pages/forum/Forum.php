@@ -14,8 +14,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- style links -->
-    <link rel="stylesheet" href="../../style/main.css".css">
-    <link rel="stylesheet" href="../../style/common.css">
+    <link rel="stylesheet" href="../../style/main1.css">
+    <link rel="stylesheet" href="../../style/common1.css">
     
     <link rel="stylesheet" href="../../style/pages/forum/forum.css">
 
@@ -84,29 +84,38 @@
 
             for($i = 0; $i < sizeof($courses); $i++){
 
-            
-        
         ?>
+
+
         <!-- Course Button -->
         <button class="buttonType2">
+
             <!-- Course name -->
             <p><?php echo $courses[$i][1] ?></p> 
+
             <!-- Course color -->
             <div class="courseMark"></div>
-        </button>
+        </button>¨
+
 
         <?php 
         
             }
         
         ?>
-
     </div>
 
 
     <!-- Content feed -->
     <section class="contentFeed FP2">
 
+        <div>
+
+            <input placeholder="Question . ." type="text">
+
+            <input placeholder="Description . . ." type="text">
+
+        </div>
 
         <?php 
 
