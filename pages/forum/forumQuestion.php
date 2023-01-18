@@ -137,65 +137,82 @@
 
         <?php 
         
-            for($i = 0; $i < sizeof($answers); $i++){
+            for($ans = 0; $ans < sizeof($answers); $ans++){
 
-                $ansUser = getUserFromId($answers[$i]->UserID);
+                if($answers[$ans]->CommentID != NULL){
+                    continue;
+                }
+
+                $ansUser = getUserFromId($answers[$ans]->UserID);
+                $comments = getCommentsByAnswerID($answers[$ans]->AnswerID);
+                console_log($comments);
         ?>
 
-        <div class="forumCard FQP1">
-            <!-- Card information -->
-            <div class="pill QCP1">
-                <!-- Username -->
-                <p class="infoText"><?php echo $ansUser[1] ?></p>
-                <!-- Date -->
-                <p class="infoText"><?php echo $answers[$i]->dt ?></p>
+            <div class="forumCard FQP1">
+                <!-- Card information -->
+                <div class="pill QCP1">
+                    <!-- Username -->
+                    <p class="infoText"><?php echo $ansUser[1] ?></p>
+                    <!-- Date -->
+                    <p class="infoText"><?php echo $answers[$ans]->dt ?></p>
+                </div>
+
+                <!-- Reply button -->
+                <button class="pill QCP6">Reply</button>
+                
+                <!-- Vote -->
+                <button class="pill QCP7">
+                    <p class="infoText"><?php echo $answers[$ans]->Upvote ?></p>
+                    <!-- <img class="icon" src="" alt=""> -->
+                </button>
+
+                <!-- Card title/answer -->
+                <p class="regularText QCP4"><?php echo $answers[$ans]->Content ?></p>
             </div>
-
-            <!-- Reply button -->
-            <button class="pill QCP6">Reply</button>
-            
-            <!-- Vote -->
-            <button class="pill QCP7">
-                <p class="infoText"><?php echo $answers[$i]->Upvote ?></p>
-                <!-- <img class="icon" src="" alt=""> -->
-            </button>
-
-            <!-- Card title/answer -->
-            <p class="regularText QCP4"><?php echo $answers[$i]->Content ?></p>
-        </div>
         
+
+            <?php
+            
+                for($com = 0; $com < sizeof($comments); $com++){
+                    $comUser = getUserFromId($comments[$com]->UserID);
+                    console_log("commenting User:");
+                    console_log($comUser);
+
+            ?>
+        
+
+            <!-- Arrow icon  -->
+            <img src="" alt="">
+
+            <!-- Comment to answer above -->
+            <div class="forumCard FQP3">
+                <!-- Card information -->
+                <div class="pill QCP1">
+                    <!-- Username -->
+                    <p class="infoText"><?php echo $comUser[1] ?></p>
+                    <!-- Date -->
+                    <p class="infoText"><?php echo $comments[$com]->dt ?></p>
+                </div>
+
+                <!-- Reply button -->
+                <button class="pill QCP6">Reply</button>
+                
+                <!-- Vote -->
+                <button class="pill QCP7">
+                    <p class="infoText"><?php echo $comments[$com]->Upvote ?></p>
+                    <!-- <img class="icon" src="" alt=""> -->
+                </button>
+
+                <!-- Card title/answer -->
+                <p class="regularText QCP4"><?php echo $comments[$com]->Content ?></p>
+            </div>
 
         <?php
 
+                }
             }
 
         ?>
-
-        <!-- Arrow icon  -->
-        <img src="" alt="">
-
-        <!-- Comment to answer above -->
-        <div class="forumCard FQP3">
-            <!-- Card information -->
-            <div class="pill QCP1">
-                <!-- Username -->
-                <p class="infoText">Username_12345</p>
-                <!-- Date -->
-                <p class="infoText">YY - MM - DD</p>
-            </div>
-
-            <!-- Reply button -->
-            <button class="pill QCP6">Reply</button>
-            
-            <!-- Vote -->
-            <button class="pill QCP7">
-                <p class="infoText">12345</p>
-                <!-- <img class="icon" src="" alt=""> -->
-            </button>
-
-            <!-- Card title/answer -->
-            <p class="regularText QCP4">Answer</p>
-        </div>
 
     </section>
     

@@ -45,6 +45,7 @@ CREATE TABLE forum_question (
 CREATE TABLE forum_answer (
     AnswerID int NOT NULL PRIMARY KEY AUTO_INCREMENT,
     QuestionID int NOT NULL,
+    CommentID int,
     UserID int NOT NULL,
     Content varchar(1000),
     dt datetime,
@@ -75,4 +76,4 @@ VALUES (1, 1, 'Hur gör man en webbsida i Javascript?', 'Jag har precis börjat 
 
 /* Lägger till ett svar på frågan ovan i databasen */
 INSERT INTO forum_answer (QuestionID, UserID, Content, dt, Upvote)
-VALUES (1, 2, 'Den bästa lösningen är att Googla. Annars kan ni fråga mig ;)', '2022-09-10 08:45:37', 4);
+VALUES (1, 2, 'Boom tjackalack! Den bästa lösningen är att Googla. Annars kan ni fråga mig ;)', '2022-09-10 08:45:37', 4);

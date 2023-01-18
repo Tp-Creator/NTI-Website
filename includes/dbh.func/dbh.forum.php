@@ -108,4 +108,26 @@
 
     }
 
+
+    function getCommentsByAnswerID($id){
+        global $conn;
+
+        // creates a call to the database in a safe way so that sql injections should not be able to take place
+        $stmt = $conn->prepare("SELECT * FROM forum_answer WHERE CommentID = ?;");
+        $stmt->bind_param("i", $id);
+        $stmt->execute();
+
+        $stmt = $stmt->get_result();
+        $result = [];
+        while ($finfo = $stmt->fetch_object()) {
+            array_push($result, $finfo);
+        }
+
+        console_log($result);
+
+        return $result;
+
+
+    }
+
 ?>
