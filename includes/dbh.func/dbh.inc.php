@@ -14,7 +14,7 @@
 $dbServername = "localhost";
 $dbUsername = "root";
 $dbPassword = "";
-// $dbPassword = "APL-UPPGIFTER3";
+$dbPassword = "APL-UPPGIFTER3";
 $dbName = "nti_db";
 
 //Creates connection to the MySQL database

@@ -135,13 +135,20 @@
     <!-- Content feed ("All the already posted answers") -->
     <section class="answerFeed FP10">
 
+        <?php 
+        
+            for($i = 0; $i < sizeof($answers); $i++){
+
+                $ansUser = getUserFromId($answers[$i]->UserID);
+        ?>
+
         <div class="forumCard FQP1">
             <!-- Card information -->
             <div class="pill QCP1">
                 <!-- Username -->
-                <p class="infoText">Username_12345</p>
+                <p class="infoText"><?php echo $ansUser[1] ?></p>
                 <!-- Date -->
-                <p class="infoText">YY - MM - DD</p>
+                <p class="infoText"><?php echo $answers[$i]->dt ?></p>
             </div>
 
             <!-- Reply button -->
@@ -149,13 +156,20 @@
             
             <!-- Vote -->
             <button class="pill QCP7">
-                <p class="infoText">12345</p>
+                <p class="infoText"><?php echo $answers[$i]->Upvote ?></p>
                 <!-- <img class="icon" src="" alt=""> -->
             </button>
 
             <!-- Card title/answer -->
-            <p class="regularText QCP4">Answer</p>
+            <p class="regularText QCP4"><?php echo $answers[$i]->Content ?></p>
         </div>
+        
+
+        <?php
+
+            }
+
+        ?>
 
         <!-- Arrow icon  -->
         <img src="" alt="">
