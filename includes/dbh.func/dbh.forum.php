@@ -97,7 +97,10 @@
         $stmt->execute();
 
         $stmt = $stmt->get_result();
-        $result = $stmt->fetch_object();
+        $result = [];
+        while ($finfo = $stmt->fetch_object()) {
+            array_push($result, $finfo);
+        }
 
         console_log($result);
 
