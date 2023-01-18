@@ -113,12 +113,23 @@
         <form class="forumCard">
             <!-- choose course -->
             <select class="AQCP1" name="" id="">
-                <!-- course -->
-                <option value="">Course 1</option>
-                <!-- course -->
-                <option value="">Course 2</option>
-                <!-- course -->
-                <option value="">Course 3</option>
+                
+                <?php 
+                
+                        //  Loops as many choices as there are courses in the db
+                    for($i = 0; $i < sizeof($courses); $i++){
+                    
+                ?>
+
+                <!-- course $courses[$i][1] is the name of the course currently looped-->
+                <option value=""><?php echo $courses[$i][1] ?></option>
+                
+                <?php 
+                
+                    }
+
+                ?>
+
             </select>
             <!-- Input question -->
             <textarea class="AQCP2" placeholder="Question . . ." name="" rows="2"></textarea>

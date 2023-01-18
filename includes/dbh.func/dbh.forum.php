@@ -87,4 +87,22 @@
         //Felhantering behövs (om det inte gick att skapa)
     }
 
+
+    function fetchAnswersWithQuestionID($ID){
+        global $conn;
+
+        // creates a call to the database in a safe way so that sql injections should not be able to take place
+        $stmt = $conn->prepare("SELECT * FROM forum_answer WHERE QuestionID = ?;");
+        $stmt->bind_param("i", $ID);
+        $stmt->execute();
+
+        $stmt = $stmt->get_result();
+        $result = $stmt->fetch_object();
+
+        console_log($result);
+
+        return $result;
+
+    }
+
 ?>

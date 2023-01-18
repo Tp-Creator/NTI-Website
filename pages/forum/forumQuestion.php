@@ -82,11 +82,14 @@
         <?php 
 
         $question = getQuestionByID($_GET["question"]);
-
         
-            //  Gets the course we are in
-            $course = getCourseByID($question->CourseID);
-            $user = getUserFromId($question->UserID);
+            // Gets all the answers
+        $answers = fetchAnswersWithQuestionID($_GET["question"]);
+            //  Gets the course from the question
+        $course = getCourseByID($question->CourseID);
+            //  Gets the user that asked the question
+        $user = getUserFromId($question->UserID);
+
         ?>
 
 
