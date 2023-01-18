@@ -4,6 +4,22 @@
     include_once '../../includes/dbh.func/dbh.all.php';
     include_once '../../includes/loginCheck.php';
 
+    //check if this is a login request
+    if($_POST) {
+
+
+
+        if($_POST["questionAnswer"] != ""){
+            postAnswer($_GET["question"], $_SESSION['userID'], $_POST["questionAnswer"], date("Y-m-d H:i:s"));
+            
+                //  This redirects us to the same page again witch will give the result that we can not reload the page and repost the answer!
+            $q = $_GET['question'];
+            header("Location: ./forumQuestion.php?question=$q");
+            exit();
+            
+        }
+    }
+
 ?>
 
 <!DOCTYPE html>
@@ -57,8 +73,9 @@
         </nav>
 
         <!-- "ask a question" button -->
-        <button class="buttonType1">Back to forum</button>
-
+        <a href="./Forum.php">
+            <button class="buttonType1">Back to forum</button>
+        </a>
         <!-- searchbar -->
         <form class="searchbar" action="">
             
@@ -125,10 +142,13 @@
 
     <!-- Answer question -->
     <div class="forumCard FP9">
-        <!-- ( "Searchfield where user are able to type" ) -->
-        <input class="searchfield AQP1" placeholder="Answer 'Username_12345' question . . ." type="text">
-
-        <button class="buttonType1 AQP2">Post</button>
+        <form name="postAnswer" method="post" action="./forumQuestion.php?question=<?php echo $_GET["question"]?>">
+            <!-- ( "Searchfield where user are able to type" )  The name of the user that asked the question -->
+            <input class="searchfield AQP1" placeholder="Answer <?php echo $user[1]; ?>'s question . . ." type="text" name="questionAnswer">
+    
+            <input class="buttonType1 AQP2" type="submit">
+            <!-- <button class="buttonType1 AQP2">Post</button> -->
+        </form>
     </div>
 
 
@@ -145,7 +165,6 @@
 
                 $ansUser = getUserFromId($answers[$ans]->UserID);
                 $comments = getCommentsByAnswerID($answers[$ans]->AnswerID);
-                console_log($comments);
         ?>
 
             <div class="forumCard FQP1">
@@ -175,8 +194,6 @@
             
                 for($com = 0; $com < sizeof($comments); $com++){
                     $comUser = getUserFromId($comments[$com]->UserID);
-                    console_log("commenting User:");
-                    console_log($comUser);
 
             ?>
         

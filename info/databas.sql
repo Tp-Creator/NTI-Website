@@ -77,3 +77,7 @@ VALUES (1, 1, 'Hur gör man en webbsida i Javascript?', 'Jag har precis börjat 
 /* Lägger till ett svar på frågan ovan i databasen */
 INSERT INTO forum_answer (QuestionID, UserID, Content, dt, Upvote)
 VALUES (1, 2, 'Boom tjackalack! Den bästa lösningen är att Googla. Annars kan ni fråga mig ;)', '2022-09-10 08:45:37', 4);
+
+/* Lägger till en kommentar till svaret ovan */
+INSERT INTO forum_answer (QuestionID, UserID, CommentID, Content, dt, Upvote)
+VALUES (1, 1, 1, 'Tack så mycket för hjälpen Nicklas! Förresten har du någon server som står och skräpar? Skulle behöva en för att sjösätta webbsidan ;)', '2023-01-16 14:46:04', 1);

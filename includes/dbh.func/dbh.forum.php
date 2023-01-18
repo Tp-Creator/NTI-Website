@@ -88,6 +88,19 @@
     }
 
 
+    function postAnswer($QuestionID, $userID, $Content, $datetime){
+        global $conn;
+
+        // creates a call to the database in a safe way so that sql injections should not be able to take place
+        $stmt = $conn->prepare("INSERT INTO forum_answer (QuestionID, UserID, Content, dt, Upvote) VALUES (?, ?, ?, ?, 0)");
+        $stmt->bind_param("iiss", $QuestionID, $userID, $Content, $datetime);
+
+        $stmt->execute();
+        //Felhantering behövs (om det inte gick att skapa)
+        
+    }
+
+
     function fetchAnswersWithQuestionID($ID){
         global $conn;
 
@@ -101,8 +114,6 @@
         while ($finfo = $stmt->fetch_object()) {
             array_push($result, $finfo);
         }
-
-        console_log($result);
 
         return $result;
 
@@ -122,8 +133,6 @@
         while ($finfo = $stmt->fetch_object()) {
             array_push($result, $finfo);
         }
-
-        console_log($result);
 
         return $result;
 
