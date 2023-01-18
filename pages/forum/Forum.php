@@ -13,10 +13,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- style links -->
+    <!-- Basic style links -->
     <link rel="stylesheet" href="../../style/main1.css">
     <link rel="stylesheet" href="../../style/common1.css">
-    
+    <!-- Page style links -->
     <link rel="stylesheet" href="../../style/pages/forum/forum.css">
 
     <title>Forum</title>
@@ -64,12 +64,12 @@
 
             <!-- ( "Search Button" ) -->
             <button class="searchButton">
-                <img class="icon" src="" alt="">
+                <img class="icon" src="../../style/includes/icons/searchIcon.svg" alt="">
             </button>
         </form>
 
         <!-- "ask a question" button -->
-        <button class="buttonType1">ask a question</button>
+        <button class="buttonType1">Ask a question</button>
 
     </header>
 
@@ -110,7 +110,7 @@
     <section class="contentFeed FP2">
         
         <!-- Create question card -->
-        <div class="forumCard">
+        <form class="forumCard">
             <!-- choose course -->
             <select class="AQCP1" name="" id="">
                 <!-- course -->
@@ -121,10 +121,10 @@
                 <option value="">Course 3</option>
             </select>
             <!-- Input question -->
-            <textarea class="AQCP2" placeholder="Question . . ." name="" rows="1"></textarea>
+            <textarea class="AQCP2" placeholder="Question . . ." name="" rows="2"></textarea>
             <!-- Input description -->
             <textarea class="AQCP3" placeholder="Description . . ." name="" rows="10"></textarea>
-        </div>
+        </form>
 
 
         <?php 
@@ -177,7 +177,7 @@
 
     </section>
     
-
+    
     <footer class="FP4"></footer>
 
 </body>

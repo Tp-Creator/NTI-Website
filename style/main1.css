@@ -1,34 +1,84 @@
-* {
+/* variables */
+:root {
+/* Main Colors */
+    --mainC1: #17161B;
+    --mainC2: #101014;
+    --mainC3: #202126;
+    --mainC4: #4F545C;
+    --mainC5: #FFFFFF;
+/* Courses Colors */
+    --FYSFYS0: #00B4D8;
+    --MATMAT0: #EF233C;
+    --SVESVE0: #FFBA08;
+    --ENGENG: #52B788;
+    --PRRPRR: #FF7D00;
+    --WEUWEB: #560BAD;
+/* Sizes based on base 16px font */
+    --size_10: 0.625rem;
+    --size_12: 0.75rem;
+    --size_14: 0.875rem;
+    --size_16: 1rem;
+    --size_18: 1.125rem;
+    --size_20: 1.25rem;
+    --size_22: 1.375rem;
+    --size_24: 1.5rem;
+    --size_30: 1.875rem;
+    --size_100vh: 100vh;
+}
 
+
+/* Text & font */
+.titleText {
+    font-size: var(--size_18);
+}
+
+.regularText {
+    font-size: var(--size_16);
+}
+
+.infoText {
+    font-size: var(--size_12);
+}
+
+
+* {
     margin: 0%;
     padding: 0%;
+
+    border: none;
 
     color: #fff;
 
     text-decoration: none;
-
 }
 
 /* Navigation bar  */
 nav {
-
     width: max-content;
     height: min-content;
     padding: 5px;
+
+    border-radius: var(--size_30);
 
     display: flex;
     flex-direction: row;
     gap: 5px;
 
     background-color: #101014;
-
 }
 
 .navButton {
-
     width: 125px;
     height: 40px;
 
+    border-radius: var(--size_30);
+
     background-color: #101014;
+}
+
+.navButton:hover {
+
+    cursor: pointer;
+    background-color: #FFFFFF25;
 
 }

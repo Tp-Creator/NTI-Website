@@ -1,20 +1,29 @@
 /* Buttons  */
 .buttonType1 {
+    padding: 0.75rem 3rem 0.75rem 3rem;
 
-    width: 200px;
-    height: 40px;
+    border-radius: var(--size_100vh);
 
-    background-color: #4F545C;
+    font-size: var(--size_14);
 
+    background: linear-gradient(45deg, rgba(41,82,112,1) 0%, rgba(82,65,117,1) 100%);
+}
+
+.buttonType1:hover {
+    cursor: pointer;
 }
 
 .buttonType2 {
-
     width: 150px;
     height: 40px;
 
-    background-color: #4F545C;
+    border-radius: var(--size_100vh);
 
+    background-color: #4F545C;
+}
+
+.buttonType2:hover {
+    cursor: pointer;
 }
 
 
@@ -25,55 +34,54 @@
     flex-grow: 1;
 
     width: fill;
-    height: 40px;
+    min-height: 3.125em;
     padding-left: 25px;
+
+    border-radius: var(--size_100vh);
 
     display: flex;
     justify-content: center;
 
     background-color: #101014;
-
 }
 
 .searchfield {
-
     width: 100%;
 
     border: none;
     outline: none;
 
+    font-size: var(--size_14);
+
     color: #FFFFFF;
     background-color: #101014;
-
 }
 
 .searchButton {
-
     width: 75px;
     height: fill;
     margin: 5px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border-radius: var(--size_24);
+
+    display: grid;
+    place-items: center;
 
     background-color: #101014;
 }
 
 .searchButton:hover {
-
     cursor: pointer;
-
+    background-color: #FFFFFF25;
 }
-
-
 
 
 /* Pill */
 .pill {
-
     width: max-content;
     padding: 5px 10px;
+
+    border-radius: var(--size_24);
 
     font-size: 12px;
 
@@ -84,5 +92,13 @@
 
     color: #FFF;
     background-color: #4F545C75;
+}
 
+
+
+
+/* icon */
+.icon {
+    width: 1.6em;
+    height: 1.6em;
 }
