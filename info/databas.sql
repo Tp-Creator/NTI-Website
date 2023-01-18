@@ -66,13 +66,13 @@ VALUES ('hej@hejj.com', 'Niklas', 'Passwords123');
 -- VALUES ('Hej, här kommer ett meddelande!', '2022-11-09 10:02:16', 1);
 
 /* Lägger till en kurs Programering 1  och färgen Orange*/
-INSERT INTO Course (CourseName, CourseColor)
+INSERT INTO course (CourseName, CourseColor)
 VALUES ('Programering 1', '#FF7D00');
 
 /* Lägger till en fråga i databasen */
-INSERT INTO Forum_question (CourseID, UserID, Title, Content, dt, Upvote)
+INSERT INTO forum_question (CourseID, UserID, Title, Content, dt, Upvote)
 VALUES (1, 1, 'Hur gör man en webbsida i Javascript?', 'Jag har precis börjat 2:an och har kommit på att jag vill göra en webbsida. Jag tänker mig att den ska använda sig av php och en databas, men har inga förkunskaper. Hur gör man egentligen?', '2022-09-09 03:02:16', 12345);
 
 /* Lägger till ett svar på frågan ovan i databasen */
-INSERT INTO Forum_answer (QuestionID, UserID, Content, dt, Upvote)
+INSERT INTO forum_answer (QuestionID, UserID, Content, dt, Upvote)
 VALUES (1, 2, 'Den bästa lösningen är att Googla. Annars kan ni fråga mig ;)', '2022-09-10 08:45:37', 4);
