@@ -44,7 +44,9 @@
 
     <header class="FP1">
         
-        <?php drawNavbar() ?>
+        <nav>
+            <?php drawNavbar() ?>
+        </nav>
 
         <!-- "ask a question" button -->
         <a href="./Forum.php">

@@ -28,7 +28,9 @@
 
 <header class="FP1">
         <!-- funktion to draw the navbar -->
-    <?php drawNavbar() ?>
+        <nav>
+            <?php drawNavbar() ?>
+        </nav>
 
     <!-- searchbar -->
     <form class="searchbar" action="">
