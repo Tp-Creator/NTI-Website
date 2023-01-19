@@ -1,8 +1,11 @@
 <?php 
 
-    //Includes functions related to the db
+        //  Includes functions related to the db
     include_once '../../includes/dbh.func/dbh.all.php';
     include_once '../../includes/loginCheck.php';
+
+        //  Includes php elements
+    include_once '../elements/elements_inc.php';
 
     //check if this is a login request
     if($_POST) {
@@ -40,37 +43,8 @@
 <body>
 
     <header class="FP1">
-        <!-- Navigation bar -->
-        <nav>
-            <!-- Navbar button -->
-            <a href="">
-                <button class="navButton">Home</button>
-            </a>
-            <!-- Navbar button -->
-            <a href="">
-                <button class="navButton">News</button>
-            </a>
-            <!-- Navbar button -->
-            <a href="forum.php">
-                <button class="navButton">Forum</button>
-            </a>
-            <!-- Navbar button -->
-            <a href="">
-                <button class="navButton">Schedule</button>
-            </a>
-            <!-- Navbar button -->
-            <a href="">
-                <button class="navButton">Memes</button>
-            </a>
-            <!-- Navbar button -->
-            <a href="">
-                <button class="navButton">Games</button>
-            </a>
-            <!-- Navbar button -->
-            <a href="">
-                <button class="navButton">Account</button>
-            </a>
-        </nav>
+        
+        <?php drawNavbar() ?>
 
         <!-- "ask a question" button -->
         <a href="./Forum.php">
