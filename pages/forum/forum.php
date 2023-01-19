@@ -27,7 +27,7 @@
 <body>
 
 <header class="FP1">
-        
+        <!-- funktion to draw the navbar -->
     <?php drawNavbar() ?>
 
     <!-- searchbar -->
