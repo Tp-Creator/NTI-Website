@@ -91,19 +91,15 @@
             <select class="AQCP1" name="" id="">
                 
                 <?php 
-                
                         //  Loops as many choices as there are courses in the db
                     for($i = 0; $i < sizeof($courses); $i++){
-                    
                 ?>
 
-                <!-- course $courses[$i][1] is the name of the course currently looped-->
-                <option value=""><?php echo $courses[$i][1] ?></option>
+                    <!-- course $courses[$i][1] is the name of the course currently looped-->
+                    <option value=""><?php echo $courses[$i][1] ?></option>
                 
                 <?php 
-                
                     }
-
                 ?>
 
             </select>
@@ -111,6 +107,7 @@
             <textarea class="AQCP2" placeholder="Question . . ." name="" rows="2"></textarea>
             <!-- Input description -->
             <textarea class="AQCP3" placeholder="Description . . ." name="" rows="10"></textarea>
+            <button type="submit">Post</button>
         </form>
 
 
