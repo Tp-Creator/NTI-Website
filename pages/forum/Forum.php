@@ -2,7 +2,22 @@
 
     //Includes functions related to the db
     include_once '../../includes/dbh.func/dbh.all.php';
+<<<<<<< Updated upstream:pages/forum/Forum.php
     include_once '../../includes/loginCheck.php';
+=======
+
+        //  Includes php elements
+    include_once '../elements/elements_inc.php';
+
+    if($_POST){
+
+    console_log($_POST);
+
+        // postQuestion($_POST["courseID"], $_SESSION["userID"], $_POST["title"], $_POST["content"], date("Y-m-d H:i:s"));
+
+    }
+
+>>>>>>> Stashed changes:pages/forum/forum.php
 
 ?>
 
@@ -106,6 +121,48 @@
 
     <!-- Content feed -->
     <section class="contentFeed FP2">
+<<<<<<< Updated upstream:pages/forum/Forum.php
+=======
+        
+        <!-- Create question card -->
+
+        <form method="post" action="./forum.php">
+  <label for="cars">Choose a car:</label>
+  <select id="cars" name="cars">
+    <option value="volvo">Volvo XC90</option>
+    <option value="saab">Saab 95</option>
+    <option value="mercedes">Mercedes SLK</option>
+    <option value="audi">Audi TT</option>
+  </select>
+  <input type="submit" value="Submit">
+</form>
+
+<form class="forumCard" method="post" action="./forum.php">
+            <!-- choose course -->
+            <select class="AQCP1" name="courseID" id="courseID">
+                
+                <!--?php 
+                        //  Loops as many choices as there are courses in the db
+                    for($i = 0; $i < sizeof($courses); $i++){
+                ?-->
+
+                    <!-- course $courses[$i][1] is the name of the course currently looped-->
+                    <option value="123"><?php echo $courses[$i][1] ?></option>
+                
+                <!--?php 
+                    }
+                ?-->
+
+            </select>
+            <!-- Input question -->
+            <textarea class="AQCP2" placeholder="Question . . ." name="title" rows="2"></textarea>
+            <!-- Input description -->
+            <textarea class="AQCP3" placeholder="Description . . ." name="content" rows="10"></textarea>
+            <button type="submit">Post</button>
+        </form>
+>>>>>>> Stashed changes:pages/forum/forum.php
+
+        
 
 
         <?php 
