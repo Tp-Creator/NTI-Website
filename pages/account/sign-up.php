@@ -103,27 +103,23 @@
         }
     ?>
 
-    <section>
+    <form name="sign-up" method="post" action="./sign-up.php">
 
         <h1>Create account</h1>
 
-        <form name="sign-up" method="post" action="./sign-up.php">
+        <input placeholder="Username" type="text" name="username">
 
-            <input placeholder="Username" type="text" name="username">
+        <input placeholder="Email" type="text" type="email" name="email">
 
-            <input placeholder="Email" type="text" type="email" name="email">
+        <input placeholder="Password" type="password" name="pwd">
 
-            <input placeholder="Password" type="password" name="pwd">
+        <input placeholder="Retype Password" type="password" name="re-pwd">
 
-            <input placeholder="Retype Password" type="password" name="re-pwd">
-
-            <button type="submit" id="submit" onclick="return validateForm(this.form)">Create your account</button>
-
-        </form>
+        <button type="submit" id="submit" onclick="return validateForm(this.form)">Create your account</button>
 
         <p>Already have an account? <a href="login.php">Return to log in</a></p>
 
-    </section>
+    </form>
 
 </body>
 </html>

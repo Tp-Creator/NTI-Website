@@ -4,24 +4,29 @@ body {
 
     display: grid;
     place-content: center;
-    gap: 1em;
+    grid-template-columns: 1fr minmax(15em , 25em) 1fr;
+    gap: 2em;
 
     background-color: #17161B;
 }
 
-section {
+form {
+    grid-column: 2;
+
+    width: fill;
+    height: max-content;
     padding: 2rem;
 
     border-radius: 10px;
 
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: var(--size_30);
 
     background-color: #101014;
 }
 
-section h1 {
+form h1 {
     margin: 1em 0em 1em 0em;
 
     font-size: var(--size_18);
@@ -29,14 +34,7 @@ section h1 {
     text-align: center;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    gap: var(--size_30);
-}
-
 input {
-    width: fill;
     padding: 1em;
 
     border-radius: 5px;
@@ -47,7 +45,6 @@ input {
 }
 
 button {
-    width: fill;
     padding: 1em;
 
     border-radius: 5px;
@@ -71,6 +68,8 @@ a {
 }
 
 #fail-msg {
+    grid-column: 2;
+
     padding: 1.5rem;
 
     border: 2px solid #F15A43;
