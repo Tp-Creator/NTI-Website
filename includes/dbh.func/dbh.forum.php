@@ -76,12 +76,12 @@
         //
         //  function to post a question to the forum
         //
-    function postQuestion($courseID, $userID, $title, $content, $datetime, $upvote){
+    function postQuestion($courseID, $userID, $title, $content, $datetime){
         global $conn;
 
         // creates a call to the database in a safe way so that sql injections should not be able to take place
-        $stmt = $conn->prepare("INSERT INTO forum_question (CourseID, userID, Title, Content, dt, Upvote) VALUES (?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("iisssi", $courseID, $userID, $title, $content, $datetime, $upvote);
+        $stmt = $conn->prepare("INSERT INTO forum_question (CourseID, userID, Title, Content, dt, Upvote) VALUES (?, ?, ?, ?, ?, 0)");
+        $stmt->bind_param("iisss", $courseID, $userID, $title, $content, $datetime);
 
         $stmt->execute();
         //Felhantering behövs (om det inte gick att skapa)

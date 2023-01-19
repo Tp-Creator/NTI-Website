@@ -5,7 +5,21 @@
     include_once '../../includes/dbh.func/dbh.all.php';
 
         //  Includes php elements
-    include_once '../elements/elements_inc.php'
+    include_once '../elements/elements_inc.php';
+
+    if($_POST){
+
+        if($_POST["courseID"] != "" AND $_POST["title"] != "" AND $_POST["content"] != ""){
+
+            postQuestion($_POST["courseID"], $_SESSION['userID'], $_POST["title"], $_POST["content"], date("Y-m-d H:i:s"));
+            
+            header("Location: ./forum.php");
+            exit();
+
+        }
+
+
+    }
 
 ?>
 
@@ -15,6 +29,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
     <!-- Basic style links -->
     <link rel="stylesheet" href="../../style/main1.css">
@@ -28,7 +45,9 @@
 
 <header class="FP1">
         <!-- funktion to draw the navbar -->
-    <?php drawNavbar() ?>
+        <nav>
+            <?php drawNavbar() ?>
+        </nav>
 
     <!-- searchbar -->
     <form class="searchbar" action="">
@@ -82,33 +101,31 @@
 
     <!-- Content feed -->
     <section class="contentFeed FP2">
-        
-        <!-- Create question card -->
-        <form class="forumCard">
+
+
+        <form class="forumCard" method="post" action="./forum.php">
+
             <!-- choose course -->
-            <select class="AQCP1" name="" id="">
+            <select class="AQCP1" name="courseID" id="courseID">
                 
                 <?php 
-                
                         //  Loops as many choices as there are courses in the db
                     for($i = 0; $i < sizeof($courses); $i++){
-                    
                 ?>
 
-                <!-- course $courses[$i][1] is the name of the course currently looped-->
-                <option value=""><?php echo $courses[$i][1] ?></option>
+                    <!-- course $courses[$i][1] is the name of the course currently looped-->
+                    <option value="<?php echo $courses[$i][0] ?>"><?php echo $courses[$i][1] ?></option>
                 
                 <?php 
-                
                     }
-
                 ?>
 
             </select>
             <!-- Input question -->
-            <textarea class="AQCP2" placeholder="Question . . ." name="" rows="2"></textarea>
+            <textarea class="AQCP2" placeholder="How to do a for loop in Javascript" name="title" rows="2"></textarea>
             <!-- Input description -->
-            <textarea class="AQCP3" placeholder="Description . . ." name="" rows="10"></textarea>
+            <textarea class="AQCP3" placeholder="I am trying to make loop that can solve..." name="content" rows="10"></textarea>
+            <button type="submit">Post</button>
         </form>
 
 

@@ -15,27 +15,16 @@
                             ["Account",     "urladress.php"]
                         ];
         
-    
-?> 
-
-    <nav> 
-    
-    <?php 
-
         for($b = 0; $b < sizeof($navbuttons); $b++){
             console_log($b);
 
-    ?>
+?>
             
-                <!-- Navbar button -->
-                <a class="navButton" href="<?php echo $navbuttons[$b][1]; ?>"><?php echo $navbuttons[$b][0]; ?></a>
+            <!-- Navbar button -->
+            <a class="navButton" href="<?php echo $navbuttons[$b][1]; ?>"><?php echo $navbuttons[$b][0]; ?></a>
             
 <?php
         }
-
-    ?>
-        </nav>
-    <?php
-
     }
+
 ?>
