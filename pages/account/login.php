@@ -44,15 +44,15 @@
 </head>
 <body>
 
-    <form name="login" method="post" action="./login.php">
+    <form class="infoCard" name="login" method="post" action="./login.php">
 
-        <h1>Welcome, consider logging in</h1>
+        <h1>Welcome! Consider logging in</h1>
 
         <input placeholder="Email" type="text" name="email">
 
         <input placeholder="Password" type="password" name="pwd">
 
-        <button type="submit" id="submit">Log in</button>
+        <button class="button" type="submit" id="submit">Log in</button>
         
         <p>Dont have any account? No problem,<a href="sign-up.php">create one here!</a></p>
     </form>

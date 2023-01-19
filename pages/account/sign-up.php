@@ -103,7 +103,7 @@
         }
     ?>
 
-    <form name="sign-up" method="post" action="./sign-up.php">
+    <form class="infoCard" name="sign-up" method="post" action="./sign-up.php">
 
         <h1>Create account</h1>
 
@@ -115,7 +115,7 @@
 
         <input placeholder="Retype Password" type="password" name="re-pwd">
 
-        <button type="submit" id="submit" onclick="return validateForm(this.form)">Create your account</button>
+        <button class="button" type="submit" id="submit" onclick="return validateForm(this.form)">Create your account</button>
 
         <p>Already have an account? <a href="login.php">Return to log in</a></p>
 
