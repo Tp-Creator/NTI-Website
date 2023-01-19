@@ -141,12 +141,11 @@
 
 
     <!-- Answer question -->
-    <div class="forumCard FP9">
-        <form name="postAnswer" method="post" action="./forumQuestion.php?question=<?php echo $_GET["question"]?>">
+        <form class="forumCard FP9" name="postAnswer" method="post" action="./forumQuestion.php?question=<?php echo $_GET["question"]?>">
             <!-- ( "Searchfield where user are able to type" )  The name of the user that asked the question -->
             <input class="searchfield AQP1" placeholder="Answer <?php echo $user[1]; ?>'s question . . ." type="text" name="questionAnswer">
     
-            <input class="buttonType1 AQP2" type="submit">
+            <button class="buttonType1 AQP2" type="submit">Post</button>
             <!-- <button class="buttonType1 AQP2">Post</button> -->
         </form>
     </div>

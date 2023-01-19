@@ -46,7 +46,7 @@
     
 <section>
 
-    <h1>Welcome, consider logging in.</h1>
+    <h1>Welcome, consider logging in</h1>
 
         <form name="login" method="post" action="./login.php">
 

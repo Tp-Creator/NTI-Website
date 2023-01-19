@@ -107,10 +107,12 @@ a {
 
     padding: 25px;
 
+    border: 2px solid #F15A43;
     border-radius: 10px;
 
     font-size: 14px;
+    text-align: center;
 
-    color: #EF233C;
-    background-color: #101014;
+    color: #ffffff;
+    background-color: #4D2724;
 }
