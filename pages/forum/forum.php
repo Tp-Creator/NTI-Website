@@ -1,8 +1,11 @@
 <?php 
 
-    //Includes functions related to the db
-    include_once '../../includes/dbh.func/dbh.all.php';
+        //  Includes functions related to the db
     include_once '../../includes/loginCheck.php';
+    include_once '../../includes/dbh.func/dbh.all.php';
+
+        //  Includes php elements
+    include_once '../elements/elements_inc.php'
 
 ?>
 
@@ -24,54 +27,25 @@
 <body>
 
 <header class="FP1">
-        <!-- Navigation bar -->
-        <nav>
-            <!-- Navbar button -->
-            <a href="">
-                <button class="navButton">Home</button>
-            </a>
-            <!-- Navbar button -->
-            <a href="">
-                <button class="navButton">News</button>
-            </a>
-            <!-- Navbar button -->
-            <a href="forum.php">
-                <button class="navButton">Forum</button>
-            </a>
-            <!-- Navbar button -->
-            <a href="">
-                <button class="navButton">Schedule</button>
-            </a>
-            <!-- Navbar button -->
-            <a href="">
-                <button class="navButton">Memes</button>
-            </a>
-            <!-- Navbar button -->
-            <a href="">
-                <button class="navButton">Games</button>
-            </a>
-            <!-- Navbar button -->
-            <a href="">
-                <button class="navButton">Account</button>
-            </a>
-        </nav>
+        <!-- funktion to draw the navbar -->
+    <?php drawNavbar() ?>
 
-        <!-- searchbar -->
-        <form class="searchbar" action="">
-            
-            <!-- ( "Searchfield where user are able to type" ) -->
-            <input class="searchfield" placeholder="Search . . ." type="text">
+    <!-- searchbar -->
+    <form class="searchbar" action="">
+        
+        <!-- ( "Searchfield where user are able to type" ) -->
+        <input class="searchfield" placeholder="Search . . ." type="text">
 
-            <!-- ( "Search Button" ) -->
-            <button class="searchButton">
-                <img class="icon" src="../../style/includes/icons/searchIcon.svg" alt="">
-            </button>
-        </form>
+        <!-- ( "Search Button" ) -->
+        <button class="searchButton">
+            <img class="icon" src="../../style/includes/icons/searchIcon.svg" alt="">
+        </button>
+    </form>
 
-        <!-- "ask a question" button -->
-        <button class="buttonType1">Ask a question</button>
+    <!-- "ask a question" button -->
+    <button class="buttonType1">Ask a question</button>
 
-    </header>
+</header>
 
 
     <!-- corses -->
