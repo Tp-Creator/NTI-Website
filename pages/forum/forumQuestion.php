@@ -49,9 +49,8 @@
         </nav>
 
         <!-- "ask a question" button -->
-        <a href="./Forum.php">
-            <button class="buttonType1">Back to forum</button>
-        </a>
+        <a class="buttonType1 regularText" href="./Forum.php">Back to forum</a>
+        
         <!-- searchbar -->
         <form class="searchbar" action="">
             

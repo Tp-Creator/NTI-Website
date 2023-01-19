@@ -1,7 +1,7 @@
 /* Main forum page & forum question page */
 body  {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr minmax(25rem , 55rem) 1fr;
     gap: var(--size_30);
 
     background-color: #17161B;
@@ -214,4 +214,10 @@ footer {
 .AQP2 {
     grid-column: 4;
     grid-row: 1;
+}
+
+/* Ask A Question Card Position */
+.AAQP1 {
+    grid-column: 4;
+    grid-row: 4;
 }

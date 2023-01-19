@@ -21,8 +21,8 @@
 ?>
             
             <!-- Navbar button -->
-            <a class="navButton" href="<?php echo $navbuttons[$b][1]; ?>">
-                <p class="titleText"><?php echo $navbuttons[$b][0]; ?></p>
+            <a class="navButton buttonText" href="<?php echo $navbuttons[$b][1]; ?>">
+                <p class="buttonText"><?php echo $navbuttons[$b][0]; ?></p>
             </a>
             
 <?php
