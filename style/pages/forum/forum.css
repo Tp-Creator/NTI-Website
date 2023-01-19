@@ -28,6 +28,9 @@ footer {
     grid-column: 3;
     grid-row: 1;
 }
+.QCP2:hover {
+    cursor: pointer;
+}
 .QCP3 {
     grid-column: 4;
     grid-row: 1;
@@ -48,6 +51,9 @@ footer {
 .QCP7 {
     grid-column: 4;
     grid-row: 1;
+}
+.QCP7:hover {
+    cursor: pointer;
 }
 
 

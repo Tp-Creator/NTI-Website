@@ -15,16 +15,22 @@
 }
 
 .buttonType2 {
-    width: 150px;
-    height: 40px;
+    padding: 0.75em;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2em;
 
     border-radius: var(--size_100vh);
 
-    background-color: #4F545C;
+    background-color: #101014;
 }
 
 .buttonType2:hover {
     cursor: pointer;
+    background-color: #FFFFFF25;
 }
 
 
@@ -95,11 +101,17 @@
     background-color: #4F545C75;
 }
 
-
-
-
 /* icon */
 .icon {
-    width: 1.6em;
-    height: 1.6em;
+    width: 1.4em;
+    height: 1.4em;
+}
+
+.courseMark {
+    width: 1em;
+    height: 1em;
+
+    border-radius: 1em;
+
+    background-color: var(--PRRPRR);
 }

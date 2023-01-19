@@ -26,6 +26,10 @@
     --size_100vh: 100vh;
 }
 
+@font-face {
+    font-family: 'Nunito';
+    src: url(includes/fonts/Nunito/Nunito-Regular.ttf);
+}
 
 /* Text & font */
 .titleText {
@@ -38,6 +42,7 @@
 
 .buttonText {
     font-size: var(--size_14);
+    width: max-content;
 }
 
 .infoText {
@@ -54,6 +59,7 @@
     color: #fff;
 
     text-decoration: none;
+    font-family: 'Nunito';
 }
 
 /* Navigation bar  */
@@ -78,6 +84,9 @@ nav {
     padding: 0.825em;
 
     border-radius: var(--size_30);
+
+    display: grid;
+    place-items: center;
 
     text-align: center;
 

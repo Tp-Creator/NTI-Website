@@ -84,7 +84,7 @@
         <button class="buttonType2">
 
             <!-- Course name -->
-            <p><?php echo $courses[$i][1] ?></p> 
+            <p class="buttonText"><?php echo $courses[$i][1] ?></p> 
 
             <!-- Course color -->
             <div class="courseMark"></div>
@@ -154,7 +154,7 @@
                 <!-- Vote -->
                 <button class="pill QCP2">
                     <?php echo $questions[$current][6] ?>
-                    <!-- <img class="icon" src="" alt=""> -->
+                    <img class="icon" src="../../style/includes/icons/voteUpIcon.svg" alt="Vote up icon">
                 </button>
 
                 <!-- Card information -->

@@ -94,7 +94,7 @@
             <!-- Vote -->
             <button class="pill QCP2">
                 <p class="infoText"><?php echo $question->Upvote ?></p>
-                <!-- <img class="icon" src="" alt=""> -->
+                <img class="icon" src="../../style/includes/icons/voteUpIcon.svg" alt="Vote up icon">
             </button>
             <!-- Card information -->
             <div class="pill QCP3">
@@ -156,7 +156,7 @@
                 <!-- Vote -->
                 <button class="pill QCP7">
                     <p class="infoText"><?php echo $answers[$ans]->Upvote ?></p>
-                    <!-- <img class="icon" src="" alt=""> -->
+                    <img class="icon" src="../../style/includes/icons/voteUpIcon.svg" alt="Vote up icon">
                 </button>
 
                 <!-- Card title/answer -->
@@ -191,7 +191,7 @@
                 <!-- Vote -->
                 <button class="pill QCP7">
                     <p class="infoText"><?php echo $comments[$com]->Upvote ?></p>
-                    <!-- <img class="icon" src="" alt=""> -->
+                    <img class="icon" src="../../style/includes/icons/voteUpIcon.svg" alt="Vote up icon">
                 </button>
 
                 <!-- Card title/answer -->
