@@ -6,13 +6,6 @@
     --mainC3: #202126;
     --mainC4: #4F545C;
     --mainC5: #FFFFFF;
-/* Courses Colors */
-    --FYSFYS0: #00B4D8;
-    --MATMAT0: #EF233C;
-    --SVESVE0: #FFBA08;
-    --ENGENG: #52B788;
-    --PRRPRR: #FF7D00;
-    --WEUWEB: #560BAD;
 /* Sizes based on base 16px font */
     --size_10: 0.625rem;
     --size_12: 0.75rem;
@@ -24,6 +17,26 @@
     --size_24: 1.5rem;
     --size_30: 1.875rem;
     --size_100vh: 100vh;
+}
+
+/* Courses Colors */
+.FYSFYS0 {
+    background-color: #00B4D8;
+}
+.MATMAT0 {
+    background-color: #EF233C;
+}
+.SVESVE0 {
+    background-color: #FFBA08;
+}
+.ENGENG {
+    background-color: #52B788;
+}
+.PRRPRR {
+    background-color: #FF7D00;
+}
+.WEUWEB {
+    background-color: #560BAD;
 }
 
 @font-face {

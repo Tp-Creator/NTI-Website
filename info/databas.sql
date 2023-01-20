@@ -24,13 +24,19 @@ CREATE TABLE users (
 --     CONSTRAINT fk_Msg_to_readMsgs FOREIGN KEY (msgID) REFERENCES Msg(msgID)
 -- );
 
--- Skapar en tabell course som har id, namn och färg
+/* Skapar en tabell course som har id, namn och färg (! OLD !) */
+-- CREATE TABLE course (
+--     CourseID int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+--     CourseName varchar(255),
+--     CourseColor varchar(8)
+-- );
+
+/* Skapar en tabell course som har id, namn och färg */
 CREATE TABLE course (
     CourseID int NOT NULL PRIMARY KEY AUTO_INCREMENT,
     CourseName varchar(255),
-    CourseColor varchar(8)
+    CourseCode varchar(10)
 );
-
 
 CREATE TABLE forum_question (
     QuestionID int NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -66,9 +72,13 @@ VALUES ('hej@hejj.com', 'Niklas', 'Passwords123');
 -- INSERT INTO msg (Content, dt, userID)
 -- VALUES ('Hej, här kommer ett meddelande!', '2022-11-09 10:02:16', 1);
 
-/* Lägger till en kurs Programering 1  och färgen Orange*/
-INSERT INTO course (CourseName, CourseColor)
-VALUES ('Programering 1', '#FF7D00');
+/* Lägger till en kurs Programering 1  och färgen Orange  (! OLD !)*/
+-- INSERT INTO course (CourseName, CourseColor)
+-- VALUES ('Programering 1', '#FF7D00');
+
+/* Lägger till en kurs Programering 1  och färgen Orange */
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Programering 1', 'PRRPRR');
 
 /* Lägger till en fråga i databasen */
 INSERT INTO forum_question (CourseID, UserID, Title, Content, dt, Upvote)

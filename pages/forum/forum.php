@@ -87,7 +87,7 @@
             <p class="buttonText"><?php echo $courses[$i][1] ?></p> 
 
             <!-- Course color -->
-            <div class="courseMark"></div>
+            <div class="courseMark <?php echo $courses[$i][2] ?>"></div>
         </button>
 
 
