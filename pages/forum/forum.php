@@ -147,7 +147,7 @@
         <a href="forumQuestion.php?question=<?php echo $questions[$current][0] ?>">
             <div class="forumCard">
                 <!-- Corse pill -->
-                <div class="pill QCP1">
+                <div class="pill QCP1 <?php echo $course[2] ?>">
                     <p><?php echo $course[1] ?></p>
                 </div>
 
