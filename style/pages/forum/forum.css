@@ -1,7 +1,7 @@
 /* Main forum page & forum question page */
 body  {
     display: grid;
-    grid-template-columns: 1fr minmax(25rem , 55rem) 1fr;
+    grid-template-columns: 1fr minmax(300px , 55rem) 1fr;
     gap: var(--size_30);
 
     background-color: #17161B;
@@ -25,31 +25,31 @@ footer {
     grid-row: 1;
 }
 .QCP2 {
-    grid-column: 3;
+    grid-column: 2;
     grid-row: 1;
 }
 .QCP2:hover {
     cursor: pointer;
 }
 .QCP3 {
-    grid-column: 4;
+    grid-column: 3;
     grid-row: 1;
 }
 .QCP4 {
-    grid-column: 1 / span 4;
+    grid-column: 1 / span 3;
     grid-row: 2;
 }
 .QCP5 {
-    grid-column: 1 / span 4;
+    grid-column: 1 / span 3;
     grid-row: 3;
 }
 
 .QCP6 {
-    grid-column: 3;
+    grid-column: 2;
     grid-row: 1;
 }
 .QCP7 {
-    grid-column: 4;
+    grid-column: 3;
     grid-row: 1;
 }
 .QCP7:hover {
@@ -66,7 +66,7 @@ footer {
     border-radius: var(--size_24);
 
     display: grid;
-    grid-template-columns: max-content 1fr max-content max-content;
+    grid-template-columns: 1fr max-content max-content;
     gap: var(--size_30);
 
     background-color: #101014;
@@ -159,12 +159,12 @@ footer {
 }
 
 .AQCP2 {
-    grid-column: 1 / span 4 ;
+    grid-column: 1 / span 3 ;
     grid-row: 2;
 }
 
 .AQCP3 {
-    grid-column: 1 / span 4 ;
+    grid-column: 1 / span 3 ;
     grid-row: 3;
 }
 
@@ -204,11 +204,11 @@ footer {
 
 /* Forum Question Position:Number */
 .FQP1 {
-    grid-column: 1 / span 4;
+    grid-column: 1 / span 3;
 }
 
 .FQP3 {
-    grid-column: 2 / span 3;
+    grid-column: 2 / span 2;
 }
 
 /* Answer Question Position:Number */
@@ -218,12 +218,12 @@ footer {
 }
 
 .AQP2 {
-    grid-column: 4;
+    grid-column: 3;
     grid-row: 1;
 }
 
 /* Ask A Question Card Position */
 .AAQP1 {
-    grid-column: 4;
+    grid-column: 3;
     grid-row: 4;
 }

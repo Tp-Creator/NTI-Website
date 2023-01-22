@@ -99,6 +99,7 @@ nav {
     border-radius: var(--size_30);
 
     display: grid;
+    grid-template-rows: repeat(2 , max-content);
     place-items: center;
 
     text-align: center;
@@ -110,3 +111,31 @@ nav {
     cursor: pointer;
     background-color: #FFFFFF25;
 }
+
+.navIcon {
+    display: none;
+
+    width: 2em;
+    height: 2em;
+}
+
+.navText {
+    font-size: var(--size_14);
+}
+
+@media screen and (max-width: 992px) {
+
+    .navButton {
+        min-width: 2rem;
+        padding: 0.5em;
+    }
+    
+    .navIcon {
+        display: block;
+    }
+
+    .navText {
+        display: none;
+    }
+
+  }

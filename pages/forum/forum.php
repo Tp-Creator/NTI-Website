@@ -105,7 +105,7 @@
         <!-- Ask a question card -->
         <form class="forumCard" method="post" action="./forum.php">
             <!-- choose course -->
-            <select class="AQCP1" name="courseID" id="courseID">
+            <select class="AQCP1 pill" name="courseID" id="courseID">
                 
                 <?php 
                         //  Loops as many choices as there are courses in the db
@@ -122,10 +122,10 @@
             </select>
 
             <!-- Input question -->
-            <textarea class="AQCP2 titleText" placeholder="How to do a for loop in Javascript" name="title" rows="2"></textarea>
+            <textarea class="AQCP2 titleText" placeholder="How to do a for loop in Javascript?" name="title" rows="1"></textarea>
 
             <!-- Input description -->
-            <textarea class="AQCP3" placeholder="I am trying to make loop that can solve..." name="content" rows="6"></textarea>
+            <textarea class="AQCP3" placeholder="I am trying to make loop that can solve . . ." name="content" rows="5"></textarea>
 
             <button class="buttonType1 AAQP1" type="submit">Post</button>
         </form>
