@@ -7,20 +7,6 @@
         //  Includes php elements
     include_once '../elements/elements_inc.php';
 
-    if($_POST){
-
-        if($_POST["courseID"] != "" AND $_POST["title"] != "" AND $_POST["content"] != ""){
-
-            postQuestion($_POST["courseID"], $_SESSION['userID'], $_POST["title"], $_POST["content"], date("Y-m-d H:i:s"));
-            
-            header("Location: ./forum.php");
-            exit();
-
-        }
-
-
-    }
-
 ?>
 
 <!DOCTYPE html>
@@ -108,6 +94,8 @@
             <!-- choose course -->
             <select class="AQCP1 pill" name="courseID" id="courseID">
                 
+                <option value="">Choose a course</option>
+
                 <?php 
                         //  Loops as many choices as there are courses in the db
                     for($i = 0; $i < sizeof($courses); $i++){
@@ -123,12 +111,12 @@
             </select>
 
             <!-- Input question -->
-            <textarea class="AQCP2 titleText" placeholder="How to do a for loop in Javascript?" name="title" rows="1"></textarea>
+            <textarea class="AQCP2 titleText" placeholder="How to do a for loop in Javascript?" name="title" id="title" rows="1"></textarea>
 
             <!-- Input description -->
-            <textarea class="AQCP3" placeholder="I am trying to make loop that can solve . . ." name="content" rows="5"></textarea>
+            <textarea class="AQCP3" placeholder="I am trying to make loop that can solve . . ." name="content" id="content" rows="5"></textarea>
 
-            <button class="buttonType1 AAQP1" type="submit">Post</button>
+            <button class="buttonType1 AAQP1" id="postNewQuestionButton" type="submit">Post</button>
         </form>
 
 
@@ -176,7 +164,6 @@
         <?php
             }
 
-            // postQuestion(1, 1, "fråga", "dfvbskjvbsjbv", "2023-01-13 03:04:11", 0);
         ?>
 
 
