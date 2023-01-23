@@ -30,8 +30,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="../../js/forum.js"></script>
 
     <!-- Basic style links -->
     <link rel="stylesheet" href="../../style/main1.css">
@@ -62,7 +63,7 @@
     </form>
 
     <!-- "ask a question" button -->
-    <button class="buttonType1">Ask a question</button>
+    <button class="buttonType1" id="askQuestion">Ask a question</button>
 
 </header>
 
@@ -103,7 +104,7 @@
     <section class="contentFeed FP2">
         
         <!-- Ask a question card -->
-        <form class="forumCard" method="post" action="./forum.php">
+        <form class="forumCard" id="askNewQuestionCard" method="post" action="./forum.php">
             <!-- choose course -->
             <select class="AQCP1 pill" name="courseID" id="courseID">
                 
