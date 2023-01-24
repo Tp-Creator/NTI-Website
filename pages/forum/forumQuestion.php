@@ -32,6 +32,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../../js/forumQuestion.js"></script>
+
     <!-- style links -->
     <link rel="stylesheet" href="../../style/main1.css">
     <link rel="stylesheet" href="../../style/common1.css">
@@ -116,9 +120,9 @@
 
 
     <!-- Answer question -->
-        <form class="forumCard FP9" name="postAnswer" method="post" action="./forumQuestion.php?question=<?php echo $_GET["question"]?>">
+        <form class="forumCard FP9" name="postNewAnswer" id="postNewAnswer">
             <!-- ( "Searchfield where user are able to type" )  The name of the user that asked the question -->
-            <input class="searchfield AQP1" placeholder="Answer <?php echo $user[1]; ?>'s question . . ." type="text" name="questionAnswer">
+            <input class="searchfield AQP1" placeholder="Answer <?php echo $user[1]; ?>'s question . . ." type="text" name="newAnswerContent" id="newAnswerContent">
     
             <button class="buttonType1 AQP2" type="submit">Post</button>
             <!-- <button class="buttonType1 AQP2">Post</button> -->

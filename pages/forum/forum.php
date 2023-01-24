@@ -90,7 +90,7 @@
     <section class="contentFeed FP2">
         
         <!-- Ask a question card -->
-        <form class="forumCard" id="askNewQuestionCard" method="post" action="./forum.php">
+        <form class="forumCard" id="askNewQuestionCard">
             <!-- choose course -->
             <select class="AQCP1 pill" name="courseID" id="courseID">
                 
