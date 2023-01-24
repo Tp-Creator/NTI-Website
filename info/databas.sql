@@ -76,9 +76,16 @@ VALUES ('hej@hejj.com', 'Niklas', 'Passwords123');
 -- INSERT INTO course (CourseName, CourseColor)
 -- VALUES ('Programering 1', '#FF7D00');
 
-/* Lägger till en kurs Programering 1  och färgen Orange */
+/* Lägger till tre olika kurser och Kurskoder som kommer användas som ID:n */
 INSERT INTO course (CourseName, CourseCode)
 VALUES ('Programering 1', 'PRRPRR');
+
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Webbutveckling 1', 'WEBUTV1');
+
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Engelska 6', 'ENGENG6');
+
 
 /* Lägger till en fråga i databasen */
 INSERT INTO forum_question (CourseID, UserID, Title, Content, dt, Upvote)
