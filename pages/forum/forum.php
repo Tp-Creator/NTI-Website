@@ -156,6 +156,7 @@
                 </div>
 
                 <!-- Card title/question -->
+                
                 <p class="RegularText QCP4"><?php echo $questions[$current][3] ?></p>
             </div>
         </a>

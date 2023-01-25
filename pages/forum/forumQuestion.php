@@ -8,20 +8,20 @@
     include_once '../elements/elements_inc.php';
 
     //check if this is a login request
-    if($_POST) {
+    // if($_POST) {
 
 
 
-        if($_POST["questionAnswer"] != ""){
-            postAnswer($_GET["question"], $_SESSION['userID'], $_POST["questionAnswer"], date("Y-m-d H:i:s"));
+    //     if($_POST["questionAnswer"] != ""){
+    //         postAnswer($_GET["question"], $_SESSION['userID'], $_POST["questionAnswer"], date("Y-m-d H:i:s"));
             
-                //  This redirects us to the same page again witch will give the result that we can not reload the page and repost the answer!
-            $q = $_GET['question'];
-            header("Location: ./forumQuestion.php?question=$q");
-            exit();
+    //             //  This redirects us to the same page again witch will give the result that we can not reload the page and repost the answer!
+    //         $q = $_GET['question'];
+    //         header("Location: ./forumQuestion.php?question=$q");
+    //         exit();
             
-        }
-    }
+    //     }
+    // }
 
 ?>
 
