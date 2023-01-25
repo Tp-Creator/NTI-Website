@@ -7,7 +7,8 @@ session_start(); //start the PHP_session function
 
 if(!isset($_SESSION['userID']))
 {
-    header("location:../../pages/account/login.php");
+    http_response_code(301);
+    //header("location:../../pages/account/login.php");
 }
 
 ?>
