@@ -9,6 +9,7 @@ if(!isset($_SESSION['userID']))
 {
     http_response_code(401);
     //header("location:../../pages/account/login.php");
+    //header("location:/pages/account/login/login.php");
 }
 
 ?>
