@@ -1,6 +1,6 @@
 <?php
         //  Includes db functions
-    include_once '../../includes/dbh.func/dbh.all.php';
+    // include_once '../../includes/dbh.func/dbh.all.php';
 
 
     function drawNavbar(){

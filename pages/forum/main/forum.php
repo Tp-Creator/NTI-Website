@@ -1,11 +1,14 @@
 <?php 
 
         //  Includes functions related to the db
-    include_once '../../includes/loginCheck.php';
-    include_once '../../includes/dbh.func/dbh.all.php';
+    include_once '../../../includes/loginCheck.php';
+    include_once '../../../includes/dbh.inc.php';
+    include_once '../../../includes/dbh.general.php';
+    include_once '../dbh.forum.php';
+
 
         //  Includes php elements
-    include_once '../elements/elements_inc.php';
+    include_once '../../../HTMLElements/navbar.php';
 
 ?>
 
@@ -133,7 +136,7 @@
 
 
         <!-- hämtar id:t på frågan och lägger till den i url:en -->
-        <a href="forumQuestion.php?question=<?php echo $questions[$current][0] ?>">
+        <a href="../question/forumQuestion.php?question=<?php echo $questions[$current][0] ?>">
             <div class="forumCard">
                 <!-- Corse pill -->
                 <div class="pill QCP1 <?php echo $course[2] ?>">

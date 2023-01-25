@@ -9,7 +9,8 @@
 
 
     //Includes the connection to the database
-    include_once '../../includes/dbh.func/dbh.all.php';
+    include_once '../../../includes/dbh.inc.php';
+    include_once '../dbh.usr.php';
 
     //  A variable for the fail message that can be needed to be displayed
     $error_message = "";
@@ -33,7 +34,7 @@
                     session_start(); // start the PHP_session function 
                     $_SESSION['userID'] = $id;
 
-                    header("location:/NTI-website/pages/forum/forum.php");
+                    header("location:/NTI-Website/pages/index.html");
                 } else {
                     $error_message = "Email is already in use. Use another email";
                 }
@@ -117,7 +118,7 @@
 
         <button class="button" type="submit" id="submit" onclick="return validateForm(this.form)">Create your account</button>
 
-        <p>Already have an account? <a href="login.php">Return to log in</a></p>
+        <p>Already have an account? <a href="../login/login.php">Return to log in</a></p>
 
     </form>
 

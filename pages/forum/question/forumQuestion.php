@@ -1,11 +1,14 @@
 <?php 
 
         //  Includes functions related to the db
-    include_once '../../includes/dbh.func/dbh.all.php';
-    include_once '../../includes/loginCheck.php';
+    include_once '../../../includes/loginCheck.php';
+    include_once '../../../includes/dbh.inc.php';
+    include_once '../../../includes/dbh.general.php';
+    include_once '../dbh.forum.php';
+
 
         //  Includes php elements
-    include_once '../elements/elements_inc.php';
+    include_once '../../../HTMLElements/navbar.php';
 
     //check if this is a login request
     // if($_POST) {
@@ -53,7 +56,7 @@
         </nav>
 
         <!-- "ask a question" button -->
-        <a class="buttonType1 regularText" href="./Forum.php">Back to forum</a>
+        <a class="buttonType1 regularText" href="../main/forum.php">Back to forum</a>
         
         <!-- searchbar -->
         <form class="searchbar" action="">

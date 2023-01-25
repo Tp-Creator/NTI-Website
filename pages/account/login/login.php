@@ -6,7 +6,8 @@
     //  the session with the user id to keep the user logged in.
 
     //Includes the connection to the database
-    include_once '../../includes/dbh.func/dbh.all.php';
+    include_once '../../../includes/dbh.inc.php';
+    include_once '../dbh.usr.php';
 
 
     //check if this is a login request
@@ -21,7 +22,7 @@
             session_start(); // start the PHP_session function 
             $_SESSION['userID'] = $id;
 
-            header("location:../forum/forum.php");
+            header("location:/NTI-Website/pages/index.html");
         } else {
             echo "<p id='fail-msg'>Invalid username or password, try again</p>";
         }
@@ -54,7 +55,7 @@
 
         <button class="button" type="submit" id="submit">Log in</button>
         
-        <p>Dont have any account? No problem,<a href="sign-up.php">create one here!</a></p>
+        <p>Dont have any account? No problem,<a href="../sign-up/sign-up.php">create one here!</a></p>
     </form>
 
 </body>
