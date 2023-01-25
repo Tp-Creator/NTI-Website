@@ -40,8 +40,8 @@
     <script src="forumQuestion.js"></script>
 
     <!-- style links -->
-    <link rel="stylesheet" href="../../../style/main1.css">
-    <link rel="stylesheet" href="../../../style/common1.css">
+    <link rel="stylesheet" href="/style/main1.css">
+    <link rel="stylesheet" href="/style/common1.css">
     
     <link rel="stylesheet" href="../forum.css">
 
@@ -66,7 +66,7 @@
 
             <!-- ( "Search Button" ) -->
             <button class="searchButton">
-                <img class="icon" src="../../../style/includes/icons/searchIcon.svg" alt="">
+                <img class="icon" src="/style/includes/icons/searchIcon.svg" alt="">
             </button>
         </form>
 
@@ -101,7 +101,7 @@
             <!-- Vote -->
             <button class="pill QCP2">
                 <p class="infoText"><?php echo $question->Upvote ?></p>
-                <img class="icon" src="../../../style/includes/icons/voteUpIcon.svg" alt="Vote up icon">
+                <img class="icon" src="/style/includes/icons/voteUpIcon.svg" alt="Vote up icon">
             </button>
             <!-- Card information -->
             <div class="pill QCP3">
@@ -163,7 +163,7 @@
                 <!-- Vote -->
                 <button class="pill QCP7">
                     <p class="infoText"><?php echo $answers[$ans]->Upvote ?></p>
-                    <img class="icon" src="../../../style/includes/icons/voteUpIcon.svg" alt="Vote up icon">
+                    <img class="icon" src="/style/includes/icons/voteUpIcon.svg" alt="Vote up icon">
                 </button>
 
                 <!-- Card title/answer -->
@@ -198,7 +198,7 @@
                 <!-- Vote -->
                 <button class="pill QCP7">
                     <p class="infoText"><?php echo $comments[$com]->Upvote ?></p>
-                    <img class="icon" src="../../../style/includes/icons/voteUpIcon.svg" alt="Vote up icon">
+                    <img class="icon" src="/style/includes/icons/voteUpIcon.svg" alt="Vote up icon">
                 </button>
 
                 <!-- Card title/answer -->
