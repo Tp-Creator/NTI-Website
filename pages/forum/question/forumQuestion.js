@@ -25,7 +25,7 @@ $(document).ready(function(){
                         //  Skapar ett anrop till en annan fil och skickar datan dit som i sin tur postar answer
                     $.ajax({
                     type: "POST",
-                    url: "/NTI-Website/includes/forum/addAnswer.php",
+                    url: "addAnswer.php",
                     data: formData,
                     success: function(response){
                             //  Vid success:

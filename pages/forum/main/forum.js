@@ -38,7 +38,7 @@
                 //  Skapar ett anrop till en annan fil och skicka datan dit som i sin tur postar question
             $.ajax({
               type: "POST",
-              url: "/NTI-Website/includes/forum/addAQuestion.php",
+              url: "addAQuestion.php",
               data: formData,
               success: function(response){
                     //  Vid success:
@@ -52,6 +52,7 @@
                 $("#askNewQuestionCard").slideUp(300);
                     //  Ändrar även texten på knappen så att det står ask a question.
                 $("#askQuestion").text("Ask a question");
+                console.log("nice");
 
               },
                     //  Vid error skriv i konsolen

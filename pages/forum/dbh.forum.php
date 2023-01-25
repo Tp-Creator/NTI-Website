@@ -1,7 +1,8 @@
 <?php 
 
     //Includes user functions related to the db
-    // include_once 'dbh.inc.php';
+    include_once '../../../includes/dbh.inc.php';
+    
 
     //  Function that gets all questions and their data
     function getQuestions(){

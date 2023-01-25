@@ -1,6 +1,6 @@
 <?php 
 
-include_once '../dbh.func/dbh.all.php';
+include_once '../dbh.forum.php';
 
 session_start(); //start the PHP_session function 
 
