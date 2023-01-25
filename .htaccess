@@ -1,3 +1,10 @@
+#Redirecting...
 ErrorDocument 404 /404.html
 ErrorDocument 403 /403.html
+
+#main page
+DirectoryIndex /pages/index.html
+
+
+#Blocking access to fillesystem
 Options -Indexes
