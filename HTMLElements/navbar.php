@@ -16,16 +16,14 @@
                         ];
         
         for($b = 0; $b < sizeof($navbuttons); $b++){
+            $content = $navbuttons[$b][0];
+            $url = $navbuttons[$b][1];
 
-?>
-            
-            <!-- Navbar button -->
-            <a class="navButton buttonText" href="<?php echo $navbuttons[$b][1]; ?>">
-                <p class="navText"><?php echo $navbuttons[$b][0]; ?></p>
-                <img class="navIcon" src="/style/includes/icons/searchIcon.svg" alt="">
-            </a>
-            
-<?php
+                // <!-- Navbar button -->
+            echo "<a class='navButton buttonText' href='$url'>";
+                echo "<p class='navText'>$content</p>";
+                echo "<img class='navIcon' src='/style/includes/icons/searchIcon.svg' alt=''>";
+            echo "</a>";
         }
     }
 
