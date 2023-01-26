@@ -1,5 +1,5 @@
 #Redirecting...
-ErrorDocument 401 /pages/account/login.php
+ErrorDocument 401 /pages/account/login/login.php
 ErrorDocument 404 /404.html
 ErrorDocument 403 /403.html
 
