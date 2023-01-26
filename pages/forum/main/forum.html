@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- stylesheet link  -->
+    <link rel="stylesheet" href="/style/main_v3.css">
+    <link rel="stylesheet" href="/style/common_v3.css">
+    <link rel="stylesheet" href="../forum_v3.css">
+
+    <title>Schoolsoft 2.0</title>
+</head>
+<body>
+    
+    <!-- 
+        Header: Found at the top att the site. Header includes elements 
+        such as navbar , searchbar , ask a question (button_1) & different filters.
+
+        stylesheets:
+            navbar      -> main_v3.css
+            button_1    -> forum_v3.css
+            searchbar   -> common_v3.css
+            filters     -> common_v3.css
+    -->
+    <header>
+
+        <!--
+            > Navigationbar <
+
+            stylesheet: main_v3.css
+        -->
+        <nav class="header_position_1">
+            <a class="navButton" href="">Home</a>
+            <div class="sectionDeviderV"></div>
+            <a class="navButton" href="">News</a>
+            <a class="navButton" href="">Forum</a>
+            <a class="navButton" href="">Schedule</a>
+            <a class="navButton" href="">Memes</a>
+            <a class="navButton" href="">Games</a>
+            <div class="sectionDeviderV"></div>
+            <a class="navButton" href="">Account</a>
+        </nav>
+
+
+        <div class="header_position_2">
+            <!-- 
+                > Searchbar <
+
+                stylesheet: common_v3.css
+            -->
+            <form class="searchbar" action="">
+
+                <input class="searchfield" placeholder="Search . . ." type="text">
+
+                <button class="searchButton" type="submit">
+                    <img class="icon" src="/style/includes/icons_v3/search_Icon_v3.svg" alt="">
+                </button>
+
+            </form>
+
+
+            <!-- 
+                > Ask a question (button_1) <
+
+                stylesheet: 
+                    common_v3.css
+                    main_v3.css
+            -->
+            <button class="button_1">
+                <p class="buttonText">Ask a question</p>
+            </button>
+        </div>
+
+    </header>
+
+    <section class="contentFeed">
+
+        <div class="filter_section">
+
+            <div class="pill">
+                <p class="infoText">Filter</p>
+
+                <select class="filterSelect" name="" id="">
+                    <option value="Latest"><p>Latest</p></option>
+                    <option value="Popular"><p>Popular</p></option>
+                    <option value="Your question"><p>Your question</p></option>
+                </select>
+            </div>
+
+
+            <div class="pill">
+                <p class="infoText">Course</p>
+
+                <select class="filterSelect" name="" id="">
+                    <option value="Fysik"><p>Fysik</p></option>
+                    <option value="Matte"><p>Matte</p></option>
+                    <option value="Svenska"><p>Svenska</p></option>
+                    <option value="Engelska"><p>Engelska</p></option>
+                    <option value="Programmering"><p>Programmering</p></option>
+                    <option value="Webbutveckling">Webbutveckling</option>
+                </select>
+            </div>
+
+            <p class="pill infoText">There are "amount" new questions today!</p>
+
+        </div>
+
+        <div class="card"></div>
+
+    </section>
+
+    <footer></footer>
+
+</body>
+</html>

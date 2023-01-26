@@ -1,0 +1,160 @@
+
+/*
+    SectionDeviderVertical: is a little line used to show that 
+    two elements beside each other is not the same element.
+*/
+.sectionDeviderV {
+
+    width: 0.125rem;
+    height: fill;
+    margin: 0.5rem 0rem;
+
+    background-color: var(--shade_1);
+
+}
+
+
+
+
+/*
+    Searchbar
+*/
+.searchbar {
+
+    /* requires a parent that displays flex  */
+    flex-grow: 1;
+
+    border-radius: 1.75rem;
+
+    background-color: var(--mainColor_2);
+
+    /* displays flex for its children */
+    display: flex;
+    flex-direction: row;
+
+}
+
+.searchfield {
+
+    padding-left: 1.75rem;
+
+    outline: none;
+    border: none;
+    border-radius: 1.75rem;
+
+    color: var(--mainColor_4);
+    background-color: var(--mainColor_2);
+
+    flex-grow: 1;
+
+}
+
+.searchButton {
+
+    width: 4rem;
+    padding: 0.5rem;
+    margin: 0.25rem;
+
+    border: none;
+    border-radius: 1.5rem;
+
+    background-color: #00000000;
+
+    display: grid;
+    place-items: center;
+
+}
+
+.searchButton:hover {
+
+    cursor: pointer;
+    background-color: var(--shade_1);
+
+}
+
+
+
+
+/*
+    Ask a question button
+*/
+.button_1 {
+
+    padding: 0.875rem 3rem;
+
+    border: none;
+    border-radius: 1.75rem;
+
+    background: linear-gradient(45deg, rgba(41,82,112,1) 0%, rgba(82,65,117,1) 100%);
+
+}
+
+.button_1:hover {
+
+    cursor: pointer;
+
+}
+
+
+
+
+/*
+    Pill
+
+    (note! Pills are not ment to have much content inside of them.)
+*/
+.pill {
+
+    width: max-content;
+    padding: 0.25rem 0.8rem;
+
+    border-radius: 2rem;
+
+    background-color: var(--shade_0);
+
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+    gap: 0.5rem;
+
+}
+
+
+
+
+/*
+    select
+*/
+.filterSelect {
+
+    border: none;
+    border-radius: 0.25rem;
+
+    text-align: center;
+
+    color: var(--mainColor_4);
+    background-color: var(--shade_0);
+
+}
+
+.filterSelect:hover {
+    cursor: pointer;
+}
+
+.filterSelect option {
+
+    background-color: var(--mainColor_3);
+
+}
+
+.filterSelect {
+    /* for Firefox */
+    -moz-appearance: none;
+    /* for Chrome */
+    -webkit-appearance: none;
+  }
+  
+  /* For IE10 */
+.filterSelect::-ms-expand {
+    display: none;
+  }
