@@ -5,6 +5,12 @@
 
 }
 
+@font-face {
+
+    font-family: 'poppins-medium';
+    src: url(/style/includes/fonts_v3/Poppins-Medium.ttf);
+
+}
 
 @font-face {
 
@@ -13,45 +19,24 @@
 
 }
 
-
-
-
-.buttonText {
-
-    font-family: 'poppins-semiBold';
-    font-size: 0.875rem;
-
-    color: var(--mainColor_4);
-
-}
-
-.infoText {
-
-    font-size: 0.875rem;
-
-    color: var(--mainColor_3);
-
-}
-
-
-
-
-/* 
-    Variabel: main colors , gradients , hover color , shadows
-*/
 :root {
 
     --mainColor_1: #17161B;
     --mainColor_2: #101014;
-    --mainColor_3: #878789;
-    --mainColor_4: #FFFFFF;
+    --mainColor_3: #ffffff;
 
-    --shade_0: #FFFFFF10;
-    --shade_1: #FFFFFF20;
+    --smallGap: 0.5rem;
+    --mediumGap: 1.25rem;
+    --largeGap: 1.875rem;
+
+    /*
+        Purpose: Sizes for the middle section of 
+        the screen. Should be used in a grid.
+    */
+    --minWidth: 26.25rem;
+    --maxWidth: 54.688rem;
 
 }
-
-
 
 
 * {
@@ -59,48 +44,98 @@
     margin: 0%;
     padding: 0%;
 
+    border: none;
+    outline: none;
+
     font-family: 'poppins-regular';
 
 }
 
 
-
-
-/* 
-    Navigationbar: nav , navButton
+/*
+    Navbar
 */
-nav {
 
-    padding: 0.375rem;
+    /*
+        Parent, controlls for all childs and background color.
+    */
+    nav {
 
-    background-color: var(--mainColor_2);
+        padding: var(--smallGap);
 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 1rem;
+        background-color: var(--mainColor_2);
 
-}
+        display: grid;
+        grid-template-columns: 1fr minmax(var(--minWidth), var(--maxWidth)) 1fr;
+        gap: var(--smallGap);
 
-.navButton {
+    }
 
-    width: 7.75rem;
-    height: 2.375rem;
+    /*
+        Parent, controlls for all childs and background color.
+    */
+    .navCon {
 
-    border-radius: 1.25rem;
+        display: flex;
+        flex-direction: row;
+        gap: var(--smallGap);
 
-    font-size: 1rem;
-    text-decoration: none;
-    color: var(--mainColor_4);
+    }
 
-    display: grid;
-    place-items: center;
+    /*
+        Child
+    */
+    .navBut {
 
-}
+        flex-grow: 1;
 
-.navButton:hover {
+        border-radius: 1.094rem;
 
-    cursor: pointer;
-    background-color: #FFFFFF15;
+        background-color: var(--mainColor_1);
 
-}
+        display: grid;
+        place-items: center;
+
+    }
+
+    /*
+        Child
+    */
+    .navIcon {
+
+        display: none;
+
+        background-color: var(--mainColor_1);
+
+    }
+
+    /*
+        Child
+    */
+    .navText {
+
+        padding: 0.438rem;
+
+        color: var(--mainColor_3);
+
+    }
+
+/*
+    Footer
+*/
+
+    /*
+        Parent, controlls for all childs and background color.
+    */
+    footer  {
+
+        padding: var(--largeGap);
+
+        background-color: var(--mainColor_2);
+
+        display: flex;
+        flex-wrap: wrap;
+        place-content: center;
+        gap: var(--largeGap);
+
+    }

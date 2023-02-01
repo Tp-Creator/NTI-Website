@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- stylesheet link  -->
-    <link rel="stylesheet" href="/style/main_v3.css">
-    <link rel="stylesheet" href="/style/common_v3.css">
+    <link rel="stylesheet" href="../../../style/main_v3.css">
+    <link rel="stylesheet" href="../../../style/common_v3.css">
     <link rel="stylesheet" href="../forum_v3.css">
 
     <title>Schoolsoft 2.0</title>
@@ -15,103 +15,204 @@
 <body>
     
     <!-- 
-        Header: Found at the top att the site. Header includes elements 
-        such as navbar , searchbar , ask a question (button_1) & different filters.
-
-        stylesheets:
-            navbar      -> main_v3.css
-            button_1    -> forum_v3.css
-            searchbar   -> common_v3.css
-            filters     -> common_v3.css
+        Header includes:
+            - Navbar
+            - Searchbar
+            - Special button (ask a question)
+            - Filter (latest, popular, your questions)
+            - Filter (courses)
+            - Stats & info (There was "amount" uploaded questions today)
     -->
     <header>
 
         <!--
-            > Navigationbar <
-
-            stylesheet: main_v3.css
+            Navbar
+            css: main_v3.css
         -->
-        <nav class="header_position_1">
-            <a class="navButton" href="">Home</a>
-            <div class="sectionDeviderV"></div>
-            <a class="navButton" href="">News</a>
-            <a class="navButton" href="">Forum</a>
-            <a class="navButton" href="">Schedule</a>
-            <a class="navButton" href="">Memes</a>
-            <a class="navButton" href="">Games</a>
-            <div class="sectionDeviderV"></div>
-            <a class="navButton" href="">Account</a>
+        <nav>
+
+
+            <!-- 
+                ("a") Navbar button
+                css: main_v3.css
+            -->
+            <a class="navBut" href="">
+
+                <!--
+                    ("p") Logo text
+                    css: main_v3.css
+                -->
+                <p class="navText">Schoolsoft 2.0</p>
+
+                <!--
+                    ("img") Logo icon
+                    css: main_v3.css
+                -->
+                <img class="navIcon" src="" alt="">
+            </a>
+
+
+            <!--
+                ("div") Container for main navbar buttons
+                css: main_v3.css
+            -->
+            <div class="navCon">
+                <!-- 
+                    ("a") Navbar button
+                    css: main_v3.css
+                -->
+                <a class="navBut" href="">
+
+                    <!--
+                        ("p") Navbar text
+                        css: main_v3.css
+                    -->
+                    <p class="navText">News</p>
+
+                    <!--
+                        ("img") Navbar icon
+                        css: main_v3.css
+                    -->
+                    <img class="navIcon" src="" alt="">
+                </a>
+
+
+                <!-- 
+                    ("a") Navbar button
+                    css: main_v3.css
+                -->
+                <a class="navBut" href="">
+
+                    <!--
+                        ("p") Navbar text
+                        css: main_v3.css
+                    -->
+                    <p class="navText">Forum</p>
+
+                    <!--
+                        ("img") Navbar icon
+                        css: main_v3.css
+                    -->
+                    <img class="navIcon" src="" alt="">
+                </a>
+
+
+                <!-- 
+                    ("a") Navbar button
+                    css: main_v3.css
+                -->
+                <a class="navBut" href="">
+
+                    <!--
+                        ("p") Navbar text
+                        css: main_v3.css
+                    -->
+                    <p class="navText">Schedule</p>
+
+                    <!--
+                        ("img") Navbar icon
+                        css: main_v3.css
+                    -->
+                    <img class="navIcon" src="" alt="">
+                </a>
+
+
+                <!-- 
+                    ("a") Navbar button
+                    css: main_v3.css
+                -->
+                <a class="navBut" href="">
+
+                    <!--
+                        ("p") Navbar text
+                        css: main_v3.css
+                    -->
+                    <p class="navText">Memes</p>
+
+                    <!--
+                        ("img") Navbar icon
+                        css: main_v3.css
+                    -->
+                    <img class="navIcon" src="" alt="">
+                </a>
+
+
+                <!-- 
+                    ("a") Navbar button
+                    css: main_v3.css
+                -->
+                <a class="navBut" href="">
+
+                    <!--
+                        ("p") Navbar text
+                        css: main_v3.css
+                    -->
+                    <p class="navText">Games</p>
+
+                    <!--
+                        ("img") Navbar icon
+                        css: main_v3.css
+                    -->
+                    <img class="navIcon" src="" alt="">
+                </a>
+            </div>
+
+
+            <!-- 
+                ("a") Navbar button
+                css: main_v3.css
+            -->
+            <a class="navBut" href="">
+
+                <!--
+                    ("p") Navbar text
+                    css: main_v3.css
+                -->
+                <p class="navText">Username_12345</p>
+
+                <!--
+                    ("img") Profile picture
+                    css: main_v3.css
+                -->
+                <img class="navIcon" src="" alt="">
+            </a>
+
         </nav>
 
 
-        <div class="header_position_2">
-            <!-- 
-                > Searchbar <
-
-                stylesheet: common_v3.css
-            -->
-            <form class="searchbar" action="">
-
-                <input class="searchfield" placeholder="Search . . ." type="text">
-
-                <button class="searchButton" type="submit">
-                    <img class="icon" src="/style/includes/icons_v3/search_Icon_v3.svg" alt="">
-                </button>
-
-            </form>
-
-
-            <!-- 
-                > Ask a question (button_1) <
-
-                stylesheet: 
-                    common_v3.css
-                    main_v3.css
-            -->
-            <button class="button_1">
-                <p class="buttonText">Ask a question</p>
-            </button>
-        </div>
-
     </header>
 
-    <section class="contentFeed">
+    <!-- 
+        Footer includes:
+            - Legal information (terms of agreement, cookies, GDPR)
+            - Contakt us (email adress)
+            - About us (link)
+    -->
+    <footer>
 
-        <div class="filter_section">
+        <ul>
 
-            <div class="pill">
-                <p class="infoText">Filter</p>
+            <li><h2>Legal</h2></li>
 
-                <select class="filterSelect" name="" id="">
-                    <option value="Latest"><p>Latest</p></option>
-                    <option value="Popular"><p>Popular</p></option>
-                    <option value="Your question"><p>Your question</p></option>
-                </select>
-            </div>
+            <li><a href="">Terms of agreement</a></li>
 
+            <li><a href="">Cookies</a></li>
 
-            <div class="pill">
-                <p class="infoText">Course</p>
+            <li><a href="">GDPR</a></li>
 
-                <select class="filterSelect" name="" id="">
-                    <option value="Fysik"><p>Fysik</p></option>
-                    <option value="Matte"><p>Matte</p></option>
-                    <option value="Svenska"><p>Svenska</p></option>
-                    <option value="Engelska"><p>Engelska</p></option>
-                    <option value="Programmering"><p>Programmering</p></option>
-                    <option value="Webbutveckling">Webbutveckling</option>
-                </select>
-            </div>
+        </ul>
 
-            <p class="pill infoText">There are "amount" new questions today!</p>
+        <ul>
 
-        </div>
+            <li><h2>Contact us</h2></li>
 
-        <div class="card"></div>
+            <li><a href="">email@contact.us</a></li>
 
-    </section>
+            <li><a href="">About us</a></li>
 
-    <footer></footer>
+        </ul>
+
+    </footer>
 
 </body>
 </html>
