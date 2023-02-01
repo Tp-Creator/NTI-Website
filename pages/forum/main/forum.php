@@ -9,6 +9,7 @@
 
         //  Includes php elements
     include_once '../../../HTMLElements/navbar.php';
+    include_once './.elements.php';
 
 ?>
 
@@ -93,7 +94,7 @@
     <section class="contentFeed FP2">
         
         <!-- Ask a question card -->
-        <form class="forumCard" id="askNewQuestionCard">
+        <form class="forumCard" id="askNewQuestionCard" style="display: none;">
             <!-- choose course -->
             <select class="AQCP1 pill" name="courseID" id="courseID">
                 
@@ -123,52 +124,22 @@
         </form>
 
 
-        <?php 
-        $questions = getQuestions();
+        <div id="questionCardFeed">
+            <?php 
+                $questions = getQuestions();
 
-        //  Amount of cards is the amount of cards that will be displayed
-        for($current = 0; $current < sizeof($questions); $current++){
-        
-            //  Gets the course we are in
-            $course = getCourseByID($questions[$current][1]);
-            $user = getUserFromId($questions[$current][2]);
-        ?>
+                    //  Amount of cards is the amount of cards that will be displayed
+                for($current = sizeof($questions)-1; $current > 0; $current--){
 
+                    questionCard($questions[$current]);
 
-        <!-- hämtar id:t på frågan och lägger till den i url:en -->
-        <a href="../question/forumQuestion.php?question=<?php echo $questions[$current][0] ?>">
-            <div class="forumCard">
-                <!-- Corse pill -->
-                <div class="pill QCP1 <?php echo $course[2] ?>">
-                    <p><?php echo $course[1] ?></p>
-                </div>
-
-                <!-- Vote -->
-                <button class="pill QCP2">
-                    <?php echo $questions[$current][6] ?>
-                    <img class="icon" src="/style/includes/icons/voteUpIcon.svg" alt="Vote up icon">
-                </button>
-
-                <!-- Card information -->
-                <div class="pill QCP3">
-                    <!-- Username -->
-                    <p><?php echo $user[1]; ?></p>
-
-                    <!-- Date -->
-                    <p><?php echo $questions[$current][5]; ?></p>
-                </div>
-
-                <!-- Card title/question -->
+                }
                 
-                <p class="RegularText QCP4"><?php echo $questions[$current][3] ?></p>
-            </div>
-        </a>
+            ?>
+        </div>
 
 
-        <?php
-            }
-
-        ?>
+        
 
 
     </section>

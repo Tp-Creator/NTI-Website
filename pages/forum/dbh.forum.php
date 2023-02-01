@@ -21,9 +21,36 @@
                 $value = htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
             }
         }
-    
+
+        // console_log($result[sizeof($result)-1][5]);
+
+        // global $questionTime;
+        // $questionTime['last_Question_Update'] = floor(microtime(true) * 1000);
+        // $questionTime['lastest_Question_post'] = $result[sizeof($result)-1][5];
+
         //  return an array with all rows where you can reach the data by taking $result[i]
         return $result;
+
+    }
+
+    function getQuestionsFromTime($clientTime){
+        global $conn;
+    
+        $stmt = $conn->prepare("SELECT * FROM forum_question WHERE dt > ?;");
+        $stmt->bind_param("i", $clientTime);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        
+        $result = $result->fetch_all();
+
+            //  Loops over the data and makes sure javascript injections can not be done by converting the vales so that no html "code" is in there
+        foreach ($result as &$row) {
+            foreach ($row as &$value) {
+                $value = htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
+            }
+        }
+
+        return $result; 
 
     }
 

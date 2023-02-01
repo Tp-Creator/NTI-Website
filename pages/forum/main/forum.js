@@ -1,6 +1,38 @@
 
     //  När sidan laddats (all html) så kan vi börja kolla om saker händer
  $(document).ready(function(){
+    window.lastPageUpdate = Date.now();
+
+    // const timeElapsed = Date.now();
+    // const today = new Date(timeElapsed);
+
+        // Periodically check for new messages every 5 seconds
+    setInterval(checkForNewMessages, 5000);
+
+    function checkForNewMessages() {
+
+        let lastQuestionMillis = $(".questionDate").first().text();
+
+        // console.log(lastQuestionMillis);
+
+        let data = '&function=2&lastQuestion=' + lastQuestionMillis;
+
+        $.ajax({
+            type: "POST",
+            url: "functions.php",
+            data: data,
+            success: function(html) {
+                // Update the page with the new messages
+                if(html != ""){
+                    $("#questionCardFeed").prepend(html);
+                    // console.log(html);
+                }
+                // $("#messages").append(data);
+                
+                window.lastPageUpdate = Date.now();
+            }
+        });
+    }
 
 
         //  När man klicka på knappen med id:t #askQuestion körs funktionen.
@@ -28,9 +60,13 @@
             //  Spara data i variabler
         var formData = $("#askNewQuestionCard").serialize();
 
+        formData += '&function=1'
+
         var courseID = $("#courseID").val();
         var title = $.trim($("#title").val());
         var content = $.trim($("#content").val());
+
+
 
 
             //  Kolla om fälten är tomma eller om de innehåller info och stoppa annars posten.
@@ -38,7 +74,7 @@
                 //  Skapar ett anrop till en annan fil och skicka datan dit som i sin tur postar question
             $.ajax({
               type: "POST",
-              url: "addAQuestion.php",
+              url: "functions.php",
               data: formData,
               success: function(response){
                     //  Vid success:
