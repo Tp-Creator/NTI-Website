@@ -57,7 +57,7 @@
 */
 
     /*
-        Parent, controlls for all childs and background color.
+        ("nav") Parent, controlls for all childs and background color.
     */
     nav {
 
@@ -72,7 +72,7 @@
     }
 
     /*
-        Parent, controlls for all childs and background color.
+        ("div") Parent, controlls for all childs and background color.
     */
     .navCon {
 
@@ -83,7 +83,7 @@
     }
 
     /*
-        Child
+        ("a") Child
     */
     .navBut {
 
@@ -93,13 +93,15 @@
 
         background-color: var(--mainColor_1);
 
+        text-decoration: none;
+
         display: grid;
         place-items: center;
 
     }
 
     /*
-        Child
+        ("img") Child
     */
     .navIcon {
 
@@ -110,7 +112,7 @@
     }
 
     /*
-        Child
+        ("p") Child
     */
     .navText {
 
@@ -120,12 +122,13 @@
 
     }
 
+
 /*
     Footer
 */
 
     /*
-        Parent, controlls for all childs and background color.
+        ("footer") Parent, controlls for all childs and background color.
     */
     footer  {
 
