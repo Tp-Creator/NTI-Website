@@ -18,7 +18,7 @@
         ];
 
         if (loginCheck()) {
-            array_push($navbuttons, ["Account", "../../account/login/login.php"]);
+            array_push($navbuttons, ["Account", "../../account/account/account.php"]);
         }
         else {
             array_push($navbuttons, ["login", "../../account/login/login.php"]);
