@@ -21,7 +21,6 @@
             data: data,
             success: function(html) {
                 // Update the page with the new messages
-                console.log("hej")
                 if(html != ""){
                     $("#questionCardFeed").prepend(html);
                 }
