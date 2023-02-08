@@ -52,7 +52,7 @@
     <header class="FP1">
         
         <nav>
-            <?php drawNavbar() ?>
+            <?php echo drawNavbar() ?>
         </nav>
 
         <!-- "ask a question" button -->

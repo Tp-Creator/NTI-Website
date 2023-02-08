@@ -13,8 +13,6 @@
 
         let lastQuestionMillis = $(".questionDate").first().text();
 
-        // console.log(lastQuestionMillis);
-
         let data = '&function=2&lastQuestion=' + lastQuestionMillis;
 
         $.ajax({
@@ -25,9 +23,7 @@
                 // Update the page with the new messages
                 if(html != ""){
                     $("#questionCardFeed").prepend(html);
-                    // console.log(html);
                 }
-                // $("#messages").append(data);
                 
                 window.lastPageUpdate = Date.now();
             }
