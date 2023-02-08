@@ -14,17 +14,21 @@
                             ["Games",       "urladress.php"],
                             ["Account",     "urladress.php"]
                         ];
-        
+
+        $navbar = "";
+
         for($b = 0; $b < sizeof($navbuttons); $b++){
             $content = $navbuttons[$b][0];
             $url = $navbuttons[$b][1];
 
                 // <!-- Navbar button -->
-            echo "<a class='navButton buttonText' href='$url'>";
-                echo "<p class='navText'>$content</p>";
-                echo "<img class='navIcon' src='/style/includes/icons/searchIcon.svg' alt=''>";
-            echo "</a>";
+            $navbar .= "<a class='navButton buttonText' href='$url'>";
+                $navbar .= "<p class='navText'>$content</p>";
+                $navbar .= "<img class='navIcon' src='/style/includes/icons/searchIcon.svg' alt=''>";
+            $navbar .= "</a>";
         }
+
+        return $navbar;
     }
 
 ?>

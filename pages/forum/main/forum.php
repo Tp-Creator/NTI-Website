@@ -37,7 +37,7 @@
 <header class="FP1">
         <!-- funktion to draw the navbar -->
         <nav>
-            <?php drawNavbar() ?>
+            <?php echo drawNavbar() ?>
         </nav>
 
     <!-- searchbar -->
