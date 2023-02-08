@@ -15,7 +15,7 @@
             ["Games",       "urladress.php"]
         ];
 
-        if (loginCheck()) {
+        if (/*loginCheck()*/True) {
             $navbuttons .= ["Account", "../../account/login/login.php"];
         }
         else {
