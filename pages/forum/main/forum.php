@@ -1,7 +1,7 @@
 <?php 
 
         //  Includes functions related to the db
-    include_once '../../../includes/loginCheck.php';
+    // include_once '../../../includes/loginCheck.php'; is not needed anymore
     include_once '../../../includes/dbh.inc.php';
     include_once '../../../includes/dbh.general.php';
     include_once '../dbh.forum.php';

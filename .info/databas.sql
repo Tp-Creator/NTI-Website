@@ -61,6 +61,10 @@ CREATE TABLE forum_answer (
 
 /* Lägger till en user som heter Joel, har en mail och ett lösenord */
 INSERT INTO users (Email, Username, pwd)
+VALUES ('kirillyasniy@gmail.com', 'Vertushka', 'asdfghjklöä');
+
+/* Lägger till en user som heter Joel, har en mail och ett lösenord */
+INSERT INTO users (Email, Username, pwd)
 VALUES ('hej@hej.com', 'Joel', 'Passwords123');
 
 /* Lägger till en user som heter Niklas, har en mail och ett lösenord */
@@ -89,12 +93,12 @@ VALUES ('Engelska 6', 'ENGENG6');
 
 /* Lägger till en fråga i databasen */
 INSERT INTO forum_question (CourseID, UserID, Title, Content, dt, Upvote)
-VALUES (1, 1, 'Hur gör man en webbsida i Javascript?', 'Jag har precis börjat 2:an och har kommit på att jag vill göra en webbsida. Jag tänker mig att den ska använda sig av php och en databas, men har inga förkunskaper. Hur gör man egentligen?', 1674747246925, 12345);
+VALUES (1, 2, 'Hur gör man en webbsida i Javascript?', 'Jag har precis börjat 2:an och har kommit på att jag vill göra en webbsida. Jag tänker mig att den ska använda sig av php och en databas, men har inga förkunskaper. Hur gör man egentligen?', 1674747246925, 12345);
 
 /* Lägger till ett svar på frågan ovan i databasen */
 INSERT INTO forum_answer (QuestionID, UserID, Content, dt, Upvote)
-VALUES (1, 2, 'Boom tjackalack! Den bästa lösningen är att Googla. Annars kan ni fråga mig ;)', 1674747246925, 4);
+VALUES (1, 3, 'Boom tjackalack! Den bästa lösningen är att Googla. Annars kan ni fråga mig ;)', 1674747246925, 4);
 
 /* Lägger till en kommentar till svaret ovan */
 INSERT INTO forum_answer (QuestionID, UserID, CommentID, Content, dt, Upvote)
-VALUES (1, 1, 1, 'Tack så mycket för hjälpen Nicklas! Förresten har du någon server som står och skräpar? Skulle behöva en för att sjösätta webbsidan ;)', 1674747246925, 1);
+VALUES (1, 2, 1, 'Tack så mycket för hjälpen Nicklas! Förresten har du någon server som står och skräpar? Skulle behöva en för att sjösätta webbsidan ;)', 1674747246925, 1);
