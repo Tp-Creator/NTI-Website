@@ -1,7 +1,9 @@
 <?php
         //  Includes db functions
     // include_once '../../includes/dbh.func/dbh.all.php';
-    include_once '../includes/dbh.general.php';
+    // include_once '../includes/dbh.general.php';
+    // include_once("../includes/dbh.general.php");
+    // include_once("footer.php");
 
 
     function drawNavbar(){
