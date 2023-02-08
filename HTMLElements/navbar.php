@@ -1,19 +1,26 @@
 <?php
         //  Includes db functions
     // include_once '../../includes/dbh.func/dbh.all.php';
+    include_once '../includes/dbh.general.php';
 
 
     function drawNavbar(){
 
         $navbuttons =   [
-                            ["Home",        "urladress.php"],
-                            ["News",        "urladress.php"],
-                            ["Forum",       "forum.php"],
-                            ["Schedule",    "urladress.php"],
-                            ["Memes",       "urladress.php"],
-                            ["Games",       "urladress.php"],
-                            ["Account",     "urladress.php"]
-                        ];
+            ["Home",        "urladress.php"],
+            ["News",        "urladress.php"],
+            ["Forum",       "forum.php"],
+            ["Schedule",    "urladress.php"],
+            ["Memes",       "urladress.php"],
+            ["Games",       "urladress.php"]
+        ];
+
+        if (loginCheck()) {
+            $navbuttons .= ["Account", "../../account/login/login.php"];
+        }
+        else {
+            $navbuttons .= ["login", "pages/account/login/login.php"];
+        }
 
         $navbar = "";
 
