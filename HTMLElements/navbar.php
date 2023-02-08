@@ -12,16 +12,16 @@
             ["Forum",       "forum.php"],
             ["Schedule",    "urladress.php"],
             ["Memes",       "urladress.php"],
-            ["Games",       "urladress.php"]
+            ["Games",       "urladress.php"],
+            []
         ];
-        $navbuttons .= ["Account", "../../account/login/login.php"];
 
-        // if (loginCheck()) {
-        //     $navbuttons .= ["Account", "../../account/login/login.php"];
-        // }
-        // else {
-        //     $navbuttons .= ["login", "pages/account/login/login.php"];
-        // }
+        if (loginCheck()) {
+            array_push($navbuttons, ["Account", "../../account/login/login.php"]);
+        }
+        else {
+            array_push($navbuttons, ["login", "pages/account/login/login.php"]);
+        }
 
         $navbar = "";
 
