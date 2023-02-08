@@ -129,9 +129,9 @@
                 $questions = getQuestions();
 
                     //  Amount of cards is the amount of cards that will be displayed
-                for($current = sizeof($questions)-1; $current > 0; $current--){
+                for($current = sizeof($questions)-1; $current >= 0; $current--){
 
-                    questionCard($questions[$current]);
+                    echo questionCard($questions[$current]);
 
                 }
                 
