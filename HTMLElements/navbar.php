@@ -21,7 +21,7 @@
             array_push($navbuttons, ["Account", "../../account/login/login.php"]);
         }
         else {
-            array_push($navbuttons, ["login", "pages/account/login/login.php"]);
+            array_push($navbuttons, ["login", "../../account/login/login.php"]);
         }
 
         $navbar = "";
