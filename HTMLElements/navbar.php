@@ -13,7 +13,6 @@
             ["Schedule",    "urladress.php"],
             ["Memes",       "urladress.php"],
             ["Games",       "urladress.php"],
-            []
         ];
 
         if (loginCheck()) {
