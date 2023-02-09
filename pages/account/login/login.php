@@ -6,8 +6,8 @@
     //  the session with the user id to keep the user logged in.
 
     //Includes the connection to the database
-    include_once '../../../includes/dbh.inc.php';
-    include_once '../dbh.usr.php';
+    include_once 'includes/dbh.inc.php';
+    include_once 'pages/account/dbh.usr.php';
 
 
     //check if this is a login request
@@ -39,7 +39,7 @@
     
     <!-- style links  -->
     <link rel="stylesheet" href="/style/main1.css">
-    <link rel="stylesheet" href="../account.css">
+    <link rel="stylesheet" href="/pages/account/account.css">
 
     <title>Log in</title>
 </head>

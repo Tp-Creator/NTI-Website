@@ -1,11 +1,18 @@
 #Redirecting...
-ErrorDocument 401 /pages/account/login/login.php
-ErrorDocument 404 /404.html
-ErrorDocument 403 /403.html
+#ErrorDocument 401 /pages/account/login/login.php
+#ErrorDocument 404 /404.html
+#ErrorDocument 403 /403.html
 
 #main page
-DirectoryIndex /pages/index.html
+RewriteEngine On
+#RewriteRule ^login$ /index.php?route=login [L]
+#RewriteCond %{REQUEST_URI} !^/
+# RewriteRule ^([^/]+)$ /index.php?route=$1 [L]
+
+
+
+#DirectoryIndex /pages/index.html
 
 
 #Blocking access to fillesystem
-Options -Indexes
+#Options -Indexes
