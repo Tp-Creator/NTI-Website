@@ -9,8 +9,8 @@
 
 
     //Includes the connection to the database
-    include_once '../../../includes/dbh.inc.php';
-    include_once '../dbh.usr.php';
+    include_once 'includes/dbh.inc.php';
+    include_once 'pages/account/dbh.usr.php';
 
     //  A variable for the fail message that can be needed to be displayed
     $error_message = "";
@@ -57,8 +57,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- style links  -->
-    <link rel="stylesheet" href="/style/main1.css">
-    <link rel="stylesheet" href="../account.css">
+    <link rel="stylesheet" href="style/main1.css">
+    <link rel="stylesheet" href="/pages/account/account.css">
 
     <title>Sign up</title>
 </head>
@@ -104,7 +104,7 @@
         }
     ?>
 
-    <form class="infoCard" name="sign-up" method="post" action="./sign-up.php">
+    <form class="infoCard" name="sign-up" method="post" action="/sign-up">
 
         <h1>Create account</h1>
 
@@ -118,7 +118,7 @@
 
         <button class="button" type="submit" id="submit" onclick="return validateForm(this.form)">Create your account</button>
 
-        <p>Already have an account? <a href="../login/login.php">Return to log in</a></p>
+        <p>Already have an account? <a href="/login">Return to log in</a></p>
 
     </form>
 

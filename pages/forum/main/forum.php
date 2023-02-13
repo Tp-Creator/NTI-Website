@@ -2,14 +2,16 @@
 
         //  Includes functions related to the db
     // include_once '../../../includes/loginCheck.php'; is not needed anymore
-    include_once '../../../includes/dbh.inc.php';
-    include_once '../../../includes/dbh.general.php';
-    include_once '../dbh.forum.php';
+    include_once 'includes/dbh.inc.php';
+    include_once 'includes/dbh.general.php';
+    include_once 'pages/forum/dbh.forum.php';
 
 
         //  Includes php elements
-    include_once '../../../HTMLElements/navbar.php';
-    include_once './.elements.php';
+    include_once 'HTMLElements/navbar.php';
+    include_once 'pages/forum/main/.elements.php';
+
+    session_start(); //start the PHP_session function
 
 ?>
 
@@ -28,7 +30,7 @@
     <link rel="stylesheet" href="/style/main1.css">
     <link rel="stylesheet" href="/style/common1.css">
     <!-- Page style links -->
-    <link rel="stylesheet" href="../forum.css">
+    <link rel="stylesheet" href="pages/forum/forum.css">
 
     <title>Forum</title>
 </head>

@@ -1,5 +1,7 @@
 #main page
 RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !\.css$
 RewriteCond %{REQUEST_URI} !^/routing\.php$
 RewriteRule ^(.*)$ routing.php [L]
 # RewriteRule ^([^/]+)$ /index.php?route=$1 [L] #den här fungerar också, det var fel på rewritecond

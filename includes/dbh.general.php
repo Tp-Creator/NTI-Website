@@ -1,6 +1,6 @@
 <?php
 
-    include_once('dbh.inc.php');
+    include_once('includes/dbh.inc.php');
 
         //  getUsernameFromId($id)
         //  this function takes one argument: the Id of a user
@@ -21,7 +21,8 @@
     // This function checks if the user is logged in by checking if the session
     // contains an userID. If not it directs the user to the login page.
     function loginCheck() {
-        session_start(); //start the PHP_session function 
+            //  Måste startas direkt från den filen där den ska användas. Annars får man felmeddelande om att man startar session för sent.
+        // session_start(); //start the PHP_session function 
     
         if(isset($_SESSION['userID']))
         {

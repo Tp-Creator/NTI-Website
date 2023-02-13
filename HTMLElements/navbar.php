@@ -11,7 +11,7 @@
         $navbuttons =   [
             ["Home",        "urladress.php"],
             ["News",        "urladress.php"],
-            ["Forum",       "forum.php"],
+            ["Forum",       "/forum"],
             ["Schedule",    "urladress.php"],
             ["Memes",       "urladress.php"],
             ["Games",       "urladress.php"],

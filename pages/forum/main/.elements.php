@@ -1,6 +1,6 @@
 <?php
 
-    include_once '../../../includes/dbh.general.php';
+    include_once 'includes/dbh.general.php';
 
     function questionCard($question){
 
@@ -27,7 +27,7 @@
         $card = "";
 
         //  <!-- hämtar id:t på frågan och lägger till den i url:en -->
-        $card .= "<a href='../question/forumQuestion.php?question=$id'>";
+        $card .= "<a href='/forum/question?question=$id'>";
             $card .= '<div class="forumCard">';
                 //  <!-- Corse pill -->
                 $card .= "<div class='pill QCP1 $courseColor'>";

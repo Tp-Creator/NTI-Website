@@ -38,14 +38,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- style links  -->
-    <link rel="stylesheet" href="/style/main1.css">
-    <link rel="stylesheet" href="/pages/account/account.css">
+    <link rel="stylesheet" type="text/css" href="/style/main1.css">
+    <link rel="stylesheet" type="text/css" href="/pages/account/account.css">
 
     <title>Log in</title>
 </head>
 <body>
 
-    <form class="infoCard" name="login" method="post" action="./login.php">
+    <form class="infoCard" name="login" method="post" action="/login">
 
         <h1>Welcome! Consider logging in</h1>
 
@@ -55,7 +55,7 @@
 
         <button class="button" type="submit" id="submit">Log in</button>
         
-        <p>Dont have any account? No problem,<a href="../sign-up/sign-up.php">create one here!</a></p>
+        <p>Dont have any account? No problem,<a href="/sign-up">create one here!</a></p>
     </form>
 
 </body>
