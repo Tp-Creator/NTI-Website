@@ -1,33 +1,47 @@
 <?php
-include_once('includes\dbh.inc.php');
+include_once('includes/dbh.func/general/dbh.inc.php');
 
 
+
+    //  OBS "/" måste vara sist för att den inte alltid ska returnera index. Den tar första bästa som börjar med det vi kollar efter...
 $routes = [
-    "/"      => "/pages/index.html",
-    "/forum" => "/pages/forum/main/forum.php",
-    "/forum/question" => "/pages/forum/question/forumQuestion.php",
-    "/login" => "/pages/account/login/login.php",
-    "/sign-up" => "/pages/account/sign-up/sign-up.php",
+    "/"                 =>  ["/pages/index.html", false],
+
+    "/login"            =>  ["/pages/account/login.php", false],
+    "/sign-up"          =>  ["/pages/account/sign-up.php", false],
+    "/account"       =>  ["/pages/account/account.php", false],
+    
+    "/forum"            =>  ["/pages/forum/forum.php", false],
+    "/forum/question"   =>  ["/pages/forum/forumQuestion.php", false],
+    
+    
+    // "/lib" => "/css//" . $_SERVER['REQUEST_URI'],
+    
 ];
-// console_log($routes);
 
-
+// console_log($_SERVER['REQUEST_URI']);
 
 
 run();
 
 function run() {
     global $routes;
-    $uri = $_SERVER['REQUEST_URI'];
-    // console_log($uri);    
+        //  Ger inte URL parametrar
+    $uri = $_SERVER['REDIRECT_URL'];
+        
+        //  Om man skrivit en eller flera "/" i slutet av URLn så tar vi bort dem och redirectar till adressen utan "/"
+        //  ex. "/forum/" -> "/forum"
+        if($uri != rtrim($uri, "/") && strlen(rtrim($uri, "/")) > 3){
+            header('Location: ' . rtrim($uri, "/"));
+        }
+            
     foreach ($routes as $path => $url) {
-        // console_log($url);
-        if ($path === $uri) {
-            // console_log($url);
-            require __DIR__ . $url;
+        if ($path === $_SERVER['REDIRECT_URL']) {
+        // if (str_starts_with($uri, $path)) {
+            require __DIR__ . $url[0];
             return;
         }
     }
-    require __DIR__ . '/404.html';
+    require __DIR__ . '/pages/.err/404.html';
 }
 ?>

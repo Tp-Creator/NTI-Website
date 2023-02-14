@@ -9,8 +9,8 @@
 
 
     //Includes the connection to the database
-    include_once 'includes/dbh.inc.php';
-    include_once 'pages/account/dbh.usr.php';
+    include_once 'includes\dbh.func\general\dbh.inc.php';
+    include_once 'includes\dbh.func\account\dbh.usr.php';
 
     //  A variable for the fail message that can be needed to be displayed
     $error_message = "";
@@ -58,7 +58,7 @@
 
     <!-- style links  -->
     <link rel="stylesheet" href="style/main1.css">
-    <link rel="stylesheet" href="/pages/account/account.css">
+    <link rel="stylesheet" href="style/pages/account/account.css">
 
     <title>Sign up</title>
 </head>

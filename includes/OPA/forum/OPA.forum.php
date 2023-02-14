@@ -1,8 +1,15 @@
 <?php 
 
-include_once '../dbh.forum.php';
-include_once './.elements.php';
+// include_once 'includes/dbh.func/forum/dbh.forum.php';
+// include_once 'includes/HTMLElements/forum/forum.elements.php';
 
+set_include_path($_SERVER['DOCUMENT_ROOT']);
+
+include_once('includes\dbh.func\forum\dbh.forum.php');
+include_once('includes\HTMLElements\forum\forum.elements.php');
+// include_once($_SERVER['DOCUMENT_ROOT'] . '/includes/dbh.func/forum/dbh.forum.php');
+
+// console_log("hej");
 
 function sendQuestion()
 {

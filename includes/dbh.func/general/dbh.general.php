@@ -1,6 +1,6 @@
 <?php
 
-    include_once('includes/dbh.inc.php');
+    include_once('includes/dbh.func/general/dbh.inc.php');
 
         //  getUsernameFromId($id)
         //  this function takes one argument: the Id of a user

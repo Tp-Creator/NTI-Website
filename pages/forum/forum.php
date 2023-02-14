@@ -2,14 +2,14 @@
 
         //  Includes functions related to the db
     // include_once '../../../includes/loginCheck.php'; is not needed anymore
-    include_once 'includes/dbh.inc.php';
-    include_once 'includes/dbh.general.php';
-    include_once 'pages/forum/dbh.forum.php';
+    include_once 'includes/dbh.func/general/dbh.inc.php';
+    include_once 'includes/dbh.func/general/dbh.general.php';
+    include_once 'includes/dbh.func/forum/dbh.forum.php';
 
 
         //  Includes php elements
-    include_once 'HTMLElements/navbar.php';
-    include_once 'pages/forum/main/.elements.php';
+    include_once 'includes/HTMLElements/general/navbar.php';
+    include_once 'includes/HTMLElements/forum/forum.elements.php';
 
     session_start(); //start the PHP_session function
 
@@ -24,13 +24,13 @@
 
     <!-- jQuery -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="forum.js"></script>
+        <script src="js/forum/forum.js"></script>
 
     <!-- Basic style links -->
     <link rel="stylesheet" href="/style/main1.css">
     <link rel="stylesheet" href="/style/common1.css">
     <!-- Page style links -->
-    <link rel="stylesheet" href="pages/forum/forum.css">
+    <link rel="stylesheet" href="style/pages/forum/forum.css">
 
     <title>Forum</title>
 </head>

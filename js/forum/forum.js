@@ -17,10 +17,10 @@
 
         $.ajax({
             type: "POST",
-            url: "functions.php",
+            url: "/includes/OPA/forum/OPA.forum.php",
             data: data,
             success: function(html) {
-                // Update the page with the new messages
+                    // Update the page with the new messages
                 if(html != ""){
                     $("#questionCardFeed").prepend(html);
                 }
@@ -70,9 +70,10 @@
                 //  Skapar ett anrop till en annan fil och skicka datan dit som i sin tur postar question
             $.ajax({
               type: "POST",
-              url: "functions.php",
+              url: "/includes/OPA/forum/OPA.forum.php",
               data: formData,
               success: function(response){
+                checkForNewMessages();
                     //  Vid success:
                     //  Resetta alla fält i formen
                 $("#courseID").val('');
@@ -84,12 +85,12 @@
                 $("#askNewQuestionCard").slideUp(300);
                     //  Ändrar även texten på knappen så att det står ask a question.
                 $("#askQuestion").text("Ask a question");
-                console.log("nice");
+                // console.log("nice");
 
               },
                     //  Vid error skriv i konsolen
               error: function(response){
-                console.log("Error posting new question!");
+                console.log("Error posting new question");
               }
             });
         } else {

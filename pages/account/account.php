@@ -1,6 +1,6 @@
 <?php
 
-    include_once('../../../includes/dbh.general.php');
+    include_once('includes\dbh.func\general\dbh.general.php');
 
     session_start();    //start the PHP_session function
 
@@ -21,7 +21,7 @@
 </head>
 <body>
     
-
+hhhh
 
 </body>
 </html>

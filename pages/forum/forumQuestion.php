@@ -1,14 +1,14 @@
 <?php 
 
         //  Includes functions related to the db
-    include_once '../../../includes/loginCheck.php';
-    include_once '../../../includes/dbh.inc.php';
-    include_once '../../../includes/dbh.general.php';
-    include_once '../dbh.forum.php';
+    // include_once 'includes/loginCheck.php';
+    include_once 'includes\dbh.func\general\dbh.inc.php';
+    include_once 'includes\dbh.func\general\dbh.general.php';
+    include_once 'includes\dbh.func\forum\dbh.forum.php';
 
 
         //  Includes php elements
-    include_once '../../../HTMLElements/navbar.php';
+    include_once 'includes\HTMLElements\general\navbar.php';
 
     //check if this is a login request
     // if($_POST) {
@@ -37,13 +37,13 @@
 
         <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="forumQuestion.js"></script>
+    <script src="/js/forum/forumQuestion.js"></script>
 
     <!-- style links -->
     <link rel="stylesheet" href="/style/main1.css">
     <link rel="stylesheet" href="/style/common1.css">
     
-    <link rel="stylesheet" href="../forum.css">
+    <link rel="stylesheet" href="/style/pages/forum/forum.css">
 
     <title>Forum</title>
 </head>
@@ -56,7 +56,7 @@
         </nav>
 
         <!-- "ask a question" button -->
-        <a class="buttonType1 regularText" href="../main/forum.php">Back to forum</a>
+        <a class="buttonType1 regularText" href="/forum">Back to forum</a>
         
         <!-- searchbar -->
         <form class="searchbar" action="">

@@ -1,6 +1,11 @@
 <?php 
+// return;
+// echo "hej";
+set_include_path($_SERVER['DOCUMENT_ROOT']);
 
-include_once '../dbh.forum.php';
+include_once 'includes/dbh.func/forum/dbh.forum.php';
+
+// console_log("hej");
 
 session_start(); //start the PHP_session function 
 

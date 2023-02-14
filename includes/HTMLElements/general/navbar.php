@@ -9,19 +9,19 @@
     function drawNavbar(){
 
         $navbuttons =   [
-            ["Home",        "urladress.php"],
-            ["News",        "urladress.php"],
+            ["Home",        "/"],
+            ["News",        "/news"],
             ["Forum",       "/forum"],
-            ["Schedule",    "urladress.php"],
-            ["Memes",       "urladress.php"],
-            ["Games",       "urladress.php"],
+            ["Schedule",    "/schedule"],
+            ["Memes",       "/memes"],
+            ["Games",       "/games"],
         ];
 
         if (loginCheck()) {
-            array_push($navbuttons, ["Account", "../../account/account/account.php"]);
+            array_push($navbuttons, ["Account", "/account"]);
         }
         else {
-            array_push($navbuttons, ["login", "../../account/login/login.php"]);
+            array_push($navbuttons, ["Login", "/login"]);
         }
 
         $navbar = "";
