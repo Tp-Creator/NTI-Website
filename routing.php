@@ -9,7 +9,7 @@ $routes = [
 
     "/login"            =>  ["/pages/account/login.php", false],
     "/sign-up"          =>  ["/pages/account/sign-up.php", false],
-    "/account"       =>  ["/pages/account/account.php", false],
+    "/account"          =>  ["/pages/account/account.php", false],
     
     "/forum"            =>  ["/pages/forum/forum.php", false],
     "/forum/question"   =>  ["/pages/forum/forumQuestion.php", false],
@@ -31,9 +31,9 @@ function run() {
         
         //  Om man skrivit en eller flera "/" i slutet av URLn så tar vi bort dem och redirectar till adressen utan "/"
         //  ex. "/forum/" -> "/forum"
-        if($uri != rtrim($uri, "/") && strlen(rtrim($uri, "/")) > 3){
-            header('Location: ' . rtrim($uri, "/"));
-        }
+    if($uri != rtrim($uri, "/") && strlen(rtrim($uri, "/")) > 3){
+        header('Location: ' . rtrim($uri, "/"));
+    }
             
     foreach ($routes as $path => $url) {
         if ($path === $_SERVER['REDIRECT_URL']) {
