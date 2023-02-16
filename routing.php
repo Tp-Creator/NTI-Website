@@ -14,6 +14,9 @@ $routes = [
     "/forum"            =>  ["/pages/forum/forum.php", false],
     "/forum/question"   =>  ["/pages/forum/forumQuestion.php", false],
     
+    "/google"          =>   ["/pages/account/googleLogin.php", false],          //  Test google login
+    "/gooIn"          =>   ["/pages/googleIndex.php", false],          //  Test google login
+
     
     // "/lib" => "/css//" . $_SERVER['REQUEST_URI'],
     
