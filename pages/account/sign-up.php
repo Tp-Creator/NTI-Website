@@ -57,8 +57,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- style links  -->
-    <link rel="stylesheet" href="style/main1.css">
-    <link rel="stylesheet" href="style/pages/account/account.css">
+    <link rel="stylesheet" href="/public/style/main1.css">
+    <link rel="stylesheet" href="/public/style/pages/account/account.css">
 
     <title>Sign up</title>
 </head>

@@ -25,7 +25,7 @@ $(document).ready(function(){
                 //  Skapar ett anrop till en annan fil och skickar datan dit som i sin tur postar answer
             $.ajax({
             type: "POST",
-            url: "/includes/OPA/forum/OPA.question.php",
+            url: "/public/OPA/forum/OPA.question.php",
             data: formData,
             success: function(response){
                 console.log(response);

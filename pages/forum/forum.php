@@ -24,13 +24,13 @@
 
     <!-- jQuery -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="js/forum/forum.js"></script>
+        <script src="/public/js/forum/forum.js"></script>
 
     <!-- Basic style links -->
-    <link rel="stylesheet" href="/style/main1.css">
-    <link rel="stylesheet" href="/style/common1.css">
+    <link rel="stylesheet" href="/public/style/main1.css" type="text/css">
+    <link rel="stylesheet" href="/public/style/common1.css" type="text/css">
     <!-- Page style links -->
-    <link rel="stylesheet" href="style/pages/forum/forum.css">
+    <link rel="stylesheet" href="/public/style/pages/forum/forum.css" type="text/css">
 
     <title>Forum</title>
 </head>
@@ -50,7 +50,7 @@
 
         <!-- ( "Search Button" ) -->
         <button class="searchButton">
-            <img class="icon" src="/style/includes/icons/searchIcon.svg" alt="">
+            <img class="icon" src="/public/style/includes/icons/searchIcon.svg" alt="">
         </button>
     </form>
 

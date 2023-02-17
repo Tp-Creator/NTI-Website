@@ -5,24 +5,31 @@ include_once('includes/dbh.func/general/dbh.inc.php');
 
     //  OBS "/" måste vara sist för att den inte alltid ska returnera index. Den tar första bästa som börjar med det vi kollar efter...
 $routes = [
-    "/"                 =>  ["/pages/index.html", false],
+    "/"                 =>      ["/pages/index.html", false],
 
-    "/login"            =>  ["/pages/account/login.php", false],
-    "/sign-up"          =>  ["/pages/account/sign-up.php", false],
-    "/account"          =>  ["/pages/account/account.php", false],
+    "/login"            =>      ["/pages/account/login.php", false],
+    "/sign-up"          =>      ["/pages/account/sign-up.php", false],
+    "/account"          =>      ["/pages/account/account.php", false],
     
-    "/forum"            =>  ["/pages/forum/forum.php", false],
-    "/forum/question"   =>  ["/pages/forum/forumQuestion.php", false],
+    "/forum"            =>      ["/pages/forum/forum.php", false],
+    "/forum/question"   =>      ["/pages/forum/forumQuestion.php", false],
     
-    "/google"          =>   ["/pages/account/googleLogin.php", false],          //  Test google login
-    "/gooIn"          =>   ["/pages/googleIndex.php", false],          //  Test google login
+    "/google"           =>      ["/pages/account/googleLogin.php", false],          //  Test google login
+    "/gooIn"            =>      ["/pages/googleIndex.php", false],          //  Test google login
+    "/403"              =>      ["/pages/error/granted.html", false],
+    "/404"              =>      ["/pages/error/404.html", false]
+    
+    
 
-    
-    // "/lib" => "/css//" . $_SERVER['REQUEST_URI'],
+    // "/includes/OPA/forum/OPA.forum.php"          =>   ["/includes/OPA/forum/OPA.forum.php", false], 
+    // "/includes/OPA/forum/OPA.question.php"          =>   ["/includes/OPA/forum/OPA.question.php", false], 
+
+
+    // "/lib" => "/css//" . $_SERVER['REQUEST_fakeURL'],
     
 ];
 
-// console_log($_SERVER['REQUEST_URI']);
+// console_log($_SERVER['REQUEST_fakeURL']);
 
 
 run();
@@ -30,21 +37,21 @@ run();
 function run() {
     global $routes;
         //  Ger inte URL parametrar
-    $uri = $_SERVER['REDIRECT_URL'];
+    $fakeURL = $_SERVER['REDIRECT_URL'];
         
         //  Om man skrivit en eller flera "/" i slutet av URLn så tar vi bort dem och redirectar till adressen utan "/"
         //  ex. "/forum/" -> "/forum"
-    if($uri != rtrim($uri, "/") && strlen(rtrim($uri, "/")) > 3){
-        header('Location: ' . rtrim($uri, "/"));
+    if($fakeURL != rtrim($fakeURL, "/") && strlen(rtrim($fakeURL, "/")) > 3){
+        header('Location: ' . rtrim($fakeURL, "/"));
     }
             
     foreach ($routes as $path => $url) {
         if ($path === $_SERVER['REDIRECT_URL']) {
-        // if (str_starts_with($uri, $path)) {
+        // if (str_starts_with($fakeURL, $path)) {
             require __DIR__ . $url[0];
             return;
         }
     }
-    require __DIR__ . '/pages/.err/404.html';
+    require __DIR__ . '/pages/error/404.html';
 }
 ?>

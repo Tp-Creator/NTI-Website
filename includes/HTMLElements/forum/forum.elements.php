@@ -37,7 +37,7 @@
                 //  <!-- Vote -->
                 $card .= "<button class='pill QCP2'>";
                     $card .= $vote;
-                    $card .= "<img class='icon' src='/style/includes/icons/voteUpIcon.svg' alt='Vote up icon'>";
+                    $card .= "<img class='icon' src='/public/style/includes/icons/voteUpIcon.svg' alt='Vote up icon'>";
                 $card .= "</button>";
 
                 //  <!-- Card information -->

@@ -33,7 +33,7 @@
                 // <!-- Navbar button -->
             $navbar .= "<a class='navButton buttonText' href='$url'>";
                 $navbar .= "<p class='navText'>$content</p>";
-                $navbar .= "<img class='navIcon' src='/style/includes/icons/searchIcon.svg' alt=''>";
+                $navbar .= "<img class='navIcon' src='/public/style/includes/icons/searchIcon.svg' alt=''>";
             $navbar .= "</a>";
         }
 

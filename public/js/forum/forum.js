@@ -17,7 +17,7 @@
 
         $.ajax({
             type: "POST",
-            url: "/includes/OPA/forum/OPA.forum.php",
+            url: "/public/OPA/forum/OPA.forum.php",
             data: data,
             success: function(html) {
                     // Update the page with the new messages
@@ -70,7 +70,7 @@
                 //  Skapar ett anrop till en annan fil och skicka datan dit som i sin tur postar question
             $.ajax({
               type: "POST",
-              url: "/includes/OPA/forum/OPA.forum.php",
+              url: "/public/OPA/forum/OPA.forum.php",
               data: formData,
               success: function(response){
                 checkForNewMessages();
