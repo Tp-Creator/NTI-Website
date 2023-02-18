@@ -1,3 +1,13 @@
+header {
+    display: grid;
+    grid-template-columns: 1fr minmax( 12rem , 58rem ) 1fr;
+    grid-template-rows: auto;
+    gap: 1.25rem;
+}
+
+
+
+
 .forumCard{
     padding: 1.25rem;
 

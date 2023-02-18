@@ -25,17 +25,20 @@
     <link rel="stylesheet" href="/style/mainStyle.css">
     <link rel="stylesheet" href="/style/commonStyle.css">
     <!-- Page style links -->
-    <link rel="stylesheet" href="../forum.css">
+    <link rel="stylesheet" href="../forumStyle.css">
+    <link rel="stylesheet" href="../forumElementPosition.css">
 
-    <title>Forum</title>
+    <title>Schoolhub Forum</title>
 </head>
 
 <body>
     <header class="FP1">
         <!-- navigationbar -->
-        <nav>
-        <?php drawNavbar() ?>
-        </nav>
+        <div id="navCon">
+            <nav>
+                <?php drawNavbar() ?>
+            </nav>
+        </div>
 
         <!-- searchbar -->
         <form class="searchbar" action="">
@@ -99,7 +102,7 @@
                 <!-- Username -->
                 <p class="usernameText"><?php echo $user[1]; ?></p>
 
-                <!-- Meta aka Course -->
+                <!-- Meta -->
                 <div class="meta <?php echo $course[2] ?>"><p><?php echo $course[1] ?></p></div>
 
                 <!-- Date & Time -->

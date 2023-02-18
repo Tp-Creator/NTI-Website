@@ -69,19 +69,14 @@
 
 /* Navigation bar  */
 nav {
-    grid-column: 2;
-
-    width: 100%;
-    min-width: max-content;
-    height: min-content;
+    max-width: 37.5rem;
 
     display: flex;
     flex-direction: row;
 }
 
 .navButton {
-    width: 100%;
-    min-width: 4rem;
+    width: 7.5rem;
     padding: 0.825em;
 
     text-align: center;
@@ -89,7 +84,6 @@ nav {
     display: grid;
     place-items: center;
 }
-
 .navButton:hover {
     cursor: pointer;
 }
@@ -103,6 +97,8 @@ nav {
 
 .navText {
     font-size: var(--size_14);
+
+    background-color: lightblue;
 }
 
 
