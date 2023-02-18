@@ -1,0 +1,130 @@
+/* variables */
+:root {
+    /* Main colors (greyscale)*/
+    --mainColor_95: hsl(0 0% 95%);
+    --mainColor_85: hsl(0 0% 85%);
+    --mainColor_50: hsl(0 0% 50%);
+    --mainColor_25: hsl(0 0% 25%);
+    --mainColor_10: hsl(0 0% 10%);
+}
+
+
+
+
+@font-face {
+    font-family: 'poppins';
+    src: url(includes/fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'poppins-medium';
+    src: url(includes/fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'poppins-semibold';
+    src: url(includes/fonts/Poppins-SemiBold.ttf);
+}
+
+
+
+
+
+
+
+
+/* Element text */
+.elemText {
+    font-size: 0.875rem;
+    font-family: 'poppins-medium';
+}
+/* Card title */
+.titleText {
+    font-size: 1rem;
+}
+/* infoText */
+.elemText {
+    font-size: 0.625rem;
+}
+/* usernameText */
+.elemText {
+    font-size: 0.75rem;
+}
+
+
+
+
+* {
+    margin: 0%;
+    padding: 0%;
+
+    border: none;
+
+    text-decoration: none;
+    font-family: 'poppins';
+}
+
+
+
+
+/* Navigation bar  */
+nav {
+    grid-column: 2;
+
+    width: 100%;
+    min-width: max-content;
+    height: min-content;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.navButton {
+    width: 100%;
+    min-width: 4rem;
+    padding: 0.825em;
+
+    text-align: center;
+
+    display: grid;
+    place-items: center;
+}
+
+.navButton:hover {
+    cursor: pointer;
+}
+
+.navIcon {
+    display: none;
+
+    width: 2em;
+    height: 2em;
+}
+
+.navText {
+    font-size: var(--size_14);
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 992px) {
+
+    .navButton {
+        min-width: 2rem;
+        padding: 0.5em;
+    }
+    
+    .navIcon {
+        display: block;
+    }
+
+    .navText {
+        display: none;
+    }
+
+  }

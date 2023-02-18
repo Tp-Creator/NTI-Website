@@ -6,13 +6,11 @@
     function drawNavbar(){
 
         $navbuttons =   [
-                            ["Home",        "urladress.php"],
                             ["News",        "urladress.php"],
                             ["Forum",       "forum.php"],
                             ["Schedule",    "urladress.php"],
                             ["Memes",       "urladress.php"],
                             ["Games",       "urladress.php"],
-                            ["Account",     "urladress.php"]
                         ];
         
         for($b = 0; $b < sizeof($navbuttons); $b++){
