@@ -1,4 +1,10 @@
 header {
+    top: 0rem;
+    position: sticky;
+    width: 100%;
+
+    background-color: #fff;
+
     display: grid;
     grid-template-columns: 1fr minmax( 12rem , 58rem ) 1fr;
     gap: 1.25rem;
@@ -78,6 +84,8 @@ header {
 
     /* Form */
     .askAQuestionForm {
+        grid-column: 2;
+
         border-radius: 1.5rem;
 
         box-shadow: 0rem 0rem 0.5rem var(--mainColor_85);

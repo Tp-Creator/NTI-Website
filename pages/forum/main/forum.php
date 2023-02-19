@@ -75,49 +75,46 @@
             <!-- "Ask a question" button -->
             <button class="aaqButton" id="askQuestion">Ask a question</button>
         </div>
+        
+        <!-- Ask a question form -->
+        <form class="askAQuestionForm" id="askNewQuestionCard">
+                <!-- card header  -->
+                <div class="aaqHeader">
+                    <p id="aaqTitle">Ask a question</p>
+
+                    <!-- Choose course -->
+                    <select class="aaqSelect" name="courseID" id="courseID">  
+                        <option value="">Choose course</option>
+
+                        <?php 
+                                //  Loops as many choices as there are courses in the db
+                            for($i = 0; $i < sizeof($courses); $i++){
+                        ?>
+                            <!-- course $courses[$i][1] is the name of the course currently looped-->
+                            <option value="<?php echo $courses[$i][0] ?>"><?php echo $courses[$i][1] ?></option>
+                        <?php 
+                            }
+                        ?>
+                    </select>
+
+                    <button class="aaqPostButton" id="postNewQuestionButton" type="submit">Post</button>
+                </div>
+
+                <div class="aaqBody">
+                    <!-- Input question -->
+                    <input class="aaqInput" placeholder="Enter a title" name="title" id="title"></input>
+
+                    <div class="lineHorizontal"></div>
+
+                    <!-- Input description -->
+                    <input class="aaqInput" placeholder="Enter a description" name="content" id="content"></input>
+                </div>
+            </form>
     </header>
 
 
     <!-- Content feed -->
     <section class="contentFeed">
-        
-        <!-- Ask a question form -->
-        <form class="askAQuestionForm" id="askNewQuestionCard">
-
-            <!-- card header  -->
-            <div class="aaqHeader">
-                <p id="aaqTitle">Ask a question</p>
-
-                <!-- Choose course -->
-                <select class="aaqSelect" name="courseID" id="courseID">  
-                    <option value="">Choose course</option>
-
-                    <?php 
-                            //  Loops as many choices as there are courses in the db
-                        for($i = 0; $i < sizeof($courses); $i++){
-                    ?>
-                        <!-- course $courses[$i][1] is the name of the course currently looped-->
-                        <option value="<?php echo $courses[$i][0] ?>"><?php echo $courses[$i][1] ?></option>
-                    <?php 
-                        }
-                    ?>
-                </select>
-
-                <button class="aaqPostButton" id="postNewQuestionButton" type="submit">Post</button>
-            </div>
-
-            <div class="aaqBody">
-                <!-- Input question -->
-                <input class="aaqInput" placeholder="Enter a title" name="title" id="title"></input>
-
-                <div class="lineHorizontal"></div>
-
-                <!-- Input description -->
-                <input class="aaqInput" placeholder="Enter a description" name="content" id="content"></input>
-            </div>
-        </form>
-
-
         <?php 
             $questions = getQuestions();
 
