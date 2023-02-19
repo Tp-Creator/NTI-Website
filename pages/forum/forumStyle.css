@@ -131,6 +131,9 @@ header {
         color: var(--mainColor_95);
         background-color: var(--mainColor_50);
     }
+    .aaqButton:hover {
+        cursor: pointer;
+    }
 
 
 
