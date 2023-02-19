@@ -27,7 +27,7 @@ $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
 //  Does not return anything
 function console_log($output) {
     $js_code = 'console.log(' . json_encode($output, JSON_HEX_TAG) . ');';
-    $js_code = '/*<script>' . $js_code . '</script>*/';
+    $js_code = '<script>' . $js_code . '</script>';
     
     echo $js_code;
 }

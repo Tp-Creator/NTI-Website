@@ -6,6 +6,16 @@ CREATE TABLE users (
     pwd varchar(255)
 );
 
+CREATE TABLE users (
+    UserID int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    Email varchar(100) NOT NULL UNIQUE,
+    Nickname varchar(50) NOT NULL,
+    FirstName varchar(50),
+    LastName varchar(50),
+    pwd varchar(255)
+);
+
+
 /*  Skapar tabellen msg kopplar ihop så att userID måste vara ett värde som finns i columnen ID i tabellen users*/
 -- CREATE TABLE msg (
 --     msgID int NOT NULL PRIMARY KEY AUTO_INCREMENT,
