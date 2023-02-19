@@ -69,36 +69,30 @@
 
 /* Navigation bar  */
 nav {
-    max-width: 37.5rem;
-
     display: flex;
     flex-direction: row;
 }
 
 .navButton {
-    width: 7.5rem;
+    width: 100%;
     padding: 0.825em;
-
-    text-align: center;
 
     display: grid;
     place-items: center;
 }
 .navButton:hover {
     cursor: pointer;
+    background-color: var(--mainColor_95);
 }
 
 .navIcon {
     display: none;
-
-    width: 2em;
-    height: 2em;
 }
 
 .navText {
-    font-size: var(--size_14);
+    font-size: 0.875rem;
 
-    background-color: lightblue;
+    color: var(--mainColor_10);
 }
 
 
@@ -108,19 +102,6 @@ nav {
 
 
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 600px) {
 
-    .navButton {
-        min-width: 2rem;
-        padding: 0.5em;
-    }
-    
-    .navIcon {
-        display: block;
-    }
-
-    .navText {
-        display: none;
-    }
-
-  }
+}

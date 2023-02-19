@@ -33,24 +33,48 @@
 
 <body>
     <header class="FP1">
-        <!-- navigationbar -->
+        <!-- Navigation bar -->
         <div id="navCon">
             <nav>
                 <?php drawNavbar() ?>
             </nav>
         </div>
 
-        <!-- searchbar -->
-        <form class="searchbar" action="">
-            <!-- Searchfield -->
-            <input class="searchfield" placeholder="Search . . ." type="text">
+        <div class="header1">
+            <!-- Filter -->
+            <select name="" id="">
+                <option value="">Latest</option>
+                <option value="">Popular</option>
+                <option value="">My questions</option>
+            </select>
 
-            <!-- "Search" Button -->
-            <button class="searchButton"><img class="icon" src="/style/includes/icons/searchIcon.svg" alt=""></button>
-        </form>
+            <!-- Course -->
+            <select name="" id="">
+                <?php 
+                    //  Loops as many choices as there are courses in the db
+                    for($i = 0; $i < sizeof($courses); $i++){
+                ?>
+                    <!-- course $courses[$i][1] is the name of the course currently looped-->
+                    <option value="<?php echo $courses[$i][0] ?>"><?php echo $courses[$i][1] ?></option>
+                <?php 
+                    }
+                ?>
+            </select>
 
-        <!-- "ask a question" button -->
-        <button class="" id="askQuestion">Ask a question</button>
+            <!-- Page status -->
+            <p></p>
+        </div>
+
+        <div class="header2">
+            <!-- Searchbar -->
+            <form class="searchbar" action="">>
+                <input class="searchfield" placeholder="Search" type="text">
+                <button class="searchButton"><img class="icon" src="/style/includes/icons/searchIcon.svg" alt=""></button>
+            </form>
+
+            <!-- "Ask a question" button -->
+            <button class="" id="askQuestion">Ask a question</button>
+        </div>
     </header>
 
 
@@ -59,7 +83,7 @@
         
         <!-- Ask a question form -->
         <form class="" id="askNewQuestionCard">
-            <!-- choose course -->
+            <!-- Choose course -->
             <select class="" name="courseID" id="courseID">  
                 <option value="">Choose a course</option>
 

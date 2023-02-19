@@ -4,18 +4,26 @@ body {
     gap: 1.25rem;
 }
 
-
 header {
     grid-column: 1 / span 3;
     grid-row: 1;
 }
 
+/* navCon & nav
+    Need to be overviewed when the other pages are done. 
+    It can be more simple and efficient.
+*/
 #navCon {
     grid-column: 1 / span 3;
     grid-row: 1;
 
     box-shadow: 0rem 0rem 0.625rem var(--mainColor_85);
 
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr minmax( 12rem , 58rem ) 1fr;
+    gap: 1.25rem;
+}
+
+nav {
+    grid-column: 2;
 }

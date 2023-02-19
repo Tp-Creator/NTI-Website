@@ -1,9 +1,6 @@
-/* searchbar  */
+/* searchbar */
 .searchbar {
-    flex-grow: 1;
-
-    width: fill;
-    min-height: 3.125em;
+    height: 3.125em;
     padding-left: 25px;
 
     display: flex;
