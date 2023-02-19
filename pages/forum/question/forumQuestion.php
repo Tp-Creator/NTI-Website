@@ -152,19 +152,19 @@
         ?>
 
         <!-- Comment to answer -->
-        <div class="forumCard">
+        <!-- <div class="forumCard"> -->
             <!-- Card information -->
-            <div class="pill QCP1">
+            <!-- <div class="pill QCP1"> -->
                 <!-- Username -->
-                <p class="infoText"><?php echo $comUser[1] ?></p>
+                <!-- <p class="infoText"><?php echo $comUser[1] ?></p> -->
                 <!-- Date -->
-                <p class="infoText"><?php echo $comments[$com]->dt ?></p>
-            </div>
+                <!-- <p class="infoText"><?php echo $comments[$com]->dt ?></p> -->
+            <!-- </div> -->
             <!-- Reply button -->
-            <button class="pill">Reply</button>
+            <!-- <button class="pill">Reply</button> -->
             <!-- Card title/answer -->
-            <p class="regularText QCP4"><?php echo $comments[$com]->Content ?></p>
-        </div>
+            <!-- <p class="regularText QCP4"><?php echo $comments[$com]->Content ?></p> -->
+        <!-- </div> -->
 
         <?php
                 }
