@@ -3,7 +3,7 @@ header {
     position: sticky;
     width: 100%;
 
-    background-color: #fff;
+    background: linear-gradient(180deg, rgba(255,255,255,1) 95%, rgba(82,65,117,0) 100%);
 
     display: grid;
     grid-template-columns: 1fr minmax( 12rem , 58rem ) 1fr;
@@ -89,6 +89,7 @@ header {
         border-radius: 1.5rem;
 
         box-shadow: 0rem 0rem 0.5rem var(--mainColor_85);
+        background-color: #fff;
 
         display: flex;
         flex-direction: column;
