@@ -1,10 +1,5 @@
 header {
-    top: 0rem;
-    position: sticky;
-    width: 100%;
-
-    padding-bottom: 1.25rem;
-    background: linear-gradient(180deg, rgba(255,255,255,1) 95%, rgba(82,65,117,0) 100%);
+    background-color: #fff;
 
     display: grid;
     grid-template-columns: 1fr minmax( 12rem , 58rem ) 1fr;
@@ -68,6 +63,7 @@ header {
     }
 
     .aaqPostButton {
+        width: max-content;
         padding: 0.325rem 1.25rem;
 
         border-radius: 2rem;
@@ -88,38 +84,46 @@ header {
         grid-column: 2;
 
         border-radius: 1.5rem;
-
         box-shadow: 0rem 0rem 0.5rem var(--mainColor_85);
-        background-color: #fff;
+
+        background-color: var(--mainColor_95);
 
         display: flex;
         flex-direction: column;
     }
 
     .aaqHeader {
-        padding: 1rem 1.25rem;
+        padding: 0.8rem 1.25rem;
 
         border-radius: 1.5rem 1.5rem 0rem 0rem;
-
-        background-color: var(--mainColor_95);
-
+    
         display: flex;
         align-items: center;
         gap: 1.25rem;
     }
+    .aaqHeader:hover {
+        background-color: var(--mainColor_85);
+    }
 
-    .aaqBody {
-        padding: 0rem 1.25rem;
+    .aaqQuestionInput {
+        flex-grow: 1;
 
-        display: flex;
-        flex-direction: column;
+        font-size: 0.875rem;
+        font-family: 'poppins-semibold';
+
+        color: var(--mainColor_25);
+        background-color: #00000000;
+        outline: none;
     }
 
     .aaqInput {
-        padding: 1.25rem 0rem 1.25rem 0rem;
+        padding: 1.15rem 1.25rem;
         font-size: 0.875rem;
 
+        border-radius:0rem 0rem 1.5rem 1.5rem;
+
         color: var(--mainColor_10);
+        background-color: #fff;
         outline: none;
     }
 
@@ -140,6 +144,9 @@ header {
 
         color: var(--mainColor_95);
         background-color: var(--mainColor_50);
+
+        display: grid;
+        place-items: center;
     }
     .aaqButton:hover {
         cursor: pointer;
@@ -162,6 +169,8 @@ header {
 }
 
 .fcInfoText {
+    grid-column: 3;
+
     font-size: 0.75rem;
     color: var(--mainColor_50);
 }
@@ -195,4 +204,36 @@ header {
 
     color: var(--mainColor_50);
     background-color: var(--mainColor_95);
+
+    display: grid;
+    place-items: center;
+}
+
+.replyButton:hover {
+    cursor: pointer;
+}
+
+
+
+
+
+.sectionHeader {
+    padding: 1.25rem 0rem 0rem 1.25rem;
+
+    display: flex;
+    flex-direction: row;
+    gap: 1.25rem;
+}
+
+.forumCard2 {
+    padding: 1.25rem;
+
+    border-radius: 1.5rem;
+
+    box-shadow: 0rem 0rem 0.5rem var(--mainColor_85);
+
+    background-color: var(--mainColor_95);
+
+    display: flex;
+    flex-direction: row;
 }

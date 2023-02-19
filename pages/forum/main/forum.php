@@ -30,7 +30,7 @@
 </head>
 
 <body>
-    <header class="FP1">
+    <header>
         <!-- Navigation bar -->
         <div id="navCon">
             <a id="logoButton" href="../../index.html">Schoolhub</a>
@@ -77,10 +77,11 @@
         </div>
         
         <!-- Ask a question form -->
-        <form class="askAQuestionForm" id="askNewQuestionCard">
+        <form class="askAQuestionForm" id="askNewQuestionCard" style="display: hidden;">
                 <!-- card header  -->
                 <div class="aaqHeader">
-                    <p id="aaqTitle">Ask a question</p>
+                    <!-- Input question -->
+                    <input class="aaqQuestionInput" placeholder="Enter your question" name="title" id="title"></input>
 
                     <!-- Choose course -->
                     <select class="aaqSelect" name="courseID" id="courseID">  
@@ -100,15 +101,8 @@
                     <button class="aaqPostButton" id="postNewQuestionButton" type="submit">Post</button>
                 </div>
 
-                <div class="aaqBody">
-                    <!-- Input question -->
-                    <input class="aaqInput" placeholder="Enter a title" name="title" id="title"></input>
-
-                    <div class="lineHorizontal"></div>
-
-                    <!-- Input description -->
-                    <input class="aaqInput" placeholder="Enter a description" name="content" id="content"></input>
-                </div>
+                <!-- Input description -->
+                <input class="aaqInput" placeholder="Enter a description" name="content" id="content"></input>
             </form>
     </header>
 

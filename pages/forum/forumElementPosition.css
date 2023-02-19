@@ -13,19 +13,6 @@ header {
     Need to be overviewed when the other pages are done. 
     It can be more simple and efficient.
 */
-#navCon {
-    grid-column: 1 / span 3;
-    grid-row: 1;
-
-    box-shadow: 0rem 0rem 0.625rem var(--mainColor_85);
-    background-color: #fff;
-
-    display: grid;
-    grid-template-columns: 1fr minmax( 12rem , 58rem ) 1fr;
-    align-items: center;
-    gap: 1.25rem;
-}
-
 nav {
     grid-column: 2;
 }

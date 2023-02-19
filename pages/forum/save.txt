@@ -21,3 +21,19 @@
         }
     ?>
 </div>
+
+
+
+
+
+<!-- Vote -->
+<button class="pill QCP7">
+    <p class="infoText"><?php echo $comments[$com]->Upvote ?></p>
+    <img class="icon" src="/style/includes/icons/voteUpIcon.svg" alt="Vote up icon">
+</button>
+
+<!-- Vote -->
+<button class="">
+    <p class=""><?php echo $answers[$ans]->Upvote ?></p>
+    <img class="" src="/style/includes/icons/voteUpIcon.svg" alt="Vote up icon">
+</button>
