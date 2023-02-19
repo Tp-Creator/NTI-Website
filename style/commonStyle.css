@@ -24,3 +24,33 @@
     cursor: pointer;
     background-color: #FFFFFF25;
 }
+
+
+/* Pills */
+.filterPill {
+    padding: 0.3rem 1rem;
+    border-radius: 1rem;
+
+    font-family: 'poppins-semibold';
+    text-align: center;
+
+    color: var(--mainColor_50);
+    background-color: var(--mainColor_95);
+
+    /* stackoverflow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+.filterPill:hover {
+    cursor: pointer;
+}
+
+
+
+
+.lineHorizontal {
+    height: 0.125rem;
+    background-color: var(--mainColor_95);
+}

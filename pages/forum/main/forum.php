@@ -4,8 +4,6 @@
     include_once '../../../includes/dbh.inc.php';
     include_once '../../../includes/dbh.general.php';
     include_once '../dbh.forum.php';
-
-
         //  Includes php elements
     include_once '../../../HTMLElements/navbar.php';
 ?>
@@ -35,6 +33,7 @@
     <header class="FP1">
         <!-- Navigation bar -->
         <div id="navCon">
+            <a id="logoButton" href="../../index.html">Schoolhub</a>
             <nav>
                 <?php drawNavbar() ?>
             </nav>
@@ -42,20 +41,21 @@
 
         <div class="header1">
             <!-- Filter -->
-            <select name="" id="">
+            <select class="filterPill" name="" id="">
                 <option value="">Latest</option>
                 <option value="">Popular</option>
                 <option value="">My questions</option>
             </select>
 
             <!-- Course -->
-            <select name="" id="">
+            <select class="filterPill" name="" id="">
                 <?php 
+                    $courses = getCourses();
                     //  Loops as many choices as there are courses in the db
                     for($i = 0; $i < sizeof($courses); $i++){
                 ?>
-                    <!-- course $courses[$i][1] is the name of the course currently looped-->
-                    <option value="<?php echo $courses[$i][0] ?>"><?php echo $courses[$i][1] ?></option>
+                <!-- course $courses[$i][1] is the name of the course currently looped-->
+                <option value="<?php echo $courses[$i][1] ?>"><?php echo $courses[$i][1] ?></option>
                 <?php 
                     }
                 ?>
@@ -82,29 +82,39 @@
     <section class="contentFeed">
         
         <!-- Ask a question form -->
-        <form class="" id="askNewQuestionCard">
-            <!-- Choose course -->
-            <select class="" name="courseID" id="courseID">  
-                <option value="">Choose a course</option>
+        <form class="askAQuestionForm" id="askNewQuestionCard">
 
-                <?php 
-                        //  Loops as many choices as there are courses in the db
-                    for($i = 0; $i < sizeof($courses); $i++){
-                ?>
-                    <!-- course $courses[$i][1] is the name of the course currently looped-->
-                    <option value="<?php echo $courses[$i][0] ?>"><?php echo $courses[$i][1] ?></option>
-                <?php 
-                    }
-                ?>
-            </select>
+            <!-- card header  -->
+            <div class="aaqHeader">
+                <p id="aaqTitle">Ask a question</p>
 
-            <!-- Input question -->
-            <textarea class="" placeholder="How to do a for loop in Javascript?" name="title" id="title" rows="1"></textarea>
+                <!-- Choose course -->
+                <select class="aaqSelect" name="courseID" id="courseID">  
+                    <option value="">Choose course</option>
 
-            <!-- Input description -->
-            <textarea class="" placeholder="I am trying to make loop that can solve . . ." name="content" id="content" rows="5"></textarea>
+                    <?php 
+                            //  Loops as many choices as there are courses in the db
+                        for($i = 0; $i < sizeof($courses); $i++){
+                    ?>
+                        <!-- course $courses[$i][1] is the name of the course currently looped-->
+                        <option value="<?php echo $courses[$i][0] ?>"><?php echo $courses[$i][1] ?></option>
+                    <?php 
+                        }
+                    ?>
+                </select>
 
-            <button class="buttonType1 AAQP1" id="postNewQuestionButton" type="submit">Post</button>
+                <button class="aaqPostButton" id="postNewQuestionButton" type="submit">Post</button>
+            </div>
+
+            <div class="aaqBody">
+                <!-- Input question -->
+                <input class="aaqInput" placeholder="Enter a title" name="title" id="title"></input>
+
+                <div class="lineHorizontal"></div>
+
+                <!-- Input description -->
+                <input class="aaqInput" placeholder="Enter a description" name="content" id="content"></input>
+            </div>
         </form>
 
 

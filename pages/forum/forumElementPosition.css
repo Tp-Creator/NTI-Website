@@ -21,9 +21,14 @@ header {
 
     display: grid;
     grid-template-columns: 1fr minmax( 12rem , 58rem ) 1fr;
+    align-items: center;
     gap: 1.25rem;
 }
 
 nav {
+    grid-column: 2;
+}
+
+.contentFeed {
     grid-column: 2;
 }

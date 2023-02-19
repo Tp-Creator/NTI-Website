@@ -73,6 +73,13 @@ nav {
     flex-direction: row;
 }
 
+#logoButton{
+    font-family: 'poppins-semibold';
+    margin-left: 1.25rem;
+
+    color: var(--mainColor_10);
+}
+
 .navButton {
     width: 100%;
     padding: 0.825em;
@@ -90,6 +97,7 @@ nav {
 }
 
 .navText {
+    font-family: 'poppins-medium';
     font-size: 0.875rem;
 
     color: var(--mainColor_10);
