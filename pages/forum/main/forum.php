@@ -133,17 +133,19 @@
         <!-- hämtar id:t på frågan och lägger till den i url:en -->
         <a href="../question/forumQuestion.php?question=<?php echo $questions[$current][0] ?>">
             <div class="forumCard">
-                <!-- Username -->
-                <p class="usernameText"><?php echo $user[1]; ?></p>
+                <div class="fcHeader">
+                    <!-- Username -->
+                    <p class="fcUsername"><?php echo $user[1]; ?></p>
 
-                <!-- Meta -->
-                <div class="meta <?php echo $course[2] ?>"><p><?php echo $course[1] ?></p></div>
+                    <!-- Meta -->
+                    <div class="meta <?php echo $course[2] ?>"><p><?php echo $course[1] ?></p></div>
 
-                <!-- Date & Time -->
-                <p class="infoText"><?php echo $questions[$current][5]; ?></p>
-            
+                    <!-- Date & Time -->
+                    <p class="fcInfoText"><?php echo $questions[$current][5]; ?></p>
+                </div>
+
                 <!-- Card title aka question -->
-                <p class="titleText"><?php echo $questions[$current][3] ?></p>
+                <p class="fcTitleText"><?php echo $questions[$current][3] ?></p>
             </div>
         </a>
 
