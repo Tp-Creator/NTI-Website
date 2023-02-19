@@ -67,13 +67,13 @@
 
         <div class="header2">
             <!-- Searchbar -->
-            <form class="searchbar" action="">>
+            <form class="searchbar" action="">
                 <input class="searchfield" placeholder="Search" type="text">
                 <button class="searchButton"><img class="icon" src="/style/includes/icons/searchIcon.svg" alt=""></button>
             </form>
 
             <!-- "Ask a question" button -->
-            <button class="" id="askQuestion">Ask a question</button>
+            <button class="aaqButton" id="askQuestion">Ask a question</button>
         </div>
     </header>
 
