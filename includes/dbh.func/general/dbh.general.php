@@ -15,7 +15,7 @@
         return $result->fetch_object();
     }
 
-    function getUserStatus() {
+    function getUserRank() {
         global $conn;
         
         $stmt = $conn->prepare("SELECT * FROM users WHERE userID = ?;");
@@ -26,7 +26,7 @@
         if ($result == null) {
             return 0;
         }
-        return $result->status;
+        return $result->rank;
     }
 
 
