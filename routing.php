@@ -1,10 +1,11 @@
 <?php
 include_once('includes/dbh.func/general/dbh.inc.php');
 include_once('includes/dbh.func/general/dbh.general.php');
+session_start();
 
 
-/* The permissions in route are are the lowest status needed to be in a file (negatives are exceptions and does in this file count as logged in), here are all status levels
-status = [
+/* The permissions in route are are the lowest rank needed to be in a file (negatives are exceptions and does in this file count as logged in), here are all rank levels
+rank = [
     0,   // not logged in
     1,   // Logged in
     2,   // Moderators
@@ -32,7 +33,6 @@ $routes = [
 
 
 run();
-
 function run() {
     global $routes;
         //  Ger inte URL parametrar
@@ -46,11 +46,11 @@ function run() {
             
     foreach ($routes as $path => $properties) {
         if ($path === $_SERVER['REDIRECT_URL']) {
-            $status = getUserFromId($_SESSION['userID'])->status;
-            if ($status < 0) {
-                $status = 1;
+            $rank = getUserRank();
+            if ($rank < 0) {
+                $rank = 1;
             }
-            if ($properties[1] <= $status) {
+            if ($properties[1] <= $rank) {
                 require __DIR__ . $properties[0];
             }
             return;
