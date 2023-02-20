@@ -13,21 +13,9 @@
         $stmt->execute();
         $result = $stmt->get_result();
         return $result->fetch_object();
+        // return $result;
     }
 
-    function getUserRank() {
-        global $conn;
-        
-        $stmt = $conn->prepare("SELECT * FROM users WHERE userID = ?;");
-        $stmt->bind_param("s", $_SESSION['userID']);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        $result = $result->fetch_object();
-        if ($result == null) {
-            return 0;
-        }
-        return $result->rank;
-    }
 
 
     // This function checks if the user is logged in by checking if the session
