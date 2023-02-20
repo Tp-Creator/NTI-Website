@@ -87,7 +87,7 @@
 
         <div class="sectionHeader">
             <!-- Section title -->
-            <p class="titleText">Question</p>
+            <p class="title">Question</p>
 
             <!-- Corse pill -->
             <p class="meta"><?php echo $course[1] ?></p>

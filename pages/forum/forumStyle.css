@@ -220,9 +220,15 @@ header {
 .sectionHeader {
     padding: 1.25rem 0rem 0rem 1.25rem;
 
+    font-family: 'poppins-semibold';
+
     display: flex;
     flex-direction: row;
     gap: 1.25rem;
+}
+
+.title {
+    font-family: 'poppins-semibold';
 }
 
 .forumCard2 {
