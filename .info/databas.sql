@@ -71,24 +71,17 @@ CREATE TABLE forum_answer (
 
 
 
-    UserID int NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    Email varchar(100) NOT NULL UNIQUE,
-    Username varchar(50) NOT NULL,
-    FirstName varchar(50),
-    LastName varchar(50),
-    Rank int,
-    pwd varchar(255)
 
 /* Lägger till en user som heter Joel, har en mail och ett lösenord */
-INSERT INTO users (Email, Username, FirstName, LastName, Rank pwd)
+INSERT INTO users (Email, Username, FirstName, LastName, Rank, pwd)
 VALUES ('kirillyasniy@gmail.com', 'Vertushka', 'Kirill', 'Yasniy', 1, 'asdfghjklöä');
 
 /* Lägger till en user som heter Joel, har en mail och ett lösenord */
-INSERT INTO users (Email, Username, FirstName, LastName, Rank pwd)
+INSERT INTO users (Email, Username, FirstName, LastName, Rank, pwd)
 VALUES ('hej@hej.com', 'Jolle43', 'Joel', 'Jägerskogh', 4, 'hej');
 
 /* Lägger till en user som heter Niklas, har en mail och ett lösenord */
-INSERT INTO users (Email, Username, FirstName, LastName, Rank pwd)
+INSERT INTO users (Email, Username, FirstName, LastName, Rank, pwd)
 VALUES ('hej@hejj.com', 'Magistern', 'Niklas', 'Hellström', 3, 'Passwords123');
 
 

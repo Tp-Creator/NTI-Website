@@ -72,7 +72,7 @@ function loginValidation($email, $pwd) {
     
     //If there are data in the result variable send the ID of the user otherwise send -1
     if (mysqli_num_rows($result)!=0) {
-        return $result->fetch_object();
+        return $result->fetch_object()->UserID;
     } else {
         return -1;
     }

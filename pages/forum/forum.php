@@ -11,7 +11,6 @@
     include_once 'includes/HTMLElements/general/navbar.php';
     include_once 'includes/HTMLElements/forum/forum.elements.php';
 
-    session_start(); //start the PHP_session function
 
 ?>
 

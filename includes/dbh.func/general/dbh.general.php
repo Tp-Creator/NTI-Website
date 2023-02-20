@@ -16,7 +16,19 @@
         // return $result;
     }
 
-
+    function getUserRank($id) {
+        global $conn;
+        
+        $stmt = $conn->prepare("SELECT * FROM users WHERE userID = ?;");
+        $stmt->bind_param("i", $id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $result = $result->fetch_object();
+        if ($result == null) {
+            return 0;
+        }
+        return $result->Rank;
+    }
 
     // This function checks if the user is logged in by checking if the session
     // contains an userID. If not it directs the user to the login page.

@@ -2,7 +2,7 @@
 
     include_once('includes\dbh.func\general\dbh.general.php');
 
-    session_start();    //start the PHP_session function
+    // session_start();    //start the PHP_session function
 
     $usr = getUserFromId($_SESSION['userID']);
     $usrName = $usr->Username;

@@ -37,6 +37,8 @@ function run() {
     global $routes;
         //  Ger inte URL parametrar
     $fakeURL = $_SERVER['REDIRECT_URL'];
+
+    $id = $_SESSION['userID'];
         
         //  Om man skrivit en eller flera "/" i slutet av URLn så tar vi bort dem och redirectar till adressen utan "/"
         //  ex. "/forum/" -> "/forum"
@@ -46,7 +48,8 @@ function run() {
             
     foreach ($routes as $path => $properties) {
         if ($path === $_SERVER['REDIRECT_URL']) {
-            $rank = getUserRank();
+            $rank = getUserRank($id);
+            
             if ($rank < 0) {
                 $rank = 1;
             }
