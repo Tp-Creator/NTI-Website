@@ -37,14 +37,14 @@
 
         <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="forumQuestion.js"></script>
+    <script src="/public/js/forum/forum.js"></script>
 
-    <!-- style links -->
-    <link rel="stylesheet" href="/style/mainStyle.css">
-    <link rel="stylesheet" href="/style/commonStyle.css">
-    
-    <link rel="stylesheet" href="../forumStyle.css">
-    <link rel="stylesheet" href="../forumElementPosition.css">
+    <!-- Basic style links -->
+    <link rel="stylesheet" href="/public/style/mainStyle.css">
+    <link rel="stylesheet" href="/public/style/commonStyle.css">
+    <!-- Page style links -->
+    <link rel="stylesheet" href="/public/style/pages/forum/forum.css">
+    <link rel="stylesheet" href="/public/style/pages/forum/forumElementPosition.css">
 
     <title>Forum</title>
 </head>
@@ -66,7 +66,7 @@
             <!-- Searchbar -->
             <form class="searchbar" action="">
                 <input class="searchfield" placeholder="Search" type="text">
-                <button class="searchButton"><img class="icon" src="/style/includes/icons/searchIcon.svg" alt=""></button>
+                <button class="searchButton"><img class="icon" src="/public/style/includes/icons/searchIcon.svg" alt=""></button>
             </form>
         </div>
     </header>

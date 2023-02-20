@@ -9,7 +9,6 @@
     function drawNavbar(){
 
         $navbuttons =   [
-            ["Home",        "/"],
             ["News",        "/news"],
             ["Forum",       "/forum"],
             ["Schedule",    "/schedule"],
@@ -17,12 +16,12 @@
             ["Games",       "/games"],
         ];
 
-        if (loginCheck()) {
-            array_push($navbuttons, ["Account", "/account"]);
-        }
-        else {
-            array_push($navbuttons, ["Login", "/login"]);
-        }
+        // if (loginCheck()) {
+        //     array_push($navbuttons, ["Account", "/account"]);
+        // }
+        // else {
+        //     array_push($navbuttons, ["Login", "/login"]);
+        // }
 
         $navbar = "";
 

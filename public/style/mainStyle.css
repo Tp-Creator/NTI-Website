@@ -13,17 +13,17 @@
 
 @font-face {
     font-family: 'poppins';
-    src: url(includes/fonts/Poppins-Regular.ttf);
+    src: url(includes/fonts/poppins/Poppins-Regular.ttf);
 }
 
 @font-face {
     font-family: 'poppins-medium';
-    src: url(includes/fonts/Poppins-Medium.ttf);
+    src: url(includes/fonts/poppins/Poppins-Medium.ttf);
 }
 
 @font-face {
     font-family: 'poppins-semibold';
-    src: url(includes/fonts/Poppins-SemiBold.ttf);
+    src: url(includes/fonts/poppins/Poppins-SemiBold.ttf);
 }
 
 

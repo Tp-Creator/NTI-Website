@@ -6,7 +6,6 @@
     include_once 'includes/dbh.func/general/dbh.general.php';
     include_once 'includes/dbh.func/forum/dbh.forum.php';
 
-
         //  Includes php elements
     include_once 'includes/HTMLElements/general/navbar.php';
     include_once 'includes/HTMLElements/forum/forum.elements.php';
@@ -24,7 +23,7 @@
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="forum.js"></script>
+    <script src="/public/js/forum/forum.js"></script>
 
     <!-- Basic style links -->
     <link rel="stylesheet" href="/public/style/mainStyle.css">
@@ -42,7 +41,7 @@
         <div id="navCon">
             <a id="logoButton" href="">Schoolhub</a>
             <nav>
-                <?php drawNavbar() ?>
+                <?php echo drawNavbar(); ?>
             </nav>
         </div>
 
@@ -84,7 +83,7 @@
         </div>
         
         <!-- Ask a question form -->
-        <form class="askAQuestionForm" id="askNewQuestionCard" style="display: hidden;">
+        <form class="askAQuestionForm" id="askNewQuestionCard" style="display: none;">
                 <!-- card header  -->
                 <div class="aaqHeader">
                     <!-- Input question -->
