@@ -16,11 +16,11 @@
         // return $result;
     }
 
-    function getUserRank($id) {
+    function getUserRank() {
         global $conn;
         
         $stmt = $conn->prepare("SELECT * FROM users WHERE userID = ?;");
-        $stmt->bind_param("i", $id);
+        $stmt->bind_param("i", $_SESSION['userID']);
         $stmt->execute();
         $result = $stmt->get_result();
         $result = $result->fetch_object();
