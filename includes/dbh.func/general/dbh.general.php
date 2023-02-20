@@ -12,7 +12,7 @@
         $stmt->bind_param("s", $id);
         $stmt->execute();
         $result = $stmt->get_result();
-        return $result->fetch_all()[0];
+        return $result->fetch_object();
         // return $result;
     }
 

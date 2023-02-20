@@ -17,7 +17,7 @@
             $courseName = $course[1];
 
         $user = getUserFromId($question[2]);        //  2
-            $username = $user[1];
+            $username = $user->Username;
 
         $title = $question[3];                      //  3
         $date = $question[5];                       //  5
