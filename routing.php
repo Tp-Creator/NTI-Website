@@ -5,12 +5,12 @@ include_once('includes/dbh.func/general/dbh.general.php');
 
 /* The permissions in route are are the lowest status needed to be in a file (negatives are exceptions and does in this file count as logged in), here are all status levels
 status = [
-    -1,  // muted
     0,   // not logged in
     1,   // Logged in
     2,   // Moderators
     3,   // Teachers
     4,   // Admins
+    -1,  // muted
 ]
 */
 $routes = [
@@ -46,7 +46,13 @@ function run() {
             
     foreach ($routes as $path => $properties) {
         if ($path === $_SERVER['REDIRECT_URL']) {
-            require __DIR__ . $properties[0];
+            $status = getUserFromId($_SESSION['userID'])->status;
+            if ($status < 0) {
+                $status = 1;
+            }
+            if ($properties[1] <= $status) {
+                require __DIR__ . $properties[0];
+            }
             return;
         }
     }

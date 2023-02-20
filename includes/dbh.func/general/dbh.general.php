@@ -16,15 +16,6 @@
         // return $result;
     }
 
-    function getUserStatus() {
-        global $conn;
-        
-        $stmt = $conn->prepare("SELECT * FROM users WHERE userID = ?;");
-        $stmt->bind_param("s", $_SESSION['userID']);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        return $result->fetch_all()[3];  //change to object instead of 3
-    }
 
 
     // This function checks if the user is logged in by checking if the session
