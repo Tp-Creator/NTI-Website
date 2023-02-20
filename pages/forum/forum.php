@@ -8,8 +8,8 @@
 
 
         //  Includes php elements
-    include_once 'includes/HTMLElements/general/navbar.php';
-    include_once 'includes/HTMLElements/forum/forum.elements.php';
+    include_once 'includes\HTMLElements\general.elements.php';
+    include_once 'includes\HTMLElements\forum.elements.php';
 
 
 ?>
@@ -22,131 +22,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- jQuery -->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="/public/js/forum/forum.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/public/js/forum/forum.js"></script>
 
     <!-- Basic style links -->
-    <link rel="stylesheet" href="/public/style/main1.css" type="text/css">
-    <link rel="stylesheet" href="/public/style/common1.css" type="text/css">
+    <link rel="stylesheet" href="/public/style/mainStyle.css">
+    <link rel="stylesheet" href="/public/style/commonStyle.css">
     <!-- Page style links -->
-    <link rel="stylesheet" href="/public/style/pages/forum/forum.css" type="text/css">
+    <link rel="stylesheet" href="/public/style/pages/forum/forumStyle.css">
+    <link rel="stylesheet" href="/public/style/pages/forum/forumElementPosition.css">
 
-    <title>Forum</title>
+    <title>Schoolhub Forum</title>
 </head>
+
 <body>
+    <header>
+        <!-- Navigation bar -->
+        <div id="navCon">
+            <a id="logoButton" href="/">Schoolhub</a>
+            <nav>
+                <?php echo drawNavbar() ?>
+            </nav>
+        </div>
 
-<header class="FP1">
-        <!-- funktion to draw the navbar -->
-        <nav>
-            <?php echo drawNavbar() ?>
-        </nav>
+        <div class="header1">
+            <!-- Filter -->
+            <select class="filterPill" name="" id="">
+                <option value="">Latest</option>
+                <option value="">Popular</option>
+                <option value="">My questions</option>
+            </select>
 
-    <!-- searchbar -->
-    <form class="searchbar" action="">
-        
-        <!-- ( "Searchfield where user are able to type" ) -->
-        <input class="searchfield" placeholder="Search . . ." type="text">
-
-        <!-- ( "Search Button" ) -->
-        <button class="searchButton">
-            <img class="icon" src="/public/style/includes/icons/searchIcon.svg" alt="">
-        </button>
-    </form>
-
-    <!-- "ask a question" button -->
-    <button class="buttonType1" id="askQuestion">Ask a question</button>
-
-</header>
-
-
-    <!-- corses -->
-    <div class="corses FP3">
-        <p>Courses</p>
-
-        <?php 
-        
-            $courses = getCourses();
-
-            for($i = 0; $i < sizeof($courses); $i++){
-
-        ?>
-
-
-        <!-- Course Button -->
-        <button class="buttonType2">
-
-            <!-- Course name -->
-            <p class="buttonText"><?php echo $courses[$i][1] ?></p> 
-
-            <!-- Course color -->
-            <div class="courseMark <?php echo $courses[$i][2] ?>"></div>
-        </button>
-
-
-        <?php 
-        
-            }
-        
-        ?>
-    </div>
-
-
-    <!-- Content feed -->
-    <section class="contentFeed FP2">
-        
-        <!-- Ask a question card -->
-        <form class="forumCard" id="askNewQuestionCard" style="display: none;">
-            <!-- choose course -->
-            <select class="AQCP1 pill" name="courseID" id="courseID">
-                
-                <option value="">Choose a course</option>
-
+            <!-- Course -->
+            <select class="filterPill" name="" id="">
                 <?php 
+                    $courses = getCourses();
                         //  Loops as many choices as there are courses in the db
                     for($i = 0; $i < sizeof($courses); $i++){
                 ?>
-
-                    <!-- course $courses[$i][1] is the name of the course currently looped-->
-                    <option value="<?php echo $courses[$i][0] ?>"><?php echo $courses[$i][1] ?></option>
-                
+                <!-- course $courses[$i][1] is the name of the course currently looped-->
+                <option value="<?php echo $courses[$i][1] ?>"><?php echo $courses[$i][1] ?></option>
                 <?php 
                     }
                 ?>
-
             </select>
 
-            <!-- Input question -->
-            <textarea class="AQCP2 titleText" placeholder="How to do a for loop in Javascript?" name="title" id="title" rows="1"></textarea>
-
-            <!-- Input description -->
-            <textarea class="AQCP3" placeholder="I am trying to make loop that can solve . . ." name="content" id="content" rows="5"></textarea>
-
-            <button class="buttonType1 AAQP1" id="postNewQuestionButton" type="submit">Post</button>
-        </form>
-
-
-        <div id="questionCardFeed">
-            <?php 
-                $questions = getQuestions();
-
-                    //  Amount of cards is the amount of cards that will be displayed
-                for($current = sizeof($questions)-1; $current >= 0; $current--){
-
-                    echo questionCard($questions[$current]);
-
-                }
-                
-            ?>
+            <!-- Page status -->
+            <p></p>
         </div>
 
+        <div class="header2">
+            <!-- Searchbar -->
+            <form class="searchbar" action="">
+                <input class="searchfield" placeholder="Search" type="text">
+                <button class="searchButton"><img class="icon" src="/public/style/includes/icons/searchIcon.svg" alt=""></button>
+            </form>
 
+            <!-- "Ask a question" button -->
+            <button class="aaqButton" id="askQuestion">Ask a question</button>
+        </div>
         
+        <!-- Ask a question form -->
+        <form class="askAQuestionForm" id="askNewQuestionCard" style="display: none;">
+                <!-- card header  -->
+                <div class="aaqHeader">
+                    <!-- Input question -->
+                    <input class="aaqQuestionInput" placeholder="Enter your question" name="title" id="title"></input>
 
+                    <!-- Choose course -->
+                    <select class="aaqSelect" name="courseID" id="courseID">  
+                        <option value="">Choose course</option>
+
+                        <?php 
+                                //  Loops as many choices as there are courses in the db
+                            for($i = 0; $i < sizeof($courses); $i++){
+                        ?>
+                            <!-- course $courses[$i][1] is the name of the course currently looped-->
+                            <option value="<?php echo $courses[$i][0] ?>"><?php echo $courses[$i][1] ?></option>
+                        <?php 
+                            }
+                        ?>
+
+                    </select>
+
+                    <button class="aaqPostButton" id="postNewQuestionButton" type="submit">Post</button>
+                </div>
+
+                <!-- Input description -->
+                <input class="aaqInput" placeholder="Enter a description" name="content" id="content"></input>
+            </form>
+    </header>
+
+
+    <!-- Content feed -->
+    <section class="contentFeed" id="questionCardFeed">
+
+        <?php 
+            $questions = getQuestions();
+
+                //  Amount of cards is the amount of cards that will be displayed
+            for($current = sizeof($questions)-1; $current >= 0; $current--){
+                echo questionCard($questions[$current]);
+
+            }
+        ?>
 
     </section>
-    
-    
-    <footer class="FP4"></footer>
 
+    <footer></footer>
 </body>
 </html>

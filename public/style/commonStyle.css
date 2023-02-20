@@ -1,0 +1,68 @@
+/* searchbar */
+.searchbar {
+    flex-grow: 1;
+    height: 3.125em;
+
+    border-radius: 2rem;
+
+    box-shadow: 0rem 0rem 0.5rem var(--mainColor_85);
+    background-color: #fff;
+
+    display: flex;
+    justify-content: center;
+}
+
+.searchfield {
+    padding-left: 1.25rem;
+    width: 100%;
+
+    outline: none;
+    border: none;
+    border-radius: 2rem 0rem 0rem 2rem;
+    
+    color: var(--mainColor_10);
+    font-size: 0.875rem;
+    font-family: 'poppins-medium';
+}
+
+.searchButton {
+    margin: 0.5rem 0.5rem 0.5rem 0rem;
+    padding: 0.25rem 0.75rem;
+
+    border-radius: 2rem;
+
+    background-color: #00000000;
+
+    display: grid;
+    place-items: center;
+}
+.searchButton:hover {
+    cursor: pointer;
+    background-color: var(--mainColor_95);
+}
+
+
+
+
+/* Pills */
+.filterPill {
+    padding: 0.3rem 1rem;
+    border-radius: 1rem;
+
+    font-family: 'poppins-semibold';
+    text-align: center;
+
+    color: var(--mainColor_50);
+    background-color: var(--mainColor_95);
+}
+.filterPill:hover {
+    cursor: pointer;
+}
+
+
+
+
+.lineHorizontal {
+    height: 0.125rem;
+    background-color: var(--mainColor_95);
+}

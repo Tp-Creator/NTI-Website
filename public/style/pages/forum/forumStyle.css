@@ -1,0 +1,245 @@
+header {
+    background-color: #fff;
+
+    display: grid;
+    grid-template-columns: 1fr minmax( 12rem , 58rem ) 1fr;
+    gap: 1.25rem;
+}
+
+.header1 {
+    grid-column: 2;
+    grid-row: 2;
+
+    display: flex;
+    flex-direction: row;
+    gap: 1.25rem;
+}
+
+.header2 {
+    grid-column: 2;
+    grid-row: 3;
+
+    display: flex;
+    flex-direction: row;
+    gap: 1.25rem;
+}
+
+
+
+
+
+.contentFeed {
+    display: flex;
+    flex-direction: column;
+    gap: 1.375rem;
+}
+
+
+
+
+/* Ask a queston */
+
+    /* Buttons */
+    .aaqSelect {
+        padding: 0.325rem 0.75rem;
+
+        border-radius: 2rem;
+        border: 0.125rem solid var(--mainColor_50);
+
+        text-align: center;
+        font-size: 0.75rem;
+        font-family: 'poppins-semibold';
+
+        color: var(--mainColor_50);
+        background-color: var(--mainColor_95);
+
+        /* stackoverflow */
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-indent: 1px;
+    }
+    .aaqSelect:hover {
+        cursor: pointer;
+    }
+
+    .aaqPostButton {
+        width: max-content;
+        padding: 0.325rem 1.25rem;
+
+        border-radius: 2rem;
+        border: none;
+
+        font-size: 0.75rem;
+        font-family: 'poppins-semibold';
+
+        color: var(--mainColor_95);
+        background-color: var(--mainColor_50);
+    }
+    .aaqPostButton:hover {
+        cursor: pointer;
+    }
+
+    /* Form */
+    .askAQuestionForm {
+        grid-column: 2;
+
+        border-radius: 1.5rem;
+        box-shadow: 0rem 0rem 0.5rem var(--mainColor_85);
+
+        background-color: var(--mainColor_95);
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .aaqHeader {
+        padding: 0.8rem 1.25rem;
+
+        border-radius: 1.5rem 1.5rem 0rem 0rem;
+    
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+    }
+    .aaqHeader:hover {
+        background-color: var(--mainColor_85);
+    }
+
+    .aaqQuestionInput {
+        flex-grow: 1;
+
+        font-size: 0.875rem;
+        font-family: 'poppins-semibold';
+
+        color: var(--mainColor_25);
+        background-color: #00000000;
+        outline: none;
+    }
+
+    .aaqInput {
+        padding: 1.15rem 1.25rem;
+        font-size: 0.875rem;
+
+        border-radius:0rem 0rem 1.5rem 1.5rem;
+
+        color: var(--mainColor_10);
+        background-color: #fff;
+        outline: none;
+    }
+
+    #aaqTitle {
+        flex-grow: 1;
+
+        font-family: 'poppins-medium';
+        color: var(--mainColor_50);
+    }
+
+    .aaqButton {
+        padding: 0.75rem 1.25rem;
+
+        border-radius: 3rem;
+
+        font-size: 0.875rem;
+        font-family: 'poppins-semibold';
+
+        color: var(--mainColor_95);
+        background-color: var(--mainColor_50);
+
+        display: grid;
+        place-items: center;
+    }
+    .aaqButton:hover {
+        cursor: pointer;
+    }
+
+
+
+
+/* forumCard */
+.fcHeader {
+    display: grid;
+    align-items: center;
+    grid-template-columns: max-content 1fr max-content;
+    gap: 1rem;
+}
+
+.fcUsername {
+    font-size: 0.875rem;
+    color: var(--mainColor_50);
+}
+
+.fcInfoText {
+    grid-column: 3;
+
+    font-size: 0.75rem;
+    color: var(--mainColor_50);
+}
+
+.fcTitleText {
+    font-family: 'poppins-semibold';
+
+    color: var(--mainColor_10);
+}
+
+.forumCard{
+    padding: 1.25rem;
+
+    border-radius: 1.5rem;
+
+    box-shadow: 0rem 0rem 0.5rem var(--mainColor_85);
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.meta {
+    width: max-content;
+    padding: 0.125rem 0.75rem;
+
+    border-radius: 2rem;
+
+    font-size: 0.75rem;
+    font-family: 'poppins-medium';
+
+    color: var(--mainColor_50);
+    background-color: var(--mainColor_95);
+
+    display: grid;
+    place-items: center;
+}
+
+.replyButton:hover {
+    cursor: pointer;
+}
+
+
+
+
+
+.sectionHeader {
+    padding: 1.25rem 0rem 0rem 1.25rem;
+
+    font-family: 'poppins-semibold';
+
+    display: flex;
+    flex-direction: row;
+    gap: 1.25rem;
+}
+
+.title {
+    font-family: 'poppins-semibold';
+}
+
+.forumCard2 {
+    padding: 1.25rem;
+
+    border-radius: 1.5rem;
+
+    box-shadow: 0rem 0rem 0.5rem var(--mainColor_85);
+
+    background-color: var(--mainColor_95);
+
+    display: flex;
+    flex-direction: row;
+}
