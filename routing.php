@@ -47,7 +47,7 @@ function run() {
     }
             
     foreach ($routes as $path => $properties) {
-        
+
         if ($path === $_SERVER['REDIRECT_URL']) {
             $rank = getUserRank($id);
 
@@ -55,10 +55,12 @@ function run() {
                 $rank = 1;
             }
 
+                //  If your rank is high enough you get to see the page
             if ($properties[1] <= $rank) {
                 require __DIR__ . $properties[0];
 
             } else {
+                    //  If your rank is too low you will be sent to the 403 page
                 require __DIR__ . '/pages/error/403.html';
 
             }
