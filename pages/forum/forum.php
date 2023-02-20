@@ -27,11 +27,11 @@
     <script src="forum.js"></script>
 
     <!-- Basic style links -->
-    <link rel="stylesheet" href="/style/mainStyle.css">
-    <link rel="stylesheet" href="/style/commonStyle.css">
+    <link rel="stylesheet" href="/public/style/mainStyle.css">
+    <link rel="stylesheet" href="/public/style/commonStyle.css">
     <!-- Page style links -->
-    <link rel="stylesheet" href="../forumStyle.css">
-    <link rel="stylesheet" href="../forumElementPosition.css">
+    <link rel="stylesheet" href="/public/style/pages/forum/forum.css">
+    <link rel="stylesheet" href="/public/style/pages/forum/forumElementPosition.css">
 
     <title>Schoolhub Forum</title>
 </head>
@@ -40,7 +40,7 @@
     <header>
         <!-- Navigation bar -->
         <div id="navCon">
-            <a id="logoButton" href="../../index.html">Schoolhub</a>
+            <a id="logoButton" href="">Schoolhub</a>
             <nav>
                 <?php drawNavbar() ?>
             </nav>
@@ -69,7 +69,7 @@
             </select>
 
             <!-- Page status -->
-            <p></p>
+            <p>There are "amount" new questions today!</p>
         </div>
 
         <div class="header2">

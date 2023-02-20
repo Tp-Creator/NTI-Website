@@ -1,116 +1,68 @@
-/* Buttons  */
-.buttonType1 {
-    padding: 0.75em 2.5em 0.75em 2.5em;
-
-    border-radius: var(--size_100vh);
-
-    display: grid;
-    place-content: center;
-
-    background: linear-gradient(45deg, rgba(41,82,112,1) 0%, rgba(82,65,117,1) 100%);
-}
-
-.buttonType1:hover {
-    cursor: pointer;
-}
-
-
-.buttonType2 {
-    padding: 0.75em 1em;
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2em;
-
-    border-radius: var(--size_100vh);
-
-    background-color: #101014;
-}
-
-.buttonType2:hover {
-    cursor: pointer;
-    background-color: #FFFFFF25;
-}
-
-
-
-
-/* searchbar  */
+/* searchbar */
 .searchbar {
     flex-grow: 1;
+    height: 3.125em;
 
-    width: fill;
-    min-height: 3.125em;
-    padding-left: 25px;
+    border-radius: 2rem;
 
-    border-radius: var(--size_100vh);
+    box-shadow: 0rem 0rem 0.5rem var(--mainColor_85);
+    background-color: #fff;
 
     display: flex;
     justify-content: center;
-
-    background-color: #101014;
 }
 
 .searchfield {
+    padding-left: 1.25rem;
     width: 100%;
 
-    border: none;
     outline: none;
-
-    font-size: var(--size_14);
-
-    color: #FFFFFF;
-    background-color: #101014;
+    border: none;
+    border-radius: 2rem 0rem 0rem 2rem;
+    
+    color: var(--mainColor_10);
+    font-size: 0.875rem;
+    font-family: 'poppins-medium';
 }
 
 .searchButton {
-    width: 75px;
-    height: fill;
-    margin: 5px;
+    margin: 0.5rem 0.5rem 0.5rem 0rem;
+    padding: 0.25rem 0.75rem;
 
-    border-radius: var(--size_24);
+    border-radius: 2rem;
+
+    background-color: #00000000;
 
     display: grid;
     place-items: center;
-
-    background-color: #101014;
 }
-
 .searchButton:hover {
     cursor: pointer;
-    background-color: #FFFFFF25;
+    background-color: var(--mainColor_95);
 }
 
 
-/* Pill */
-.pill {
-    width: max-content;
-    padding: 5px 10px;
 
-    border-radius: var(--size_24);
 
-    font-size: 12px;
+/* Pills */
+.filterPill {
+    padding: 0.3rem 1rem;
+    border-radius: 1rem;
 
-    display: flex;
-    flex-direction: row;
-    place-items: center;
-    gap: 10px;
+    font-family: 'poppins-semibold';
+    text-align: center;
 
-    color: #FFF;
-    background-color: #4F545C75;
+    color: var(--mainColor_50);
+    background-color: var(--mainColor_95);
+}
+.filterPill:hover {
+    cursor: pointer;
 }
 
-/* icon */
-.icon {
-    width: 1.4em;
-    height: 1.4em;
-}
 
-.courseMark {
-    width: 1em;
-    height: 1em;
 
-    border-radius: 1em;
+
+.lineHorizontal {
+    height: 0.125rem;
+    background-color: var(--mainColor_95);
 }
