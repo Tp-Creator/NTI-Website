@@ -5,7 +5,7 @@
     session_start();    //start the PHP_session function
 
     $usr = getUserFromId($_SESSION['userID']);
-    $usrName = $usr[1];
+    $usrName = $usr->Username;
 
     
 

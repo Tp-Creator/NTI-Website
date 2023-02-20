@@ -106,7 +106,7 @@
             <!-- Card information -->
             <div class="pill QCP3">
                 <!-- Username -->
-                <p class="infoText"><?php echo $user[1]; ?></p>
+                <p class="infoText"><?php echo $user->Username; ?></p>
                 <!-- Date -->
                 <p class="infoText"><?php echo $question->dt; ?></p>
             </div>
@@ -125,7 +125,7 @@
     <!-- Answer question -->
         <form class="forumCard FP9" name="postNewAnswer" id="postNewAnswer">
             <!-- ( "Searchfield where user are able to type" )  The name of the user that asked the question -->
-            <input class="searchfield AQP1" placeholder="Answer <?php echo $user[1]; ?>'s question . . ." type="text" name="newAnswerContent" id="newAnswerContent">
+            <input class="searchfield AQP1" placeholder="Answer <?php echo $user->Username; ?>'s question . . ." type="text" name="newAnswerContent" id="newAnswerContent">
     
             <button class="buttonType1 AQP2" type="submit">Post</button>
             <!-- <button class="buttonType1 AQP2">Post</button> -->
@@ -152,7 +152,7 @@
                 <!-- Card information -->
                 <div class="pill QCP1">
                     <!-- Username -->
-                    <p class="infoText"><?php echo $ansUser[1] ?></p>
+                    <p class="infoText"><?php echo $ansUser->Username ?></p>
                     <!-- Date -->
                     <p class="infoText"><?php echo $answers[$ans]->dt ?></p>
                 </div>
@@ -187,7 +187,7 @@
                 <!-- Card information -->
                 <div class="pill QCP1">
                     <!-- Username -->
-                    <p class="infoText"><?php echo $comUser[1] ?></p>
+                    <p class="infoText"><?php echo $comUser->Username ?></p>
                     <!-- Date -->
                     <p class="infoText"><?php echo $comments[$com]->dt ?></p>
                 </div>
