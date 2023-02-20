@@ -47,14 +47,20 @@ function run() {
     }
             
     foreach ($routes as $path => $properties) {
+        
         if ($path === $_SERVER['REDIRECT_URL']) {
             $rank = getUserRank($id);
-            
+
             if ($rank < 0) {
                 $rank = 1;
             }
+
             if ($properties[1] <= $rank) {
                 require __DIR__ . $properties[0];
+
+            } else {
+                require __DIR__ . '/pages/error/403.html';
+
             }
             return;
         }
