@@ -16,8 +16,8 @@ $routes = [
     
     "/google"           =>      ["/pages/account/googleLogin.php", false],          //  Test google login
     "/gooIn"            =>      ["/pages/googleIndex.php", false],          //  Test google login
-    "/403"              =>      ["/pages/error/granted.html", false],
-    "/404"              =>      ["/pages/error/404.html", false]
+    "/403"              =>      ["/pages/eastereggs/403.php", false],
+    "/404"              =>      ["/pages/eastereggs/404.php", false]
     
     
 
