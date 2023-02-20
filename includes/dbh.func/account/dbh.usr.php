@@ -53,19 +53,7 @@ function addUser($name, $mail, $pwd) {
 
 
 
-//  getUsernameFromId($id)
-//  this function takes one argument: the Id of a user
-//  And returns the username of the specific user
-// function getUserFromId($id) {
-//     global $conn;
-    
-//     $stmt = $conn->prepare("SELECT * FROM users WHERE userID = ?;");
-//     $stmt->bind_param("s", $id);
-//     $stmt->execute();
-//     $result = $stmt->get_result();
-//     return $result->fetch_all()[0];
-//     // return $result;
-// }
+
 
 
 //  loginValidation($email, $pwd)
@@ -84,7 +72,7 @@ function loginValidation($email, $pwd) {
     
     //If there are data in the result variable send the ID of the user otherwise send -1
     if (mysqli_num_rows($result)!=0) {
-        return $result->fetch_column(0);
+        return $result->fetch_object();
     } else {
         return -1;
     }

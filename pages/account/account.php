@@ -6,6 +6,7 @@
 
     $usr = getUserFromId($_SESSION['userID']);
     $usrName = $usr->Username;
+    console_log($usr);
 
     
 
