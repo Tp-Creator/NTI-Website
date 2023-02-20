@@ -1,6 +1,7 @@
 <?php
 include_once('includes/dbh.func/general/dbh.inc.php');
 include_once('includes/dbh.func/general/dbh.general.php');
+session_start();
 
 
 /* The permissions in route are are the lowest status needed to be in a file (negatives are exceptions and does in this file count as logged in), here are all status levels
@@ -32,7 +33,6 @@ $routes = [
 
 
 run();
-
 function run() {
     global $routes;
         //  Ger inte URL parametrar
@@ -46,7 +46,7 @@ function run() {
             
     foreach ($routes as $path => $properties) {
         if ($path === $_SERVER['REDIRECT_URL']) {
-            $status = getUserFromId($_SESSION['userID'])->status;
+            $status = getUserStatus();
             if ($status < 0) {
                 $status = 1;
             }
