@@ -43,7 +43,7 @@
         
         $result = $result->fetch_all();
 
-            //  Loops over the data and makes sure javascript injections can not be done by converting the vales so that no html "code" is in there
+            //  Loops over the data and makes sure javascript injections can not be done by converting the values so that no html "code" is in there
         foreach ($result as &$row) {
             foreach ($row as &$value) {
                 $value = htmlspecialchars($value, ENT_QUOTES, 'UTF-8');

@@ -12,11 +12,23 @@
         $stmt->bind_param("s", $id);
         $stmt->execute();
         $result = $stmt->get_result();
-        return $result->fetch_all()[0];
+        return $result->fetch_object();
         // return $result;
     }
 
-
+    function getUserRank() {
+        global $conn;
+        
+        $stmt = $conn->prepare("SELECT * FROM users WHERE userID = ?;");
+        $stmt->bind_param("i", $_SESSION['userID']);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $result = $result->fetch_object();
+        if ($result == null) {
+            return 0;
+        }
+        return $result->Rank;
+    }
 
     // This function checks if the user is logged in by checking if the session
     // contains an userID. If not it directs the user to the login page.

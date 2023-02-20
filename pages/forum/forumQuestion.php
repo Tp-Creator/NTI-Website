@@ -8,23 +8,7 @@
 
 
         //  Includes php elements
-    include_once 'includes\HTMLElements\general\navbar.php';
-
-    //check if this is a login request
-    // if($_POST) {
-
-
-
-    //     if($_POST["questionAnswer"] != ""){
-    //         postAnswer($_GET["question"], $_SESSION['userID'], $_POST["questionAnswer"], date("Y-m-d H:i:s"));
-            
-    //             //  This redirects us to the same page again witch will give the result that we can not reload the page and repost the answer!
-    //         $q = $_GET['question'];
-    //         header("Location: ./forumQuestion.php?question=$q");
-    //         exit();
-            
-    //     }
-    // }
+    include_once 'includes\HTMLElements\general.elements.php';
 
 ?>
 
@@ -39,11 +23,11 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="/public/js/forum/forum.js"></script>
 
-    <!-- Basic style links -->
+    <!-- style links -->
     <link rel="stylesheet" href="/public/style/mainStyle.css">
     <link rel="stylesheet" href="/public/style/commonStyle.css">
-    <!-- Page style links -->
-    <link rel="stylesheet" href="/public/style/pages/forum/forum.css">
+    
+    <link rel="stylesheet" href="/public/style/pages/forum/forumStyle.css">
     <link rel="stylesheet" href="/public/style/pages/forum/forumElementPosition.css">
 
     <title>Forum</title>
@@ -53,15 +37,15 @@
     <header>
         <!-- Navigation bar -->
         <div id="navCon">
-            <a id="logoButton" href="../../index.html">Schoolhub</a>
+            <a id="logoButton" href="/">Schoolhub</a>
             <nav>
-                <?php drawNavbar() ?>
+                <?php echo drawNavbar() ?>
             </nav>
         </div>
 
         <div class="header2">
             <!-- "Ask a question" button -->
-            <a class="aaqButton" href="../main/forum.php">Back to forum</a>
+            <a class="aaqButton" href="/forum">Back to forum</a>
 
             <!-- Searchbar -->
             <form class="searchbar" action="">
@@ -96,7 +80,7 @@
         <div class="forumCard">
             <div class="fcHeader">
                 <!-- Username -->
-                <p class="fcUsername"><?php echo $user[1]; ?></p>
+                <p class="fcUsername"><?php echo $user->Username; ?></p>
                 <!-- Date -->
                 <p class="fcInfoText"><?php echo $question->dt; ?></p>
             </div>
@@ -110,7 +94,7 @@
 
         <form class="forumCard2" name="postNewAnswer" id="postNewAnswer">
             <!-- ( "Searchfield where user are able to type" )  The name of the user that asked the question -->
-            <input class="aaqQuestionInput" placeholder="Answer <?php echo $user[1]; ?>'s question" type="text" name="newAnswerContent" id="newAnswerContent">
+            <input class="aaqQuestionInput" placeholder="Answer <?php echo $user->Username; ?>'s question" type="text" name="newAnswerContent" id="newAnswerContent">
     
             <button class="aaqPostButton" type="submit">Post</button>
             <!-- <button class="buttonType1 AQP2">Post</button> -->
@@ -134,7 +118,7 @@
             <!-- Card information -->
             <div class="fcHeader">
                 <!-- Username -->
-                <p class="fcUsername"><?php echo $ansUser[1] ?></p>
+                <p class="fcUsername"><?php echo $ansUser->Username ?></p>
                 <!-- Reply button -->
                 <button class="meta replyButton">Reply</button>
                 <!-- Date & Time -->
@@ -155,14 +139,14 @@
             <!-- Card information -->
             <!-- <div class="pill QCP1"> -->
                 <!-- Username -->
-                <!-- <p class="infoText"><?php echo $comUser[1] ?></p> -->
+                <!-- <p class="infoText"><?php //echo $comUser->Username ?></p> -->
                 <!-- Date -->
-                <!-- <p class="infoText"><?php echo $comments[$com]->dt ?></p> -->
+                <!-- <p class="infoText"><?php //echo $comments[$com]->dt ?></p> -->
             <!-- </div> -->
             <!-- Reply button -->
             <!-- <button class="pill">Reply</button> -->
             <!-- Card title/answer -->
-            <!-- <p class="regularText QCP4"><?php echo $comments[$com]->Content ?></p> -->
+            <!-- <p class="regularText QCP4"><?php //echo $comments[$com]->Content ?></p> -->
         <!-- </div> -->
 
         <?php

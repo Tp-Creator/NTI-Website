@@ -11,9 +11,9 @@
 
     function checkForNewMessages() {
 
-        let lastQuestionMillis = $(".questionDate").first().text();
+        // let lastQuestionMillis = $(".questionDate").first().text();
 
-        let data = '&function=2&lastQuestion=' + lastQuestionMillis;
+        let data = '&function=2&lastQuestion=' + window.lastPageUpdate;
 
         $.ajax({
             type: "POST",

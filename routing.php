@@ -1,54 +1,67 @@
 <?php
 include_once('includes/dbh.func/general/dbh.inc.php');
+include_once('includes/dbh.func/general/dbh.general.php');
+session_start();
 
 
-
-    //  OBS "/" måste vara sist för att den inte alltid ska returnera index. Den tar första bästa som börjar med det vi kollar efter...
+/* The permissions in route are are the lowest rank needed to be in a file (negatives are exceptions and does in this file count as logged in), here are all rank levels
+rank = [
+    0,   // not logged in
+    1,   // Logged in
+    2,   // Moderators
+    3,   // Teachers
+    4,   // Admins
+    -1,  // muted
+]
+*/
 $routes = [
-    "/"                 =>      ["/pages/index.html", false],
+    // Fake path                     Real path               Permission level
+    "/"                 =>    [ "/pages/index.html",               0 ],
 
-    "/login"            =>      ["/pages/account/login.php", false],
-    "/sign-up"          =>      ["/pages/account/sign-up.php", false],
-    "/account"          =>      ["/pages/account/account.php", false],
+    "/login"            =>    [ "/pages/account/login.php",        0 ],
+    "/sign-up"          =>    [ "/pages/account/sign-up.php",      0 ],
+    "/account"          =>    [ "/pages/account/account.php",      1 ],
     
-    "/forum"            =>      ["/pages/forum/forum.php", false],
-    "/forum/question"   =>      ["/pages/forum/forumQuestion.php", false],
+    "/forum"            =>    [ "/pages/forum/forum.php",          0 ],
+    "/forum/question"   =>    [ "/pages/forum/forumQuestion.php",  0 ],
     
-    "/google"           =>      ["/pages/account/googleLogin.php", false],          //  Test google login
-    "/gooIn"            =>      ["/pages/googleIndex.php", false],          //  Test google login
-    "/403"              =>      ["/pages/eastereggs/403.php", false],
-    "/404"              =>      ["/pages/eastereggs/404.php", false]
-    
-    
-
-    // "/includes/OPA/forum/OPA.forum.php"          =>   ["/includes/OPA/forum/OPA.forum.php", false], 
-    // "/includes/OPA/forum/OPA.question.php"          =>   ["/includes/OPA/forum/OPA.question.php", false], 
-
-
-    // "/lib" => "/css//" . $_SERVER['REQUEST_fakeURL'],
-    
+    "/google"           =>    [ "/pages/account/googleLogin.php",  0 ],          //  Test google login
+    "/gooIn"            =>    [ "/pages/googleIndex.php",          0 ],          //  Test google login
+    "/403"              =>    [ "/pages/eastereggs/403.php",       0 ],
+    "/404"              =>    [ "/pages/eastereggs/404.php",       0 ],
 ];
-
-// console_log($_SERVER['REQUEST_fakeURL']);
 
 
 run();
-
 function run() {
     global $routes;
         //  Ger inte URL parametrar
     $fakeURL = $_SERVER['REDIRECT_URL'];
-        
+
         //  Om man skrivit en eller flera "/" i slutet av URLn så tar vi bort dem och redirectar till adressen utan "/"
         //  ex. "/forum/" -> "/forum"
     if($fakeURL != rtrim($fakeURL, "/") && strlen(rtrim($fakeURL, "/")) > 3){
         header('Location: ' . rtrim($fakeURL, "/"));
     }
             
-    foreach ($routes as $path => $url) {
+    foreach ($routes as $path => $properties) {
+
         if ($path === $_SERVER['REDIRECT_URL']) {
-        // if (str_starts_with($fakeURL, $path)) {
-            require __DIR__ . $url[0];
+            $rank = getUserRank();
+
+            if ($rank < 0) {
+                $rank = 1;
+            }
+
+                //  If your rank is high enough you get to see the page
+            if ($properties[1] <= $rank) {
+                require __DIR__ . $properties[0];
+
+            } else {
+                    //  If your rank is too low you will be sent to the 403 page
+                require __DIR__ . '/pages/error/403.html';
+
+            }
             return;
         }
     }

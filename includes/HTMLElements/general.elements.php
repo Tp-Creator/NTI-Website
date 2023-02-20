@@ -30,10 +30,10 @@
             $url = $navbuttons[$b][1];
 
                 // <!-- Navbar button -->
-            $navbar .= "<a class='navButton buttonText' href='$url'>";
-                $navbar .= "<p class='navText'>$content</p>";
-                $navbar .= "<img class='navIcon' src='/public/style/includes/icons/searchIcon.svg' alt=''>";
-            $navbar .= "</a>";
+            $navbar .= "<a class='navButton buttonText' href='$url'>
+                            <p class='navText'>$content</p>
+                            <img class='navIcon' src='/public/style/includes/icons/searchIcon.svg' alt=''>
+                        </a>";
         }
 
         return $navbar;
