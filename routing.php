@@ -1,35 +1,34 @@
 <?php
 include_once('includes/dbh.func/general/dbh.inc.php');
+include_once('includes/dbh.func/general/dbh.general.php');
 
 
-
-    //  OBS "/" måste vara sist för att den inte alltid ska returnera index. Den tar första bästa som börjar med det vi kollar efter...
+/* The permissions in route are are the lowest status needed to be in a file (negatives are exceptions and does in this file count as logged in), here are all status levels
+status = [
+    -1,  // muted
+    0,   // not logged in
+    1,   // Logged in
+    2,   // Moderators
+    3,   // Teachers
+    4,   // Admins
+]
+*/
 $routes = [
-    "/"                 =>      ["/pages/index.html", false],
+    // Fake path                     Real path               Permission level
+    "/"                 =>    [ "/pages/index.html",               0 ],
 
-    "/login"            =>      ["/pages/account/login.php", false],
-    "/sign-up"          =>      ["/pages/account/sign-up.php", false],
-    "/account"          =>      ["/pages/account/account.php", false],
+    "/login"            =>    [ "/pages/account/login.php",        0 ],
+    "/sign-up"          =>    [ "/pages/account/sign-up.php",      0 ],
+    "/account"          =>    [ "/pages/account/account.php",      1 ],
     
-    "/forum"            =>      ["/pages/forum/forum.php", false],
-    "/forum/question"   =>      ["/pages/forum/forumQuestion.php", false],
+    "/forum"            =>    [ "/pages/forum/forum.php",          0 ],
+    "/forum/question"   =>    [ "/pages/forum/forumQuestion.php",  0 ],
     
-    "/google"           =>      ["/pages/account/googleLogin.php", false],          //  Test google login
-    "/gooIn"            =>      ["/pages/googleIndex.php", false],          //  Test google login
-    "/403"              =>      ["/pages/eastereggs/403.php", false],
-    "/404"              =>      ["/pages/eastereggs/404.php", false]
-    
-    
-
-    // "/includes/OPA/forum/OPA.forum.php"          =>   ["/includes/OPA/forum/OPA.forum.php", false], 
-    // "/includes/OPA/forum/OPA.question.php"          =>   ["/includes/OPA/forum/OPA.question.php", false], 
-
-
-    // "/lib" => "/css//" . $_SERVER['REQUEST_fakeURL'],
-    
+    "/google"           =>    [ "/pages/account/googleLogin.php",  0 ],          //  Test google login
+    "/gooIn"            =>    [ "/pages/googleIndex.php",          0 ],          //  Test google login
+    "/403"              =>    [ "/pages/eastereggs/403.php",       0 ],
+    "/404"              =>    [ "/pages/eastereggs/404.php",       0 ],
 ];
-
-// console_log($_SERVER['REQUEST_fakeURL']);
 
 
 run();
@@ -45,10 +44,9 @@ function run() {
         header('Location: ' . rtrim($fakeURL, "/"));
     }
             
-    foreach ($routes as $path => $url) {
+    foreach ($routes as $path => $properties) {
         if ($path === $_SERVER['REDIRECT_URL']) {
-        // if (str_starts_with($fakeURL, $path)) {
-            require __DIR__ . $url[0];
+            require __DIR__ . $properties[0];
             return;
         }
     }
