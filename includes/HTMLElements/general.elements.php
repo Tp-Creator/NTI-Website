@@ -13,15 +13,15 @@
             ["Forum",       "/forum"],
             ["Schedule",    "/schedule"],
             ["Memes",       "/memes"],
-            ["Games",       "/games"],
+            ["Games",       "/games"]
         ];
 
-        // if (loginCheck()) {
-        //     array_push($navbuttons, ["Account", "/account"]);
-        // }
-        // else {
-        //     array_push($navbuttons, ["Login", "/login"]);
-        // }
+        if (loginCheck()) {
+            array_push($navbuttons, ["Account", "/account"]);
+        }
+        else {
+            array_push($navbuttons, ["Login", "/login"]);
+        }
 
         $navbar = "";
 
