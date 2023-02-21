@@ -24,10 +24,6 @@ header {
     gap: 1.25rem;
 }
 
-
-
-
-
 .contentFeed {
     display: flex;
     flex-direction: column;

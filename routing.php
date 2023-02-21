@@ -16,7 +16,7 @@ rank = [
 */
 $routes = [
     // Fake path                     Real path               Permission level
-    "/"                 =>    [ "/pages/index.html",               0 ],
+    "/"                 =>    [ "/pages/index.php",                0 ],
 
     "/login"            =>    [ "/pages/account/login.php",        0 ],
     "/sign-up"          =>    [ "/pages/account/sign-up.php",      0 ],
