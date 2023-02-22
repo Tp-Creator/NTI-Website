@@ -1,5 +1,5 @@
 <?php
-require_once('includes\dbh.func\googleLogin\google.config.php');
+require_once('includes\external\googleLogin\google.config.php');
 require_once('includes\dbh.func\general\dbh.inc.php');
 
 // authenticate code from Google OAuth Flow
