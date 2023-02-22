@@ -24,9 +24,11 @@ $routes = [
     
     "/forum"            =>    [ "/pages/forum/forum.php",          0 ],
     "/forum/question"   =>    [ "/pages/forum/forumQuestion.php",  0 ],
+
+    "/memes"            =>    [ "/pages/memes/memes.php",          0 ],
     
     "/google"           =>    [ "/pages/account/googleLogin.php",  0 ],          //  Test google login
-    "/gooIn"            =>    [ "/pages/account/googleIndex.php",          0 ],          //  Test google login
+    "/gooIn"            =>    [ "/pages/account/googleIndex.php",  0 ],          //  Test google login
     "/403"              =>    [ "/pages/eastereggs/403.php",       0 ],
     "/404"              =>    [ "/pages/eastereggs/404.php",       0 ],
 ];

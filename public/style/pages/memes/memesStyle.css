@@ -1,0 +1,23 @@
+body {
+    height: 100vh;
+
+    background-image: url(../../includes/icons/Emojis.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: grid;
+    grid-template-columns: 1fr minmax( 12rem , 58rem ) 1fr;
+    grid-template-rows: min-content 1fr min-content 1.5fr;
+    gap: 1.25rem; 
+}
+
+header {
+    grid-column: 1 / span 3;
+    grid-row: 1;
+
+    background-color: #fff;
+
+    display: grid;
+    grid-template-columns: 1fr minmax( 12rem , 58rem ) 1fr;
+    gap: 1.25rem;
+}
