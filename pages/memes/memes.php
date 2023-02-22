@@ -30,8 +30,22 @@
             </nav>
         </div>
 
-        
     </header>
+
+    <section class="contentFeed">
+        <div class="memeCard">
+            <div class="imgCon">
+                <img class="cardImg" src="/public/style/includes/img/meme.jpeg" alt="">
+            </div>
+            <div class="cardBody">
+                <p>Username_12345</p>
+                <button class="likeButton">
+                    <p>12345</p>
+                    <img src="" alt="">
+                </button>
+            </div>
+        </div>
+    </section>
 
 </body>
 </html>
