@@ -1,0 +1,76 @@
+* {
+
+    color: var(--mainColor_10);
+
+}
+
+body {
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: 1fr minmax( 12rem , 58rem ) 1fr;
+    grid-template-rows: min-content 1fr min-content 1.5fr;
+    gap: 1.25rem; 
+}
+
+header {
+    grid-column: 1 / span 3;
+    grid-row: 1;
+
+    background-color: #fff;
+
+    display: grid;
+    grid-template-columns: 1fr minmax( 12rem , 58rem ) 1fr;
+    gap: 1.25rem;
+}
+
+#mainCon {
+    grid-column: 2;
+    grid-row: 3;
+
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    gap: 1.375rem;
+}
+
+#verCon {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.normalText {
+    font-size: 3rem;
+}
+
+.logoText {
+    font-size: 3rem;
+    font-family: 'poppins-semibold';
+}
+
+#logInButton {
+    padding: 0.625rem 1.375rem 0.625rem 0.625rem;
+
+    border-radius: 2rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.375rem;
+}
+#logInButton:hover {
+    cursor: pointer;
+    background-color: var(--mainColor_95);
+}
+
+.icon {
+    width: 2rem;
+    aspect-ratio: 1 / 1;
+}
+
+.butText {
+    font-size: 1.25rem;
+    font-family: 'poppins-semibold';
+    color: var(--mainColor_10);
+}
