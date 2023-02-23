@@ -78,4 +78,34 @@ function loginValidation($email, $pwd) {
     }
 }
 
+
+
+function validateGoogleUser($gmail, $first, $last){
+    global $conn;
+
+        //  Get user from email
+    $stmt = $conn->prepare("SELECT * FROM users WHERE Email = ?;");
+    $stmt->bind_param("s", $gmail);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    
+        
+    if (mysqli_num_rows($result)!=0) {                              //  Validate if user exist or has to be created
+        return $result->fetch_object()->UserID;                     //  If there is a user with the correct email we return the userID and it will be signed in
+    
+
+    } else {                                                        //  Otherwise Create a user with the provided information
+        $usrName = $first . substr ($last, 0, 1);                   //  Sets the username to a default
+
+            //  Creates the user
+        $stmt = $conn->prepare("INSERT INTO users (Email, Username, FirstName, LastName, Rank, pwd) VALUES (?, ?, ?, ?, 1, 'Hej')");
+        $stmt->bind_param("ssss", $gmail, $usrName, $first, $last);
+
+        $stmt->execute();
+
+        return $stmt->insert_id;                                    //  Returns the id of the new user
+    }
+
+}
+
 ?>

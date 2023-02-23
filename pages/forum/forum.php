@@ -2,13 +2,13 @@
 
         //  Includes functions related to the db
     // include_once '../../../includes/loginCheck.php'; is not needed anymore
-    include_once 'includes/dbh.func/general/dbh.inc.php';
-    include_once 'includes/dbh.func/general/dbh.general.php';
-    include_once 'includes/dbh.func/forum/dbh.forum.php';
+    // include_once 'includes/dbh.func/general/dbh.inc.php';
+    // include_once 'includes/dbh.func/general/dbh.general.php';
+    include_once('includes/dbh.func/forum/dbh.forum.php');
 
         //  Includes php elements
-    include_once 'includes\HTMLElements\general.elements.php';
-    include_once 'includes\HTMLElements\forum.elements.php';
+    include_once('includes/HTMLElements/general.elements.php');
+    include_once('includes/HTMLElements/forum.elements.php');
 
 
 ?>

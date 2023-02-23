@@ -1,8 +1,8 @@
 <?php 
 
-        //  Includes php elements
-    include_once 'includes\HTMLElements\general.elements.php';
-    include_once 'includes\HTMLElements\forum.elements.php';
+    //  Includes php elements
+    include_once('includes/HTMLElements/general.elements.php');
+    include_once('includes/HTMLElements/forum.elements.php');
 
 ?>
 

@@ -1,6 +1,6 @@
 <?php
-include_once('includes/dbh.func/general/dbh.inc.php');
-include_once('includes/dbh.func/general/dbh.general.php');
+require_once('includes/dbh.func/general/dbh.inc.php');
+require_once('includes/dbh.func/general/dbh.general.php');
 session_start();
 
 
@@ -29,10 +29,17 @@ $routes = [
 
     "/games"            =>    [ "/pages/games/games.php",          0 ],
     
+    "/news"             =>    [ "/pages/error/503.html",           0 ],
+    "/schedule"         =>    [ "/pages/error/503.html",           0 ],
+    
+
     "/google"           =>    [ "/pages/account/googleLogin.php",  0 ],          //  Test google login
     "/gooIn"            =>    [ "/pages/account/googleIndex.php",  0 ],          //  Test google login
+
+
     "/403"              =>    [ "/pages/eastereggs/403.php",       0 ],
     "/404"              =>    [ "/pages/eastereggs/404.php",       0 ],
+    "/503"              =>    [ "/pages/eastereggs/503.php",       0 ],
 ];
 
 

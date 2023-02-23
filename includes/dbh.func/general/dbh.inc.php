@@ -1,12 +1,12 @@
 <?php
-    // dbh.inc.php
-    // This file creates a connection to the database that can be used to make
-    // database calls.
+// dbh.inc.php
+// This file creates a connection to the database that can be used to make
+// database calls.
 
-    // The file for now also contains a few functions that can write and or read
-    // the database.
+// The file for now also contains a few functions that can write and or read
+// the database.
 
-    //The code doesn't display anything for the user to see.
+//The code doesn't display anything for the user to see.
 
 
 
@@ -31,10 +31,5 @@ function console_log($output) {
     
     echo $js_code;
 }
-
-
-
-
-
 
 ?>
