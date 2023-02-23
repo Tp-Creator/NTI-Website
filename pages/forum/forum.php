@@ -40,7 +40,7 @@
         <div id="navCon">
             <a id="logoButton" href="/">Schoolhub</a>
             <nav>
-                <?php echo drawNavbar() ?>
+                
             </nav>
         </div>
 
