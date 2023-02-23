@@ -95,10 +95,10 @@ function validateGoogleUser($gmail, $first, $last){
     
 
     } else {                                                        //  Otherwise Create a user with the provided information
-        $usrName = $first . " " . substr ($last, 0, 1);                   //  Sets the username to a default
+        $usrName = $first . " " . substr ($last, 0, 1);             //  Sets the username to a default
 
             //  Creates the user
-        $stmt = $conn->prepare("INSERT INTO users (Email, Username, FirstName, LastName, Rank, pwd) VALUES (?, ?, ?, ?, 1, 'Hej')");
+        $stmt = $conn->prepare("INSERT INTO users (Email, Username, FirstName, LastName, Rank) VALUES (?, ?, ?, ?, 1)");
         $stmt->bind_param("ssss", $gmail, $usrName, $first, $last);
 
         $stmt->execute();
