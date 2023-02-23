@@ -30,9 +30,55 @@
             </nav>
         </div>
 
+        <div class="header1">
+            <!-- Filter -->
+            <select class="filterPill" name="" id="">
+                <option value="">Latest</option>
+                <option value="">Popular</option>
+                <option value="">My memes</option>
+                <option value="">Saved memes</option>
+            </select>
+        </div>
+
+        <div class="header2">
+            <!-- Searchbar -->
+            <form class="searchbar" action="">
+                <input class="searchfield" placeholder="Search" type="text">
+                <button class="searchButton"><img class="icon" src="/public/style/includes/icons/searchIcon.svg" alt=""></button>
+            </form>
+
+            <!-- "Ask a question" button -->
+            <button class="pAM" id="askQuestion">Post a meme</button>
+        </div>
     </header>
 
     <section class="contentFeed">
+        <div class="memeCard">
+            <div class="imgCon">
+                <img class="cardImg" src="/public/style/includes/img/meme.jpeg" alt="">
+            </div>
+            <div class="cardBody">
+                <p>Username_12345</p>
+                <button class="likeButton">
+                    <p>12345</p>
+                    <img src="" alt="">
+                </button>
+            </div>
+        </div>
+
+        <div class="memeCard">
+            <div class="imgCon">
+                <img class="cardImg" src="/public/style/includes/img/meme.jpeg" alt="">
+            </div>
+            <div class="cardBody">
+                <p>Username_12345</p>
+                <button class="likeButton">
+                    <p>12345</p>
+                    <img src="" alt="">
+                </button>
+            </div>
+        </div>
+
         <div class="memeCard">
             <div class="imgCon">
                 <img class="cardImg" src="/public/style/includes/img/meme.jpeg" alt="">

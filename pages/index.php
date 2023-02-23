@@ -1,9 +1,7 @@
 <?php 
-
         //  Includes php elements
     include_once 'includes\HTMLElements\general.elements.php';
     include_once 'includes\HTMLElements\forum.elements.php';
-
 ?>
 
 <!DOCTYPE html>
@@ -28,6 +26,8 @@
                 <?php echo drawNavbar() ?>
             </nav>
         </div>
+
+        
     </header>
 
     <div id="mainCon">

@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="/public/style/commonStyle.css">
     
     <link rel="stylesheet" href="/public/style/pages/forum/forumStyle.css">
-    <link rel="stylesheet" href="/public/style/pages/forum/forumElementPosition.css">
+    <link rel="stylesheet" href="/public/style/elementPosition.css">
 
     <title>Forum</title>
 </head>
@@ -43,7 +43,7 @@
             </nav>
         </div>
 
-        <div class="header2">
+        <div class="verticalCon header2">
             <!-- "Ask a question" button -->
             <a class="aaqButton" href="/forum">Back to forum</a>
 
@@ -56,7 +56,7 @@
     </header>
 
     <!-- Question card -->
-    <section class="contentFeed">
+    <section class="horizontalCon contentFeed">
         <?php 
             $question = getQuestionByID($_GET["question"]);
             

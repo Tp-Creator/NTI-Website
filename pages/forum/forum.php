@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="/public/style/commonStyle.css">
     <!-- Page style links -->
     <link rel="stylesheet" href="/public/style/pages/forum/forumStyle.css">
-    <link rel="stylesheet" href="/public/style/pages/forum/forumElementPosition.css">
+    <link rel="stylesheet" href="/public/style/elementPosition.css">
 
     <title>Schoolhub Forum</title>
 </head>
@@ -44,12 +44,13 @@
             </nav>
         </div>
 
-        <div class="header1">
+        <div class="verticalCon header1">
             <!-- Filter -->
             <select class="filterPill" name="" id="">
                 <option value="">Latest</option>
                 <option value="">Popular</option>
                 <option value="">My questions</option>
+                <option value="">Saved questions</option>
             </select>
 
             <!-- Course -->
@@ -70,7 +71,7 @@
             <p></p>
         </div>
 
-        <div class="header2">
+        <div class="verticalCon header2">
             <!-- Searchbar -->
             <form class="searchbar" action="">
                 <input class="searchfield" placeholder="Search" type="text">
@@ -114,7 +115,7 @@
 
 
     <!-- Content feed -->
-    <section class="contentFeed" id="questionCardFeed">
+    <section class="horizontalCon contentFeed" id="questionCardFeed">
 
         <?php 
             $questions = getQuestions();

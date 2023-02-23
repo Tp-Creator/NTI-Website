@@ -26,6 +26,8 @@ $routes = [
     "/forum/question"   =>    [ "/pages/forum/forumQuestion.php",  0 ],
 
     "/memes"            =>    [ "/pages/memes/memes.php",          0 ],
+
+    "/games"            =>    [ "/pages/games/games.php",          0 ],
     
     "/google"           =>    [ "/pages/account/googleLogin.php",  0 ],          //  Test google login
     "/gooIn"            =>    [ "/pages/account/googleIndex.php",  0 ],          //  Test google login
