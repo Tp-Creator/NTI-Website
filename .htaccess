@@ -1,5 +1,5 @@
 #main page
-RewriteEngine On
+# RewriteEngine On
 
 # # Om filen som anropas ligger i /public ge access
 # RewriteCond %{REQUEST_URI} !^/public
