@@ -1,6 +1,7 @@
 <?php
-require_once('includes\external\googleLogin\google.config.php');
-require_once('includes\dbh.func\general\dbh.inc.php');
+require_once('includes/dbh.func/general/dbh.inc.php');
+require_once('includes/external/googleLogin/google.config.php');
+require_once('includes/dbh.func/account/dbh.usr.php');
 
 // authenticate code from Google OAuth Flow
 if (isset($_GET['code'])) {
@@ -14,6 +15,8 @@ if (isset($_GET['code'])) {
     $google_account_info = $google_oauth->userinfo->get();
 
     $email =  $google_account_info->email;
+    $first =  $google_account_info->givenName;
+    $last =  $google_account_info->familyName;
     $url =  $google_account_info->picture;
 
   //   $name =  $google_account_info->name;
@@ -21,13 +24,24 @@ if (isset($_GET['code'])) {
     echo "<pre>";
     print_r($google_account_info);
 
-  // Image path
-$img = "data/pfp/$email.png";
+    // Image path
+  $img = "data/pfp/$email.png";
 
-if(!file_exists($img)){
-    // Save image 
-  file_put_contents($img, file_get_contents($url));
-}
+  if(!file_exists($img)){
+      // Save image 
+    file_put_contents($img, file_get_contents($url));
+  }
+
+  $userID = validateGoogleUser($email, $first, $last);
+  console_log($userID);
+
+  $_SESSION['userID'] = $userID;
+
+  header('Location: /');
+
+  die();
+
+
 }
 
 ///////// https://www.oauth.com/oauth2-servers/signing-in-with-google/setting-up-the-environment/ //////////
