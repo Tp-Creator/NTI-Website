@@ -1,19 +1,12 @@
 #main page
-RewriteEngine On
-#RewriteCond %{REQUEST_FILENAME} !-f
-# RewriteCond %{REQUEST_URI} !\.css$
-# RewriteCond %{REQUEST_URI} !\.ttf$
-# RewriteCond %{REQUEST_URI} !\.svg$
-# RewriteCond %{REQUEST_URI} !\.svg$
+# RewriteEngine On
 
-    #   Om filen som anropas ligger i /public ge access
-RewriteCond %{REQUEST_URI} !^/public
-RewriteCond %{REQUEST_URI} !^/routing\.php$
-RewriteRule ^(.*)$ routing.php [L]
+# # Om filen som anropas ligger i /public ge access
+# RewriteCond %{REQUEST_URI} !^/public
+# RewriteCond %{REQUEST_URI} !^/routing\.php$
+# RewriteRule ^(.*)$ routing.php [L]
 
 # RewriteRule ^([^/]+)$ /index.php?route=$1 [L] #den här fungerar också, det var fel på rewritecond
-
-
 
 # Blocking access to fillesystem
 Options -Indexes
