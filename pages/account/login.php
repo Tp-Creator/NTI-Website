@@ -6,8 +6,8 @@
     //  the session with the user id to keep the user logged in.
 
     //Includes the connection to the database
-    include_once 'includes\dbh.func\general\dbh.inc.php';
-    include_once 'includes\dbh.func\account\dbh.usr.php';
+    // include_once 'includes/dbh.func/general/dbh.inc.php';
+    include_once('includes/dbh.func/account/dbh.usr.php');
 
 
     //check if this is a login request

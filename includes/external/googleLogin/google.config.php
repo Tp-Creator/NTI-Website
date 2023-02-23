@@ -1,6 +1,6 @@
 <?php
 
-require_once 'vendor/autoload.php';
+require_once('vendor/autoload.php');
 
 // init configuration
 $clientID = '551005406674-h2gd6th757dennnuefhicgvgt0pvf8gl.apps.googleusercontent.com';
