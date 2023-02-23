@@ -9,5 +9,5 @@ RewriteRule ^(.*)$ /routing.php [L]
 # RewriteRule ^([^/]+)$ /index.php?route=$1 [L] #den här fungerar också, det var fel på rewritecond
 
 # Blocking access to fillesystem
-# Options -Indexes
-# ErrorDocument 403 /404
+Options -Indexes
+ErrorDocument 403 /404
