@@ -77,8 +77,8 @@
         </div>
 
         <!-- Question card  -->
-        <div class="forumCard">
-            <div class="fcHeader">
+        <div class="horizontalCon forumCard">
+            <div class="verticalWrap">
                 <!-- Username -->
                 <p class="fcUsername"><?php echo $user->Username; ?></p>
                 <!-- Date -->
@@ -114,13 +114,13 @@
                 $comments = getCommentsByAnswerID($answers[$ans]->AnswerID);
         ?>
 
-        <div class="forumCard">
+        <div class="horizontalCon forumCard">
             <!-- Card information -->
-            <div class="fcHeader">
+            <div class="verticalWrap">
                 <!-- Username -->
                 <p class="fcUsername"><?php echo $ansUser->Username ?></p>
                 <!-- Reply button -->
-                <button class="meta replyButton">Reply</button>
+                <!-- <button class="meta replyButton">Reply</button> -->
                 <!-- Date & Time -->
                 <p class="fcInfoText"><?php echo $answers[$ans]->dt ?></p>
             </div>

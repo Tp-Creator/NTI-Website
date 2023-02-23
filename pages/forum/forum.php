@@ -36,7 +36,9 @@
 
 <body>
     <header>
-        <!-- Navigation bar -->
+        <!-- 
+            Navigation bar 
+        -->
         <div id="navCon">
             <a id="logoButton" href="/">Schoolhub</a>
             <nav>
@@ -44,16 +46,20 @@
             </nav>
         </div>
 
-        <div class="verticalCon header1">
-            <!-- Filter -->
+        <div class="verticalWrap header1">
+            <!-- 
+                Filter 
+            -->
             <select class="filterPill" name="" id="">
+                <option value="">Saved</option>
                 <option value="">Latest</option>
                 <option value="">Popular</option>
                 <option value="">My questions</option>
-                <option value="">Saved questions</option>
             </select>
 
-            <!-- Course -->
+            <!-- 
+                Course 
+            -->
             <select class="filterPill" name="" id="">
                 <?php 
                     $courses = getCourses();
@@ -67,27 +73,38 @@
                 ?>
             </select>
 
-            <!-- Page status -->
-            <p></p>
+            <!-- 
+                Page status 
+            -->
+            <p id="pageInfo">There are "amount" new questions today!</p>
         </div>
 
         <div class="verticalCon header2">
-            <!-- Searchbar -->
+            <!-- 
+                Searchbar 
+            -->
             <form class="searchbar" action="">
                 <input class="searchfield" placeholder="Search" type="text">
                 <button class="searchButton"><img class="icon" src="/public/style/includes/icons/searchIcon.svg" alt=""></button>
             </form>
 
-            <!-- "Ask a question" button -->
+            <!-- 
+                "Ask a question" button 
+            -->
             <button class="aaqButton" id="askQuestion">Ask a question</button>
         </div>
-        
-        <!-- Ask a question form -->
+       
+        <!-- 
+            "Ask a question" form 
+        -->
         <form class="askAQuestionForm" id="askNewQuestionCard" style="display: none;">
-                <!-- card header  -->
+                <!-- Card header  -->
                 <div class="aaqHeader">
                     <!-- Input question -->
                     <input class="aaqQuestionInput" placeholder="Enter your question" name="title" id="title"></input>
+
+                        <!-- Cursed solutions from: https://css-tricks.com/auto-growing-inputs-textareas/ -->
+                        <!-- <span class="aaqQuestionInput" role="textbox" contenteditable>Enter your question</span> -->
 
                     <!-- Choose course -->
                     <select class="aaqSelect" name="courseID" id="courseID">  
@@ -113,18 +130,18 @@
             </form>
     </header>
 
-
+    
     <!-- Content feed -->
     <section class="horizontalCon contentFeed" id="questionCardFeed">
 
         <?php 
-            $questions = getQuestions();
-
-                //  Amount of cards is the amount of cards that will be displayed
-            for($current = sizeof($questions)-1; $current >= 0; $current--){
-                echo questionCard($questions[$current]);
-
-            }
+           $questions = getQuestions();
+        
+               //  Amount of cards is the amount of cards that will be displayed
+           for($current = sizeof($questions)-1; $current >= 0; $current--){
+               echo questionCard($questions[$current]);
+        
+           }
         ?>
 
     </section>

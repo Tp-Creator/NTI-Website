@@ -5,7 +5,6 @@
     // include_once("../includes/dbh.general.php");
     // include_once("footer.php");
 
-
     function drawNavbar(){
 
         $navbuttons =   [

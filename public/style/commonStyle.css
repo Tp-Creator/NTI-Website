@@ -46,8 +46,8 @@
 
 /* Pills */
 .filterPill {
-    padding: 0.3rem 1rem;
-    border-radius: 1rem;
+    padding: 0.45rem 1rem;
+    border-radius: 2rem;
 
     font-family: 'poppins-semibold';
     text-align: center;

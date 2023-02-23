@@ -130,6 +130,12 @@ nav {
     gap: 1.25rem;
 }
 
+.verticalWrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+}
+
 .horizontalCon {
     display: flex;
     flex-direction: column;
