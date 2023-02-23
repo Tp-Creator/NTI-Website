@@ -4,7 +4,7 @@ RewriteEngine On
 # # Om filen som anropas ligger i /public ge access
 RewriteCond %{REQUEST_URI} !^/public
 RewriteCond %{REQUEST_URI} !^/routing\.php$
-RewriteRule ^(.*)$ routing.php [L]
+RewriteRule ^(.*)$ /routing.php [L]
 
 # RewriteRule ^([^/]+)$ /index.php?route=$1 [L] #den här fungerar också, det var fel på rewritecond
 
