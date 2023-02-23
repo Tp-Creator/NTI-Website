@@ -7,8 +7,8 @@
     include_once 'includes/dbh.func/forum/dbh.forum.php';
 
         //  Includes php elements
-    include_once 'includes\HTMLElements\general.elements.php';
-    include_once 'includes\HTMLElements\forum.elements.php';
+    require_once('includes\HTMLElements\general.elements.php');
+    require_once('includes\HTMLElements\forum.elements.php');
 
 
 ?>
