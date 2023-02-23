@@ -18,6 +18,7 @@
 
         if (loginCheck()) {
             array_push($navbuttons, ["Account", "/account"]);
+            array_push($navbuttons, ["Logout", "/logout"]);
         }
         else {
             array_push($navbuttons, ["Login", "/login"]);

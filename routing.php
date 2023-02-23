@@ -19,6 +19,7 @@ $routes = [
     "/"                 =>    [ "/pages/index.php",                0 ],
 
     "/login"            =>    [ "/pages/account/login.php",        0 ],
+    "/logout"           =>    [ "/pages/account/logout.php",        0 ],
     "/sign-up"          =>    [ "/pages/account/sign-up.php",      0 ],
     "/account"          =>    [ "/pages/account/account.php",      1 ],
     
