@@ -8,11 +8,11 @@
     --mainColor_10: hsl(0 0% 10%);
 
     /* Main colors (Dark mode)*/
-    --mC_dM_1: hsl(210 12% 4%); /*Card etc*/
-    --mC_dM_2: hsl(230 14% 12%); /*bg*/
-    --mC_dM_3: hsl(216 5% 60%); /*smaller elements, text*/
-    --mC_dM_4: hsl(214 14% 90%); /*text*/
-    --mC_dM_5: hsl(258 66% 46%); /*text*/
+    --mC_dM_1: hsl(210 12% 6%);  /* Main element Color */
+    --mC_dM_2: hsl(230 14% 12%); /* Background Color only! */
+    --mC_dM_3: hsl(216 5% 60%);  /*Warm grey*/
+    --mC_dM_4: hsl(214 14% 90%); /*Almost white*/
+    --mC_dM_5: hsl(258 66% 46%); /*Acient color*/
 }
 
 
