@@ -1,3 +1,11 @@
+body {
+    background-color: var(--mC_dM_2);
+
+    display: grid;
+    grid-template-columns: 1fr minmax( 18.5rem , 55rem ) 1fr;
+    gap: 24px;
+}
+
 header {
     grid-column: 2;
 
@@ -68,6 +76,10 @@ header {
     place-items: center;
 }
 
+.callToAction:hover {
+    cursor: pointer;
+}
+
 .optionsCon {
     flex-grow: 1;
 
@@ -105,22 +117,4 @@ header {
     border-radius: 0.25rem;
 
     background-color: var(--mC_dM_5);
-}
-
-
-
-
-/* Pills */
-.filterPill {
-    padding: 0.45rem 1rem;
-    border-radius: 2rem;
-
-    font-family: 'poppins-semibold';
-    text-align: center;
-
-    color: var(--mC_dM_1);
-    background-color: var(--mC_dM_3);
-}
-.filterPill:hover {
-    cursor: pointer;
 }

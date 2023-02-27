@@ -1,11 +1,18 @@
 /* variables */
 :root {
-    /* Main colors (greyscale)*/
+    /* Main colors (Greyscale)*/
     --mainColor_95: hsl(0 0% 95%);
     --mainColor_85: hsl(0 0% 85%);
     --mainColor_50: hsl(0 0% 50%);
     --mainColor_25: hsl(0 0% 25%);
     --mainColor_10: hsl(0 0% 10%);
+
+    /* Main colors (Dark mode)*/
+    --mC_dM_1: hsl(210 12% 4%); /*Card etc*/
+    --mC_dM_2: hsl(230 14% 12%); /*bg*/
+    --mC_dM_3: hsl(216 5% 60%); /*smaller elements, text*/
+    --mC_dM_4: hsl(214 14% 90%); /*text*/
+    --mC_dM_5: hsl(258 66% 46%); /*text*/
 }
 
 
@@ -25,10 +32,6 @@
     font-family: 'poppins-semibold';
     src: url(includes/fonts/poppins/Poppins-SemiBold.ttf);
 }
-
-
-
-
 
 
 
@@ -53,6 +56,13 @@
 
 
 
+::selection {
+    color: var(--mC_dM_4);
+    background-color: var(--mC_dM_5);
+}
+
+
+
 
 * {
     margin: 0%;
@@ -62,62 +72,6 @@
 
     text-decoration: none;
     font-family: 'poppins';
-}
-
-
-
-
-/* Navigation bar  */
-#navCon {
-    top: 0rem;
-    position: sticky;
-    width: 100%;
-
-    grid-column: 1 / span 3;
-    grid-row: 1;
-
-    box-shadow: 0rem 0rem 0.625rem var(--mainColor_85);
-    background-color: #fff;
-
-    display: grid;
-    grid-template-columns: 1fr minmax( 12rem , 58rem ) 1fr;
-    align-items: center;
-    gap: 1.25rem;
-}
-
-nav {
-    display: flex;
-    flex-direction: row;
-}
-
-#logoButton{
-    font-family: 'poppins-semibold';
-    margin-left: 1.25rem;
-
-    color: var(--mainColor_10);
-}
-
-.navButton {
-    width: 100%;
-    padding: 0.825em;
-
-    display: grid;
-    place-items: center;
-}
-.navButton:hover {
-    cursor: pointer;
-    background-color: var(--mainColor_95);
-}
-
-.navIcon {
-    display: none;
-}
-
-.navText {
-    font-family: 'poppins-medium';
-    font-size: 0.875rem;
-
-    color: var(--mainColor_10);
 }
 
 
@@ -133,6 +87,7 @@ nav {
 .verticalWrap {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     gap: 1.25rem;
 }
 
@@ -145,10 +100,85 @@ nav {
 
 
 
+/*New Navbar*/
+nav {
+    grid-column: 1 / span 3;
+
+    display: grid;
+    grid-template-columns:minmax( 3.125rem , 11.6rem ) 1fr minmax( 15.625rem , 50rem ) 1fr minmax( 3.125rem , 11.6rem );
+
+    background-color: var(--mC_dM_1);
+}
+
+#navButCon {
+    grid-column: 3;
+    width: fit-content;
+
+    display: grid;
+    grid-template-columns:repeat(5, minmax( 3.125rem , 11.6rem ));
+}
+
+#navButCon  a {
+    display: grid;
+    place-content: center;
+}
+
+#navButCon  a:hover {
+    background: linear-gradient(0deg, var(--mC_dM_5) 0%, var(--mC_dM_5) 10%, var(--mC_dM_1) 10%);
+}
+
+#navRight {
+    grid-column: 5;
+    height: 3.125rem;
+    justify-self: right;
+}
+
+#navPfp {
+    aspect-ratio: 1 / 1;
+    width: 2rem;
+    margin: 0.563rem;
+
+    border-radius: 2rem;
+    background-color: var(--mC_dM_3);
+}
+
+.navText {
+    padding: 0.781rem;
+
+    font-size: 0.875rem;
+
+    color: var(--mC_dM_4);
+}
+
+.navTextLogo {
+    font-family: 'poppins-semibold';
+}
+
+
+.navIcon {
+    display: none;
+
+    aspect-ratio: 1 / 1;
+    width: 2rem;
+    margin: 0.563rem;
+
+    border-radius: 2rem;
+    background-color: var(--mC_dM_3);
+}
 
 
 
 
-@media screen and (max-width: 600px) {
+
+
+@media screen and (max-width: 800px) {
+
+    .navText {
+        display: none;
+    }
+    
+    .navIcon {
+        display: block;
+    }
 
 }

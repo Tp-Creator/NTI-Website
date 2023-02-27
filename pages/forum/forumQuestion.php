@@ -33,16 +33,23 @@
     <title>Forum</title>
 </head>
 <body>
+    <!-- Navigationbar  -->
+    <nav>
+        <a id='navLeft' href='/pages/index.php'>
+            <p class='navText navTextLogo'>Schoolhub</p>
+            <img class='navIcon' src='' alt=''>
+        </a>
 
-    <header>
-        <!-- Navigation bar -->
-        <div id="navCon">
-            <a id="logoButton" href="/">Schoolhub</a>
-            <nav>
-                <?php echo drawNavbar() ?>
-            </nav>
+        <div id='navButCon'>
+            <?php echo drawNavbar() ?>
         </div>
 
+        <a id='navRight' href=''>
+            <img id='navPfp' src='' alt=''>
+        </a>
+    </nav>
+
+    <header>
         <div class="verticalCon header2">
             <!-- "Ask a question" button -->
             <a class="aaqButton" href="/forum">Back to forum</a>

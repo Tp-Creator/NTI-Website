@@ -1,175 +1,67 @@
-header {
-    background-color: #fff;
+body {
+    background-color: var(--mC_dM_2);
 
     display: grid;
-    grid-template-columns: 1fr minmax( 12rem , 58rem ) 1fr;
-    gap: 1.25rem;
+    grid-template-columns: 1fr minmax( 12rem , 55rem ) 1fr;
 }
 
 
 
 
 
-/* Ask a queston */
+.contentFeed {
+    grid-column: 2;
+}
 
-    /* Buttons */
-    .aaqSelect {
-        padding: 0.325rem 0.75rem;
 
-        border-radius: 2rem;
-        border: 0.125rem solid var(--mainColor_50);
 
-        text-align: center;
-        font-size: 0.75rem;
-        font-family: 'poppins-semibold';
 
-        color: var(--mainColor_50);
-        background-color: var(--mainColor_95);
 
-        /* stackoverflow */
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        text-indent: 1px;
-    }
-    .aaqSelect:hover {
-        cursor: pointer;
-    }
+header {
+    grid-column: 2;
 
-    .aaqPostButton {
-        width: max-content;
-        padding: 0.325rem 1.25rem;
+    padding: 1.25rem 0rem;
 
-        border-radius: 2rem;
-        border: none;
-
-        font-size: 0.75rem;
-        font-family: 'poppins-semibold';
-
-        color: var(--mainColor_95);
-        background-color: var(--mainColor_50);
-    }
-    .aaqPostButton:hover {
-        cursor: pointer;
-    }
-
-    /* Form */
-    .askAQuestionForm {
-        grid-column: 2;
-
-        border-radius: 1.5rem;
-        box-shadow: 0rem 0rem 0.5rem var(--mainColor_85);
-
-        background-color: var(--mainColor_95);
-
-        display: flex;
-        flex-direction: column;
-    }
-
-    .aaqHeader {
-        padding: 0.8rem 1.25rem;
-
-        border-radius: 1.5rem 1.5rem 0rem 0rem;
-    
-        display: flex;
-        align-items: center;
-        gap: 1.25rem;
-    }
-    .aaqHeader:hover {
-        background-color: var(--mainColor_85);
-    }
-
-    .aaqQuestionInput {
-        width: 100%;
-
-        font-size: 0.875rem;
-        font-family: 'poppins-semibold';
-
-        color: var(--mainColor_25);
-        background-color: #00000000;
-        outline: none;
-    }
-
-    .aaqInput {
-        padding: 1.15rem 1.25rem;
-        font-size: 0.875rem;
-
-        border-radius:0rem 0rem 1.5rem 1.5rem;
-
-        color: var(--mainColor_10);
-        background-color: #fff;
-        outline: none;
-    }
-
-    #aaqTitle {
-        flex-grow: 1;
-
-        font-family: 'poppins-medium';
-        color: var(--mainColor_50);
-    }
-
-    .aaqButton {
-        padding: 0.75rem 1.25rem;
-
-        border-radius: 3rem;
-
-        font-size: 0.875rem;
-        font-family: 'poppins-semibold';
-
-        color: var(--mainColor_95);
-        background-color: var(--mainColor_50);
-
-        display: grid;
-        place-items: center;
-    }
-    .aaqButton:hover {
-        cursor: pointer;
-    }
+    background-color: var(--mC_dM_2);
+}
 
 
 
 
 
 /* forumCard */
+.forumCard{
+    min-width: fit-content;
+    padding: 1.25rem;
+    border-radius: 1.5rem;
+    background-color: var(--mC_dM_1);
+}
+
 .fcUsername {
     font-size: 0.875rem;
-    color: var(--mainColor_50);
+    color: var(--mC_dM_3);
 }
 
 .fcInfoText {
     flex-grow: 1;
     text-align: right;
     font-size: 0.75rem;
-    color: var(--mainColor_50);
+    color: var(--mC_dM_3);
 }
 
 .fcTitleText {
     font-family: 'poppins-semibold';
-
-    color: var(--mainColor_10);
-}
-
-.forumCard{
-    min-width: fit-content;
-
-    padding: 1.25rem;
-
-    border-radius: 1.5rem;
-
-    box-shadow: 0rem 0rem 0.5rem var(--mainColor_85);
+    color: var(--mC_dM_4);
 }
 
 .meta {
     width: max-content;
     padding: 0.125rem 0.75rem;
-
     border-radius: 2rem;
-
     font-size: 0.75rem;
-    font-family: 'poppins-medium';
-
-    color: var(--mainColor_50);
-    background-color: var(--mainColor_95);
-
+    font-family: 'poppins-semibold';
+    color: var(--mC_dM_1);
+    background-color: var(--mC_dM_3);
     display: grid;
     place-items: center;
 }
@@ -184,9 +76,7 @@ header {
 
 .sectionHeader {
     padding: 1.25rem 0rem 0rem 1.25rem;
-
     font-family: 'poppins-semibold';
-
     display: flex;
     flex-direction: row;
     gap: 1.25rem;
@@ -198,13 +88,8 @@ header {
 
 .forumCard2 {
     padding: 1.25rem;
-
     border-radius: 1.5rem;
-
-    box-shadow: 0rem 0rem 0.5rem var(--mainColor_85);
-
-    background-color: var(--mainColor_95);
-
+    background-color: var(--mC_dM_1);
     display: flex;
     flex-direction: row;
 }
@@ -224,4 +109,70 @@ header {
     display: flex;
     flex-wrap: wrap-reverse;
     gap: 1.25rem;
+}
+
+
+
+
+
+#addQuestionCard {
+    padding: 24px;
+
+    border-radius: 1.25rem;
+
+    border: 0.125rem solid var(--mC_dM_5);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 24px;
+}
+
+#formFotter {
+    width: max-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+}
+
+#postQuestionButton {
+    padding: 0.4rem 1.25rem;
+
+    border-radius: 2rem;
+
+    font-size: 0.875rem;
+    font-family: 'poppins-medium';
+
+    color: var(--mC_dM_4);
+    background-color: var(--mC_dM_5);
+}
+
+#postQuestionButton:hover {
+    cursor: pointer;
+}
+
+.formInput {
+    width: 100%;
+    min-height: 2rem;
+
+    border-radius: 0.25rem;
+
+    color: var(--mC_dM_4);
+    background: none;
+
+    resize: vertical;
+}
+.formInput:hover {
+    background-color: hsla(214 14% 90% / 15%);
+}
+
+.formTitel {
+    font-size: 1rem;
+    font-family: 'poppins-semibold';
+}
+
+.formDescription {
+    font-size: 0.875rem;
+    font-family: 'poppins';
 }

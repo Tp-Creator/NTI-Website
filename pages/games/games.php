@@ -20,14 +20,32 @@
     <title>Schoolhub Games</title>
 </head>
 <body>
+    <!-- Navigationbar  -->
+    <nav>
+        <a id='navLeft' href='/pages/index.php'>
+            <p class='navText navTextLogo'>Schoolhub</p>
+            <img class='navIcon' src='' alt=''>
+        </a>
 
-<header>
-        <!-- Navigation bar -->
-        <div id="navCon">
-            <a id="logoButton" href="/">Schoolhub</a>
-            <nav>
-                <?php echo drawNavbar() ?>
-            </nav>
+        <div id='navButCon'>
+            <?php echo drawNavbar() ?>
+        </div>
+
+        <a id='navRight' href=''>
+            <img id='navPfp' src='' alt=''>
+        </a>
+    </nav>
+
+    <header>
+        <div class="header2">
+            <!-- Searchbar -->
+            <form class="searchbar" action="">
+                <input class="searchfield" placeholder="Search" type="text">
+                <button class="searchButton"><img class="icon" src="/public/style/includes/icons/searchIcon.svg" alt=""></button>
+            </form>
+
+            <!-- "Ask a question" button -->
+            <button class="rU" id="askQuestion">Request upload</button>
         </div>
 
         <div class="header1">
@@ -38,17 +56,6 @@
                 <option value="">My games</option>
                 <option value="">Saved games</option>
             </select>
-        </div>
-
-        <div class="header2">
-            <!-- Searchbar -->
-            <form class="searchbar" action="">
-                <input class="searchfield" placeholder="Search" type="text">
-                <button class="searchButton"><img class="icon" src="/public/style/includes/icons/searchIcon.svg" alt=""></button>
-            </form>
-
-            <!-- "Ask a question" button -->
-            <button class="rU" id="askQuestion">Request upload</button>
         </div>
     </header>
 
