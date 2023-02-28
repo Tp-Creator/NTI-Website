@@ -53,23 +53,7 @@
             <select class="optionsCon" name="" id="">
 
                 <option value="">Latest</option>
-                <option value="">Popular</option>
                 <option value="">Bookmarked</option>
-                <option value="">Your questions</option>
-
-            </select>
-
-            <div class="devider"></div>
-
-            <select class="optionsCon" name="" id="">
-
-                <option value="">Courses</option>
-                <option value="">Fysik</option>
-                <option value="">Matte</option>
-                <option value="">Svenska</option>
-                <option value="">Engelska</option>
-                <option value="">Programering</option>
-                <option value="">Webbutveckling</option>
 
             </select>
 

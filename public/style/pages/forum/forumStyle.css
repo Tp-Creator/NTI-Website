@@ -2,7 +2,8 @@ body {
     background-color: var(--mC_dM_2);
 
     display: grid;
-    grid-template-columns: 1fr minmax( 12rem , 55rem ) 1fr;
+    grid-template-columns: 1fr minmax( 18.5rem , 52.5rem ) 1fr;
+    gap: 24px;
 }
 
 
@@ -11,18 +12,6 @@ body {
 
 .contentFeed {
     grid-column: 2;
-}
-
-
-
-
-
-header {
-    grid-column: 2;
-
-    padding: 1.25rem 0rem;
-
-    background-color: var(--mC_dM_2);
 }
 
 
@@ -74,17 +63,6 @@ header {
 
 
 
-.sectionHeader {
-    padding: 1.25rem 0rem 0rem 1.25rem;
-    font-family: 'poppins-semibold';
-    display: flex;
-    flex-direction: row;
-    gap: 1.25rem;
-}
-
-.title {
-    font-family: 'poppins-semibold';
-}
 
 .forumCard2 {
     padding: 1.25rem;
@@ -118,7 +96,7 @@ header {
 #addQuestionCard {
     padding: 24px;
 
-    border-radius: 1.25rem;
+    border-radius: 1.5rem;
 
     border: 0.125rem solid var(--mC_dM_5);
 
@@ -137,6 +115,8 @@ header {
 }
 
 #postQuestionButton {
+    align-self: flex-end;
+
     padding: 0.4rem 1.25rem;
 
     border-radius: 2rem;
@@ -175,4 +155,50 @@ header {
 .formDescription {
     font-size: 0.875rem;
     font-family: 'poppins';
+}
+
+
+
+
+
+/* Forum question page, Titel for question and answers. */
+.sectionHeader {
+    margin: 1.24rem 0rem 0rem 1.25rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+}
+
+.sectiontitle {
+    font-family: 'poppins-medium';
+    color: var(--mC_dM_4);
+}
+
+#answerInput {
+    flex-grow: 1;
+    min-height: 2rem;
+
+    resize: vertical;
+
+    border-radius: 0.25rem;
+
+    color: var(--mC_dM_4);
+    background: none;
+}
+#answerInput:hover {
+    background-color: hsla(214 14% 90% / 15%);
+}
+
+#answerQuestionCard {
+    padding: 24px;
+
+    border-radius: 1.25rem;
+
+    border: 0.125rem solid var(--mC_dM_5);
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
 }

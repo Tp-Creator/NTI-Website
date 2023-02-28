@@ -28,7 +28,6 @@
     <link rel="stylesheet" href="/public/style/commonStyle.css">
     
     <link rel="stylesheet" href="/public/style/pages/forum/forumStyle.css">
-    <link rel="stylesheet" href="/public/style/elementPosition.css">
 
     <title>Forum</title>
 </head>
@@ -50,16 +49,26 @@
     </nav>
 
     <header>
-        <div class="verticalCon header2">
-            <!-- "Ask a question" button -->
-            <a class="aaqButton" href="/forum">Back to forum</a>
 
-            <!-- Searchbar -->
-            <form class="searchbar" action="">
-                <input class="searchfield" placeholder="Search" type="text">
-                <button class="searchButton"><img class="icon" src="/public/style/includes/icons/searchIcon.svg" alt=""></button>
+        <div id="headerCon1">
+                <!-- Searchbar  -->
+            <form id="searchbar" action="">
+
+                <input id="searchfield" placeholder="Search" type="text">
+
+                <button id="searchButton">
+                    <img src="/public/style/includes/icons/search_Icon_v3.svg" alt="">
+                </button>
+
             </form>
+
+                <!-- "Aks a question" button  -->
+            <a class="callToAction" href="/pages/forum.php">
+                Back to forum
+                <!-- <img src="" alt=""> -->
+            </a>
         </div>
+
     </header>
 
     <!-- Question card -->
@@ -75,40 +84,60 @@
             $user = getUserFromId($question->UserID);
         ?>
 
+
+
+
+
         <div class="sectionHeader">
             <!-- Section title -->
-            <p class="title">Question</p>
+            <p class="sectiontitle">Question</p>
+
+            <div class="devider"></div>
 
             <!-- Corse pill -->
             <p class="meta"><?php echo $course[1] ?></p>
         </div>
 
+
+
+
+        
         <!-- Question card  -->
-        <div class="horizontalCon forumCard">
+        <div class="card">
             <div class="verticalWrap">
                 <!-- Username -->
-                <p class="fcUsername"><?php echo $user->Username; ?></p>
+                <p class="cardUsername"><?php echo $user->Username; ?></p>
                 <!-- Date -->
-                <p class="fcInfoText"><?php echo $question->dt; ?></p>
+                <p class="cardInfoText"><?php echo $question->dt; ?></p>
             </div>
 
             <!-- Card title/question -->
-            <p class="fcTitleText"><?php echo $question->Title ?></p>
+            <p class="cardTitleText"><?php echo $question->Title ?></p>
 
             <!-- Question description -->
-            <p class="titleText"><?php echo $question->Content ?></p>
+            <p class="cardContentText"><?php echo $question->Content ?></p>
         </div>
 
-        <form class="forumCard2" name="postNewAnswer" id="postNewAnswer">
+
+
+
+
+        <form id="answerQuestionCard" name="answerQuestionCard">
             <!-- ( "Searchfield where user are able to type" )  The name of the user that asked the question -->
-            <input class="aaqQuestionInput" placeholder="Answer <?php echo $user->Username; ?>'s question" type="text" name="newAnswerContent" id="newAnswerContent">
+            <textarea id="answerInput" placeholder="Answer <?php echo $user->Username; ?>'s question" rows="1" type="text" name="newAnswerContent" id="newAnswerContent"></textarea>
     
-            <button class="aaqPostButton" type="submit">Post</button>
+            <button id="postQuestionButton" type="submit">Post</button>
             <!-- <button class="buttonType1 AQP2">Post</button> -->
         </form>
 
+
+
+
         <!-- Section title -->
-        <p class="sectionHeader">Answers</p>
+        <p class="sectionHeader sectiontitle">Answers</p>
+
+
+
 
         <?php 
             for($ans = 0; $ans < sizeof($answers); $ans++){
@@ -121,19 +150,19 @@
                 $comments = getCommentsByAnswerID($answers[$ans]->AnswerID);
         ?>
 
-        <div class="horizontalCon forumCard">
+        <div class="card">
             <!-- Card information -->
             <div class="verticalWrap">
                 <!-- Username -->
-                <p class="fcUsername"><?php echo $ansUser->Username ?></p>
+                <p class="cardUsername"><?php echo $ansUser->Username ?></p>
                 <!-- Reply button -->
                 <!-- <button class="meta replyButton">Reply</button> -->
                 <!-- Date & Time -->
-                <p class="fcInfoText"><?php echo $answers[$ans]->dt ?></p>
+                <p class="cardInfoText"><?php echo $answers[$ans]->dt ?></p>
             </div>
 
             <!-- Card title/answer -->
-            <p class="titleText"><?php echo $answers[$ans]->Content ?></p>
+            <p class="cardContentText"><?php echo $answers[$ans]->Content ?></p>
         </div>
 
         <?php
