@@ -10,8 +10,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="/public/style/commonStyle.css">
     <link rel="stylesheet" href="/public/style/mainStyle.css">
+    <link rel="stylesheet" href="/public/style/commonStyle.css">
     <link rel="stylesheet" href="/public/style/pages/news/newsStyle.css">
 
     <title>Schoolhub News</title>
@@ -48,7 +48,7 @@
         </form>
 
             <!-- Page options & information -->
-        <div class="verticalWrap">
+        <div class="mainOptionsCon">
 
             <select class="optionsCon" name="" id="">
 
