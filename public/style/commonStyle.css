@@ -40,7 +40,7 @@ header {
 
 #searchButton {
     margin: 0.25rem;
-    padding: 0.75rem;
+    padding: 0.75rem 1.25rem;
 
     border-radius: 2rem;
 
@@ -110,26 +110,24 @@ header {
 
 
 
-/* Pills */
-.filterPill {
-    padding: 0.45rem 1rem;
-    border-radius: 2rem;
 
-    font-family: 'poppins-semibold';
-    text-align: center;
+.contentFeed {
+    grid-column: 2;
 
-    color: var(--mC_dM_1);
-    background-color: var(--mC_dM_3);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
-.filterPill:hover {
-    cursor: pointer;
-}
+
+
+
+
 
 
 .card {
     padding: 24px;
 
-    border-radius: 1.5rem;
+    border-radius: 24px;
 
     background-color: var(--mC_dM_1);
 
@@ -162,18 +160,4 @@ header {
     line-height: 1.5rem;
 
     color: var(--mC_dM_4);
-}
-
-
-
-
-.mainOptionsCon {
-    padding: 0.5rem;
-    border-radius: 2rem;
-
-    display: flex;
-    align-items: center;
-    justify-items: flex-start;
-
-    background-color: var(--mC_dM_1);
 }

@@ -104,7 +104,7 @@
 
 
             <!-- Page options & information -->
-        <div class="verticalWrap mainOptionsCon">
+        <div class="verticalWrap">
 
             <select class="optionsCon" name="" id="">
 

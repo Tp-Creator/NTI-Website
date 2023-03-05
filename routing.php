@@ -22,16 +22,16 @@ $routes = [
     "/logout"           =>    [ "/pages/account/logout.php",       0 ],
     "/sign-up"          =>    [ "/pages/account/sign-up.php",      0 ],
     "/account"          =>    [ "/pages/account/account.php",      1 ],
+
+    "/news"             =>    [ "/pages/news/news.php",            0 ],
     
     "/forum"            =>    [ "/pages/forum/forum.php",          0 ],
     "/forum/question"   =>    [ "/pages/forum/forumQuestion.php",  0 ],
 
-    "/memes"            =>    [ "/pages/memes/memes.php",          0 ],
-
     "/games"            =>    [ "/pages/games/games.php",          0 ],
     
-    "/news"             =>    [ "/pages/news/news.php",            0 ],
     "/schedule"         =>    [ "/pages/error/503.html",           0 ],
+    "/memes"            =>    [ "/pages/error/503.html",           0 ],
     
 
     "/google"           =>    [ "/pages/account/googleLogin.php",  0 ],          //  Test google login

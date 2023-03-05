@@ -48,7 +48,7 @@
         </form>
 
             <!-- Page options & information -->
-        <div class="mainOptionsCon">
+        <div class="verticalWrap">
 
             <select class="optionsCon" name="" id="">
 
@@ -64,6 +64,26 @@
         </div>
 
     </header>
+
+
+
+
+    <div class="contentFeed">
+        
+        <div class="card">
+            <div class="verticalWrap">
+                <p class="cardUsername">Username_12345</p>
+
+                <p class="cardInfoText">2023 - 03 - 02 16:15</p>
+            </div>
+
+            <p class="cardTitleText">Titel</p>
+
+            <p class="cardContentText">Description</p>
+
+        </div>
+
+    </div>
 
 </body>
 </html>
