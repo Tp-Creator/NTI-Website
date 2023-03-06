@@ -1,10 +1,6 @@
 body {
     height: 100vh;
 
-    background-image: url(../../includes/icons/emojis_v2.svg);
-    background-repeat: repeat-y;
-    background-size: cover;
-
     display: grid;
     grid-template-columns: 1fr minmax( 12rem , 58rem ) 1fr;
     grid-template-rows: min-content 1fr min-content 1.5fr;
@@ -83,8 +79,6 @@ header {
 
 .memeCard {
     border-radius: 1.5rem;
-
-    background-color: var(--mainColor_85);
 
     box-shadow: 0rem 0rem 0.5rem var(--mainColor_95);
 }

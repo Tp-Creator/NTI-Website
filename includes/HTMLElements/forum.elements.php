@@ -26,12 +26,13 @@
 
         //  hämtar id:t på frågan och lägger till den i url:en
         $card = "<a href='/forum/question?question=$id'>
-                    <div class='forumCard'>
-                        <div class='fcHeader'>
+                    <div class='horizontalCon forumCard'>
+                        <div class='verticalCon'>
+                            <div class='verticalWrapReverse'>
+                                <p class='fcUsername'>$username</p>
 
-                            <p class='fcUsername'>$username</p>
-
-                            <div class='meta $courseColor'><p>$courseName</p></div>
+                                <div class='meta $courseColor'><p>$courseName</p></div>
+                            </div>
 
                             <p class='fcInfoText'>$date</p>
                         </div>

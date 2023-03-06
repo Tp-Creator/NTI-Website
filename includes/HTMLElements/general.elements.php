@@ -5,7 +5,6 @@
     // include_once("../includes/dbh.general.php");
     // include_once("footer.php");
 
-
     function drawNavbar(){
 
         $navbuttons =   [
@@ -16,26 +15,32 @@
             ["Games",       "/games"]
         ];
 
-        if (loginCheck()) {
-            array_push($navbuttons, ["Account", "/account"]);
-            array_push($navbuttons, ["Logout", "/logout"]);
-        }
-        else {
-            array_push($navbuttons, ["Login", "/login"]);
-        }
+
+        // if (loginCheck()) {
+        //     array_push($navbuttons, ["Account", "/account"]);
+        //     array_push($navbuttons, ["Logout", "/logout"]);
+        // }
+        // else {
+        //     array_push($navbuttons, ["Login", "/login"]);
+        // }
 
         $navbar = "";
-
+        
         for($b = 0; $b < sizeof($navbuttons); $b++){
             $content = $navbuttons[$b][0];
             $url = $navbuttons[$b][1];
-
                 // <!-- Navbar button -->
-            $navbar .= "<a class='navButton buttonText' href='$url'>
+            // $navbar .= "<a class='navButton buttonText' href='$url'>
+            //                 <p class='navText'>$content</p>
+            //                 <img class='navIcon' src='/public/style/includes/icons/searchIcon.svg' alt=''>
+            //             </a>";
+
+            $navbar .= "<a href='$url'>
                             <p class='navText'>$content</p>
-                            <img class='navIcon' src='/public/style/includes/icons/searchIcon.svg' alt=''>
+                            <img class='navIcon' src='' alt=''>
                         </a>";
         }
+
 
         return $navbar;
     }

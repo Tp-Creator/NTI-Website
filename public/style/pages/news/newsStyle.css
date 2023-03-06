@@ -1,0 +1,11 @@
+body {
+    background-color: var(--mC_dM_2);
+
+    display: grid;
+    grid-template-columns: 1fr minmax( 18.5rem , 55rem ) 1fr;
+    gap: 24px;
+}
+
+.callToAction:hover {
+    cursor: pointer;
+}

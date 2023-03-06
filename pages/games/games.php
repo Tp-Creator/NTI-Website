@@ -1,9 +1,6 @@
 <?php 
-
-        //  Includes php elements
-    include_once 'includes\HTMLElements\general.elements.php';
-    include_once 'includes\HTMLElements\forum.elements.php';
-
+    //  Includes php elements
+    include_once('includes/HTMLElements/general.elements.php');
 ?>
 
 <!DOCTYPE html>
@@ -17,40 +14,80 @@
     <link rel="stylesheet" href="/public/style/commonStyle.css">
     <link rel="stylesheet" href="/public/style/pages/games/gamesStyle.css">
 
-    <title>Schoolhub Games</title>
+    <title>Schoolhub News</title>
 </head>
 <body>
+    
+    <!-- Navigationbar  -->
+    <nav>
+        <a id='navLeft' href='/pages/index.php'>
+            <p class='navText navTextLogo'>Schoolhub</p>
+            <img class='navIcon' src='' alt=''>
+        </a>
 
-<header>
-        <!-- Navigation bar -->
-        <div id="navCon">
-            <a id="logoButton" href="/">Schoolhub</a>
-            <nav>
-                <?php echo drawNavbar() ?>
-            </nav>
+        <div id='navButCon'>
+            <?php echo drawNavbar() ?>
         </div>
 
-        <div class="header1">
-            <!-- Filter -->
-            <select class="filterPill" name="" id="">
+        <a id='navRight' href=''>
+            <img id='navPfp' src='' alt=''>
+        </a>
+    </nav>
+
+    <header>
+
+            <!-- Searchbar  -->
+        <form id="searchbar" action="">
+
+            <input id="searchfield" placeholder="Search" type="text">
+
+            <button id="searchButton">
+                <img src="/public/style/includes/icons/search_Icon_v3.svg" alt="">
+            </button>
+
+        </form>
+
+            <!-- Page options & information -->
+        <div class="verticalWrap">
+
+            <select class="optionsCon" name="" id="">
+
                 <option value="">Latest</option>
-                <option value="">Popular</option>
-                <option value="">My games</option>
-                <option value="">Saved games</option>
+                <option value="">Bookmarked</option>
+
             </select>
+
+            <div class="devider"></div>
+
+            <p class="infoText">There are "amount" new articles today!</p>
+
         </div>
 
-        <div class="header2">
-            <!-- Searchbar -->
-            <form class="searchbar" action="">
-                <input class="searchfield" placeholder="Search" type="text">
-                <button class="searchButton"><img class="icon" src="/public/style/includes/icons/searchIcon.svg" alt=""></button>
-            </form>
-
-            <!-- "Ask a question" button -->
-            <button class="rU" id="askQuestion">Request upload</button>
-        </div>
     </header>
+
+
+
+
+    <div class="gamesContentFeed">
+        
+        <div class="gamesCard">
+
+            <!-- Game title  -->
+            <p class="">Game Title</p>
+
+            <!-- Username  -->
+            <p class="">Username_12345</p>
+
+            <!-- Icons  -->
+            <div>
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+            </div>
+
+        </div>
+
+    </div>
 
 </body>
 </html>

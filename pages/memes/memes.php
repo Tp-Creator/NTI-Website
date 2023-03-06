@@ -20,26 +20,23 @@
     <title>Schoolhub Memes</title>
 </head>
 <body>
+    <!-- Navigationbar  -->
+    <nav>
+        <a id='navLeft' href='/pages/index.php'>
+            <p class='navText navTextLogo'>Schoolhub</p>
+            <img class='navIcon' src='' alt=''>
+        </a>
+
+        <div id='navButCon'>
+            <?php echo drawNavbar() ?>
+        </div>
+
+        <a id='navRight' href=''>
+            <img id='navPfp' src='' alt=''>
+        </a>
+    </nav>
     
     <header>
-        <!-- Navigation bar -->
-        <div id="navCon">
-            <a id="logoButton" href="/">Schoolhub</a>
-            <nav>
-                <?php echo drawNavbar() ?>
-            </nav>
-        </div>
-
-        <div class="header1">
-            <!-- Filter -->
-            <select class="filterPill" name="" id="">
-                <option value="">Latest</option>
-                <option value="">Popular</option>
-                <option value="">My memes</option>
-                <option value="">Saved memes</option>
-            </select>
-        </div>
-
         <div class="header2">
             <!-- Searchbar -->
             <form class="searchbar" action="">
@@ -52,46 +49,17 @@
         </div>
     </header>
 
-    <section class="contentFeed">
-        <div class="memeCard">
-            <div class="imgCon">
-                <img class="cardImg" src="/public/style/includes/img/meme.jpeg" alt="">
-            </div>
-            <div class="cardBody">
-                <p>Username_12345</p>
-                <button class="likeButton">
-                    <p>12345</p>
-                    <img src="" alt="">
-                </button>
-            </div>
-        </div>
+    <div class="header1">
+        <!-- Filter -->
+        <select class="filterPill" name="" id="">
+            <option value="">Latest</option>
+            <option value="">Popular</option>
+            <option value="">My memes</option>
+            <option value="">Saved memes</option>
+        </select>
+    </div>
 
-        <div class="memeCard">
-            <div class="imgCon">
-                <img class="cardImg" src="/public/style/includes/img/meme.jpeg" alt="">
-            </div>
-            <div class="cardBody">
-                <p>Username_12345</p>
-                <button class="likeButton">
-                    <p>12345</p>
-                    <img src="" alt="">
-                </button>
-            </div>
-        </div>
-
-        <div class="memeCard">
-            <div class="imgCon">
-                <img class="cardImg" src="/public/style/includes/img/meme.jpeg" alt="">
-            </div>
-            <div class="cardBody">
-                <p>Username_12345</p>
-                <button class="likeButton">
-                    <p>12345</p>
-                    <img src="" alt="">
-                </button>
-            </div>
-        </div>
-    </section>
+    <section class="contentFeed"></section>
 
 </body>
 </html>
