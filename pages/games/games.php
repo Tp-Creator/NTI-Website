@@ -20,18 +20,7 @@
     
     <!-- Navigationbar  -->
     <nav>
-        <a id='navLeft' href='/pages/index.php'>
-            <p class='navText navTextLogo'>Schoolhub</p>
-            <img class='navIcon' src='' alt=''>
-        </a>
-
-        <div id='navButCon'>
-            <?php echo drawNavbar() ?>
-        </div>
-
-        <a id='navRight' href=''>
-            <img id='navPfp' src='' alt=''>
-        </a>
+        <?php echo drawNavbar() ?>
     </nav>
 
     <header>

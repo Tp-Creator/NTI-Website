@@ -5,6 +5,7 @@
     // include_once("../includes/dbh.general.php");
     // include_once("footer.php");
 
+
     function drawNavbar(){
 
         $navbuttons =   [
@@ -16,29 +17,46 @@
         ];
 
 
-        // if (loginCheck()) {
-        //     array_push($navbuttons, ["Account", "/account"]);
-        //     array_push($navbuttons, ["Logout", "/logout"]);
-        // }
-        // else {
-        //     array_push($navbuttons, ["Login", "/login"]);
-        // }
+            //  Logo
+        $navbar =   "    
+                        <a id='navLeft' href='/'>
+                            <p class='navText navTextLogo'>Schoolhub</p>
+                            <img class='navIcon' src='' alt=''>
+                        </a>
+                    ";
 
-        $navbar = "";
+            //  Start navButCon
+        $navbar .= "<div id='navButCon'>";
+        
         
         for($b = 0; $b < sizeof($navbuttons); $b++){
             $content = $navbuttons[$b][0];
             $url = $navbuttons[$b][1];
-                // <!-- Navbar button -->
-            // $navbar .= "<a class='navButton buttonText' href='$url'>
-            //                 <p class='navText'>$content</p>
-            //                 <img class='navIcon' src='/public/style/includes/icons/searchIcon.svg' alt=''>
-            //             </a>";
 
             $navbar .= "<a href='$url'>
                             <p class='navText'>$content</p>
                             <img class='navIcon' src='' alt=''>
                         </a>";
+        }
+
+            //  End navButCon
+        $navbar .= "</div>";
+
+        if (loginCheck()) {
+            // array_push($navbuttons, ["Account", "/account"]);
+            // array_push($navbuttons, ["Logout", "/logout"]);
+
+            $usr = getUserFromId($_SESSION['userID']);
+            $usrMail = $usr->Email;
+
+            $navbar .= "
+                            <a id='navRight' href='/account'>
+                                <img id='navPfp' src='/data/pfp/$usrMail.png' alt=''>
+                            </a>
+                         ";
+        }
+        else {
+            $navbar .=  "<a id='navRight' href='/google'>login</a>";
         }
 
 

@@ -19,20 +19,10 @@
     <link rel="stylesheet" href="/public/style/indexStyle.css">
 </head>
 <body>
+    
     <!-- Navigationbar  -->
     <nav>
-        <a id='navLeft' href='/pages/index.php'>
-            <p class='navText navTextLogo'>Schoolhub</p>
-            <img class='navIcon' src='' alt=''>
-        </a>
-
-        <div id='navButCon'>
-            <?php echo drawNavbar() ?>
-        </div>
-
-        <a id='navRight' href=''>
-            <img id='navPfp' src='' alt=''>
-        </a>
+        <?php echo drawNavbar() ?>
     </nav>
     
     <div id="mainCon">
@@ -54,7 +44,7 @@
 
 
         echo "
-            <a id='logInButton' href=". $client->createAuthUrl() .">
+            <a id='logInButton' href='/google'>
                 <img class='icon' src='/public/style/includes/icons/google-icon.svg'>
                 <p class='butText'>LOG IN</p>
             </a>
