@@ -7,10 +7,6 @@
     // session_start();    //start the PHP_session function
 
     $usr = getUserFromId($_SESSION['userID']);
-    $usrName = $usr->Username;
-    $usrMail = $usr->Email;
-    console_log($usr);
-    console_log($usrMail);
 
     
 
@@ -27,7 +23,7 @@
     <link rel="stylesheet" href="/public/style/mainStyle.css">
     <link rel="stylesheet" href="/public/style/commonStyle.css">
 
-    <title><?php echo $usrName; ?>'s account</title>
+    <title><?php echo $usr->Username; ?>'s account</title>
 </head>
 <body>
     
@@ -36,7 +32,12 @@
         <?php echo drawNavbar() ?>
     </nav>
 
-    <img src="public/img/pfp/<?php echo $usrMail; ?>.png" alt="">
+    <h1>Welcome <?php echo $usr->FirstName . " ". $usr->LastName; ?>!</h1>
+    <p>This is your profile page. On this page you can see you profile image and sign out</p>
+
+    <img src="public/img/pfp/<?php echo $usr->Email; ?>.png" alt="">
+
+    <a href="/logout">Logout</a>
 
 
 </body>
