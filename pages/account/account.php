@@ -36,10 +36,7 @@
         <?php echo drawNavbar() ?>
     </nav>
 
-    <img src="data/pfp/<?php echo $usrMail; ?>.png" alt="">
-    <img src="/data/pfp/joel.jagerskogh@elev.ga.ntig.se.png" alt="">
-    <img src="/pages/account/a.png" alt="">
-    <!-- joel.jagerskogh@elev.ga.ntig.se.png -->
+    <img src="public/img/pfp/<?php echo $usrMail; ?>.png" alt="">
 
 
 </body>

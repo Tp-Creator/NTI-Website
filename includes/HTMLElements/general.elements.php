@@ -51,7 +51,7 @@
 
             $navbar .= "
                             <a id='navRight' href='/account'>
-                                <img id='navPfp' src='/data/pfp/$usrMail.png' alt=''>
+                                <img id='navPfp' src='public/img/pfp/$usrMail.png' alt=''>
                             </a>
                          ";
         }
