@@ -25,40 +25,5 @@
         <?php echo drawNavbar() ?>
     </nav>
     
-    <div id="mainCon">
-        <!-- Welcome text  -->
-        <div id="verCon">
-            <p class="normalText">Welcome to</p>
-            <p class="logoText">Schoolhub</p>
-        </div>
-
-        <?php
-
-        require_once('includes/external/googleLogin/google.config.php');
-
-        console_log($client);
-
-
-          // now you can use this profile info to create account in your website and make user logged in.
-        //   echo "<a href='" . $client->createAuthUrl() . "'>Google Login</a>";
-
-
-        echo "
-            <a id='logInButton' href='/google'>
-                <img class='icon' src='/public/style/includes/icons/google-icon.svg'>
-                <p class='butText'>LOG IN</p>
-            </a>
-        "
-
-        ?>
-
-        <!-- Google log in button  -->
-        <!-- <a id="logInButton" href="">
-            <img class="icon" src="/public/style/includes/icons/google-icon.svg" alt="">
-            <p class="butText">LOG IN</p>
-        </a> -->
-
-    </div>
-
 </body>
 </html>
