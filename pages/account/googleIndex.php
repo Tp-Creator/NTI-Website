@@ -25,7 +25,7 @@ if (isset($_GET['code'])) {
     print_r($google_account_info);
 
     // Image path
-  $img = "data/pfp/$email.png";
+  $img = "public/img/pfp/$email.png";
 
   if(!file_exists($img)){
       // Save image 

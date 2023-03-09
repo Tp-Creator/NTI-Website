@@ -53,7 +53,7 @@
             </form>
 
                 <!-- "Aks a question" button  -->
-            <a class="callToAction" href="/pages/forum.php">
+            <a class="callToAction" href="forum">
                 Back to forum
                 <!-- <img src="" alt=""> -->
             </a>

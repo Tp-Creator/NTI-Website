@@ -47,11 +47,10 @@
             // array_push($navbuttons, ["Logout", "/logout"]);
 
             $usr = getUserFromId($_SESSION['userID']);
-            $usrMail = $usr->Email;
 
             $navbar .= "
                             <a id='navRight' href='/account'>
-                                <img id='navPfp' src='/data/pfp/$usrMail.png' alt=''>
+                                <img id='navPfp' src='public/img/pfp/$usr->Email.png' alt=''>
                             </a>
                          ";
         }
