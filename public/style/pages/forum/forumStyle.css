@@ -1,15 +1,3 @@
-body {
-    background-color: var(--mC_dM_2);
-
-    display: grid;
-    grid-template-columns: 1fr minmax( 18.5rem , 52.5rem ) 1fr;
-    gap: 24px;
-}
-
-
-
-
-
 .contentFeed {
     grid-column: 2;
 }
@@ -21,14 +9,22 @@ body {
 /* forumCard */
 .forumCard{
     min-width: fit-content;
-    padding: 1.25rem;
-    border-radius: 1.5rem;
+    padding: 18px;
+    border-radius: 22px;
     background-color: var(--mC_dM_1);
 }
 
 .fcUsername {
     font-size: 0.875rem;
     color: var(--mC_dM_3);
+
+    display: flex;
+}
+
+.fcPFP {
+    aspect-ratio: 1/1;
+    width: 24px;
+    border-radius: 12px;
 }
 
 .fcInfoText {
@@ -47,10 +43,13 @@ body {
     width: max-content;
     padding: 0.125rem 0.75rem;
     border-radius: 2rem;
+    
     font-size: 0.75rem;
-    font-family: 'poppins-semibold';
+    font-family: 'poppins-medium';
     color: var(--mC_dM_1);
+
     background-color: var(--mC_dM_3);
+
     display: grid;
     place-items: center;
 }
@@ -85,8 +84,8 @@ body {
 
 .verticalWrapReverse {
     display: flex;
-    flex-wrap: wrap-reverse;
-    gap: 1.25rem;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
 

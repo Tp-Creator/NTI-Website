@@ -98,17 +98,6 @@
 
             <select class="optionsCon" name="" id="">
 
-                <option value="">Latest</option>
-                <option value="">Popular</option>
-                <option value="">Bookmarked</option>
-                <option value="">Your questions</option>
-
-            </select>
-
-            <div class="devider"></div>
-
-            <select class="optionsCon" name="" id="">
-
                 <option value="">Courses</option>
                 <?php 
                     $courses = getCourses();
@@ -122,10 +111,6 @@
                 ?>
 
             </select>
-
-            <div class="devider"></div>
-
-            <p class="infoText">There are "amount" new questions today!</p>
 
         </div>
 
