@@ -54,6 +54,31 @@
 
     }
 
+
+
+    function getAnswersFromTime($clientTime){
+        global $conn;
+    
+        $stmt = $conn->prepare("SELECT * FROM forum_answer WHERE dt > ?;");
+        $stmt->bind_param("i", $clientTime);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        
+        $result = $result->fetch_all();
+
+            //  Loops over the data and makes sure javascript injections can not be done by converting the values so that no html "code" is in there
+        foreach ($result as &$row) {
+            foreach ($row as &$value) {
+                $value = htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
+            }
+        }
+
+        return $result; 
+
+    }
+
+
+
     function getCourses(){
 
         global $conn;
@@ -209,10 +234,10 @@
             $time = "Right now";
         }
         elseif($diffNum < 6000){                        //  If there has gone less than 60 minutes
-            $time = $diff->format("%I minutes ago");
+            $time = $diff->format("%i minutes ago");
         }
         elseif($diffNum < 240000){                      //  If there has gone less than 24 hours
-            $time = $diff->format("%H hours ago");
+            $time = $diff->format("%h hours ago");
         }
         elseif($diffNum < 7000000){                     //  If there has gone less than 7 days
             $time = $diff->format("%a days ago");

@@ -9,6 +9,7 @@
 
         //  Includes php elements
     include_once('includes/HTMLElements/general.elements.php');
+    include_once('includes/HTMLElements/forum.elements.php');
 
 ?>
 
@@ -53,7 +54,7 @@
             </form>
 
                 <!-- "Aks a question" button  -->
-            <a class="callToAction" href="/pages/forum.php">
+            <a class="callToAction" href="/forum">
                 Back to forum
                 <!-- <img src="" alt=""> -->
             </a>
@@ -65,7 +66,7 @@
     <section class="horizontalCon contentFeed">
         <?php 
             $question = getQuestionByID($_GET["question"]);
-            
+
                 // Gets all the answers
             $answers = fetchAnswersWithQuestionID($_GET["question"]);
                 //  Gets the course from the question
@@ -132,53 +133,12 @@
         <?php 
             for($ans = 0; $ans < sizeof($answers); $ans++){
 
-                if($answers[$ans]->CommentID != NULL){
-                    continue;
-                }
-
-                $ansUser = getUserFromId($answers[$ans]->UserID);
-                $comments = getCommentsByAnswerID($answers[$ans]->AnswerID);
-        ?>
-
-        <div class="card">
-            <!-- Card information -->
-            <div class="verticalWrap">
-                <!-- Username -->
-                <p class="cardUsername"><?php echo $ansUser->Username ?></p>
-                <!-- Reply button -->
-                <!-- <button class="meta replyButton">Reply</button> -->
-                <!-- Date & Time -->
-                <p class="cardInfoText"><?php echo $answers[$ans]->dt ?></p>
-            </div>
-
-            <!-- Card title/answer -->
-            <p class="cardContentText"><?php echo $answers[$ans]->Content ?></p>
-        </div>
-
-        <?php
-            for($com = 0; $com < sizeof($comments); $com++){
-                $comUser = getUserFromId($comments[$com]->UserID);
-        ?>
-
-        <!-- Comment to answer -->
-        <!-- <div class="forumCard"> -->
-            <!-- Card information -->
-            <!-- <div class="pill QCP1"> -->
-                <!-- Username -->
-                <!-- <p class="infoText"><?php //echo $comUser->Username ?></p> -->
-                <!-- Date -->
-                <!-- <p class="infoText"><?php //echo $comments[$com]->dt ?></p> -->
-            <!-- </div> -->
-            <!-- Reply button -->
-            <!-- <button class="pill">Reply</button> -->
-            <!-- Card title/answer -->
-            <!-- <p class="regularText QCP4"><?php //echo $comments[$com]->Content ?></p> -->
-        <!-- </div> -->
-
-        <?php
-                }
+                // if($answers[$ans]->CommentID == NULL){
+                    echo answerCard($answers[$ans]);
+                // }
             }
         ?>
+
     </section>
     
     <footer></footer>
