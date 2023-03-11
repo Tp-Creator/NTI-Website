@@ -189,4 +189,40 @@
 
     }
 
+
+    //  This function converts a message timestamp in millis to a text that tells the user how long ago the message was sent
+    //  Takes one argument ($millis)
+    function timestampToRead($millis){
+
+            //  Creates a date object for the millis timestamp and for the time right now
+        $date = date_create(date("Y-m-d H:i:s", $millis/1000));
+        $curr = date_create();
+        
+            //  $diff is the diffrence in time between $date and $curr as an object
+        $diff = date_diff($date, $curr);
+            //  $diffNum is the diffrens as a number "%a" = day, "%H" = hours, "%I" = minutes, "%S" = seconds
+        $diffNum = $diff->format("%a%H%I%S");
+
+            //  An if to determain what should be written
+
+        if($diffNum < 60){                      //  If there has gone less than 60 seconds
+            $time = "Right now";
+        }
+        elseif($diffNum < 6000){                        //  If there has gone less than 60 minutes
+            $time = $diff->format("%I minutes ago");
+        }
+        elseif($diffNum < 240000){                      //  If there has gone less than 24 hours
+            $time = $diff->format("%H hours ago");
+        }
+        elseif($diffNum < 7000000){                     //  If there has gone less than 7 days
+            $time = $diff->format("%a days ago");
+        }
+        else{                                           //  Other wise it just shows the data in year-month-day (Ex. 2023-03-11)
+            $time = date("Y-m-d", $millis/1000);        
+        }
+
+        return $time;
+
+    }
+
 ?>

@@ -98,7 +98,7 @@
                 <!-- Username -->
                 <p class="cardUsername"><?php echo $user->Username; ?></p>
                 <!-- Date -->
-                <p class="cardInfoText"><?php echo $question->dt; ?></p>
+                <p class="cardInfoText"><?php echo timestampToRead($question->dt); ?></p>
             </div>
 
             <!-- Card title/question -->

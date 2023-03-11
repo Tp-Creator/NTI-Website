@@ -20,8 +20,10 @@
             $username = $user->Username;
 
         $title = $question[3];                      //  3
-        $date = $question[5];                       //  5
         $vote = $question[6];                       //  6
+        
+        $millis = $question[5];                     //  5
+        $date = timestampToRead($millis);                    
 
 
         //  hämtar id:t på frågan och lägger till den i url:en
