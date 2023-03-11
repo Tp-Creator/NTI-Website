@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="/public/style/commonStyle.css">
     <link rel="stylesheet" href="/public/style/pages/news/newsStyle.css">
 
-    <title>Schoolhub News</title>
+    <title>Schoolhub Inbox</title>
 </head>
 <body>
     
@@ -24,7 +24,6 @@
     </nav>
 
     <header>
-
             <!-- Searchbar  -->
         <form id="searchbar" action="">
 
@@ -36,28 +35,40 @@
 
         </form>
 
-            <!-- Page options & information -->
-        <div class="verticalWrap">
+        <div class="verticalCon">
+            <a class="hotlinkBut" href="">News</a>
 
-            <select class="optionsCon" name="" id="">
-
-                <option value="">Latest</option>
-                <option value="">Bookmarked</option>
-
-            </select>
-
-            <div class="devider"></div>
-
-            <p class="infoText">There are "amount" new articles today!</p>
-
+            <a class="hotlinkBut" href="">Dev log</a>
         </div>
-
     </header>
 
 
 
 
     <div class="contentFeed">
+
+        <div>
+            <h3>Food</h3>
+            <p>Description</p>
+        </div>
+
+        <h3>Week 11</h3>
+        
+        <!-- Food card  -->
+        <div>
+            <div>
+                <p>Mon 23-03-13</p>
+                <p>Food name</p>
+                <p>Veg: Food name</p>
+            </div>
+
+            <!-- google search of the food  -->
+            <a href="">
+                <img src="" alt="">
+            </a>
+        </div>
+
+        <h3>News</h3>
         
         <div class="card">
             <div class="verticalWrap">
@@ -71,6 +82,8 @@
             <p class="cardContentText">Description</p>
 
         </div>
+
+        <h3>Dev log</h3>
 
     </div>
 

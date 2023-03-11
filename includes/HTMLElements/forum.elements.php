@@ -25,15 +25,22 @@
         $millis = $question[5];                     //  5
         $date = timestampToRead($millis);                    
 
+        $usr = getUserFromId($_SESSION['userID']);
+        $usrMail = $usr->Email;
 
         //  hämtar id:t på frågan och lägger till den i url:en
         $card = "<a href='/forum/question?question=$id'>
                     <div class='horizontalCon forumCard'>
                         <div class='verticalCon'>
                             <div class='verticalWrapReverse'>
-                                <p class='fcUsername'>$username</p>
-
+        
                                 <div class='meta $courseColor'><p>$courseName</p></div>
+
+                                <div class='verticalCon'>
+                                    <img class='fcPFP' src='public/img/pfp/$usrMail.png' alt=''>
+
+                                    <p class='fcUsername'>$username</p>
+                                </div>
                             </div>
 
                             <p class='fcInfoText'>$date</p>
