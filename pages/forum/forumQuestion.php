@@ -66,7 +66,7 @@
     <section class="horizontalCon contentFeed">
         <?php 
             $question = getQuestionByID($_GET["question"]);
-
+            
                 // Gets all the answers
             $answers = fetchAnswersWithQuestionID($_GET["question"]);
                 //  Gets the course from the question

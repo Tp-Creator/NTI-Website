@@ -4,6 +4,7 @@ set_include_path($_SERVER['DOCUMENT_ROOT']);
 
 include_once('includes/dbh.func/forum/dbh.forum.php');
 include_once('includes/dbh.func/general/dbh.inc.php');
+include_once('includes/HTMLElements/forum.elements.php');
 
 
 session_start(); //start the PHP_session function 
@@ -31,6 +32,7 @@ function getNewAnswers()
         $html = "";
 
         for ($ans = 0; $ans < sizeof($newAnswers); $ans++){
+            // console_log($newAnswers[$ans]);
             $html .= answerCard($newAnswers[$ans]);
         }
 

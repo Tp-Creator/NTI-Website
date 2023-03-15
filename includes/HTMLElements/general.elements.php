@@ -51,7 +51,7 @@
 
             $navbar .= "
                             <a id='navRight' href='/account'>
-                                <img id='navPfp' src='public/img/pfp/$usrMail.png' alt=''>
+                                <img id='navPfp' src='/public/img/pfp/$usrMail.png' alt=''>
                             </a>
                          ";
         }
@@ -59,7 +59,7 @@
             $navbar .=  "<a id='navRight' href='/google'>
                             <div class='loginBut'>
                                 <p class='navText'>Login</p>
-                                <img class='smallIcon' src='public/style/includes/icons/google-icon.svg' alt=''>
+                                <img class='smallIcon' src='/public/style/includes/icons/google-icon.svg' alt=''>
                             </div>
 
                         </a>";

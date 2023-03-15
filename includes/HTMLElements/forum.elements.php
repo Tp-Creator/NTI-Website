@@ -68,6 +68,7 @@
         //     continue;
         // }
 
+        // console_log($answer);
         $ansUser = getUserFromId($answer->UserID);
         $ansDate = timestampToRead($answer->dt);
         $ansContent = $answer->Content;
@@ -92,7 +93,7 @@
 
 
             if($comment){
-                console_log("vi skriver kommentarer");
+                // console_log("vi skriver kommentarer");
                 for($com = 0; $com < sizeof($comments); $com++){
                     $comUser = getUserFromId($comments[$com]->UserID);
                     $comDate = $comments[$com]->dt;

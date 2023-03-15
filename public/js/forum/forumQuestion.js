@@ -20,7 +20,8 @@
             success: function(html) {
                     // Update the page with the new messages
                 if(html != ""){
-                    $("#contentFeed").append(html);
+                    // console.log(html);
+                    $(".contentFeed").append(html);
                 }
                 
                 window.lastPageUpdate = Date.now();
@@ -47,8 +48,8 @@
     formData += '&questionID=' + questionID + "&function=1";
 
         //  Hämtar contentet så att vi kan kolla så att det inte är en tom sträng
-    let answerContent = $("#newAnswerContent").val();
-
+    let answerContent = $("#answerInput").val();
+    
 
         //  Kolla om fälten är tomma eller om de innehåller info och stoppa annars post:en.
     if(answerContent != ""){
@@ -60,7 +61,7 @@
         success: function(response){
             checkForNewMessages();
             // $("#courseID").val('');
-            $("#newAnswerContent").val('');
+            $("#answerInput").val('');
 
             // console.log(response);
                 //  Vid success:

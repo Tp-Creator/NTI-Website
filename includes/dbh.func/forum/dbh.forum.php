@@ -62,16 +62,34 @@
         $stmt = $conn->prepare("SELECT * FROM forum_answer WHERE dt > ?;");
         $stmt->bind_param("i", $clientTime);
         $stmt->execute();
-        $result = $stmt->get_result();
+        // $result = $stmt->get_result();
         
-        $result = $result->fetch_all();
+        $stmt = $stmt->get_result();
+        $result = [];
 
-            //  Loops over the data and makes sure javascript injections can not be done by converting the values so that no html "code" is in there
-        foreach ($result as &$row) {
-            foreach ($row as &$value) {
+            //  Fetches each answer individually and then adds them to an array that is then returned.
+        while ($finfo = $stmt->fetch_object()) {
+
+                //  Loops over the data and makes sure javascript injections can not be done
+            foreach ($finfo as $key => &$value) {
                 $value = htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
             }
+
+                //  Pushes the secured object to an array. Each object is a row that was returned from the sql call
+            array_push($result, $finfo);
         }
+
+
+        // $result = $result->fetch_all();
+
+        //     //  Loops over the data and makes sure javascript injections can not be done by converting the values so that no html "code" is in there
+        // foreach ($result as &$row) {
+        //     foreach ($row as &$value) {
+        //         $value = htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
+        //     }
+        // }
+
+        // console_log($result);
 
         return $result; 
 
