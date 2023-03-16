@@ -54,6 +54,49 @@
 
     }
 
+
+
+    function getAnswersFromTime($clientTime){
+        global $conn;
+    
+        $stmt = $conn->prepare("SELECT * FROM forum_answer WHERE dt > ?;");
+        $stmt->bind_param("i", $clientTime);
+        $stmt->execute();
+        // $result = $stmt->get_result();
+        
+        $stmt = $stmt->get_result();
+        $result = [];
+
+            //  Fetches each answer individually and then adds them to an array that is then returned.
+        while ($finfo = $stmt->fetch_object()) {
+
+                //  Loops over the data and makes sure javascript injections can not be done
+            foreach ($finfo as $key => &$value) {
+                $value = htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
+            }
+
+                //  Pushes the secured object to an array. Each object is a row that was returned from the sql call
+            array_push($result, $finfo);
+        }
+
+
+        // $result = $result->fetch_all();
+
+        //     //  Loops over the data and makes sure javascript injections can not be done by converting the values so that no html "code" is in there
+        // foreach ($result as &$row) {
+        //     foreach ($row as &$value) {
+        //         $value = htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
+        //     }
+        // }
+
+        // console_log($result);
+
+        return $result; 
+
+    }
+
+
+
     function getCourses(){
 
         global $conn;
@@ -186,6 +229,42 @@
 
         return $result;
 
+
+    }
+
+
+    //  This function converts a message timestamp in millis to a text that tells the user how long ago the message was sent
+    //  Takes one argument ($millis)
+    function timestampToRead($millis){
+
+            //  Creates a date object for the millis timestamp and for the time right now
+        $date = date_create(date("Y-m-d H:i:s", $millis/1000));
+        $curr = date_create();
+        
+            //  $diff is the diffrence in time between $date and $curr as an object
+        $diff = date_diff($date, $curr);
+            //  $diffNum is the diffrens as a number "%a" = day, "%H" = hours, "%I" = minutes, "%S" = seconds
+        $diffNum = $diff->format("%a%H%I%S");
+
+            //  An if to determain what should be written
+
+        if($diffNum < 60){                      //  If there has gone less than 60 seconds
+            $time = "Right now";
+        }
+        elseif($diffNum < 6000){                        //  If there has gone less than 60 minutes
+            $time = $diff->format("%i minutes ago");
+        }
+        elseif($diffNum < 240000){                      //  If there has gone less than 24 hours
+            $time = $diff->format("%h hours ago");
+        }
+        elseif($diffNum < 7000000){                     //  If there has gone less than 7 days
+            $time = $diff->format("%a days ago");
+        }
+        else{                                           //  Other wise it just shows the data in year-month-day (Ex. 2023-03-11)
+            $time = date("Y-m-d", $millis/1000);        
+        }
+
+        return $time;
 
     }
 

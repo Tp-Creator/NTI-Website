@@ -9,14 +9,18 @@
 
     /* Main colors (Dark mode)*/
     --mC_dM_1: hsl(210 12% 6%);  /* Main element Color */
-    --mC_dM_2: hsl(230 14% 12%); /* Background Color only! */
+    /* --mC_dM_2: hsl(230 14% 12%); Background Color only! */
+    --mC_dM_2: hsl(225, 6%, 37%); /* Background Color only! */
     --mC_dM_3: hsl(216 5% 60%);  /*Warm grey*/
     --mC_dM_4: hsl(214 14% 90%); /*Almost white*/
     --mC_dM_5: hsl(258 66% 46%); /*Acient color*/
 }
 
 
-
+@font-face {
+    font-family: 'poppins-light';
+    src: url(includes/fonts/poppins/Poppins-Thin.ttf);
+}
 
 @font-face {
     font-family: 'poppins';
@@ -31,6 +35,16 @@
 @font-face {
     font-family: 'poppins-semibold';
     src: url(includes/fonts/poppins/Poppins-SemiBold.ttf);
+}
+
+
+
+body {
+    background-color: var(--mC_dM_2);
+
+    display: grid;
+    grid-template-columns: 1fr minmax( 18.5rem , 57.5rem ) 1fr;
+    gap: 18px;
 }
 
 
@@ -72,6 +86,7 @@
 
     text-decoration: none;
     font-family: 'poppins';
+    letter-spacing: 0.25px;
 }
 
 
@@ -81,20 +96,20 @@
 .verticalCon {
     display: flex;
     flex-direction: row;
-    gap: 1.25rem;
+    gap: 8px;
 }
 
 .verticalWrap {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 1.25rem;
+    gap: 8px;
 }
 
 .horizontalCon {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 8px;
 }
 
 
@@ -148,13 +163,14 @@ nav {
 .navText {
     padding: 0.781rem;
 
-    font-size: 0.875rem;
+    font-size: 14px;
 
     color: var(--mC_dM_4);
 }
 
 .navTextLogo {
     font-family: 'poppins-semibold';
+    color: var(--mC_dM_4);
 }
 
 
@@ -168,6 +184,27 @@ nav {
     border-radius: 2rem;
     background-color: var(--mC_dM_3);
 }
+
+
+
+
+
+.smallIcon{
+    aspect-ratio: 1/1;
+    width: 24px;
+}
+
+.loginBut {
+    display: flex;
+    align-content: center;
+    gap: 10px;
+
+    padding: 0px 12px;
+}
+.loginBut:hover {
+    cursor: pointer;
+}
+
 
 
 

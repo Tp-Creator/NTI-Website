@@ -31,7 +31,7 @@
 </head>
 
 <body>
-    
+
     <!-- Navigationbar  -->
     <nav>
         <?php echo drawNavbar() ?>
@@ -98,17 +98,6 @@
 
             <select class="optionsCon" name="" id="">
 
-                <option value="">Latest</option>
-                <option value="">Popular</option>
-                <option value="">Bookmarked</option>
-                <option value="">Your questions</option>
-
-            </select>
-
-            <div class="devider"></div>
-
-            <select class="optionsCon" name="" id="">
-
                 <option value="">Courses</option>
                 <?php 
                     $courses = getCourses();
@@ -122,10 +111,6 @@
                 ?>
 
             </select>
-
-            <div class="devider"></div>
-
-            <p class="infoText">There are "amount" new questions today!</p>
 
         </div>
 
@@ -148,6 +133,17 @@
         ?>
 
     </section>
+
+    <?php
+
+        // Create a new DOMDocument object
+    // $dom = new DOMDocument();
+
+    // $hej = file_get_contents('https://skolfood.foodservo.com/view?menus');
+
+    // console_log(explode('section_standard_max', $hej));
+
+    ?>
 
     <footer></footer>
 </body>

@@ -20,7 +20,7 @@
             //  Logo
         $navbar =   "    
                         <a id='navLeft' href='/'>
-                            <p class='navText navTextLogo'>Schoolhub</p>
+                            <p class='navTextLogo'>Schoolhub</p>
                             <img class='navIcon' src='' alt=''>
                         </a>
                     ";
@@ -51,12 +51,18 @@
 
             $navbar .= "
                             <a id='navRight' href='/account'>
-                                <img id='navPfp' src='public/img/pfp/$usrMail.png' alt=''>
+                                <img id='navPfp' src='/public/img/pfp/$usrMail.png' alt=''>
                             </a>
                          ";
         }
         else {
-            $navbar .=  "<a id='navRight' href='/google'>login</a>";
+            $navbar .=  "<a id='navRight' href='/google'>
+                            <div class='loginBut'>
+                                <p class='navText'>Login</p>
+                                <img class='smallIcon' src='/public/style/includes/icons/google-icon.svg' alt=''>
+                            </div>
+
+                        </a>";
         }
 
 

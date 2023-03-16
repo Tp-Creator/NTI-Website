@@ -1,10 +1,41 @@
  
     //  När sidan laddats (all html) så kan vi börja kolla om saker händer
  $(document).ready(function(){
+    window.lastPageUpdate = Date.now();
+
     //  När sidan laddats, skapa ett objekt som kan söka i url:n efter parametrar
     const searchParams = new URLSearchParams(location.search);
 
-    //  När man submittar formen för att posta en question kör functionen:
+        // Periodically check for new messages every 5 seconds
+    setInterval(checkForNewMessages, 5000);
+
+    function checkForNewMessages() {
+
+        let data = '&function=2&lastAnswer=' + window.lastPageUpdate;
+
+        $.ajax({
+            type: "POST",
+            url: "/public/OPA/forum/OPA.question.php",
+            data: data,
+            success: function(html) {
+                    // Update the page with the new messages
+                if(html != ""){
+                    // console.log(html);
+                    $(".contentFeed").append(html);
+                }
+                
+                window.lastPageUpdate = Date.now();
+            }
+        });
+    }
+
+
+
+
+
+
+
+//  När man submittar formen för att posta en answer kör functionen:
     $("#answerQuestionCard").submit(function(event){
         //  Hindra formen från att ladda om sidan
     event.preventDefault();
@@ -14,11 +45,11 @@
 
         //  Hämtar questionID:t från url:n och adderar den till formdata
     let questionID = searchParams.get("question");
-    formData += '&questionID=' + questionID;
+    formData += '&questionID=' + questionID + "&function=1";
 
         //  Hämtar contentet så att vi kan kolla så att det inte är en tom sträng
-    let answerContent = $("#newAnswerContent").val();
-
+    let answerContent = $("#answerInput").val();
+    
 
         //  Kolla om fälten är tomma eller om de innehåller info och stoppa annars post:en.
     if(answerContent != ""){
@@ -28,11 +59,15 @@
         url: "/public/OPA/forum/OPA.question.php",
         data: formData,
         success: function(response){
-            console.log(response);
+            checkForNewMessages();
+            // $("#courseID").val('');
+            $("#answerInput").val('');
+
+            // console.log(response);
                 //  Vid success:
                 //  Resetta alla fält i formen
-            $("#newAnswerContent").val('');
-
+            
+            
 
         },
                 //  Vid error skriv i konsolen
@@ -44,7 +79,6 @@
         //  Code for handling uncompleted submit
     }
 });
-
 
 
 
