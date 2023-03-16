@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="/public/style/commonStyle.css">
     <link rel="stylesheet" href="/public/style/pages/memes/memesStyle.css">
 
-    <title>Schoolhub Memes</title>
+    <title>Memes</title>
 </head>
 <body>
     

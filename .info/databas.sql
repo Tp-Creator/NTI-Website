@@ -1,10 +1,10 @@
 /*  Skapar tabellen users och gör så att Email måste vara uniqe for the user*/
--- CREATE TABLE users (
---     UserID int NOT NULL PRIMARY KEY AUTO_INCREMENT,
---     Username varchar(30) NOT NULL,
---     Email varchar(100) UNIQUE,
---     pwd varchar(255)
--- );
+--  CREATE TABLE users (
+--      UserID int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+--      Username varchar(30) NOT NULL,
+--      Email varchar(100) UNIQUE,
+--      pwd varchar(255)
+--  );
 
 CREATE TABLE users (
     UserID int NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -17,29 +17,29 @@ CREATE TABLE users (
 
 
 /*  Skapar tabellen msg kopplar ihop så att userID måste vara ett värde som finns i columnen ID i tabellen users*/
--- CREATE TABLE msg (
---     msgID int NOT NULL PRIMARY KEY AUTO_INCREMENT,
---     Content varchar(8000) NOT NULL,
---     UserID int NOT NULL,
---     dt datetime,
---     CONSTRAINT fk_Users FOREIGN KEY (userID) REFERENCES Users(userID)
--- );
+--  CREATE TABLE msg (
+--      msgID int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+--      Content varchar(8000) NOT NULL,
+--      UserID int NOT NULL,
+--      dt datetime,
+--      CONSTRAINT fk_Users FOREIGN KEY (userID) REFERENCES Users(userID)
+--  );
 
 /*  Skapar tabellen readMsgs som innehåller ID på users och id:t på de meddelanden som usern läst*/
--- CREATE TABLE readMsgs (
---     readMsgsID int NOT NULL PRIMARY KEY AUTO_INCREMENT,
---     userID int NOT NULL,
---     msgID int NOT NULL,
---     CONSTRAINT fk_Users_to_readMsgs FOREIGN KEY (userID) REFERENCES Users(userID),
---     CONSTRAINT fk_Msg_to_readMsgs FOREIGN KEY (msgID) REFERENCES Msg(msgID)
--- );
+--  CREATE TABLE readMsgs (
+--      readMsgsID int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+--      userID int NOT NULL,
+--      msgID int NOT NULL,
+--      CONSTRAINT fk_Users_to_readMsgs FOREIGN KEY (userID) REFERENCES Users(userID),
+--      CONSTRAINT fk_Msg_to_readMsgs FOREIGN KEY (msgID) REFERENCES Msg(msgID)
+--  );
 
 /* Skapar en tabell course som har id, namn och färg (! OLD !) */
--- CREATE TABLE course (
---     CourseID int NOT NULL PRIMARY KEY AUTO_INCREMENT,
---     CourseName varchar(255),
---     CourseColor varchar(8)
--- );
+--  CREATE TABLE course (
+--      CourseID int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+--      CourseName varchar(255),
+--      CourseColor varchar(8)
+--  );
 
 /* Skapar en tabell course som har id, namn och färg */
 CREATE TABLE course (
@@ -49,7 +49,7 @@ CREATE TABLE course (
     CourseCode varchar(10)
 );
 
--- Ska användas för att inte behöva separera ex. alla svenska kurserna på forumet utan de får vara samma
+--  Ska användas för att inte behöva separera ex. alla svenska kurserna på forumet utan de får vara samma
 CREATE TABLE subject (
     SubjectID int NOT NULL PRIMARY KEY AUTO_INCREMENT,
     SubjectName varchar(255),
@@ -79,7 +79,9 @@ CREATE TABLE forum_answer (
 
 
 CREATE TABLE food_Calendar (
-    Calendar
+    DayID
+
+    WeekNumber
 );
 
 
@@ -98,7 +100,7 @@ VALUES ('hej@hejj.com', 'Magistern', 'Niklas', 'Hellström', 3);
 
 
 
---Skapar Subject
+-- Skapar Subject
 INSERT INTO subject (SubjectName, UserID)
 VALUES ('Programering 1', 3);
 
@@ -109,17 +111,17 @@ INSERT INTO subject (SubjectName, UserID)
 VALUES ('Programering 1', 3);
 
 
--- /* Lägger till ett meddelande med datum och vilken användare som skrev det; user med ID: 1*/
--- INSERT INTO msg (Content, dt, userID)
--- VALUES ('Hej, här kommer ett meddelande!', '2022-11-09 10:02:16', 1);
+--  /* Lägger till ett meddelande med datum och vilken användare som skrev det; user med ID: 1*/
+--  INSERT INTO msg (Content, dt, userID)
+--  VALUES ('Hej, här kommer ett meddelande!', '2022-11-09 10:02:16', 1);
 
 /* Lägger till en kurs Programering 1  och färgen Orange  (! OLD !)*/
--- INSERT INTO course (CourseName, CourseColor)
--- VALUES ('Programering 1', '#FF7D00');
+--  INSERT INTO course (CourseName, CourseColor)
+--  VALUES ('Programering 1', '#FF7D00');
 
 /* Lägger till tre olika kurser och Kurskoder som kommer användas som ID:n */
 
---Programmering
+--  Programmering
 INSERT INTO course (CourseName, CourseCode)
 VALUES ('Programering 1', 'PRRPRR01');
 
@@ -130,7 +132,7 @@ INSERT INTO course (CourseName, CourseCode)
 VALUES ('Tillämpad programmering', 'TIATIL00S');
 
 
---Webb...
+--  Webb...
 INSERT INTO course (CourseName, CourseCode)
 VALUES ('Webbutveckling 1', 'WEUWEB01');
 
@@ -141,7 +143,7 @@ INSERT INTO course (CourseName, CourseCode)
 VALUES ('Gränssnittsdesign', 'GRÄGRÄ0');
 
 
---Engelska
+-- Engelska
 INSERT INTO course (CourseName, CourseCode)
 VALUES ('Engelska 5', 'ENGENG05');
 
@@ -152,7 +154,7 @@ INSERT INTO course (CourseName, CourseCode)
 VALUES ('Engelska 7', 'ENGENG07');
 
 
---Svenska
+-- Svenska
 INSERT INTO course (CourseName, CourseCode)
 VALUES ('Svenska 1', 'SVESVE01');
 
@@ -163,7 +165,7 @@ INSERT INTO course (CourseName, CourseCode)
 VALUES ('Svenska 3', 'SVESVE01');
 
 
---Fysik
+-- Fysik
 INSERT INTO course (CourseName, CourseCode)
 VALUES ('Fysik 1', 'FYSFYS01');
 
@@ -171,7 +173,7 @@ INSERT INTO course (CourseName, CourseCode)
 VALUES ('Fysik 2', 'SVESVE02');
 
 
---Matematik
+-- Matematik
 INSERT INTO course (CourseName, CourseCode)
 VALUES ('Matematik 1a', 'MATMAT01a');
 
@@ -191,22 +193,22 @@ INSERT INTO course (CourseName, CourseCode)
 VALUES ('Matematik 5', 'MATMAT05');
 
 
---Data
+-- Data
 INSERT INTO course (CourseName, CourseCode)
 VALUES ('Dator- och nätverksteknik', 'DAODAC0');
 
 
---Teknik
+-- Teknik
 INSERT INTO course (CourseName, CourseCode)
 VALUES ('Teknik 1', 'TEKTEK01');
 
 
---Kemi
+-- Kemi
 INSERT INTO course (CourseName, CourseCode)
 VALUES ('Kemi 1', 'KEMKEM01');
 
 
---Övrigt
+-- Övrigt
 INSERT INTO course (CourseName, CourseCode)
 VALUES ('Mentorstid', 'BAVARDER0');
 

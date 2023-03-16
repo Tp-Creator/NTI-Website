@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="/public/style/commonStyle.css">
     <link rel="stylesheet" href="/public/style/pages/news/newsStyle.css">
 
-    <title>Schoolhub Inbox</title>
+    <title>News</title>
 </head>
 <body>
     

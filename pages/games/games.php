@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="/public/style/commonStyle.css">
     <link rel="stylesheet" href="/public/style/pages/games/gamesStyle.css">
 
-    <title>Schoolhub News</title>
+    <title>Games</title>
 </head>
 <body>
     
