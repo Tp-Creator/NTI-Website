@@ -44,9 +44,18 @@ CREATE TABLE users (
 /* Skapar en tabell course som har id, namn och färg */
 CREATE TABLE course (
     CourseID int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    SubjectID int /*NOT NULL*/,
     CourseName varchar(255),
     CourseCode varchar(10)
 );
+
+-- Ska användas för att inte behöva separera ex. alla svenska kurserna på forumet utan de får vara samma
+CREATE TABLE subject (
+    SubjectID int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    SubjectName varchar(255),
+    TeacherID int NOT NULL
+);
+
 
 CREATE TABLE forum_question (
     QuestionID int NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -69,6 +78,10 @@ CREATE TABLE forum_answer (
 );
 
 
+CREATE TABLE food_Calendar (
+    Calendar
+);
+
 
 
 /* Lägger till en user som heter Joel, har en mail och ett lösenord */
@@ -84,6 +97,18 @@ INSERT INTO users (Email, Username, FirstName, LastName, Rank)
 VALUES ('hej@hejj.com', 'Magistern', 'Niklas', 'Hellström', 3);
 
 
+
+--Skapar Subject
+INSERT INTO subject (SubjectName, UserID)
+VALUES ('Programering 1', 3);
+
+INSERT INTO subject (SubjectName, UserID)
+VALUES ('Tillämpad', 3);
+
+INSERT INTO subject (SubjectName, UserID)
+VALUES ('Programering 1', 3);
+
+
 -- /* Lägger till ett meddelande med datum och vilken användare som skrev det; user med ID: 1*/
 -- INSERT INTO msg (Content, dt, userID)
 -- VALUES ('Hej, här kommer ett meddelande!', '2022-11-09 10:02:16', 1);
@@ -93,14 +118,112 @@ VALUES ('hej@hejj.com', 'Magistern', 'Niklas', 'Hellström', 3);
 -- VALUES ('Programering 1', '#FF7D00');
 
 /* Lägger till tre olika kurser och Kurskoder som kommer användas som ID:n */
+
+--Programmering
 INSERT INTO course (CourseName, CourseCode)
-VALUES ('Programering 1', 'PRRPRR');
+VALUES ('Programering 1', 'PRRPRR01');
 
 INSERT INTO course (CourseName, CourseCode)
-VALUES ('Webbutveckling 1', 'WEBUTV1');
+VALUES ('Programering 2', 'PRRPRR02');
 
 INSERT INTO course (CourseName, CourseCode)
-VALUES ('Engelska 6', 'ENGENG6');
+VALUES ('Tillämpad programmering', 'TIATIL00S');
+
+
+--Webb...
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Webbutveckling 1', 'WEUWEB01');
+
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Webbserverprogrammering 1', 'WESWEB01');
+
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Gränssnittsdesign', 'GRÄGRÄ0');
+
+
+--Engelska
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Engelska 5', 'ENGENG05');
+
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Engelska 6', 'ENGENG06');
+
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Engelska 7', 'ENGENG07');
+
+
+--Svenska
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Svenska 1', 'SVESVE01');
+
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Svenska 2', 'SVESVE01');
+
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Svenska 3', 'SVESVE01');
+
+
+--Fysik
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Fysik 1', 'FYSFYS01');
+
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Fysik 2', 'SVESVE02');
+
+
+--Matematik
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Matematik 1a', 'MATMAT01a');
+
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Matematik 1c', 'MATMAT01c');
+
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Matematik 2c', 'MATMAT02c');
+
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Matematik 3c', 'MATMAT03c');
+
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Matematik 4', 'MATMAT04');
+
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Matematik 5', 'MATMAT05');
+
+
+--Data
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Dator- och nätverksteknik', 'DAODAC0');
+
+
+--Teknik
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Teknik 1', 'TEKTEK01');
+
+
+--Kemi
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Kemi 1', 'KEMKEM01');
+
+
+--Övrigt
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Mentorstid', 'BAVARDER0');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Lägger till en fråga i databasen */
