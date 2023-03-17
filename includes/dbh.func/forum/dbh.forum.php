@@ -130,7 +130,6 @@
 
             //  Because we dont want an array in an array we just take out the info before we return it
         // $result = $result[0];
-        console_log($result);
 
             //  Returns the specific course and all it's content
         return $result;

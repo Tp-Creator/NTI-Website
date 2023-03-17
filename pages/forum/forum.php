@@ -81,7 +81,6 @@
                         <option value="<?php echo $courses[$i]->CourseID ?>"><?php echo $courses[$i]->CourseName ?></option>
                     <?php 
                         }
-                        console_log($courses);
                     ?>
                 </select>
 

@@ -13,7 +13,6 @@
         $id = $question[0];                         //  0
         
         $course = getCourseByID($question[1]);      //  1
-            console_log($course);
             $courseColor = $course->CourseCode;
             $courseName = $course->CourseName;
 
