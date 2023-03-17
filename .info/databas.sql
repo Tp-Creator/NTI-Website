@@ -50,11 +50,11 @@ CREATE TABLE course (
 );
 
 --  Ska användas för att inte behöva separera ex. alla svenska kurserna på forumet utan de får vara samma
-CREATE TABLE subject (
-    SubjectID int NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    SubjectName varchar(255),
-    TeacherID int NOT NULL
-);
+-- CREATE TABLE subject (
+--     SubjectID int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+--     SubjectName varchar(255),
+--     TeacherID int NOT NULL
+-- );
 
 
 CREATE TABLE forum_question (
@@ -78,11 +78,11 @@ CREATE TABLE forum_answer (
 );
 
 
-CREATE TABLE food_Calendar (
-    DayID
+-- CREATE TABLE food_Calendar (
+--     DayID
 
-    WeekNumber
-);
+--     WeekNumber
+-- );
 
 
 
@@ -101,14 +101,14 @@ VALUES ('hej@hejj.com', 'Magistern', 'Niklas', 'Hellström', 3);
 
 
 -- Skapar Subject
-INSERT INTO subject (SubjectName, UserID)
-VALUES ('Programering 1', 3);
+-- INSERT INTO subject (SubjectName, UserID)
+-- VALUES ('Programering 1', 3);
 
-INSERT INTO subject (SubjectName, UserID)
-VALUES ('Tillämpad', 3);
+-- INSERT INTO subject (SubjectName, UserID)
+-- VALUES ('Tillämpad', 3);
 
-INSERT INTO subject (SubjectName, UserID)
-VALUES ('Programering 1', 3);
+-- INSERT INTO subject (SubjectName, UserID)
+-- VALUES ('Programering 1', 3);
 
 
 --  /* Lägger till ett meddelande med datum och vilken användare som skrev det; user med ID: 1*/

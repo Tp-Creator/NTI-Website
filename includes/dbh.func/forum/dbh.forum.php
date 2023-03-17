@@ -36,6 +36,7 @@
     function getQuestionsFromTime($clientTime){
         global $conn;
     
+        // console_log($clientTime);
         $stmt = $conn->prepare("SELECT * FROM forum_question WHERE dt > ?;");
         $stmt->bind_param("i", $clientTime);
         $stmt->execute();
@@ -103,9 +104,13 @@
     
         $stmt = $conn->prepare("SELECT * FROM course;");
         $stmt->execute();
-        $result = $stmt->get_result();
         
-        $result = $result->fetch_all();
+        $stmt = $stmt->get_result();
+        $result = [];
+        while ($finfo = $stmt->fetch_object()) {
+            array_push($result, $finfo);
+        }
+
     
         //  return an array with all rows where you can reach the data by taking $result[i]
         return $result;
@@ -122,10 +127,11 @@
         $stmt->execute();
 
         $result = $stmt->get_result();
-        $result = $result->fetch_all();
+        $result = $result->fetch_object();
 
             //  Because we dont want an array in an array we just take out the info before we return it
-        $result = $result[0];
+        // $result = $result[0];
+        console_log($result);
 
             //  Returns the specific course and all it's content
         return $result;

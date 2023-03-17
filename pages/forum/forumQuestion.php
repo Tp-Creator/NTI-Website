@@ -86,7 +86,7 @@
             <div class="devider"></div>
 
             <!-- Corse pill -->
-            <p class="meta"><?php echo $course[1] ?></p>
+            <p class="meta"><?php echo $course->CourseName ?></p>
         </div>
 
 

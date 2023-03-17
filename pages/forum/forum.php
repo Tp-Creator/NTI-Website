@@ -78,9 +78,10 @@
                         for($i = 0; $i < sizeof($courses); $i++){
                     ?>
                         <!-- course $courses[$i][1] is the name of the course currently looped-->
-                        <option value="<?php echo $courses[$i][0] ?>"><?php echo $courses[$i][1] ?></option>
+                        <option value="<?php echo $courses[$i]->CourseID ?>"><?php echo $courses[$i]->CourseName ?></option>
                     <?php 
                         }
+                        console_log($courses);
                     ?>
                 </select>
 
@@ -105,7 +106,7 @@
                     for($i = 0; $i < sizeof($courses); $i++){
                 ?>
                     <!-- course $courses[$i][1] is the name of the course currently looped-->
-                    <option value="<?php echo $courses[$i][0] ?>"><?php echo $courses[$i][1] ?></option>
+                    <option value="<?php echo $courses[$i]->CourseID ?>"><?php echo $courses[$i]->CourseName ?></option>
                 <?php 
                     }
                 ?>
