@@ -11,6 +11,18 @@
     include_once('includes/HTMLElements/general.elements.php');
     include_once('includes/HTMLElements/forum.elements.php');
 
+
+    //  Here we put some of the logic so that we don't have to put it down there...
+        //  Gets the specific question by ID
+    $question = getQuestionByID($_GET["question"]);
+        // Gets all the answers
+    $answers = fetchAnswersWithQuestionID($_GET["question"]);
+        //  Gets the course from the question
+    $course = getCourseByID($question->CourseID);
+        //  Gets the user that asked the question
+    $user = getUserFromId($question->UserID);
+
+
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +42,7 @@
     
     <link rel="stylesheet" href="/public/style/pages/forum/forumStyle.css">
 
-    <title>Forum</title>
+    <title><?php echo $question->Title ?></title>
 </head>
 <body>
     
@@ -64,16 +76,7 @@
 
     <!-- Question card -->
     <section class="horizontalCon contentFeed">
-        <?php 
-            $question = getQuestionByID($_GET["question"]);
-            
-                // Gets all the answers
-            $answers = fetchAnswersWithQuestionID($_GET["question"]);
-                //  Gets the course from the question
-            $course = getCourseByID($question->CourseID);
-                //  Gets the user that asked the question
-            $user = getUserFromId($question->UserID);
-        ?>
+
 
 
 
@@ -132,7 +135,6 @@
 
         <?php 
             for($ans = 0; $ans < sizeof($answers); $ans++){
-
                 // if($answers[$ans]->CommentID == NULL){
                     echo answerCard($answers[$ans]);
                 // }

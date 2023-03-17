@@ -3,11 +3,15 @@
     // include_once '../../../includes/loginCheck.php'; is not needed anymore
     // include_once 'includes/dbh.func/general/dbh.inc.php';
     // include_once 'includes/dbh.func/general/dbh.general.php';
-    include_once('includes/dbh.func/forum/dbh.forum.php');
+    require_once('includes/dbh.func/forum/dbh.forum.php');
 
         //  Includes php elements
-    include_once('includes/HTMLElements/general.elements.php');
-    include_once('includes/HTMLElements/forum.elements.php');
+    require_once('includes/HTMLElements/general.elements.php');
+    require_once('includes/HTMLElements/forum.elements.php');
+
+    $courses = getCourses();
+
+
 ?>
 
 <!DOCTYPE html>
@@ -73,11 +77,9 @@
                     <option value="">Choose a "Course"</option>
 
                     <?php 
-                        $courses = getCourses();
                             //  Loops as many choices as there are courses in the db
                         for($i = 0; $i < sizeof($courses); $i++){
                     ?>
-                        <!-- course $courses[$i][1] is the name of the course currently looped-->
                         <option value="<?php echo $courses[$i]->CourseID ?>"><?php echo $courses[$i]->CourseName ?></option>
                     <?php 
                         }
@@ -100,11 +102,9 @@
 
                 <option value="">Courses</option>
                 <?php 
-                    $courses = getCourses();
                         //  Loops as many choices as there are courses in the db
                     for($i = 0; $i < sizeof($courses); $i++){
                 ?>
-                    <!-- course $courses[$i][1] is the name of the course currently looped-->
                     <option value="<?php echo $courses[$i]->CourseID ?>"><?php echo $courses[$i]->CourseName ?></option>
                 <?php 
                     }
