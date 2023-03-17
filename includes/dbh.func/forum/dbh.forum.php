@@ -1,7 +1,7 @@
 <?php 
 
     //Includes user functions related to the db
-    include_once 'includes/dbh.func/general/dbh.inc.php';
+    require_once('includes/dbh.func/general/dbh.inc.php');
     
 
     //  Function that gets all questions and their data
@@ -36,7 +36,6 @@
     function getQuestionsFromTime($clientTime){
         global $conn;
     
-        console_log($clientTime);
         $stmt = $conn->prepare("SELECT * FROM forum_question WHERE dt > ?;");
         $stmt->bind_param("i", $clientTime);
         $stmt->execute();
