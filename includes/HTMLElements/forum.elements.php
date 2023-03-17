@@ -1,6 +1,6 @@
 <?php
 
-    include_once('includes\dbh.func\general\dbh.general.php');
+    require_once('includes/dbh.func/general/dbh.general.php');
 
     function questionCard($question){
 
