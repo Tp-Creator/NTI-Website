@@ -36,7 +36,7 @@
     function getQuestionsFromTime($clientTime){
         global $conn;
     
-        // console_log($clientTime);
+        console_log($clientTime);
         $stmt = $conn->prepare("SELECT * FROM forum_question WHERE dt > ?;");
         $stmt->bind_param("i", $clientTime);
         $stmt->execute();
