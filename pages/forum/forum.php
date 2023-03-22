@@ -133,18 +133,6 @@
         ?>
 
     </section>
-
-    <?php
-
-        // Create a new DOMDocument object
-    // $dom = new DOMDocument();
-
-    // $hej = file_get_contents('https://skolfood.foodservo.com/view?menus');
-
-    // console_log(explode('section_standard_max', $hej));
-
-    ?>
-
     <footer></footer>
 </body>
 </html>
