@@ -100,7 +100,7 @@
 
             <select class="optionsCon" name="" id="">
 
-                <option value="">Courses</option>
+                <option value="">All Courses</option>
                 <?php 
                         //  Loops as many choices as there are courses in the db
                     for($i = 0; $i < sizeof($courses); $i++){

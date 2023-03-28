@@ -30,6 +30,10 @@
         });
     }
 
+    function fetchQuestions(courses=true){
+        // if
+    }
+
 
         //  När man klicka på knappen med id:t #askQuestion körs funktionen.
     $("#askQuestion").click(function(){
@@ -98,7 +102,50 @@
         }
     });
 
+
+
+//  Inte klart och kommer behövas mer kod och en checkbox meny för att veta hur det blir
+
+    //  Ta bort frågor som inte tillhör valda ämnen
+    if (/* unchecked a course AND At least on box is checked */0){
+        //  Remove unchecked questions
     
+        let questions = $("#questionCardFeed").children();
+        // let choice = [];
+        let choice = ['DAODAC0', 'ENGENG05'];
+    
+            //  .each() Loopar över alla element i children och kör funktionen
+        questions.each(function(){
+
+            let hasClass = false;
+            for (let i in choice){
+                    //  .hasClass kollar om elementet har den specifika klassen eller inte (returnerar true eller false)
+                if ($(this).hasClass(choice[i])){
+                    hasClass = true;
+                    break;
+                }
+            }
+
+            if (!hasClass){
+                $(this).remove();
+            }
+        });        
+
+    } else if(/* checked a course */0) {
+        //  Remove all questions
+        $("#questionCardFeed").empty();
+        
+        //  Fetch needed questions
+        
+
+
+    } else {
+        //  Remove all questions
+        //  Fetch all questions
+    }
+
+//  Detta är ett kodblock som ska köras när man uncheckar en kurs
+
 
 
 });

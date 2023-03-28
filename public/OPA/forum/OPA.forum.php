@@ -28,7 +28,7 @@ function getNewQuestions()
 {
     $clientTime = $_POST['lastQuestion'];
     
-    $newQuestions = getQuestionsFromTime($clientTime);
+    $newQuestions = getQuestionsByTime($clientTime);
 
     
     if(sizeof($newQuestions) > 0){

@@ -10,30 +10,30 @@
         }
 
         
-        $id = $question[0];                         //  0
+        $id = $question->QuestionID;                         //  0
         
-        $course = getCourseByID($question[1]);      //  1
-            $courseColor = $course->CourseCode;
+        $course = getCourseByID($question->CourseID);      //  1
+            $courseCode = $course->CourseCode;
             $courseName = $course->CourseName;
 
-        $user = getUserFromId($question[2]);        //  2
+        $user = getUserFromId($question->UserID);        //  2
             $username = $user->Username;
 
-        $title = $question[3];                      //  3
-        $vote = $question[6];                       //  6
+        $title = $question->Title;                      //  3
+        $vote = $question->Upvote;                       //  6
         
-        $millis = $question[5];                     //  5
+        $millis = $question->dt;                     //  5
         $date = timestampToRead($millis);                    
 
         $usrMail = $user->Email;
 
         //  hämtar id:t på frågan och lägger till den i url:en
-        $card = "<a href='/forum/question?question=$id'>
+        $card = "<a class='$courseCode Hej' href='/forum/question?question=$id'>
                     <div class='horizontalCon forumCard'>
                         <div class='verticalCon'>
                             <div class='verticalWrapReverse'>
         
-                                <div class='meta $courseColor'><p>$courseName</p></div>
+                                <div class='meta $courseCode'><p>$courseName</p></div>
 
                                 <div class='verticalCon'>
                                     <img class='fcPFP' src='public/img/pfp/$usrMail.png' alt=''>
@@ -117,6 +117,6 @@
     }
 
 
-    
+
 
 ?>
