@@ -10,6 +10,6 @@ for day_HTML in this_weeks_food_HTML.split("dag")[1:]:
     for i in day_HTML.split("⬇")[1:]:
         menu.append([
             i.split("<")[0].strip(),
-            i.split("/ port")[0].split(">")[-1]
+            i.split("/ port")[0].split(">")[-1]   # Enheten för coldioxid halt är (x/portion)CO2e/kg
         ])
 print(menu)
