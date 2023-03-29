@@ -9,18 +9,18 @@
     function drawNavbar(){
 
         $navbuttons =   [
-            ["Lounge",      "/news"],
-            ["Forum",       "/forum"],
-            ["Schedule",    "/schedule"],
-            ["Memes",       "/memes"],
-            ["Games",       "/games"]
+            ["Lounge",      "/news", "public/style/includes/icons/nav/couch_icon.svg"],
+            ["Forum",       "/forum", "public/style/includes/icons/nav/question_icon.svg"],
+            ["Schedule",    "/schedule", "public/style/includes/icons/nav/event_icon.svg"],
+            ["Memes",       "/memes", "public/style/includes/icons/nav/satisfied_icon.svg"],
+            ["Games",       "/games", "public/style/includes/icons/nav/gamepad_icon.svg"]
         ];
 
 
             //  Logo
         $navbar =   "    
                     <a class='navBut' href=''>
-                        <img class='navIcon' src='inc/icons/nav/home_icon.svg' alt=''>
+                        <img class='navIcon' src='public/style/includes/icons/nav/home_icon.svg' alt=''>
 
                         <p class='navText logoText'>Gradeless</p>
                     </a>
@@ -33,10 +33,11 @@
         for($b = 0; $b < sizeof($navbuttons); $b++){
             $content = $navbuttons[$b][0];
             $url = $navbuttons[$b][1];
+            $icon = $navbuttons[$b][2];
 
             $navbar .= "
-                        <a class='navBut' href=''>
-                            <img class='navIcon' src='inc/icons/nav/couch_icon.svg' alt=''>
+                        <a class='navBut' href='$url'>
+                            <img class='navIcon' src='$icon' alt=''>
 
                             <p class='navText'>$content</p>
                         </a>
