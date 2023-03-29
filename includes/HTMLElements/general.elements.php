@@ -19,7 +19,7 @@
 
             //  Logo
         $navbar =   "    
-                    <a class='navBut' href=''>
+                    <a class='navBut' href='/'>
                         <img class='navIcon' src='public/style/includes/icons/nav/home_icon.svg' alt=''>
 
                         <p class='navText logoText'>Gradeless</p>
@@ -56,15 +56,15 @@
             $usrMail = $usr->Email;
 
             $navbar .= "
-                        <a id='navPfpBut' href=''>
-                            <img id='navPfp' src='inc/img/ejpfpf.png' alt=''>
+                        <a id='navPfpBut' href='/account'>
+                            <img id='navPfp' src='public/img/pfp/$usrMail.png' alt=''>
                         </a>
                         ";
         }
         else {
             $navbar .=  "
-                        <a class='navBut loginBut' href=''>
-                            <img class='navIcon' src='inc/icons/nav/login_‭icon.svg' alt=''>
+                        <a class='navBut loginBut' href='/google'>
+                            <img class='navIcon' src='public/style/includes/icons/nav/login_‭icon.svg' alt=''>
 
                             <p class='navText'>Login</p>
                         </a>
