@@ -1,42 +1,136 @@
 /* first slide */
-.container{
+body{
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr minmax( 12rem , 58rem ) 1fr;
-    gap: 1.25rem;    
-    background-color: var(--mC_dM_2);
+    row-gap: 0px;   
+    background-color: var(--mC_dM_2); 
 }
 /* welcoming text*/
 .hero-text{
     grid-column: 2;
+    height: 95vh;
     margin-top: 4rem;
-    width: 100%;
+    /* width: 60%; */
     text-align: center;
+    font-size: 40px;
+    align-items: center;
 }
+
 
 /* second slide */
 .hero-image2{
+    grid-column: 1 /span 3;
     height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr minmax( 12rem , 58rem ) 1fr;
-    gap: 1.25rem;    
+    /* gap: 1.25rem;     */
     background-color: var(--mC_dM_2);   
-    box-shadow: 5px 5px 20px 5px black;
+    box-shadow: 20px 0px 8px hsl(0 0% 15%);
 }
 /* Titel "Forum" */
 .hero-image2 h1{
     grid-column: 2;
+    margin-left: 5rem; 
+    margin-top: 4rem;
     /* grid-row: 2; */
     /* margin-top: 1rem;
     height: 10rem; */
+    text-align: left;
+    width: 40%;
 }
 /* Forum slide text */
 .hero-text2{
     grid-column: 2;
-    width: 60%;
+    margin-left: 5rem;
+    margin-right: 5rem;  
+    /* margin-top: 10rem; */
+    width: 40%; 
+    /* Margin left och right fixar problemet med att texten inte är inom gridden, men man ska leta efter ett bättre och snyggare fix */
 }
 /* a-tag in forum slide text */
 .hero-text2 p a{
     text-decoration: underline;
     color: black;
 }
+
+
+
+
+/* third slide */
+.hero-image3{
+    grid-column: 1 /span 3;
+    height: 100vh;
+    background-color: var(--mC_dM_2);   
+    box-shadow: 20px 0px 8px hsl(0 0% 15%);
+
+}
+/* Titel "News" */
+.hero-image3 h1{
+    grid-column: 2;
+    margin-left: 5rem; 
+    margin-top: 4rem;
+
+    width: 40%;
+}
+/* Forum slide text */
+.hero-text3{
+    grid-column: 2;
+    margin-left: 5rem;
+    margin-right: 5rem; 
+    /* margin-top: 10rem; */
+    width: 40rem;
+    /* Margin left och right fixar problemet med att texten inte är inom gridden, men man ska leta efter ett bättre och snyggare fix */
+}
+/* a-tag in forum slide text */
+.hero-text3 p a{
+    text-decoration: underline;
+    color: black;
+}
+
+
+
+
+/* fourth slide */
+.hero-image4{
+    grid-column: 1 /span 3;
+    height: 100vh;
+    background-color: var(--mC_dM_2);   
+    box-shadow: 20px 0px 8px hsl(0 0% 15%);
+}
+/* Titel "News" */
+.hero-image4 h1{
+    grid-column: 2;
+    margin-left: 5rem; 
+    margin-top: 4rem;
+
+    width: 40%;
+}
+/* Forum slide text */
+.hero-text4{
+    grid-column: 2;
+    margin-left: 5rem;
+    margin-right: 5rem; 
+    /* margin-top: 10rem; */
+    width: 40rem;
+    /* Margin left och right fixar problemet med att texten inte är inom gridden, men man ska leta efter ett bättre och snyggare fix */
+}
+/* a-tag in forum slide text */
+.hero-text4 p a{
+    text-decoration: underline;
+    color: black;
+}
+
+/* fith slide */
+.footer{
+    grid-column: 1 /span 3;
+    height: 40vh;
+    background-color: var(--mC_dM_2);   
+    box-shadow: 20px 0px 8px hsl(0 0% 15%);
+    align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: space-around
+}
+
+
+
+
