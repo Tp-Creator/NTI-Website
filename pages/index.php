@@ -36,36 +36,44 @@
 
     <!-- second slide -->
     <div class="hero-image2">
-        <h1>Forum</h1>
         <div class="hero-text2">
+            <h1>Forum</h1>
             <!-- <p>bla bla bla forum vad är d blablabla, Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit expedita autem magni quas dolor accusamus id nemo possimus illo, cupiditate laborum itaque omnis sed assumenda incidunt ad architecto nam? Explicabo!</p> -->
             <!-- <p>Gradeless erbjuder ett revilutionär teknologi som kallas ett "forum". Vart du som elev kan ställa frågor för andra elver om kurser, läxor och allmän information.</p> -->
             <p>Gradeless has invented the cool technology of a so-called "forum", where you as a student can ask other students for information about your courses and studies.</p>
             <br>
             <p>Se forumet <a href=""> HÄR</a></p>
         </div>
+        <div class="img1">
+            <img src="bllvjbfjf" alt="">
+        </div>
     </div>
 
     <!-- third slide -->
     <div class="hero-image3">
-        <h1>News</h1>
         <div class="hero-text3">
+        <h1>News</h1>
             <!-- <p>bla bla bla News vad är d, vad ska det innehålla... blablabla, Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit expedita autem magni quas dolor accusamus id nemo possimus illo, cupiditate laborum itaque omnis sed assumenda incidunt ad architecto nam? Explicabo!</p> -->
             <p>Here you can browse news about your school, a perfect place to keep yourself informed</p>
             <p>Läs mer <a href="">HÄR</a></p>
         </div>
-        
+        <div class="img1">
+            <img src="bllvjbfjf" alt="">
+        </div>
     </div>
 
     <!-- fourth slide -->
     <div class="hero-image4">
-        <h1>Memes och spel</h1>
         <div class="hero-text4">
+        <h1>Memes and Games</h1>
             <!-- <p>bla bla bla News vad är d, vad ska det innehålla... blablabla, Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit expedita autem magni quas dolor accusamus id nemo possimus illo, cupiditate laborum itaque omnis sed assumenda incidunt ad architecto nam? Explicabo!</p> -->
             <p>Name something that students love more than being depressed and stressed over schoolwork? Videogames and Memes, of course!</p>
             <p>Here you can post your own created games and memes for others to enjoy!</p>
             <br>
             <p>Gå direkt till sidan<a href=""> HÄR</a></p>
+        </div>
+        <div class="img1">
+            <img src="bllvjbfjf" alt="">
         </div>
     </div>
 
