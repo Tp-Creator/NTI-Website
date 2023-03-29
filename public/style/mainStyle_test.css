@@ -117,74 +117,79 @@ body {
 
 /*New Navbar*/
 nav {
-    top: 0px;
+    top: 0rem;
     position: sticky;
 
     grid-column: 1 / span 3;
 
-    padding: 8px 18px;
+    display: grid;
+    grid-template-columns:minmax( 3.125rem , 11.6rem ) 1fr minmax( 15.625rem , 50rem ) 1fr minmax( 3.125rem , 11.6rem );
 
-    background-color: #fff;
-
-    display: flex;
+    background-color: var(--mC_dM_1);
 }
 
-.navCon {
-    flex-grow: 1;
-    justify-content: flex-end;
+#navButCon {
+    grid-column: 3;
+    width: fit-content;
 
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns:repeat(5, minmax( 3.125rem , 11.6rem ));
 }
 
-.navBut {
-    padding: 8px;
-
-    border-radius: 20px;
-
-    display: flex;
-    align-items: center;
-}
-.navBut:hover {
-    background-color: #d9d9d9;
+#navButCon  a {
+    display: grid;
+    place-content: center;
 }
 
-/* .navIcon {} */
-
-.navText {
-    margin: 0px 4px 0px 8px;
-
-    font-family: 'poppins-medium';
-    font-size: 14px;
-
-    color: #1a1a1a;
+#navButCon  a:hover {
+    background: linear-gradient(0deg, var(--mC_dM_5) 0%, var(--mC_dM_5) 10%, var(--mC_dM_1) 10%);
 }
 
-.logoText {
-    font-family: 'poppins-semibold';
+#navRight {
+    grid-column: 5;
+    height: 3.125rem;
+    justify-self: right;
 }
 
 #navPfp {
-    aspect-ratio: 1/1;
-    width: 40px;
+    aspect-ratio: 1 / 1;
+    width: 2rem;
+    margin: 0.563rem;
 
-    border-radius: 20px;
+    border-radius: 2rem;
+    background-color: var(--mC_dM_3);
 }
 
-#navPfpBut {
-    margin-left: 8px;
-    display: flex;
+.navText {
+    padding: 0.781rem;
+
+    font-size: 14px;
+
+    color: var(--mC_dM_4);
 }
 
-.loginBut {
-    background-color: lightcoral;
+.navTextLogo {
+    font-family: 'poppins-semibold';
+    color: var(--mC_dM_4);
+}
+
+
+.navIcon {
+    display: none;
+
+    aspect-ratio: 1 / 1;
+    width: 2rem;
+    margin: 0.563rem;
+
+    border-radius: 2rem;
+    background-color: var(--mC_dM_3);
 }
 
 
 
 
 
-/* .smallIcon{
+.smallIcon{
     aspect-ratio: 1/1;
     width: 24px;
 }
@@ -198,7 +203,7 @@ nav {
 }
 .loginBut:hover {
     cursor: pointer;
-} */
+}
 
 
 
