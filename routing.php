@@ -29,8 +29,8 @@ $routes = [
     "/forum/question"   =>    [ "/pages/forum/forumQuestion.php",  0 ],
 
     "/games"            =>    [ "/pages/games/games.php",          0 ],
-    
-    "/schedule"         =>    [ "/pages/error/503.html",           0 ],
+    "/schedule"         =>    [ "/pages/schedule/schedule.php",    0 ],
+
     "/memes"            =>    [ "/pages/error/503.html",           0 ],
     
 

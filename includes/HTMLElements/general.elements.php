@@ -9,18 +9,18 @@
     function drawNavbar(){
 
         $navbuttons =   [
-            ["Lounge",      "/news", "public/style/includes/icons/nav/couch_icon.svg"],
-            ["Forum",       "/forum", "public/style/includes/icons/nav/question_icon.svg"],
-            ["Schedule",    "/schedule", "public/style/includes/icons/nav/event_icon.svg"],
-            ["Memes",       "/memes", "public/style/includes/icons/nav/satisfied_icon.svg"],
-            ["Games",       "/games", "public/style/includes/icons/nav/gamepad_icon.svg"]
+            ["Lounge",      "/news", "/public/style/includes/icons/nav/couch_icon.svg"],
+            ["Forum",       "/forum", "/public/style/includes/icons/nav/question_icon.svg"],
+            ["Schedule",    "/schedule", "/public/style/includes/icons/nav/event_icon.svg"],
+            ["Memes",       "/memes", "/public/style/includes/icons/nav/satisfied_icon.svg"],
+            ["Games",       "/games", "/public/style/includes/icons/nav/gamepad_icon.svg"]
         ];
 
 
             //  Logo
         $navbar =   "    
                     <a class='navBut' href='/'>
-                        <img class='navIcon' src='public/style/includes/icons/nav/home_icon.svg' alt=''>
+                        <img class='navIcon' src='/public/style/includes/icons/nav/home_icon.svg' alt=''>
 
                         <p class='navText logoText'>Gradeless</p>
                     </a>
@@ -57,14 +57,14 @@
 
             $navbar .= "
                         <a id='navPfpBut' href='/account'>
-                            <img id='navPfp' src='public/img/pfp/$usrMail.png' alt=''>
+                            <img id='navPfp' src='/public/img/pfp/$usrMail.png' alt=''>
                         </a>
                         ";
         }
         else {
             $navbar .=  "
                         <a class='navBut loginBut' href='/google'>
-                            <img class='navIcon' src='public/style/includes/icons/nav/login_‭icon.svg' alt=''>
+                            <img class='navIcon' src='/public/style/includes/icons/nav/login_‭icon.svg' alt=''>
 
                             <p class='navText'>Login</p>
                         </a>

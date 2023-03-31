@@ -49,6 +49,25 @@ CREATE TABLE course (
     CourseCode varchar(10)
 );
 
+
+/* Skapar en tabell lessons som har id, namn och färg */
+CREATE TABLE lesson (
+    ID int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    courseID int NOT NULL,
+    classID int not NULL,
+    room varchar(16),
+    starts bigint NOT NULL,
+    ends bigint NOT NULL,
+    repeated int
+);
+
+/* Skapar en tabell class som har id, namn och färg */
+CREATE TABLE class (
+    id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    className varchar(8),
+    grade int
+);
+
 --  Ska användas för att inte behöva separera ex. alla svenska kurserna på forumet utan de får vara samma
 -- CREATE TABLE subject (
 --     SubjectID int NOT NULL PRIMARY KEY AUTO_INCREMENT,
