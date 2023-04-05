@@ -14,13 +14,18 @@
     --mC_dM_3: hsl(216 5% 60%);  /*Warm grey*/
     --mC_dM_4: hsl(214 14% 90%); /*Almost white*/
     --mC_dM_5: hsl(258 66% 46%); /*Acient color*/
-}
 
 
-@font-face {
-    font-family: 'poppins-light';
-    src: url(includes/fonts/poppins/Poppins-Thin.ttf);
+    /* colors */
+    /* element color  */
+    --mc1: hsl(210 12% 6%);
+    --mc2: hsl(230 14% 12%);
+
+    /* text color */
+    --mc3: hsl(0 0% 95%);
+    --mc4: hsl(0 0% 85%);
 }
+
 
 @font-face {
     font-family: 'poppins';
@@ -38,56 +43,78 @@
 }
 
 
-
 body {
-    background-color: var(--mC_dM_2);
+    background-color: var(--mc1);
 
     display: grid;
-    grid-template-columns: 1fr minmax( 18.5rem , 57.5rem ) 1fr;
+    grid-template-columns: 1fr minmax( 320px , 1200px ) 1fr;
     gap: 18px;
 }
-
-
-
-
-/* Element text */
-.elemText {
-    font-size: 0.875rem;
-    font-family: 'poppins-medium';
-}
-/* Card title */
-.titleText {
-    font-size: 1rem;
-}
-/* infoText */
-.elemText {
-    font-size: 0.625rem;
-}
-/* usernameText */
-.elemText {
-    font-size: 0.75rem;
-}
-
-
-
-/* ::selection {
-    color: var(--mC_dM_4);
-    background-color: var(--mC_dM_5);
-} */
-
-
 
 
 * {
     margin: 0%;
     padding: 0%;
-
     border: none;
-
     text-decoration: none;
     font-family: 'poppins';
     letter-spacing: 0.25px;
 }
+
+
+nav {
+    top: 0px;
+    position: sticky;
+    grid-column: 1 / span 3;
+    padding: 8px 18px;
+    background-color: var(--mc1);
+    display: flex;
+}
+
+.navCon {
+    flex-grow: 1;
+    justify-content: flex-end;
+    display: flex;
+    align-items: center;
+}
+
+.navBut {
+    padding: 6px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+}
+.navBut:hover {
+    background-color: hsl(258, 91%, 69%);
+}
+
+.navText {
+    margin: 0px 6px 0px 8px;
+    font-family: 'poppins-medium';
+    font-size: 14px;
+    color: var(--mc4);
+}
+
+.logoText {
+    font-family: 'poppins-semibold';
+}
+
+#navPfp {
+    aspect-ratio: 1/1;
+    width: 40px;
+
+    border-radius: 20px;
+}
+
+#navPfpBut {
+    margin-left: 8px;
+    display: flex;
+}
+
+.loginBut {
+    background-color: hsl(258, 91%, 69%);
+}
+
 
 
 
@@ -111,94 +138,6 @@ body {
     flex-direction: column;
     gap: 8px;
 }
-
-
-
-
-/*New Navbar*/
-nav {
-    top: 0px;
-    position: sticky;
-
-    grid-column: 1 / span 3;
-
-    padding: 8px 18px;
-
-    background-color: #fff;
-
-    display: flex;
-}
-
-.navCon {
-    flex-grow: 1;
-    justify-content: flex-end;
-
-    display: flex;
-    align-items: center;
-}
-
-.navBut {
-    padding: 8px;
-
-    border-radius: 20px;
-
-    display: flex;
-    align-items: center;
-}
-.navBut:hover {
-    background-color: #d9d9d9;
-}
-
-/* .navIcon {} */
-
-.navText {
-    margin: 0px 4px 0px 8px;
-
-    font-family: 'poppins-medium';
-    font-size: 14px;
-
-    color: #1a1a1a;
-}
-
-.logoText {
-    font-family: 'poppins-semibold';
-}
-
-#navPfp {
-    aspect-ratio: 1/1;
-    width: 40px;
-
-    border-radius: 20px;
-}
-
-#navPfpBut {
-    margin-left: 8px;
-    display: flex;
-}
-
-.loginBut {
-    background-color: lightcoral;
-}
-
-
-
-
-
-/* .smallIcon{
-    aspect-ratio: 1/1;
-    width: 24px;
-}
-
-.loginBut {
-    display: flex;
-    align-content: center;
-    gap: 10px;
-
-    padding: 0px 12px;
-}
-.loginBut:hover {
-    cursor: pointer;
-} */
 
 
 

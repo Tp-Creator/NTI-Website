@@ -10,8 +10,6 @@
     require_once('includes/HTMLElements/forum.elements.php');
 
     $courses = getCourses();
-
-
 ?>
 
 <!DOCTYPE html>
@@ -41,101 +39,68 @@
         <?php echo drawNavbar() ?>
     </nav>
 
-    <header>
 
-        <div id="headerCon1">
-                <!-- Searchbar  -->
-            <form id="searchbar" action="">
+    <div id="body">
 
-                <input id="searchfield" placeholder="Search" type="text">
+        <div id="filterCon">
+            <p>Sort by course</p>
 
-                <button id="searchButton">
-                    <img src="/public/style/includes/icons/search_Icon_v3.svg" alt="">
-                </button>
+            <button class="filterBut">Programmering</button>
+        </div>
 
+
+        <!-- <button id="testButton">Hej</button>
+        <button id="stestButton">sHej</button> -->
+
+
+        <!-- Content feed -->
+        <section id="questionCardFeed">
+
+
+            <button id="askQuestion">Ask a question</button>
+
+
+            <form id="addQuestionCard" style="display: none;">
+                <input class="formInput formTitel" placeholder="Enter your question" name="title" id="title"></input>
+
+                <!-- Input description -->
+                <textarea class="formInput formDescription" placeholder="Enter a description" rows="5" name="content" id="content"></textarea>
+
+                <div id="formFotter">
+                    <select class="optionsCon formOptionsCon" name="courseID" id="courseID">  
+                        <option value="">Choose a "Course"</option>
+
+                        <?php 
+                                //  Loops as many choices as there are courses in the db
+                            for($i = 0; $i < sizeof($courses); $i++){
+                        ?>
+                            <option value="<?php echo $courses[$i]->CourseID ?>"><?php echo $courses[$i]->CourseName ?></option>
+                        <?php 
+                            }
+                        ?>
+                    </select>
+
+                    <div class="devider"></div>
+
+                    <button id="postQuestionButton" type="submit">Post</button>
+                </div>
             </form>
 
-                <!-- "Aks a question" button  -->
-            <button class="callToAction" id="askQuestion">
-                Ask a question
-                <!-- <img src="" alt=""> -->
-            </button>
-        </div>
 
-
-
-
-        <!-- "Ask a question" form -->
-        <form id="addQuestionCard" style="display: none;">
-            <input class="formInput formTitel" placeholder="Enter your question" name="title" id="title"></input>
-
-            <!-- Input description -->
-            <textarea class="formInput formDescription" placeholder="Enter a description" rows="5" name="content" id="content"></textarea>
+            <?php 
+               $questions = getQuestions();
+                        
+                   //  Amount of cards is the amount of cards that will be displayed
+               for($current = sizeof($questions)-1; $current >= 0; $current--){
+                   echo questionCard($questions[$current]);
             
-            <div id="formFotter">
-                <select class="optionsCon formOptionsCon" name="courseID" id="courseID">  
-                    <option value="">Choose a "Course"</option>
+               }
+            ?>
 
-                    <?php 
-                            //  Loops as many choices as there are courses in the db
-                        for($i = 0; $i < sizeof($courses); $i++){
-                    ?>
-                        <option value="<?php echo $courses[$i]->CourseID ?>"><?php echo $courses[$i]->CourseName ?></option>
-                    <?php 
-                        }
-                    ?>
-                </select>
+        </section>
 
-                <div class="devider"></div>
-
-                <button id="postQuestionButton" type="submit">Post</button>
-            </div>
-        </form>
-
-
-
-
-            <!-- Page options & information -->
-        <div class="verticalWrap">
-
-            <select class="optionsCon" name="" id="">
-
-                <option value="">All Courses</option>
-                <?php 
-                        //  Loops as many choices as there are courses in the db
-                    for($i = 0; $i < sizeof($courses); $i++){
-                ?>
-                    <option value="<?php echo $courses[$i]->CourseID ?>"><?php echo $courses[$i]->CourseName ?></option>
-                <?php 
-                    }
-                ?>
-
-            </select>
-
-        </div>
-
-    </header>
-
-
-
-    <button id="testButton">Hej</button>
-    <button id="stestButton">sHej</button>
-
+    </div>
     
-    <!-- Content feed -->
-    <section class="horizontalCon contentFeed" id="questionCardFeed">
-
-        <?php 
-           $questions = getQuestions();
-        
-               //  Amount of cards is the amount of cards that will be displayed
-           for($current = sizeof($questions)-1; $current >= 0; $current--){
-               echo questionCard($questions[$current]);
-        
-           }
-        ?>
-
-    </section>
     <footer></footer>
 </body>
 </html>

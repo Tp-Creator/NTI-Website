@@ -22,7 +22,7 @@ body {
     min-width: fit-content;
     padding: 18px;
     border-radius: 22px;
-    background-color: var(--mC_dM_1);
+    background-color: var(--mc2);
 }
 
 .fcUsername {
@@ -211,4 +211,46 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
+}
+
+#askQuestion {
+    padding: 10px;
+
+    border-radius: 12px;
+
+    font-size: 14px;
+
+    background-color: var(--mC_dM_5);
+}
+
+#filterCon {
+    margin-right: 18px;
+}
+
+#questionCardFeed {
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+#body {
+    grid-column: 2;
+
+    display: flex;
+}
+
+.filterBut {
+    padding: 6px 8px;
+
+    border-radius: 12px;
+
+    font-size: 14px;
+
+    color: var(--mc4);
+    background: none;
+}
+.filterBut:hover {
+    background-color: #ffffff15
 }
