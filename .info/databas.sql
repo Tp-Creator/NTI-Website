@@ -140,6 +140,14 @@ VALUES ('hej@hejj.com', 'Magistern', 'Niklas', 'Hellström', 3);
 
 /* Lägger till tre olika kurser och Kurskoder som kommer användas som ID:n */
 
+-- Skapar TE21 som en klass som är 2:a året på gymnasiet
+INSERT INTO class (className, grade)
+VALUES ('TE21', 2);
+
+-- Skapar programmering 1 på onsdagar kl 10:05-11:10
+INSERT INTO lesson (courseID, classID, room, starts, ends, repeated)
+VALUES (1, 1, "105", 1680509100000, 1680513000000, 2); -- 1: dayly 2: weekly, 3: monthly, 4: termin 5: yearly
+
 --  Programmering
 INSERT INTO course (CourseName, CourseCode)
 VALUES ('Programering 1', 'PRRPRR01');

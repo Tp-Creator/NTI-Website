@@ -8,7 +8,8 @@
 
     $courses = getCourses();
 
-    $hej = getLessons();
+    $lessons = getLessons();
+    $classes = getClassById(1);
 
 ?>
 
@@ -39,7 +40,8 @@
         <?php echo drawNavbar() ?>
     </nav>
 
-    <p><?php console_log($hej); ?></p>
+    <p><?php console_log($lessons); ?></p>
+    <p><?php console_log($classes); ?></p>
 
         
     <footer></footer>

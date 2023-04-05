@@ -12,7 +12,7 @@
             ["Lounge",      "/news", "/public/style/includes/icons/nav/couch_icon.svg"],
             ["Forum",       "/forum", "/public/style/includes/icons/nav/question_icon.svg"],
             ["Schedule",    "/schedule", "/public/style/includes/icons/nav/event_icon.svg"],
-            ["Memes",       "/memes", "/public/style/includes/icons/nav/satisfied_icon.svg"],
+            // ["Memes",       "/memes", "/public/style/includes/icons/nav/satisfied_icon.svg"],
             ["Games",       "/games", "/public/style/includes/icons/nav/gamepad_icon.svg"]
         ];
 
