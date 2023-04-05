@@ -7,9 +7,9 @@
     // const today = new Date(timeElapsed);
 
         // Periodically check for new messages every 5 seconds
-    setInterval(checkForNewMessages, 5000);
+    setInterval(checkForNewQuestions, 5000);
 
-    function checkForNewMessages() {
+    function checkForNewQuestions() {
 
         // let lastQuestionMillis = $(".questionDate").first().text();
 
@@ -30,9 +30,9 @@
         });
     }
 
-    function fetchQuestions(courses=true){
-        // if
-    }
+    // function fetchQuestions(courses=true){
+    //     // if
+    // }
 
 
         //  När man klicka på knappen med id:t #askQuestion körs funktionen.
@@ -77,7 +77,7 @@
               url: "/public/OPA/forum/OPA.forum.php",
               data: formData,
               success: function(response){
-                checkForNewMessages();
+                checkForNewQuestions();
                     //  Vid success:
                     //  Resetta alla fält i formen
                 $("#courseID").val('');
@@ -106,13 +106,21 @@
 
 //  Inte klart och kommer behövas mer kod och en checkbox meny för att veta hur det blir
 
-    //  Ta bort frågor som inte tillhör valda ämnen
-    if (/* unchecked a course AND At least on box is checked */0){
+    let button = $('#testButton');
+    let sbutton = $('#stestButton');
+
+    button.on('click', updateQuestions);
+    sbutton.on('click', function(){
+        choice.push('DAODAC0')
+    })
+
+    let choice = ['ENGENG05'];
+
+    function updateQuestions(){
         //  Remove unchecked questions
     
         let questions = $("#questionCardFeed").children();
         // let choice = [];
-        let choice = ['DAODAC0', 'ENGENG05'];
     
             //  .each() Loopar över alla element i children och kör funktionen
         questions.each(function(){
@@ -127,22 +135,36 @@
             }
 
             if (!hasClass){
-                $(this).remove();
+                    //  Kalkylerar exakt hur långt frågan måste slida för att försvinna + 10 för marginal
+                let slideDistance =  ($(window).outerWidth() - $(this).outerWidth())/2 + $(this).outerWidth() + 10;
+
+                    //  Flyttar ut frågan och gömmer den med animation
+                $(this).animate({right: -slideDistance}, 700, function() {
+                    $(this).hide();
+                });
+
+            }
+            else {
+                //  Flyttar tillbaka frågan så att man kan se den med animation
+                $(this).show();
+                $(this).animate({right: 0}, 700);
             }
         });        
 
-    } else if(/* checked a course */0) {
-        //  Remove all questions
-        $("#questionCardFeed").empty();
+    } 
+    
+    // else if(/* checked one more course */0) {
+    //     //  Remove all questions
+    //     $("#questionCardFeed").empty();
         
-        //  Fetch needed questions
+    //     //  Fetch needed questions
         
 
 
-    } else {
-        //  Remove all questions
-        //  Fetch all questions
-    }
+    // } else {
+    //     //  Remove all questions
+    //     //  Fetch all questions
+    // }
 
 //  Detta är ett kodblock som ska köras när man uncheckar en kurs
 

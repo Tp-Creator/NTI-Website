@@ -118,6 +118,9 @@
 
 
 
+    <button id="testButton">Hej</button>
+    <button id="stestButton">sHej</button>
+
     
     <!-- Content feed -->
     <section class="horizontalCon contentFeed" id="questionCardFeed">

@@ -1,3 +1,14 @@
+body {
+    /* horizontal scroll tas bort på sidan
+       gör animeringen mer smooth för att tabort
+       frågor när man sorterar */
+    overflow-x: hidden;
+}
+
+.forumA{
+    position: relative;
+}
+
 .contentFeed {
     grid-column: 2;
 }

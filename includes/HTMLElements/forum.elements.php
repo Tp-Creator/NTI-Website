@@ -28,7 +28,7 @@
         $usrMail = $user->Email;
 
         //  hämtar id:t på frågan och lägger till den i url:en
-        $card = "<a class='$courseCode Hej' href='/forum/question?question=$id'>
+        $card = "<a class='$courseCode forumA' href='/forum/question?question=$id'>
                     <div class='horizontalCon forumCard'>
                         <div class='verticalCon'>
                             <div class='verticalWrapReverse'>
