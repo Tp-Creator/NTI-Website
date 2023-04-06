@@ -22,12 +22,12 @@ body {
     min-width: fit-content;
     padding: 18px;
     border-radius: 22px;
-    background-color: var(--mc2);
+    background-color: var(--mc1);
 }
 
 .fcUsername {
     font-size: 0.875rem;
-    color: var(--mC_dM_3);
+    color: var(--mc4);
 
     display: flex;
 }
@@ -42,12 +42,12 @@ body {
     flex-grow: 1;
     text-align: right;
     font-size: 0.75rem;
-    color: var(--mC_dM_3);
+    color: var(--mc4);
 }
 
 .fcTitleText {
     font-family: 'poppins-semibold';
-    color: var(--mC_dM_4);
+    color: var(--mc4);
 }
 
 .meta {
@@ -57,9 +57,9 @@ body {
     
     font-size: 0.75rem;
     font-family: 'poppins-medium';
-    color: var(--mC_dM_1);
+    color: var(--mc4);
 
-    background-color: var(--mC_dM_3);
+    background-color: var(--mc3);
 
     display: grid;
     place-items: center;
@@ -108,7 +108,7 @@ body {
 
     border-radius: 1.5rem;
 
-    border: 0.125rem solid var(--mC_dM_5);
+    background-color: var(--mc2);
 
     display: flex;
     flex-direction: column;
@@ -160,11 +160,20 @@ body {
 .formTitel {
     font-size: 1rem;
     font-family: 'poppins-semibold';
+
+    color: var(--mc4);
 }
 
 .formDescription {
     font-size: 0.875rem;
     font-family: 'poppins';
+
+    color: var(--mc4);
+}
+
+.formOption {
+    color: var(--mc4);
+    background-color: --mc2;
 }
 
 
@@ -216,11 +225,11 @@ body {
 #askQuestion {
     padding: 10px;
 
-    border-radius: 12px;
+    border-radius: 20px;
 
     font-size: 14px;
 
-    background-color: var(--mC_dM_5);
+    background-color: var(--mc3);
 }
 
 #filterCon {

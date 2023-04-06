@@ -89,7 +89,7 @@ header {
 
     font-size: 0.875rem;
 
-    color: var(--mC_dM_4);
+    color: var(--mc4);
     background: none;
 }
 
@@ -99,6 +99,7 @@ header {
 }
 
 .optionsCon:focus {
+    color: var(--mc4);
     background: var(--mC_dM_2);
 }
 

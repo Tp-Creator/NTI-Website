@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="/public/style/mainStyle.css">
     <link rel="stylesheet" href="/public/style/commonStyle.css">
-    <link rel="stylesheet" href="/public/style/pages/news/newsStyle.css">
+    <link rel="stylesheet" href="/public/style/pages/newsStyle.css">
 
     <title>News</title>
 </head>

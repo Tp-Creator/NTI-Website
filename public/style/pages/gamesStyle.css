@@ -1,0 +1,15 @@
+.gamesContentFeed {
+    grid-column: 2;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.gamesCard {
+    flex-grow: 1;
+
+    padding: 24px;
+
+    background-color: var(--mC_dM_1);
+}
