@@ -30,7 +30,7 @@
     <div class="hero-text">
         <h1 class="hero-header">Gradeless</h1>
         <!-- <p class="other-text">Välkomna till Gradeless. Gradeless är en webbsida som är menad för dig som är elev och är trött på schoolsoft. Vi garanterar våra användare en säkrare och snabbare  informationshantering i jämförelse med schoolsoft. Vi kommer att informera våra läsare om det nyaste, scheman, prov och en möjlighet att chatta med våra fantastiska lärare. Men samtidigt kan man ha lite kul såklart med våra memes och games som regelbundet uppdateras.</p> -->
-        <p class="other-text">Welcome to Gradeless, the site created by students for students.  </p>
+        <p class="other-text">Welcome to Gradeless, the site created by students for students.</p>
     </div>
     
 
