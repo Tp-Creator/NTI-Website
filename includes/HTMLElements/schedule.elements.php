@@ -3,7 +3,7 @@
 // require_once('includes/dbh.func/general/dbh.general.php');
 require_once('includes/dbh.func/schedule/dbh.schedule.php');
 
-function lessonCard($mStart, $mEnd, $courseID, $roomID, $classID){
+function lessonCard($rawStart, $rawEnd, $courseID, $roomID, $classID){
 
         //  The course data
     $course = getCourseByID($courseID);
@@ -11,8 +11,13 @@ function lessonCard($mStart, $mEnd, $courseID, $roomID, $classID){
         $CourseName = $course->CourseName;
 
         //  begining and end
-    $start = date("H:i", $mStart/1000);
-    $end = date("H:i", $mEnd/1000);
+    // $start = date("H:i", $mStart/1000);
+    $yes = new DateTime($rawStart);
+    $no = new DateTime($rawEnd);
+
+    $start = $yes->format('H:i');
+    $end = $no->format('H:i');
+    // $end = date("H:i", $mEnd/1000);
 
         //  class name
     $class = getClassByID($classID);
@@ -24,15 +29,13 @@ function lessonCard($mStart, $mEnd, $courseID, $roomID, $classID){
 
 
         //  HTML
-    $HTML =   "   
-                    <div class='subject $courseCode'>
-                        <p class='name'>$CourseName</p>
-                        <p class='start'>$start</p>
-                        <p class='end'>$end</p>
-                        <p class='class'>$className</p>
-                        <p class='room'>$roomName</p>
-                    </div>
-                ";
+    $HTML =    "<div class='subject $courseCode'>
+                    <p class='name'>$CourseName</p>
+                    <p class='start'>$start</p>
+                    <p class='end'>$end</p>
+                    <p class='class'>$className</p>
+                    <p class='room'>$roomName</p>
+                </div>";
 
     return $HTML;
 
@@ -41,11 +44,13 @@ function lessonCard($mStart, $mEnd, $courseID, $roomID, $classID){
 function schedule($classID){
 
 
-    $lessons = getLessons($classID);
+    $lessons = getLessons($classID, /*$day*/);
     
     // Get all lessons for user or class 
 
     $HTML = "<div class='mainTopContainer'>";
+
+
 
     for($i = 0; $i < 6; $i++){
         continue;
@@ -63,8 +68,8 @@ function schedule($classID){
         //  Sorting the lessons for each day
         //  create html for each day...
 
-        $mStart = $lessons[0]->starts;
-        $mEnd = $lessons[0]->ends;
+        $mStart = $lessons[0]->start;
+        $mEnd = $lessons[0]->end;
         $courseID = $lessons[0]-> courseID;
         $roomID = $lessons[0]->roomID;
 

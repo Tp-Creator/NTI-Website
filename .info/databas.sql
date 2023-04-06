@@ -54,12 +54,14 @@ CREATE TABLE course (
 CREATE TABLE lesson (
     ID int NOT NULL PRIMARY KEY AUTO_INCREMENT,
     courseID int NOT NULL,
-    classID int not NULL,
+    classID int NOT NULL,
     roomID int,
-    starts bigint NOT NULL,
-    ends bigint NOT NULL,
+    start DATETIME NOT NULL,
+    end DATETIME NOT NULL,
     repeated int
 );
+
+
 
 /* Skapar en tabell class som har id, namn och färg */
 CREATE TABLE class (
@@ -153,8 +155,14 @@ INSERT INTO room (name)
 VALUES ('105');
 
 -- Skapar programmering 1 på onsdagar kl 10:05-11:10
+-- INSERT INTO lesson (courseID, classID, roomID, starts, ends, repeated)
+-- VALUES (1, 1, 1, 1680509100000, 1680513000000, 2); -- 1: dayly 2: weekly, 3: monthly, 4: termin 5: yearly
+
+-- Skapar programmering 1 på onsdagar kl 10:05-11:10
 INSERT INTO lesson (courseID, classID, roomID, starts, ends, repeated)
-VALUES (1, 1, 1, 1680509100000, 1680513000000, 2); -- 1: dayly 2: weekly, 3: monthly, 4: termin 5: yearly
+VALUES (1, 1, 1, '2023-04-05 13:00:00', '2023-04-05 14:15:00', 2);  -- 1: dayly 2: weekly, 3: monthly, 4: termin 5: yearly
+
+
 
 --  Programmering
 INSERT INTO course (CourseName, CourseCode)

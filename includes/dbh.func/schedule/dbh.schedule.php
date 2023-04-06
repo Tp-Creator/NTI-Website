@@ -6,8 +6,8 @@
 
     function getLessons($class){
         global $conn;
-    
-        $stmt = $conn->prepare("SELECT * FROM lesson WHERE classID = ?;");
+
+        $stmt = $conn->prepare("SELECT * FROM lesson WHERE classID = ? ORDER BY start;");
         $stmt->bind_param("i", $class);
         $stmt->execute();
 
