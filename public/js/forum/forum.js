@@ -139,7 +139,7 @@
                 let slideDistance =  ($(window).outerWidth() - $(this).outerWidth())/2 + $(this).outerWidth() + 10;
 
                     //  Flyttar ut frågan och gömmer den med animation
-                $(this).animate({right: -slideDistance}, 700, function() {
+                $(this).animate({right: -slideDistance}, 400, function() {
                     $(this).hide();
                 });
 
@@ -147,7 +147,7 @@
             else {
                 //  Flyttar tillbaka frågan så att man kan se den med animation
                 $(this).show();
-                $(this).animate({right: 0}, 700);
+                $(this).animate({right: 0}, 400);
             }
         });        
 
