@@ -40,7 +40,7 @@
     <link rel="stylesheet" href="/public/style/mainStyle.css">
     <link rel="stylesheet" href="/public/style/commonStyle.css">
     
-    <link rel="stylesheet" href="/public/style/pages/forum/forumStyle.css">
+    <link rel="stylesheet" href="/public/style/pages/forumStyle.css">
 
     <title><?php echo $question->Title ?></title>
 </head>

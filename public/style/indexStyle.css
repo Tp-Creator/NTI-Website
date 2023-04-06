@@ -1,148 +1,42 @@
-
-body{
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr minmax( 12rem , 58rem ) 1fr;
-    row-gap: 0px;   
-    background-color: var(--mC_dM_2); 
-}
-/* first slide */
-/* welcoming text*/
-.hero-text{
+.infoSection {
     grid-column: 2;
-    height: 95vh;
-    margin-top: 4rem;
-    /* width: 60%; */
-    text-align: center;
-    font-size: 40px;
-    align-items: center;
-}
-
-/* second slide */
-.hero-image2{
-    grid-column: 1 /span 3;
-    height: 100vh;
-    /* gap: 1.25rem;     */
-    background-color: var(--mC_dM_2);   
-    box-shadow: 20px 0px 8px hsl(0 0% 15%);
     display: flex;
 }
-.img1{
-    grid-column: 2; 
-    border: 2px solid black;
-    width: 20%;   
-    height: 30%; 
-    margin-top: 90px;
+
+.infoSectionHeader {
+    padding: 18px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 18px;
 }
-/* Titel "Forum" */
-.hero-image2 h1{
-    grid-column: 2;
-    margin-left: 5rem; 
-    margin-top: 4rem;
-    /* grid-row: 2; */
-    /* margin-top: 1rem;
-    height: 10rem; */
-    text-align: left;
+
+.infoTitle {
+    font-size: 28px;
+    color: var(--mc4);
+}
+
+.infoDes {
+    font-size: 16px;
+    color: var(--mc4);
+}
+
+.infoImg {
+    flex: 1;
+    aspect-ratio: 1/1;
     width: 100%;
 }
-/* Forum slide text */
-.hero-text2{
-    grid-column: 2;
-    margin-left: 5rem;
-    margin-right: 5rem;  
-    /* margin-top: 10rem; */
-    width: 40%; 
-    align-self: flex-start;
-    /* Margin left och right fixar problemet med att texten inte är inom gridden, men man ska leta efter ett bättre och snyggare fix */
+
+@media screen and (max-width: 600px) {
+
+    .infoSection {
+        flex-direction: column;
+    }
+    
+    .sectionReverse {
+        flex-direction: column-reverse;
+    }
+
 }
-/* a-tag in forum slide text */
-.hero-text2 p a{
-    text-decoration: underline;
-    color: black;
-}
-
-
-
-
-/* third slide */
-.hero-image3{
-    grid-column: 1 /span 3;
-    height: 100vh;
-    background-color: var(--mC_dM_2);   
-    box-shadow: 20px 0px 8px hsl(0 0% 15%);
-    display: flex;
-}
-/* Titel "News" */
-.hero-image3 h1{
-    grid-column: 2;
-    margin-left: 5rem; 
-    margin-top: 4rem;
-
-    width: 40%;
-}
-/* Forum slide text */
-.hero-text3{
-    grid-column: 2;
-    margin-left: 5rem;
-    margin-right: 5rem; 
-    /* margin-top: 10rem; */
-    width: 40rem;
-    /* Margin left och right fixar problemet med att texten inte är inom gridden, men man ska leta efter ett bättre och snyggare fix */
-    align-self: flex-start;
-}
-/* a-tag in forum slide text */
-.hero-text3 p a{
-    text-decoration: underline;
-    color: black;
-}
-
-
-
-
-/* fourth slide */
-.hero-image4{
-    grid-column: 1 /span 3;
-    height: 100vh;
-    background-color: var(--mC_dM_2);   
-    box-shadow: 20px 0px 8px hsl(0 0% 15%);
-    display: flex;
-}
-/* Titel "News" */
-.hero-image4 h1{
-    grid-column: 2;
-    margin-left: 5rem; 
-    margin-top: 4rem;
-
-    width: 50%;
-}
-/* Forum slide text */
-.hero-text4{
-    grid-column: 2;
-    margin-left: 5rem;
-    margin-right: 5rem; 
-    /* margin-top: 10rem; */
-    width: 40rem;
-    align-self: flex-start;
-    /* Margin left och right fixar problemet med att texten inte är inom gridden, men man ska leta efter ett bättre och snyggare fix */
-}
-/* a-tag in forum slide text */
-.hero-text4 p a{
-    text-decoration: underline;
-    color: black;
-}
-
-/* fith slide */
-.footer{
-    grid-column: 1 /span 3;
-    height: 40vh;
-    background-color: var(--mC_dM_2);   
-    box-shadow: 20px 0px 8px hsl(0 0% 15%);
-    align-items: center;
-    text-align: center;
-    display: flex;
-    justify-content: space-around
-}
-
-
-
-

@@ -28,7 +28,6 @@
     <link rel="stylesheet" href="/public/style/mainStyle.css">
     <link rel="stylesheet" href="/public/style/commonStyle.css">
     <!-- Page style links -->
-    <!-- <link rel="stylesheet" href="/public/style/pages/forum/forumStyle.css"> -->
 
     <title>Schedule</title>
 </head>

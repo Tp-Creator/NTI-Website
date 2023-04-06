@@ -1,29 +1,14 @@
-/* variables */
 :root {
-    /* Main colors (Greyscale)*/
-    --mainColor_95: hsl(0 0% 95%);
-    --mainColor_85: hsl(0 0% 85%);
-    --mainColor_50: hsl(0 0% 50%);
-    --mainColor_25: hsl(0 0% 25%);
-    --mainColor_10: hsl(0 0% 10%);
-
-    /* Main colors (Dark mode)*/
-    --mC_dM_1: hsl(210 12% 6%);  /* Main element Color */
-    /* --mC_dM_2: hsl(230 14% 12%); Background Color only! */
-    --mC_dM_2: hsl(225, 6%, 37%); /* Background Color only! */
-    --mC_dM_3: hsl(216 5% 60%);  /*Warm grey*/
-    --mC_dM_4: hsl(214 14% 90%); /*Almost white*/
-    --mC_dM_5: hsl(258 66% 46%); /*Acient color*/
-
-
-    /* colors */
     /* element color  */
     --mc1: hsl(210 12% 6%);
     --mc2: hsl(230 14% 12%);
 
+    /* accent color  */
+    --mc3: hsl(258 66% 46%);
+
     /* text color */
-    --mc3: hsl(0 0% 95%);
-    --mc4: hsl(0 0% 85%);
+    --mc4: hsl(0 0% 95%);
+    --mc5: hsl(0 0% 85%);
 }
 
 
@@ -42,9 +27,8 @@
     src: url(includes/fonts/poppins/Poppins-SemiBold.ttf);
 }
 
-
 body {
-    background-color: var(--mc1);
+    background-color: var(--mc2);
 
     display: grid;
     grid-template-columns: 1fr minmax( 320px , 1200px ) 1fr;
@@ -67,7 +51,7 @@ nav {
     position: sticky;
     grid-column: 1 / span 3;
     padding: 8px 18px;
-    background-color: var(--mc1);
+    background-color: var(--mc2);
     display: flex;
 }
 
@@ -80,12 +64,12 @@ nav {
 
 .navBut {
     padding: 6px;
-    border-radius: 12px;
+    border-radius: 20px;
     display: flex;
     align-items: center;
 }
 .navBut:hover {
-    background-color: hsl(258, 91%, 69%);
+    background-color: hsl(258 66% 46%);
 }
 
 .navText {
@@ -112,7 +96,7 @@ nav {
 }
 
 .loginBut {
-    background-color: hsl(258, 91%, 69%);
+    background-color: hsl(258 66% 46%);
 }
 
 
@@ -137,6 +121,44 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 8px;
+}
+
+
+
+
+footer {
+    grid-column: 1/ span 3;
+    margin-top: 32px;
+    padding: 36px 18px;
+    background-color: var(--mc1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.footerSection {
+    margin: 36px 0px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footerSection a {
+    font-size: 14px;
+    text-decoration: underline;
+    color: var(--mc4);
+}
+
+.footerContent {
+    font-size: 14px;
+    color: var(--mc4);
+}
+
+.footerTitle {
+    font-size: 18px;
+    font-family: 'poppins-semibold';
+    color: var(--mc3);
 }
 
 

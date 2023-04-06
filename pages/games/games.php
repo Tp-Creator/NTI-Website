@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="/public/style/mainStyle.css">
     <link rel="stylesheet" href="/public/style/commonStyle.css">
-    <link rel="stylesheet" href="/public/style/pages/games/gamesStyle.css">
+    <link rel="stylesheet" href="/public/style/pages/gamesStyle.css">
 
     <title>Games</title>
 </head>

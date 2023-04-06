@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="/public/style/mainStyle.css">
     <link rel="stylesheet" href="/public/style/commonStyle.css">
     <!-- Page style links -->
-    <link rel="stylesheet" href="/public/style/pages/forum/forumStyle.css">
+    <link rel="stylesheet" href="/public/style/pages/forumStyle.css">
 
     <title>Forum</title>
 </head>
@@ -53,12 +53,8 @@
         <button id="stestButton">sHej</button> -->
 
 
-        <!-- Content feed -->
-        <section id="questionCardFeed">
-
-
+        <div>
             <button id="askQuestion">Ask a question</button>
-
 
             <form id="addQuestionCard" style="display: none;">
                 <input class="formInput formTitel" placeholder="Enter your question" name="title" id="title"></input>
@@ -68,13 +64,13 @@
 
                 <div id="formFotter">
                     <select class="optionsCon formOptionsCon" name="courseID" id="courseID">  
-                        <option value="">Choose a "Course"</option>
+                        <option class="" value="">Choose a "Course"</option>
 
                         <?php 
                                 //  Loops as many choices as there are courses in the db
                             for($i = 0; $i < sizeof($courses); $i++){
                         ?>
-                            <option value="<?php echo $courses[$i]->CourseID ?>"><?php echo $courses[$i]->CourseName ?></option>
+                            <option class="" value="<?php echo $courses[$i]->CourseID ?>"><?php echo $courses[$i]->CourseName ?></option>
                         <?php 
                             }
                         ?>
@@ -86,21 +82,22 @@
                 </div>
             </form>
 
+            <!-- Content feed -->
+            <section id="questionCardFeed">
+                <?php 
+                    $questions = getQuestions();
+                            
+                    //  Amount of cards is the amount of cards that will be displayed
+                    for($current = sizeof($questions)-1; $current >= 0; $current--){
+                        echo questionCard($questions[$current]);
 
-            <?php 
-               $questions = getQuestions();
-                        
-                   //  Amount of cards is the amount of cards that will be displayed
-               for($current = sizeof($questions)-1; $current >= 0; $current--){
-                   echo questionCard($questions[$current]);
-            
-               }
-            ?>
+                    }
+                ?>
+            </section>
 
-        </section>
+            </div>
+        </div>
 
-    </div>
-    
     <footer></footer>
 </body>
 </html>
