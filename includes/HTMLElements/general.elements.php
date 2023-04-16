@@ -7,7 +7,7 @@
 
 
     function drawNavbar(){
-
+        
         $navbuttons =   [
             ["Lounge",      "/news", "/public/style/includes/icons/nav/couch_icon.svg"],
             ["Forum",       "/forum", "/public/style/includes/icons/nav/question_icon.svg"],
@@ -18,16 +18,14 @@
 
 
             //  Logo
-        $navbar =   "    
-                    <a class='navBut' href='/'>
-                        <img class='navIcon' src='/public/style/includes/icons/nav/home_icon.svg' alt=''>
-
-                        <p class='navText logoText'>Gradeless</p>
+        $navbar =   "
+                    <a id='navHomeBut' href='/'>
+                        <p>Gradeless</p>
                     </a>
                     ";
 
             //  Start navButCon
-        $navbar .= "<div class='navCon'>";
+        $navbar .= "<div id='navCon'>";
         
         
         for($b = 0; $b < sizeof($navbuttons); $b++){
@@ -37,16 +35,11 @@
 
             $navbar .= "
                         <a class='navBut' href='$url'>
-                            <img class='navIcon' src='$icon' alt=''>
-
+                            <img class='navIcon' src='$icon'>
                             <p class='navText'>$content</p>
                         </a>
                         ";
         }
-
-            //  End navButCon
-        $navbar .= "</div>";
-
         
         if (loginCheck()) {
             // array_push($navbuttons, ["Account", "/account"]);
@@ -57,20 +50,21 @@
 
             $navbar .= "
                         <a id='navPfpBut' href='/account'>
-                            <img id='navPfp' src='/public/img/pfp/$usrMail.png' alt=''>
+                            <img id='navPfp' src='/public/img/pfp/$usrMail.png' alt='Profile picture'>
                         </a>
                         ";
         }
         else {
             $navbar .=  "
-                        <a class='navBut loginBut' href='/google'>
-                            <img class='navIcon' src='/public/style/includes/icons/nav/login_‭icon.svg' alt=''>
-
-                            <p class='navText'>Login</p>
+                        <a class='navBut' href='/google'>
+                            <img class='navIcon' src='public\style\includes\icons\google-icon.svg'>
+                            <p class='navText loginBut'>Login</p>
                         </a>
                         ";
         }
 
+        //  End navButCon
+        $navbar .= "</div>";
 
         return $navbar;
     }

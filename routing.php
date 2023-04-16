@@ -23,13 +23,16 @@ $routes = [
     "/sign-up"          =>    [ "/pages/account/sign-up.php",      0 ],
     "/account"          =>    [ "/pages/account/account.php",      1 ],
 
-    "/news"             =>    [ "/pages/news/news.php",            0 ],
+    "/news"             =>    [ "/pages/error/503.html",            0 ],
+    // "/news"             =>    [ "/pages/news/news.php",            0 ],
     
     "/forum"            =>    [ "/pages/forum/forum.php",          0 ],
     "/forum/question"   =>    [ "/pages/forum/forumQuestion.php",  0 ],
 
-    "/games"            =>    [ "/pages/games/games.php",          0 ],
-    "/schedule"         =>    [ "/pages/schedule/schedule.php",    0 ],
+    "/games"            =>    [ "/pages/error/503.html",          0 ],
+    // "/games"            =>    [ "/pages/games/games.php",          0 ],
+    "/schedule"         =>    [ "/pages/error/503.html",    0 ],
+    // "/schedule"         =>    [ "/pages/schedule/schedule.php",    0 ],
 
     "/memes"            =>    [ "/pages/error/503.html",           0 ],
     

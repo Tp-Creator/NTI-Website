@@ -48,9 +48,11 @@
 <body>
     
     <!-- Navigationbar  -->
-    <nav>
-        <?php echo drawNavbar() ?>
-    </nav>
+    <div class="container mainNavCon">
+        <nav>
+            <?php echo drawNavbar() ?>
+        </nav>
+    </div>
 
     <header>
 

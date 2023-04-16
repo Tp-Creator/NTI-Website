@@ -28,9 +28,11 @@
 <body>
     
     <!-- Navigationbar  -->
-    <nav>
-        <?php echo drawNavbar() ?>
-    </nav>
+    <div class="container mainNavCon">
+        <nav>
+            <?php echo drawNavbar() ?>
+        </nav>
+    </div>
 
     <h1>Welcome <?php echo $usr->FirstName . " ". $usr->LastName; ?>!</h1>
     <p>This is your profile page. On this page you can see you profile image and sign out</p>

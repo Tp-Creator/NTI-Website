@@ -16,19 +16,24 @@
     <!-- random style links -->
     <link rel="stylesheet" href="/public/style/mainStyle.css">
     <link rel="stylesheet" href="/public/style/commonStyle.css">
-    <link rel="stylesheet" href="/public/style/indexStyle.css">
+    <link rel="stylesheet" href="/public/style/pages/indexStyle.css">
 
     <title>We're GradeLess</title>
 </head>
 <body>
 
     <!-- Navigationbar  -->
-    <nav>
-        <?php echo drawNavbar() ?>
-    </nav>
+    <div class="container mainNavCon">
+        <nav>
+            <?php echo drawNavbar() ?>
+        </nav>
+    </div>
+    
+
+
 
     <div class="infoSection">
-        <img class="infoImg" src="../public/style/includes/img/Img_placeholder.svg" alt="">
+        <img class="infoImg" src="../public/style/includes/img/placeholder.svg" alt="">
         <div class="infoSectionHeader">
             <p class="infoTitle">Lounge</p>
             <p class="infoDes">description</p>
@@ -40,11 +45,11 @@
             <p class="infoTitle">Forum</p>
             <p class="infoDes">Description</p>
         </div>
-        <img class="infoImg" src="../public/style/includes/img/Img_placeholder.svg" alt="">
+        <img class="infoImg" src="../public/style/includes/img/placeholder.svg" alt="">
     </div>
 
     <div class="infoSection">
-        <img class="infoImg" src="../public/style/includes/img/Img_placeholder.svg" alt="">
+        <img class="infoImg" src="../public/style/includes/img/placeholder.svg" alt="">
         <div class="infoSectionHeader">
             <p class="infoTitle">Schedule</p>
             <p class="infoDes">description</p>
@@ -56,24 +61,29 @@
             <p class="infoTitle">Games</p>
             <p class="infoDes">Description</p>
         </div>
-        <img class="infoImg" src="../public/style/includes/img/Img_placeholder.svg" alt="">
+        <img class="infoImg" src="../public/style/includes/img/placeholder.svg" alt="">
     </div>
 
-    <footer>
-        <div class="footerSection">
-            <p class="footerTitle">Title</p>
 
-            <a class="footerContent" href="">Content</a>
-            <p class="footerContent">Content</p>
-        </div>
 
-        <div class="footerSection">
-            <p class="footerTitle">Title</p>
 
-            <a class="" href="">Content</a>
-            <p class="footerContent">Content</p>
-        </div>
-    </footer>
+
+    <div class="container">
+        <footer>
+            <div class="footerSection">
+                <p class="footerTitle">Gradeless</p>
+                <a class="footerSubject" href="">Legacy</a>
+                <a class="footerSubject" href="">About us</a>
+            </div>
+            <div class="footerSection">
+                <p class="footerTitle">Support</p>
+                <a class="footerSubject" href="">Contact admin</a>
+                <a class="footerSubject" href="">Help Gradeless</a>
+            </div>
+
+            <p id="footerHero">2023・www.gradeless.se・V1</p>
+        </footer>
+    </div>
 
 </body>
 </html>
