@@ -15,7 +15,7 @@ rank = [
 ]
 */
 
-// Negativa permission level i $routes for 503?
+// Negativa permission level i $routes fär 503?
 $routes = [
     // Fake path                     Real path               Permission level
     "/"                 =>    [ "/pages/index.php",                0 ],
@@ -48,7 +48,7 @@ $routes = [
     "/503"              =>    [ "/pages/eastereggs/503.php",       0 ],
 ];
 
-// Det här istället för magiska path's I run functionen?
+// Det här istället för magiska path's i run functionen?
 //$errorPages = [
 // Error code      Path
 //    "403" => "/pages/error/503.html",
@@ -61,20 +61,19 @@ $routes = [
 run();
 function run() {
     global $routes;
-        //  Ger inte URL parametrar
+    //  Ger inte URL parametrar
     $fakeURL = $_SERVER['REDIRECT_URL'];
 
-        //  Om man skrivit en eller flera "/" i slutet av URLn så tar vi bort dem och redirectar till adressen utan "/"
-        //  ex. "/forum/" -> "/forum"
+    //  Om man skrivit en eller flera "/" i slutet av URLn så tar vi bort dem och redirectar till adressen utan "/"
+    //  ex. "/forum/" -> "/forum"
     if ($fakeURL != rtrim($fakeURL, "/") && strlen(rtrim($fakeURL, "/")) > 3) {
         header('Location: ' . rtrim($fakeURL, "/"));
     }
     
-    if ($_SERVER['SERVER_NAME'] == "gradeless.se") {
-        require __DIR__ . '/pages/error/503.html';
-        return;
-    }
-    console_log($_SERVER['SERVER_NAME']);
+    //if ($_SERVER['SERVER_NAME'] == "gradeless.se") {
+    //    require __DIR__ . '/pages/error/503.html';
+    //    return;
+    //}
 
     foreach ($routes as $path => $properties) {
 
@@ -85,12 +84,15 @@ function run() {
                 $rank = 1;
             }
 
-                //  If your rank is high enough you get to see the page
-            if ($properties[1] <= $rank) {
+            if (0 < $properties[1] && $_SERVER['SERVER_NAME'] == "gradeless.se"){
+                require __DIR__ . '/pages/error/503.html';
+            }
+            //  If your rank is high enough you get to see the page
+            else if ($properties[1] <= $rank) {
                 require __DIR__ . $properties[0];
 
             } else {
-                    //  If your rank is too low you will be sent to the 403 page
+                //  If your rank is too low you will be sent to the 403 page
                 require __DIR__ . '/pages/error/403.html';
 
             }
