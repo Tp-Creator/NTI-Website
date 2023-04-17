@@ -316,7 +316,7 @@
             }
         }
         elseif($diffNum < 240000){                      //  If there has gone less than 24 hours
-            if($diffNum >= 020000) {
+            if($diffNum >= 030000) {
                 $time = $diff->format("%h hours ago");
             }
             else{
