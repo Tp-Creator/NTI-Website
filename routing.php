@@ -81,7 +81,7 @@ function run() {
                 $rank = 1;
             }
 
-            if (0 < $properties[1] && $_SERVER['SERVER_NAME'] == "gradeless.se"){
+            if ($properties[1] < 0 && $_SERVER['SERVER_NAME'] == "gradeless.se"){
                 require __DIR__ . '/pages/error/503.html';
             }
             //  If your rank is high enough you get to see the page
