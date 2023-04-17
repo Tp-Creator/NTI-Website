@@ -14,10 +14,6 @@
 }
 
 body {
-    background-color: #392D69;
-    /* background-color: #2E3542; */
-
-    background: rgb(57,45,105);
     background: linear-gradient(-45deg, rgba(57,45,105,1) 0%, rgba(181,123,238,1) 100%);
 
     display: grid;
@@ -230,7 +226,7 @@ footer {
 .footerTitle {
     margin-bottom: 12px;
     font-weight: 700;
-    color: #31456a;
+    color: #B57BEE;
 }
 
 .footerSubject {
