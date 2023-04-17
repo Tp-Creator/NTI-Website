@@ -14,6 +14,8 @@ rank = [
     -1,  // muted
 ]
 */
+
+// Negativa permission level i $routes fär 503?
 $routes = [
     // Fake path                     Real path               Permission level
     "/"                 =>    [ "/pages/index.php",                0 ],
@@ -23,22 +25,19 @@ $routes = [
     "/sign-up"          =>    [ "/pages/account/sign-up.php",      0 ],
     "/account"          =>    [ "/pages/account/account.php",      1 ],
 
-    "/news"             =>    [ "/pages/error/503.html",            0 ],
-    // "/news"             =>    [ "/pages/news/news.php",            0 ],
+    "/news"             =>    [ "/pages/news/news.php",           -1 ],
     
     "/forum"            =>    [ "/pages/forum/forum.php",          0 ],
     "/forum/question"   =>    [ "/pages/forum/forumQuestion.php",  0 ],
 
-    "/games"            =>    [ "/pages/error/503.html",          0 ],
-    // "/games"            =>    [ "/pages/games/games.php",          0 ],
-    "/schedule"         =>    [ "/pages/error/503.html",    0 ],
-    // "/schedule"         =>    [ "/pages/schedule/schedule.php",    0 ],
+    "/games"            =>    [ "/pages/games/games.php",         -1 ],
+    "/schedule"         =>    [ "/pages/schedule/schedule.php",   -1 ],
 
     "/memes"            =>    [ "/pages/error/503.html",           0 ],
     
 
-    "/google"           =>    [ "/pages/account/googleLogin.php",  0 ],          //  Test google login
-    "/gooIn"            =>    [ "/pages/account/googleIndex.php",  0 ],          //  Test google login
+    "/google"           =>    [ "/pages/account/googleLogin.php", -1 ],          //  Test google login
+    "/gooIn"            =>    [ "/pages/account/googleIndex.php", -1 ],          //  Test google login
 
 
     "/403"              =>    [ "/pages/eastereggs/403.php",       0 ],
@@ -46,19 +45,33 @@ $routes = [
     "/503"              =>    [ "/pages/eastereggs/503.php",       0 ],
 ];
 
+// Det här istället för magiska path's i run functionen?
+//$errorPages = [
+// Error code      Path
+//    "403" => "/pages/error/503.html",
+//    "404" => "/pages/error/404.html",
+//    "503" => "/pages/error/503.html",
+//];
+
+
 
 run();
 function run() {
     global $routes;
-        //  Ger inte URL parametrar
+    //  Ger inte URL parametrar
     $fakeURL = $_SERVER['REDIRECT_URL'];
 
-        //  Om man skrivit en eller flera "/" i slutet av URLn så tar vi bort dem och redirectar till adressen utan "/"
-        //  ex. "/forum/" -> "/forum"
-    if($fakeURL != rtrim($fakeURL, "/") && strlen(rtrim($fakeURL, "/")) > 3){
+    //  Om man skrivit en eller flera "/" i slutet av URLn så tar vi bort dem och redirectar till adressen utan "/"
+    //  ex. "/forum/" -> "/forum"
+    if ($fakeURL != rtrim($fakeURL, "/") && strlen(rtrim($fakeURL, "/")) > 3) {
         header('Location: ' . rtrim($fakeURL, "/"));
     }
-            
+    
+    //if ($_SERVER['SERVER_NAME'] == "gradeless.se") {
+    //    require __DIR__ . '/pages/error/503.html';
+    //    return;
+    //}
+
     foreach ($routes as $path => $properties) {
 
         if ($path === $_SERVER['REDIRECT_URL']) {
@@ -68,12 +81,15 @@ function run() {
                 $rank = 1;
             }
 
-                //  If your rank is high enough you get to see the page
-            if ($properties[1] <= $rank) {
+            if ($properties[1] < 0 && $_SERVER['SERVER_NAME'] == "gradeless.se"){
+                require __DIR__ . '/pages/error/503.html';
+            }
+            //  If your rank is high enough you get to see the page
+            else if ($properties[1] <= $rank) {
                 require __DIR__ . $properties[0];
 
             } else {
-                    //  If your rank is too low you will be sent to the 403 page
+                //  If your rank is too low you will be sent to the 403 page
                 require __DIR__ . '/pages/error/403.html';
 
             }
