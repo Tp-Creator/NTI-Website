@@ -44,18 +44,18 @@
 
     <div id="body">
 
-        <div id="filterCon">
+        <!-- <div id="filterCon">
             <p>Sort by course</p>
 
             <button class="filterBut">Programmering</button>
-        </div>
+        </div> -->
 
 
         <!-- <button id="testButton">Hej</button>
         <button id="stestButton">sHej</button> -->
 
 
-        <div>
+        <header>
             <button id="askQuestion">Ask a question</button>
 
             <form id="addQuestionCard" style="display: none;">
@@ -83,24 +83,24 @@
                     <button id="postQuestionButton" type="submit">Post</button>
                 </div>
             </form>
+        <header>
 
-            <!-- Content feed -->
-            <section id="questionCardFeed">
-                <?php 
-                    $questions = getQuestions();
-                            
-                    //  Amount of cards is the amount of cards that will be displayed
-                    for($current = sizeof($questions)-1; $current >= 0; $current--){
-                        echo questionCard($questions[$current]);
+        <!-- Content feed -->
+        <section id="questionCardFeed">
+            <?php 
+                $questions = getQuestions();
+                        
+                //  Amount of cards is the amount of cards that will be displayed
+                for($current = sizeof($questions)-1; $current >= 0; $current--){
+                    echo questionCard($questions[$current]);
 
-                    }
-                ?>
-            </section>
+                }
+            ?>
+        </section>
 
-            </div>
-        </div>
-
-        <div class="container">
+    </div>
+        
+    <div class="container">
         <footer>
             <div class="footerSection">
                 <p class="footerTitle">Gradeless</p>
