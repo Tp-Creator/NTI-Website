@@ -55,26 +55,11 @@
     </div>
 
     <header>
-
-        <div id="headerCon1">
-                <!-- Searchbar  -->
-            <form id="searchbar" action="">
-
-                <input id="searchfield" placeholder="Search" type="text">
-
-                <button id="searchButton">
-                    <img src="/public/style/includes/icons/search_Icon_v3.svg" alt="">
-                </button>
-
-            </form>
-
-                <!-- "Aks a question" button  -->
-            <a class="callToAction" href="/forum">
-                Back to forum
-                <!-- <img src="" alt=""> -->
-            </a>
-        </div>
-
+            <!-- "Aks a question" button  -->
+        <a class="callToAction" href="/forum">
+            Back to forum
+            <!-- <img src="" alt=""> -->
+        </a>
     </header>
 
     <!-- Question card -->
@@ -146,7 +131,22 @@
 
     </section>
     
-    <footer></footer>
+    <div class="container">
+        <footer>
+            <div class="footerSection">
+                <p class="footerTitle">Gradeless</p>
+                <a class="footerSubject" href="">Legacy</a>
+                <a class="footerSubject" href="">About us</a>
+            </div>
+            <div class="footerSection">
+                <p class="footerTitle">Support</p>
+                <a class="footerSubject" href="">Contact admin</a>
+                <a class="footerSubject" href="">Help Gradeless</a>
+            </div>
+
+            <p id="footerHero">2023・www.gradeless.se・V1</p>
+        </footer>
+    </div>
 
 </body>
 </html>

@@ -222,20 +222,6 @@ body {
     gap: 24px;
 }
 
-#askQuestion {
-    padding: 10px;
-
-    border-radius: 20px;
-
-    font-size: 14px;
-
-    background-color: var(--mc3);
-}
-
-#filterCon {
-    margin-right: 18px;
-}
-
 #questionCardFeed {
     grid-column: 2;
 
@@ -254,21 +240,6 @@ body {
     gap: 18px;
 }
 
-.filterBut {
-    padding: 6px 8px;
-
-    border-radius: 12px;
-
-    font-size: 14px;
-
-    color: var(--mc4);
-    background: none;
-}
-.filterBut:hover {
-    background-color: #ffffff15
-}
-
-
 
 
 
@@ -280,9 +251,9 @@ body {
     /* flex: 1; */
     max-width: 100%;
 
-    padding: 18px;
+    padding: 16px;
 
-    border-radius: 18px;
+    border-radius: 16px;
 
     background-color: #101014;
 
@@ -312,7 +283,7 @@ body {
 .fcStatus {
     flex-grow: 1;
 
-    font-size: 14px;
+    font-size: 12px;
 
     text-align: right;
     font-family: 'poppins-semibold';
@@ -321,7 +292,7 @@ body {
 }
 
 .fcContentTitle {
-    font-size: 18px;
+    /* font-size: 18px; */
     font-family: 'poppins-semibold';
 
     color: #d9d9d9;
@@ -362,7 +333,73 @@ body {
 
 
 
+
+
+#header {
+    display: flex;
+    gap: 18px;
+}
+
+#askQuestion {
+    min-width: max-content;
+    flex: 0.15;
+
+    padding: 10px;
+
+    border-radius: 20px;
+
+    font-size: 14px;
+
+    color: #d9d9d9;
+    background-color: #101014;
+}
+
+#filterCon {
+    flex: 0.85;
+    /* border-radius: 18px; */
+
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    overflow-x: scroll;
+}
+#filterCon::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+#filterCon {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+.filterBut {
+    min-width: max-content;
+
+    margin: 4px 0px;
+    padding: 4px 12px;
+    border-radius: 10px;
+
+    font-family: 'poppins-medium';
+    font-size: 14px;
+
+    color: #d9d9d9;
+    background-color: #101014;
+}
+
+
+
+
+
+
+
+
 @media screen and (max-width: 690px) {
+
+    #header {
+        flex-direction: column;
+    }
     
     #questionCardFeed {
         grid-column: 2;

@@ -56,7 +56,16 @@
 
 
         <header>
-            <button id="askQuestion">Ask a question</button>
+            <div id="header">
+                <div id="filterCon">
+                    <button class="filterBut">All courses</button>
+                    <button class="filterBut">Course 1</button>
+                    <button class="filterBut">Course 2</button>
+                    <button class="filterBut">Course 3</button>
+                </div>
+
+                <button id="askQuestion">Ask a question</button>
+            </div>
 
             <form id="addQuestionCard" style="display: none;">
                 <input class="formInput formTitel" placeholder="Enter your question" name="title" id="title"></input>
