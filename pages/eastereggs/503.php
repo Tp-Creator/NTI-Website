@@ -6,7 +6,7 @@
     $contents = file_get_contents('pages/error/503.html');
 
     // Replace the word "denied" with "granted" in the contents
-    $contents = str_replace('', '', $contents);
+    $contents = str_replace('is', 'is not', $contents);
 
     // Output the modified contents of the 403.html file
     echo $contents;
