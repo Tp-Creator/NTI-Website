@@ -167,6 +167,16 @@ body {
     color: var(--mc4);
 }
 
+/* 
+    Detta lägger till en placeholder till diven, se:
+    https://css-tricks.com/auto-growing-inputs-textareas/ 
+*/
+.formDescription[contenteditable]:empty::before {
+    content: "Placeholder still possible";
+    font-family: 'poppins';
+    color: grey;
+  }
+
 .formOption {
     color: var(--mc4);
     background-color: --mc2;

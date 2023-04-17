@@ -36,8 +36,8 @@ $routes = [
     "/memes"            =>    [ "/pages/error/503.html",           0 ],
     
 
-    "/google"           =>    [ "/pages/account/googleLogin.php", -1 ],          //  Test google login
-    "/gooIn"            =>    [ "/pages/account/googleIndex.php", -1 ],          //  Test google login
+    "/google"           =>    [ "/pages/account/googleLogin.php",  0 ],
+    "/gooIn"            =>    [ "/pages/account/googleIndex.php",  0 ],
 
 
     "/403"              =>    [ "/pages/eastereggs/403.php",       0 ],

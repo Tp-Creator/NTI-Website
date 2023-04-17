@@ -75,7 +75,8 @@
                         <input class="formInput formTitel" placeholder="Enter your question" name="title" id="title"></input>
 
                         <!-- Input description -->
-                        <textarea class="formInput formDescription" placeholder="Enter a description" rows="5" name="content" id="content"></textarea>
+                        <!-- <textarea class="formInput formDescription" placeholder="Enter a description" rows="5" name="content" id="content"></textarea> -->
+                        <div class="formInput formDescription" role="textbox" contenteditable style="min-height: 120px;" name="content" id="content"></div>
 
                         <div id="formFotter">
                             <select class="optionsCon formOptionsCon" name="courseID" id="courseID">  

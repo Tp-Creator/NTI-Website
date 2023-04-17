@@ -64,9 +64,7 @@
 
         var courseID = $("#courseID").val();
         var title = $.trim($("#title").val());
-        var content = $.trim($("#content").val());
-
-
+        var content = $.trim($("#content").text());
 
 
             //  Kolla om fälten är tomma eller om de innehåller info och stoppa annars posten.
