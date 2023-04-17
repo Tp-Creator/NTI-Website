@@ -309,12 +309,29 @@
         }
         elseif($diffNum < 6000){                        //  If there has gone less than 60 minutes
             $time = $diff->format("%i minutes ago");
+            if($diffNum < 0100) {
+                $time = $diff->format("%h hours ago");
+            }
+            else{
+                $time = $diff->format("%h hour ago");
+            }
         }
         elseif($diffNum < 240000){                      //  If there has gone less than 24 hours
-            $time = $diff->format("%h hours ago");
+            if($diffNum < 010000) {
+                $time = $diff->format("%h hours ago");
+            }
+            else{
+                $time = $diff->format("%h hour ago");
+            }
         }
         elseif($diffNum < 7000000){                     //  If there has gone less than 7 days
             $time = $diff->format("%a days ago");
+            if($diffNum < 1000000) {
+                $time = $diff->format("%h hours ago");
+            }
+            else{
+                $time = $diff->format("%h hour ago");
+            }
         }
         else{                                           //  Other wise it just shows the data in year-month-day (Ex. 2023-03-11)
             $time = date("Y-m-d", $millis/1000);        
