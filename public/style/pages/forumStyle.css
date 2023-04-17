@@ -5,10 +5,6 @@ body {
     overflow-x: hidden;
 }
 
-.forumA{
-    position: relative;
-}
-
 .contentFeed {
     grid-column: 2;
 }
@@ -260,6 +256,9 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    /* Behövs för animation av questionCard när de går ut */
+    position: relative;
 }
 
 .fcElementCon {

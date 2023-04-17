@@ -51,17 +51,11 @@
         </div> -->
 
 
-        <!-- <button id="testButton">Hej</button>
-        <button id="stestButton">sHej</button> -->
-
-
         <header>
             <div id="header">
                 <div id="filterCon">
                     <button class="filterBut">All courses</button>
-                    <button class="filterBut">Course 1</button>
-                    <button class="filterBut">Course 2</button>
-                    <button class="filterBut">Course 3</button>
+                    <?php echo filterMenu(); ?>
                 </div>
 
                 <?php

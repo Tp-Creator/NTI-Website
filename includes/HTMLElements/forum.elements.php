@@ -29,9 +29,9 @@
 
         //  hämtar id:t på frågan och lägger till den i url:en
         $card = "
-                <div class='fcCon'>
+                <div class='fcCon $courseCode'>
                     <div class='fcElementCon'>
-                        <p class='fcMeta $courseCode'>$courseName</p>
+                        <p class='fcMeta'>$courseName</p>
 
                         <p class='fcStatus'>Status</p>
                     </div>
@@ -116,6 +116,24 @@
 
     }
 
+
+    function filterMenu(){
+     
+        $courses = getCourses();
+        // console_log($courses);
+        
+        $menu = "";
+
+        for($i = 0; $i < sizeof($courses); $i++){
+            $name = $courses[$i]->CourseName;
+            $code = $courses[$i]->CourseCode;
+        
+            $menu .= "<button id='$code' class='filterBut'>$name</button>";
+        }
+
+        return $menu;
+
+    }
 
 
 

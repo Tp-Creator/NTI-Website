@@ -103,35 +103,59 @@
     });
 
 
+    let choice = [];
 
-//  Inte klart och kommer behövas mer kod och en checkbox meny för att veta hur det blir
-
-    let button = $('#testButton');
-    let sbutton = $('#stestButton');
-
-    button.on('click', updateQuestions);
-    sbutton.on('click', function(){
-        choice.push('DAODAC0')
+    const filterButtons = $('.filterBut');
+    
+    //  The first button is speciall, it clears the filter
+    const allButton = filterButtons[0];
+    filterButtons.splice(0, 1);
+    
+    $(allButton).on('click', function(){
+        //  Removes all of the chosen courses
+        choice = [];
+        updateQuestions()
     })
 
-    let choice = ['ENGENG05'];
+        //  .each() Loopar över alla element i children och kör funktionen
+    filterButtons.each(function(){
+        $(this).on('click', function(){
+
+                //  Checks if the element is in the array choice. If,
+                //  the index of the element is returned otherwise -1 is returned
+            let indexToRemove = $.inArray($(this).attr('id'), choice);
+
+            if (indexToRemove !== -1) {
+                choice.splice(indexToRemove, 1);
+            }
+            else{
+                choice.push($(this).attr('id'));
+            }
+
+            updateQuestions();
+        })
+    });
+
 
     function updateQuestions(){
-        //  Remove unchecked questions
     
         let questions = $("#questionCardFeed").children();
-        // let choice = [];
     
             //  .each() Loopar över alla element i children och kör funktionen
         questions.each(function(){
 
             let hasClass = false;
-            for (let i in choice){
-                    //  .hasClass kollar om elementet har den specifika klassen eller inte (returnerar true eller false)
-                if ($(this).hasClass(choice[i])){
-                    hasClass = true;
-                    break;
+            if(choice.length > 0){
+                for (let i in choice){
+                        //  .hasClass kollar om elementet har den specifika klassen eller inte (returnerar true eller false)
+                    if ($(this).hasClass(choice[i])){
+                        hasClass = true;
+                        break;
+                    }
                 }
+            }
+            else {
+                hasClass = true;
             }
 
             if (!hasClass){
@@ -151,23 +175,6 @@
             }
         });        
 
-    } 
-    
-    // else if(/* checked one more course */0) {
-    //     //  Remove all questions
-    //     $("#questionCardFeed").empty();
-        
-    //     //  Fetch needed questions
-        
-
-
-    // } else {
-    //     //  Remove all questions
-    //     //  Fetch all questions
-    // }
-
-//  Detta är ett kodblock som ska köras när man uncheckar en kurs
-
-
+    }
 
 });
