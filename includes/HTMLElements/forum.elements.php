@@ -28,26 +28,26 @@
         $usrMail = $user->Email;
 
         //  hämtar id:t på frågan och lägger till den i url:en
-        $card = "<a class='$courseCode forumA' href='/forum/question?question=$id'>
-                    <div class='horizontalCon forumCard'>
-                        <div class='verticalCon'>
-                            <div class='verticalWrapReverse'>
-        
-                                <div class='meta $courseCode'><p>$courseName</p></div>
+        $card = "
+                <div class='fcCon'>
+                    <div class='fcElementCon'>
+                        <p class='fcMeta $courseCode'>$courseName</p>
 
-                                <div class='verticalCon'>
-                                    <img class='fcPFP' src='public/img/pfp/$usrMail.png' alt=''>
-
-                                    <p class='fcUsername'>$username</p>
-                                </div>
-                            </div>
-
-                            <p class='fcInfoText'>$date</p>
-                        </div>
-
-                        <p class='fcTitleText'>$title</p>
+                        <p class='fcStatus'>Status</p>
                     </div>
-                </a>";
+
+                    <a class='fcContentTitle' href='/forum/question?question=$id'>$title</a>
+
+                    <div class='fcElementCon'>
+                        <a class='fcUserCon' href=''>
+                            <img class='fcUserPFP' src='public/img/pfp/$usrMail.png'>
+                            <p class='fcUserName'>$username</p>
+                        </a>
+
+                        <p class='fcContentDatetime'>$date</p>
+                    </div>
+                </div>
+                ";
 
 
         return $card;

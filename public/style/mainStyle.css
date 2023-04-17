@@ -14,13 +14,14 @@
 }
 
 body {
-    background-color: #503B81;
+    background-color: #392D69;
+    /* background-color: #2E3542; */
 
-    /* background: rgb(57,45,105); */
-    /* background: linear-gradient(-45deg, rgba(57,45,105,1) 0%, rgba(181,123,238,1) 100%); */
+    background: rgb(57,45,105);
+    background: linear-gradient(-45deg, rgba(57,45,105,1) 0%, rgba(181,123,238,1) 100%);
 
     display: grid;
-    grid-template-columns: 1fr minmax( 320px , 1200px ) 1fr;
+    grid-template-columns: 1fr minmax( 320px , 1100px ) 1fr;
     gap: 18px;
 }
 
@@ -229,7 +230,7 @@ footer {
 .footerTitle {
     margin-bottom: 12px;
     font-weight: 700;
-    color: #b57bee;
+    color: #31456a;
 }
 
 .footerSubject {
@@ -246,7 +247,7 @@ footer {
     margin: 18px 0px 36px 0px;
     font-size: 13px;
     text-align: center;
-    color: #b57bee;
+    color: #6d6d6d;
 }
 
 
