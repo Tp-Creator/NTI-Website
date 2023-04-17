@@ -335,7 +335,6 @@
             $time = date("Y-m-d", $millis/1000);        
         }
 
-        $time .=$diffNum;
         return $time;
 
     }
