@@ -14,6 +14,8 @@ rank = [
     -1,  // muted
 ]
 */
+
+// Negativa permission level i $routes for 503?
 $routes = [
     // Fake path                     Real path               Permission level
     "/"                 =>    [ "/pages/index.php",                0 ],
@@ -46,6 +48,15 @@ $routes = [
     "/503"              =>    [ "/pages/eastereggs/503.php",       0 ],
 ];
 
+// Det här istället för magiska path's I run functionen?
+//$errorPages = [
+// Error code      Path
+//    "403" => "/pages/error/503.html",
+//    "404" => "/pages/error/404.html",
+//    "503" => "/pages/error/503.html",
+//];
+
+
 
 run();
 function run() {
@@ -55,10 +66,16 @@ function run() {
 
         //  Om man skrivit en eller flera "/" i slutet av URLn så tar vi bort dem och redirectar till adressen utan "/"
         //  ex. "/forum/" -> "/forum"
-    if($fakeURL != rtrim($fakeURL, "/") && strlen(rtrim($fakeURL, "/")) > 3){
+    if ($fakeURL != rtrim($fakeURL, "/") && strlen(rtrim($fakeURL, "/")) > 3) {
         header('Location: ' . rtrim($fakeURL, "/"));
     }
-            
+    
+    if ($_SERVER['SERVER_NAME'] == "gradeless.se") {
+        require __DIR__ . '/pages/error/503.html';
+        return;
+    }
+    console_log($_SERVER['SERVER_NAME']);
+
     foreach ($routes as $path => $properties) {
 
         if ($path === $_SERVER['REDIRECT_URL']) {
