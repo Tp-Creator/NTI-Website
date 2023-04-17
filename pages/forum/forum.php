@@ -64,34 +64,47 @@
                     <button class="filterBut">Course 3</button>
                 </div>
 
-                <button id="askQuestion">Ask a question</button>
+                <?php
+                    //  Removes the ask a question button if your not signed in
+                    if(getUserRank() > 0){
+                        echo '<button id="askQuestion">Ask a question</button>';
+                    } 
+                ?>
+                <!-- <button id="askQuestion">Ask a question</button> -->
             </div>
 
-            <form id="addQuestionCard" style="display: none;">
-                <input class="formInput formTitel" placeholder="Enter your question" name="title" id="title"></input>
+            <?php
+                //  Removes the ask a question menu if not signed in
+                if(getUserRank() > 0){
+            ?>
+                    <form id="addQuestionCard" style="display: none;">
+                        <input class="formInput formTitel" placeholder="Enter your question" name="title" id="title"></input>
 
-                <!-- Input description -->
-                <textarea class="formInput formDescription" placeholder="Enter a description" rows="5" name="content" id="content"></textarea>
+                        <!-- Input description -->
+                        <textarea class="formInput formDescription" placeholder="Enter a description" rows="5" name="content" id="content"></textarea>
 
-                <div id="formFotter">
-                    <select class="optionsCon formOptionsCon" name="courseID" id="courseID">  
-                        <option class="" value="">Choose a "Course"</option>
+                        <div id="formFotter">
+                            <select class="optionsCon formOptionsCon" name="courseID" id="courseID">  
+                                <option class="" value="">Choose a "Course"</option>
 
-                        <?php 
-                                //  Loops as many choices as there are courses in the db
-                            for($i = 0; $i < sizeof($courses); $i++){
-                        ?>
-                            <option class="" value="<?php echo $courses[$i]->CourseID ?>"><?php echo $courses[$i]->CourseName ?></option>
-                        <?php 
-                            }
-                        ?>
-                    </select>
+                                <?php 
+                                        //  Loops as many choices as there are courses in the db
+                                    for($i = 0; $i < sizeof($courses); $i++){
+                                ?>
+                                    <option class="" value="<?php echo $courses[$i]->CourseID ?>"><?php echo $courses[$i]->CourseName ?></option>
+                                <?php 
+                                    }
+                                ?>
+                            </select>
 
-                    <div class="devider"></div>
+                            <div class="devider"></div>
 
-                    <button id="postQuestionButton" type="submit">Post</button>
-                </div>
-            </form>
+                            <button id="postQuestionButton" type="submit">Post</button>
+                        </div>
+                    </form>
+            <?php
+                }
+            ?>
         <header>
 
         <!-- Content feed -->
