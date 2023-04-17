@@ -308,7 +308,7 @@
             $time = "Right now";
         }
         elseif($diffNum < 6000){                        //  If there has gone less than 60 minutes
-            if($diffNum > 0100) {
+            if($diffNum >= 200) {
                 $time = $diff->format("%i minutes ago");
             }
             else{
@@ -316,7 +316,7 @@
             }
         }
         elseif($diffNum < 240000){                      //  If there has gone less than 24 hours
-            if($diffNum > 010000) {
+            if($diffNum >= 020000) {
                 $time = $diff->format("%h hours ago");
             }
             else{
@@ -324,7 +324,7 @@
             }
         }
         elseif($diffNum < 7000000){                     //  If there has gone less than 7 days
-            if($diffNum > 1000000) {
+            if($diffNum >= 1000000) {
                 $time = $diff->format("%a days ago");
             }
             else{
