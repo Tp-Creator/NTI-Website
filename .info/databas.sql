@@ -159,7 +159,7 @@ VALUES ('105');
 -- VALUES (1, 1, 1, 1680509100000, 1680513000000, 2); -- 1: dayly 2: weekly, 3: monthly, 4: termin 5: yearly
 
 -- Skapar programmering 1 på onsdagar kl 10:05-11:10
-INSERT INTO lesson (courseID, classID, roomID, starts, ends, repeated)
+INSERT INTO lesson (courseID, classID, roomID, start, end, repeated)
 VALUES (1, 1, 1, '2023-04-05 13:00:00', '2023-04-05 14:15:00', 2);  -- 1: dayly 2: weekly, 3: monthly, 4: termin 5: yearly
 
 
