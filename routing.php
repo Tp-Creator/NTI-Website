@@ -29,7 +29,7 @@ $errorPages = [
 // Negativa permission level i $routes fär 503
 $routes = [
     // Fake path                     Real path               Permission level
-    "/"                 =>    [ "/pages/index.php",                0 ],
+    ""                 =>    [ "/pages/index.php",                0 ],
 
     "/login"            =>    [ "/pages/account/login.php",        0 ],
     "/logout"           =>    [ "/pages/account/logout.php",       0 ],
@@ -64,7 +64,7 @@ function run() {
     global $routes;
     //  Ger inte URL parametrar
     $fakeURL = $_SERVER['REDIRECT_URL'];  // Varför inte REQUEST_URI?
-    
+
     $fakeURL = rtrim($fakeURL, "/");
 
     foreach ($routes as $path => $properties) {
