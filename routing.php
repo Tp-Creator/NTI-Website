@@ -16,7 +16,7 @@ rank = [
 */
 
 
-// Det här istället för magiska path's i run functionen?
+// Det här istället för magiska path's i run functionen
 $errorPages = [
  //Error code      Path
     "403" => "/pages/error/503.html",
@@ -63,22 +63,13 @@ run();
 function run() {
     global $routes;
     //  Ger inte URL parametrar
-    $fakeURL = $_SERVER['REDIRECT_URL'];
-
-    //  Om man skrivit en eller flera "/" i slutet av URLn så tar vi bort dem och redirectar till adressen utan "/"
-    //  ex. "/forum/" -> "/forum"
-    if ($fakeURL != rtrim($fakeURL, "/") && strlen(rtrim($fakeURL, "/")) > 3) {
-        header('Location: ' . rtrim($fakeURL, "/"));
-    }
+    $fakeURL = $_SERVER['REDIRECT_URL'];  // Varför inte REQUEST_URI?
     
-    //if ($_SERVER['SERVER_NAME'] == "gradeless.se") {
-    //    require __DIR__ . '/pages/error/503.html';
-    //    return;
-    //}
+    $fakeURL = rtrim($fakeURL, "/");
 
     foreach ($routes as $path => $properties) {
 
-        if ($path === $_SERVER['REDIRECT_URL']) {
+        if ($path === $fakeURL) {
             $rank = getUserRank();
 
             if ($rank < 0) {
@@ -86,7 +77,7 @@ function run() {
             }
 
             if ($properties[1] < 0 && $_SERVER['SERVER_NAME'] == "gradeless.se"){
-                require __DIR__ . '/pages/error/503.html';
+                // require __DIR__ . '/pages/error/503.html';
             }
             //  If your rank is high enough you get to see the page
             else if ($properties[1] <= $rank) {
