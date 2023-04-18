@@ -15,7 +15,18 @@ rank = [
 ]
 */
 
-// Negativa permission level i $routes fär 503?
+
+// Det här istället för magiska path's i run functionen?
+$errorPages = [
+ //Error code      Path
+    "403" => "/pages/error/503.html",
+    "404" => "/pages/error/404.html",
+    "503" => "/pages/error/503.html",
+];
+
+
+
+// Negativa permission level i $routes fär 503
 $routes = [
     // Fake path                     Real path               Permission level
     "/"                 =>    [ "/pages/index.php",                0 ],
@@ -33,7 +44,7 @@ $routes = [
     "/games"            =>    [ "/pages/games/games.php",         -1 ],
     "/schedule"         =>    [ "/pages/schedule/schedule.php",   -1 ],
 
-    "/memes"            =>    [ "/pages/error/503.html",           0 ],
+    "/memes"            =>    [ "/pages/memes/memes.php",         -1 ],
     
 
     "/google"           =>    [ "/pages/account/googleLogin.php", -1 ],          //  Test google login
@@ -45,13 +56,6 @@ $routes = [
     "/503"              =>    [ "/pages/eastereggs/503.php",       0 ],
 ];
 
-// Det här istället för magiska path's i run functionen?
-//$errorPages = [
-// Error code      Path
-//    "403" => "/pages/error/503.html",
-//    "404" => "/pages/error/404.html",
-//    "503" => "/pages/error/503.html",
-//];
 
 
 
