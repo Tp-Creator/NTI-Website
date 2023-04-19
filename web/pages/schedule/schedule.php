@@ -10,7 +10,9 @@
     $courses = getCourses();
 
     $lessons = getLessons(1);
-    $classes = getClassById(1);
+    $class = getClassById(1);
+    $classes = getClasses();
+    console_log($classes);
 
 ?>
 
@@ -42,6 +44,8 @@
             <?php echo drawNavbar() ?>
         </nav>
     </div>
+
+
 
     <img id="scheduel-img" src="/web/public/img/schedule/TE21.jpg" alt="">
 
