@@ -26,57 +26,15 @@
         </nav>
     </div>
 
-    <header>
+    <div id="contentFeed">
 
-            <!-- Searchbar  -->
-        <form id="searchbar" action="">
+        <div class="gCard">
+            <img src="" alt="">
 
-            <input id="searchfield" placeholder="Search" type="text">
+            <p>Title</p>
+            <p>publisher</p>
 
-            <button id="searchButton">
-                <img src="/public/style/includes/icons/search_Icon_v3.svg" alt="">
-            </button>
-
-        </form>
-
-            <!-- Page options & information -->
-        <div class="verticalWrap">
-
-            <select class="optionsCon" name="" id="">
-
-                <option value="">Latest</option>
-                <option value="">Bookmarked</option>
-
-            </select>
-
-            <div class="devider"></div>
-
-            <p class="infoText">There are "amount" new articles today!</p>
-
-        </div>
-
-    </header>
-
-
-
-
-    <div class="gamesContentFeed">
-        
-        <div class="gamesCard">
-
-            <!-- Game title  -->
-            <p class="">Game Title</p>
-
-            <!-- Username  -->
-            <p class="">Username_12345</p>
-
-            <!-- Icons  -->
-            <div>
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-            </div>
-
+            <a href="">Play</a>
         </div>
 
     </div>

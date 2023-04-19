@@ -57,7 +57,7 @@
         ?>
     </select>
     
-    <img id="scheduel_img" src="/public/img/schedule/te_21.png" alt="">
+    <img id="scheduel_img" src="/public/img/schedule/TE21.png" alt="">
 
     <div class="container">
         <footer>
