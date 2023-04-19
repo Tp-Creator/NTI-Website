@@ -16,4 +16,4 @@ print(menu)
 
 
 # (SELECT * FROM food_menu WHERE dt = 3) Hämtar alla rader från food_menu om dt = 3
-# (INSERT ) Hämtar alla rader från food_menu om dt = 3
+# (INSERT INTO forum_question (CourseID, userID, Title, Content, dt, Upvote) VALUES (?, ?, ?, ?, ?, ?))
