@@ -26,6 +26,7 @@
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/public/js/schedule/schedule.js"></script>
     <!-- <script src="/public/js/forum/forum.js"></script> -->
 
     <!-- Basic style links -->
@@ -57,7 +58,7 @@
         ?>
     </select>
     
-    <img id="scheduel_img" src="/public/img/schedule/te_21.png" alt="">
+    <img id="schedule-img" src="/public/img/schedule/TE21.png" alt="">
 
     <div class="container">
         <footer>
