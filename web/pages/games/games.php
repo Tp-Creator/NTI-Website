@@ -27,16 +27,42 @@
     </div>
 
     <div id="contentFeed">
-
         <div class="gCard">
-            <img src="" alt="">
+            <img class="gcIMG" src="/public/style/includes/img/placeholder_16_9.svg" alt="">
+            <div class="gCardFooter">
+                <p class="gcTitle">Title</p>
+                <p class="gcDesc">publisher</p>
 
-            <p>Title</p>
-            <p>publisher</p>
-
-            <a href="">Play</a>
+                <a class="gcBtn" href="">Play</a>
+            </div>
         </div>
 
+        <div class="gCard">
+            <img class="gcIMG" src="/public/style/includes/img/placeholder_16_9.svg" alt="">
+            <div class="gCardFooter">
+                <p class="gcTitle">Title</p>
+                <p class="gcDesc">publisher</p>
+
+                <a class="gcBtn" href="">Play</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <footer>
+            <div class="footerSection">
+                <p class="footerTitle">Gradeless</p>
+                <a class="footerSubject" href="">Legacy</a>
+                <a class="footerSubject" href="">About us</a>
+            </div>
+            <div class="footerSection">
+                <p class="footerTitle">Support</p>
+                <a class="footerSubject" href="">Contact admin</a>
+                <a class="footerSubject" href="">Help Gradeless</a>
+            </div>
+
+            <p id="footerHero">2023・www.gradeless.se・V1</p>
+        </footer>
     </div>
 
 </body>
