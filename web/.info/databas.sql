@@ -103,6 +103,15 @@ CREATE TABLE forum_answer (
     Upvote int
 );
 
+-- För matsedel
+CREATE TABLE food_menu (
+    id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    dt datetime NOT NULL,
+    food varchar(64),
+    vegFood varchar(64),
+    CO2 float, 
+    vegCO2 float 
+);
 
 -- CREATE TABLE food_Calendar (
 --     DayID
