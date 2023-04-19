@@ -45,6 +45,15 @@
         </nav>
     </div>
 
+    <select name="class-select" id="class-select">
+        <option value="">Select your class</option>
+        <?php
+            for($i = 0; $i < sizeof($classes); $i++){
+                $id = $classes[$i]->className;
+                echo "<option value='$id'>$id</option>";
+            }
+        ?>
+    </select>
 
 
     <img id="scheduel-img" src="/web/public/img/schedule/TE21.jpg" alt="">
