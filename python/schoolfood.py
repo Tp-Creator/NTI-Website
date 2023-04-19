@@ -3,7 +3,7 @@ from urllib import request
 url = 'http://www.skolfood.foodservo.com/view?menus'
 response = request.urlopen(url)
 html = response.read().decode('utf-8')
-this_weeks_food_HTML = html.split("<section class ='section_standard_max'>")[1]  # Behövs inte
+this_weeks_food_HTML = html.split("<section class ='section_standard_max'>")[1] # [1] gör att det bara är den första veckan som tas
 
 menu = []
 for day_HTML in this_weeks_food_HTML.split("dag")[1:]:
