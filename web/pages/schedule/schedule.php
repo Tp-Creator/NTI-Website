@@ -31,6 +31,7 @@
     <!-- Basic style links -->
     <link rel="stylesheet" href="/public/style/mainStyle.css">
     <link rel="stylesheet" href="/public/style/commonStyle.css">
+    <link rel="stylesheet" href="/public/style/pages/scheduleStyle.css">
     <!-- Page style links -->
 
     <title>Schedule</title>
@@ -56,7 +57,7 @@
     </select>
 
 
-    <img id="scheduel-img" src="/web/public/img/schedule/TE21.jpg" alt="">
+    <img id="scheduel_img" src="/public/img/schedule/te_21.png" alt="">
 
 </body>
 </html>
