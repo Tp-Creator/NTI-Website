@@ -149,7 +149,17 @@ VALUES ('hej@hejj.com', 'Magistern', 'Niklas', 'Hellström', 3);
 
 -- Skapar TE21 som en klass som är 2:a året på gymnasiet
 INSERT INTO class (className, grade)
+VALUES ('TE22', 1);
+INSERT INTO class (className, grade)
 VALUES ('TE21', 2);
+INSERT INTO class (className, grade)
+VALUES ('TE20', 3);
+INSERT INTO class (className, grade)
+VALUES ('IT22', 1);
+INSERT INTO class (className, grade)
+VALUES ('IT21', 2);
+INSERT INTO class (className, grade)
+VALUES ('IT20', 3);
 
 INSERT INTO room (name)
 VALUES ('105');
