@@ -46,6 +46,7 @@
         </nav>
     </div>
 
+    
     <select name="class-select" id="class-select">
         <option value="">Select your class</option>
         <?php
@@ -55,9 +56,25 @@
             }
         ?>
     </select>
-
-
+    
     <img id="scheduel_img" src="/public/img/schedule/te_21.png" alt="">
+
+    <div class="container">
+        <footer>
+            <div class="footerSection">
+                <p class="footerTitle">Gradeless</p>
+                <a class="footerSubject" href="">Legacy</a>
+                <a class="footerSubject" href="">About us</a>
+            </div>
+            <div class="footerSection">
+                <p class="footerTitle">Support</p>
+                <a class="footerSubject" href="">Contact admin</a>
+                <a class="footerSubject" href="">Help Gradeless</a>
+            </div>
+
+            <p id="footerHero">2023・www.gradeless.se・V1</p>
+        </footer>
+    </div>
 
 </body>
 </html>
