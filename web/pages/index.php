@@ -36,14 +36,14 @@
         <img class="infoImg" src="../public/style/includes/img/placeholder.svg" alt="">
         <div class="infoSectionHeader">
             <p class="infoTitle">Lounge</p>
-            <p class="infoDes">description</p>
+            <p class="infoDes">The lounge highlights various parts of Gradeless, such as the news, food schedule and updates from the developers.</p>
         </div>
     </div>
 
     <div class="infoSection sectionReverse">
         <div class="infoSectionHeader">
             <p class="infoTitle">Forum</p>
-            <p class="infoDes">Description</p>
+            <p class="infoDes">The forum is a place where you can ask and answer questions on varying subjects.</p>
         </div>
         <img class="infoImg" src="../public/style/includes/img/placeholder.svg" alt="">
     </div>
@@ -52,14 +52,14 @@
         <img class="infoImg" src="../public/style/includes/img/placeholder.svg" alt="">
         <div class="infoSectionHeader">
             <p class="infoTitle">Schedule</p>
-            <p class="infoDes">description</p>
+            <p class="infoDes">Schedules for all the classes.</p>
         </div>
     </div>
 
     <div class="infoSection sectionReverse">
         <div class="infoSectionHeader">
             <p class="infoTitle">Games</p>
-            <p class="infoDes">Description</p>
+            <p class="infoDes">Play games that were created and uploaded by students or even make your own.</p>
         </div>
         <img class="infoImg" src="../public/style/includes/img/placeholder.svg" alt="">
     </div>
