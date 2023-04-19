@@ -38,6 +38,16 @@
         </div>
 
         <div class="gCard">
+            <img class="gcIMG" src="/public/img/gamesThumbnail/tictactoe_Kirill_Y.png" alt="">
+            <div class="gCardFooter">
+                <p class="gcTitle">Tic Tac Toe</p>
+                <p class="gcDesc">Kirill Y - TE21</p>
+
+                <a class="gcBtn" href="/games/tictactoe">Play</a>
+            </div>
+        </div>
+
+        <div class="gCard">
             <img class="gcIMG" src="/public/style/includes/img/placeholder_16_9.svg" alt="">
             <div class="gCardFooter">
                 <p class="gcTitle">Title</p>
