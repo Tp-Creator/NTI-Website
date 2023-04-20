@@ -7,7 +7,7 @@
     function getFoodDay(){
         global $conn;
 
-        $stmt = $conn->prepare("SELECT * FROM foodMenu;");
+        $stmt = $conn->prepare("SELECT * FROM food_menu ORDER BY dt ASC;");
         $stmt->execute();
 
         $stmt = $stmt->get_result();
