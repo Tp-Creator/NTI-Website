@@ -2,3 +2,5 @@
 
 git pull
 systemctl restart httpd
+
+# Run python files

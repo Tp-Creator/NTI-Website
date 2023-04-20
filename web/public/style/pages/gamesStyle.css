@@ -30,6 +30,8 @@
 .gcIMG {
     aspect-ratio: 16/9;
     width: 100%;
+
+    border-radius: 18px 18px 0px 0px;
 }
 
 .gcTitle {
@@ -50,11 +52,33 @@
     margin-top: 18px;
     padding: 6px 18px;
 
-    border-radius: 18px;
+    border-radius: 12px;
 
     text-align: center;
     font-family: 'poppins-medium';
 
     color: #101014;
     background-color: #d9d9d9;
+}
+
+#returnBtn {
+    z-index: 1;
+    position: absolute;
+
+    aspect-ratio: 1/1;
+
+    margin: 8px 0px 0px 8px;
+    padding: 8px;
+
+    height: 24px;
+
+    border-radius: 42px;
+
+    background-color: #101014;
+}
+
+#returnIcon {
+    aspect-ratio: 1/1;
+    width: 100%;
+    height: 100%;
 }

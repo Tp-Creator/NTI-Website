@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="/public/style/commonStyle.css">
     <link rel="stylesheet" href="/public/style/pages/newsStyle.css">
 
-    <title>News</title>
+    <title>Lounge</title>
 </head>
 <body>
     
@@ -25,69 +25,95 @@
             <?php echo drawNavbar() ?>
         </nav>
     </div>
-    
-    <header>
-            <!-- Searchbar  -->
-        <form id="searchbar" action="">
 
-            <input id="searchfield" placeholder="Search" type="text">
+    <div class="section">
+        <p class="sectionTitle">Lunch</p>
+        <p class="seactionMeta">Week 16</p>
+    </div>
 
-            <button id="searchButton">
-                <img src="/public/style/includes/icons/search_Icon_v3.svg" alt="">
-            </button>
+    <div id="contentFeed">
 
-        </form>
+        <p class="title">Monday</p>
 
-        <div class="verticalCon">
-            <a class="hotlinkBut" href="">News</a>
-
-            <a class="hotlinkBut" href="">Dev log</a>
-        </div>
-    </header>
-
-
-
-
-    <div class="contentFeed">
-
-        <div>
-            <h3>Food</h3>
-            <p>Description</p>
+        <div class="foodCard">
+            <div class="fcSection">
+                <img class="fcIcon" src="" alt="">
+                <p class="fcTitle">Normal mat</p>
+            </div>
+            <div class="fcSection">
+                <img class="fcIcon" src="" alt="">
+                <p class="fcTitle">Veg mat</p>
+            </div>
         </div>
 
-        <h3>Week 11</h3>
-        
-        <!-- Food card  -->
-        <div>
-            <div>
-                <p>Mon 23-03-13</p>
-                <p>Food name</p>
-                <p>Veg: Food name</p>
+        <p class="title">Tuesday</p>
+
+        <div class="foodCard">
+            <div class="fcSection">
+                <img class="fcIcon" src="" alt="">
+                <p class="fcTitle">Normal mat</p>
+            </div>
+            <div class="fcSection">
+                <img class="fcIcon" src="" alt="">
+                <p class="fcTitle">Veg mat</p>
+            </div>
+        </div>
+
+        <p class="title">Wednesday</p>
+
+        <div class="foodCard">
+            <div class="fcSection">
+                <img class="fcIcon" src="" alt="">
+                <p class="fcTitle">Normal mat</p>
+            </div>
+            <div class="fcSection">
+                <img class="fcIcon" src="" alt="">
+                <p class="fcTitle">Veg mat</p>
+            </div>
+        </div>
+
+        <p class="title">Thursday</p>
+
+        <div class="foodCard">
+            <div class="fcSection">
+                <img class="fcIcon" src="" alt="">
+                <p class="fcTitle">Normal mat</p>
+            </div>
+            <div class="fcSection">
+                <img class="fcIcon" src="" alt="">
+                <p class="fcTitle">Veg mat</p>
+            </div>
+        </div>
+
+        <p class="title">Friday</p>
+
+        <div class="foodCard">
+            <div class="fcSection">
+                <img class="fcIcon" src="" alt="">
+                <p class="fcTitle">Normal mat</p>
+            </div>
+            <div class="fcSection">
+                <img class="fcIcon" src="" alt="">
+                <p class="fcTitle">Veg mat</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <footer>
+            <div class="footerSection">
+                <p class="footerTitle">Gradeless</p>
+                <a class="footerSubject" href="">Legacy</a>
+                <a class="footerSubject" href="">About us</a>
+            </div>
+            <div class="footerSection">
+                <p class="footerTitle">Support</p>
+                <a class="footerSubject" href="">Contact admin</a>
+                <a class="footerSubject" href="">Help Gradeless</a>
             </div>
 
-            <!-- google search of the food  -->
-            <a href="">
-                <img src="" alt="">
-            </a>
-        </div>
-
-        <h3>News</h3>
-        
-        <div class="card">
-            <div class="verticalWrap">
-                <p class="cardUsername">Username_12345</p>
-
-                <p class="cardInfoText">2023 - 03 - 02 16:15</p>
-            </div>
-
-            <p class="cardTitleText">Titel</p>
-
-            <p class="cardContentText">Description</p>
-
-        </div>
-
-        <h3>Dev log</h3>
-
+            <p id="footerHero">2023・www.gradeless.se・V1</p>
+        </footer>
     </div>
 
 </body>
