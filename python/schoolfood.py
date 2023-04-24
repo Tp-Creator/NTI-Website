@@ -14,7 +14,7 @@ for day_HTML in this_weeks_food_HTML.split("dag")[1:]:
         ])
 
 with open("test", "w") as file:
-    file.write("\n".join("|".join(item) for item in menu))
+    file.write("\n".join("|".join(str(i) for i in item) for item in menu))
 print("Success")
 
 
