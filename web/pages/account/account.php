@@ -41,6 +41,9 @@
 
     <a href="/logout">Logout</a>
 
+    <?php 
+        echo drawFooter();
+    ?>
 
 </body>
 </html>

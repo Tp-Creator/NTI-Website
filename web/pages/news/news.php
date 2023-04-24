@@ -108,22 +108,9 @@
         </div>
     </div>
 
-    <div class="container">
-        <footer>
-            <div class="footerSection">
-                <p class="footerTitle">Gradeless</p>
-                <a class="footerSubject" href="">Legacy</a>
-                <a class="footerSubject" href="">About us</a>
-            </div>
-            <div class="footerSection">
-                <p class="footerTitle">Support</p>
-                <a class="footerSubject" href="">Contact admin</a>
-                <a class="footerSubject" href="">Help Gradeless</a>
-            </div>
-
-            <p id="footerHero">2023・www.gradeless.se・V1</p>
-        </footer>
-    </div>
+    <?php 
+        echo drawFooter();
+    ?>
 
 </body>
 </html>
