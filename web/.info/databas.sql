@@ -106,12 +106,15 @@ CREATE TABLE forum_answer (
 -- För matsedel
 CREATE TABLE food_menu (
     id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    dt datetime NOT NULL,
+    dt date NOT NULL,
     food varchar(64),
     vegFood varchar(64),
     CO2 float, 
     vegCO2 float 
 );
+
+INSERT INTO food_menu (dt, food, vegFood, CO2, vegCO2)
+VALUES ('2023-04-21', 'Köttbullar och potatis puré', 'Vegobullar', '', 1);
 
 -- CREATE TABLE food_Calendar (
 --     DayID
