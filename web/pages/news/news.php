@@ -1,6 +1,7 @@
 <?php 
     //  Includes php elements
     include_once('includes/HTMLElements/general.elements.php');
+    include_once('includes/HTMLElements/foodmenu.elements.php');
 ?>
 
 <!DOCTYPE html>
@@ -32,6 +33,12 @@
     </div>
 
     <div id="contentFeed">
+
+        <?php
+        
+            echo foodCards();
+
+        ?>
 
         <p class="title">Monday</p>
 

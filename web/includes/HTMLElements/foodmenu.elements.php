@@ -1,6 +1,6 @@
 <?php
 
-require_once('/includes/dbh.func/dbh.foodmenu.php');
+require_once('includes/dbh.func/dbh.foodmenu.php');
 
 
 
@@ -16,26 +16,27 @@ function foodCards(){
 
     
     for($i = 0; $i < sizeof($allFood); $i++){
+        $dt = $allFood[$i]->dt;
+        $day = date("D", $dt);
+        $food = $allFood[$i]->food;
+        $vegFood = $allFood[$i]->vegFood;
 
-        $cards .=  "<p class='title'>Monday</p>
+        $cards .=  "<p class='title'>$day</p>
         
                         <div class='foodCard'>
                             <div class='fcSection'>
                                 <img class='fcIcon' src='' alt=''>
-                                <p class='fcTitle'>Normal mat</p>
+                                <p class='fcTitle'>Normal mat: $food</p>
                             </div>
                             <div class='fcSection'>
                                 <img class='fcIcon' src='' alt=''>
-                                <p class='fcTitle'>Veg mat</p>
+                                <p class='fcTitle'>Veg mat: $vegFood</p>
                             </div>
                         </div>";
 
     }
 
-
-
-
-
+    return $cards;
 
 }
 
