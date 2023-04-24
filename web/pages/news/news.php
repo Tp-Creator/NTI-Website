@@ -27,10 +27,10 @@
         </nav>
     </div>
 
-    <div class="section">
+    <!-- <div class="section">
         <p class="sectionTitle">Lunch</p>
         <p class="seactionMeta">Week 16</p>
-    </div>
+    </div> -->
 
     <div id="contentFeed">
 
@@ -39,6 +39,8 @@
             echo foodCards();
 
         ?>
+
+        Everything under here is not automaticly written
 
         <p class="title">Monday</p>
 

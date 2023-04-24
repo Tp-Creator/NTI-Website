@@ -114,7 +114,13 @@ CREATE TABLE food_menu (
 );
 
 INSERT INTO food_menu (dt, food, vegFood, CO2, vegCO2)
-VALUES ('2023-04-21', 'Köttbullar och potatis puré', 'Vegobullar', '', 1);
+VALUES ('2023-04-21', 'Köttbullar och potatis puré', 'Vegobullar', 0.94, 0.34);
+
+INSERT INTO food_menu (dt, food, vegFood, CO2, vegCO2)
+VALUES ('2023-04-19', 'Pannkakor', 'Pannkakor', 0.45, 0.45);
+
+INSERT INTO food_menu (dt, food, vegFood, CO2, vegCO2)
+VALUES ('2023-04-24', 'Oxpytt med rödbetor', 'Vegetarisk pytt med garbanzobönor serveras med rödbetor', 0.62, 0);
 
 -- CREATE TABLE food_Calendar (
 --     DayID

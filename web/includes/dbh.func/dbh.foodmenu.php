@@ -7,7 +7,13 @@
     function getFoodDay(){
         global $conn;
 
-        $stmt = $conn->prepare("SELECT * FROM food_menu ORDER BY dt ASC;");
+            //  Fetches all rows that are in the current week or later
+            //  And sorts them by date, early first
+        $stmt = $conn->prepare(
+            "SELECT * FROM food_menu
+             WHERE DATE(dt) >= DATE(NOW()) - INTERVAL WEEKDAY(NOW())
+             DAY ORDER BY dt ASC;"
+             );
         $stmt->execute();
 
         $stmt = $stmt->get_result();
@@ -24,8 +30,26 @@
             array_push($result, $finfo);
         }
 
-        //  return an array with all rows where you can reach the data by taking $result[i]
-        return $result;
+        
+        //  Sorting all the days on the week
+        $weekResult = [];
+        $currWeek = Null;
+        for($i = 0; $i < sizeof($result); $i++){
+            $dt = $result[$i]->dt;
+            $weekNum = date("W", strtotime($dt));
+            
+            if($currWeek != $weekNum){
+                //  pushing new array with current week
+                $currWeek = $weekNum;
+                array_push($weekResult, [$weekNum]);
+            }
+
+                //  Pushing the day into the correct array, the latest one
+            array_push($weekResult[sizeof($weekResult)-1], $result[$i]);
+
+        }
+        
+        return $weekResult;
     }
 
 ?>
