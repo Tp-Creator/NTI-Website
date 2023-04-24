@@ -49,7 +49,6 @@
 
     
     <select name="class-select" id="class-select">
-        <option value="">Select your class</option>
         <?php
             for($i = 0; $i < sizeof($classes); $i++){
                 $id = $classes[$i]->className;
