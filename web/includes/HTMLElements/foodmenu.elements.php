@@ -24,7 +24,7 @@ function foodCards(){
                         <p id='lcTitle'>Lunch, Week $weekNum</p>
 
                         <!--Placeholder för medellande om det behös.-->
-                        <!-- <p id='lcMsg'>Message if needed</p> -->
+                        <p id='lcMsg'>Note! The information is provided by the organization delivering the food. Changes may occur.</p>
                     ";
 
     
@@ -33,7 +33,8 @@ function foodCards(){
             $day = $week[$d];
 
             // $dt = $day->dt;
-            $dayName = date("l", strtotime($day->dt));
+            // $dayName = date("l", strtotime($day->dt));
+            $dayName = date("D j", strtotime($day->dt));
             $food = $day->food;
             $vegFood = $day->vegFood;
 

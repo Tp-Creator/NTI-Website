@@ -122,6 +122,52 @@ VALUES ('2023-04-19', 'Pannkakor', 'Pannkakor', 0.45, 0.45);
 INSERT INTO food_menu (dt, food, vegFood, CO2, vegCO2)
 VALUES ('2023-04-24', 'Oxpytt med rödbetor', 'Vegetarisk pytt med garbanzobönor serveras med rödbetor', 0.62, 0);
 
+INSERT INTO food_menu (dt, food, vegFood, CO2, vegCO2)
+VALUES ('2023-04-25', 'Pastasås med skinka samt pasta', 'Pastasås med blomkål och smörbönor serveras med pasta', 0.62, 0);
+
+INSERT INTO food_menu (dt, food, vegFood, CO2, vegCO2)
+VALUES ('2023-04-26', 'Panerad fisk med kokt potatis och kall citronsås', 'Morotsbiff med kokt potatis och kall citronsås', 0.6, 0.23);
+
+INSERT INTO food_menu (dt, food, vegFood, CO2, vegCO2)
+VALUES ('2023-04-27', 'Het sojafärsgryta med chili serveras med ris', 'Het sojafärsgryta med chili serveras med ris', 0.19, 0.19);
+
+INSERT INTO food_menu (dt, food, vegFood, CO2, vegCO2)
+VALUES ('2023-04-28', 'Nötfärsbiff med rostad potatis samt BBQsås', 'Vegetarisk schnitzel serveras med rostad potatis och bbq sås', 0.78, 0.24);
+
+
+
+INSERT INTO food_menu (dt, food, vegFood, CO2, vegCO2)
+VALUES ('2023-05-01', 'The Gradeless team wishes you a nice weekend/holiday', 'The Gradeless team wishes you a nice weekend/holiday', 0, 0);
+
+INSERT INTO food_menu (dt, food, vegFood, CO2, vegCO2)
+VALUES ('2023-05-02', 'Oxjärpar med kokt potatis och gräddsås', 'Vegan köttbullar med potatis och gräddsås', 2.06, 0.03);
+
+INSERT INTO food_menu (dt, food, vegFood, CO2, vegCO2)
+VALUES ('2023-05-03', 'Tomatsoppa serveras med mjukt bröd', 'Tomatsoppa serveras med mjukt bröd', 0.2, 0.2);
+
+INSERT INTO food_menu (dt, food, vegFood, CO2, vegCO2)
+VALUES ('2023-05-04', 'Grillkorv med hemlagat potatismos och gurkmajonnäs', 'Vegetarisk korv med potatismos och gurkmajonnäs', 0.54, 0.35);
+
+INSERT INTO food_menu (dt, food, vegFood, CO2, vegCO2)
+VALUES ('2023-05-05', 'Tacoröra serveras med ris och kall vitlökssås', 'Tacoröra på sojafärs serveras med ris och kall vitlökssås', 1.32, 0.14);
+
+
+
+INSERT INTO food_menu (dt, food, vegFood, CO2, vegCO2)
+VALUES ('2023-05-08', 'Korvstroganoff med ris', 'Kikärtsstroganoff serveras med ris', 0.46, 0.24);
+
+INSERT INTO food_menu (dt, food, vegFood, CO2, vegCO2)
+VALUES ('2023-05-09', 'Sprödbakad fisk med kokt potatis samt kall gräslökssås', 'Grönsaksbiff med kokt potatis och kall gräslökssås', 0.44, 0.12);
+
+INSERT INTO food_menu (dt, food, vegFood, CO2, vegCO2)
+VALUES ('2023-05-10', 'Köttbullar och makaroner och ketchup', 'Falafel med makaroner', 0.44, 0.14);
+
+INSERT INTO food_menu (dt, food, vegFood, CO2, vegCO2)
+VALUES ('2023-05-11', 'Kyckling med annans och curry serveras med ris', 'Garbanzobönor med ananas och curry serveras med ris', 0.41, 0.09);
+
+INSERT INTO food_menu (dt, food, vegFood, CO2, vegCO2)
+VALUES ('2023-05-12', 'Grekisk pastagratäng med oliver, tomat och salladsost', 'Grekisk pastagratäng med oliver, tomat och salladsost', 0.3, 0.3);
+
 -- CREATE TABLE food_Calendar (
 --     DayID
 
