@@ -13,7 +13,6 @@
 // Incluces database account, names and pwd:s
 $dbServername = "localhost";
 $dbUsername = "root";
-$dbPassword = "";
 $dbPassword = "APL-UPPGIFTER3";
 $dbName = "nti_db";
 
