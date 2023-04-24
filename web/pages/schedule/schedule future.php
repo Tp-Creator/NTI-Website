@@ -458,6 +458,8 @@
         </div>
     </div>
         
-    <footer></footer>
+    <?php 
+        echo drawFooter();
+    ?>
 </body>
 </html>

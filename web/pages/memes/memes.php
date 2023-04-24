@@ -54,5 +54,9 @@
 
     <section class="contentFeed"></section>
 
+    <?php 
+        echo drawFooter();
+    ?>
+
 </body>
 </html>

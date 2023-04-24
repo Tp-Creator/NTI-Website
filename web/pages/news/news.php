@@ -27,10 +27,10 @@
         </nav>
     </div>
 
-    <div class="section">
+    <!-- <div class="section">
         <p class="sectionTitle">Lunch</p>
         <p class="seactionMeta">Week 16</p>
-    </div>
+    </div> -->
 
     <div id="contentFeed">
 
@@ -39,6 +39,8 @@
             echo foodCards();
 
         ?>
+
+        Everything under here is not automaticly written
 
         <p class="title">Monday</p>
 
@@ -106,22 +108,9 @@
         </div>
     </div>
 
-    <div class="container">
-        <footer>
-            <div class="footerSection">
-                <p class="footerTitle">Gradeless</p>
-                <a class="footerSubject" href="">Legacy</a>
-                <a class="footerSubject" href="">About us</a>
-            </div>
-            <div class="footerSection">
-                <p class="footerTitle">Support</p>
-                <a class="footerSubject" href="">Contact admin</a>
-                <a class="footerSubject" href="">Help Gradeless</a>
-            </div>
-
-            <p id="footerHero">2023・www.gradeless.se・V1</p>
-        </footer>
-    </div>
+    <?php 
+        echo drawFooter();
+    ?>
 
 </body>
 </html>
