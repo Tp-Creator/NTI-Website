@@ -20,3 +20,6 @@ print("Success")
 
 # (SELECT * FROM food_menu WHERE dt = 3) Hämtar alla rader från food_menu om dt = 3
 # (INSERT INTO forum_question (CourseID, userID, Title, Content, dt, Upvote) VALUES (?, ?, ?, ?, ?, ?))
+
+# INSERT INTO food_menu (dt, food, vegFood, CO2, vegCO2)
+# VALUES ('2023-04-24', 'Oxpytt med rödbetor', 'Vegetarisk pytt med garbanzobönor serveras med rödbetor', 0.62, 0);
