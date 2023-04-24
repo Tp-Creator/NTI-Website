@@ -27,85 +27,12 @@
         </nav>
     </div>
 
-    <!-- <div class="section">
-        <p class="sectionTitle">Lunch</p>
-        <p class="seactionMeta">Week 16</p>
-    </div> -->
-
     <div id="contentFeed">
-
         <?php
         
             echo foodCards();
 
         ?>
-
-        Everything under here is not automaticly written
-
-        <p class="title">Monday</p>
-
-        <div class="foodCard">
-            <div class="fcSection">
-                <img class="fcIcon" src="" alt="">
-                <p class="fcTitle">Normal mat</p>
-            </div>
-            <div class="fcSection">
-                <img class="fcIcon" src="" alt="">
-                <p class="fcTitle">Veg mat</p>
-            </div>
-        </div>
-
-        <p class="title">Tuesday</p>
-
-        <div class="foodCard">
-            <div class="fcSection">
-                <img class="fcIcon" src="" alt="">
-                <p class="fcTitle">Normal mat</p>
-            </div>
-            <div class="fcSection">
-                <img class="fcIcon" src="" alt="">
-                <p class="fcTitle">Veg mat</p>
-            </div>
-        </div>
-
-        <p class="title">Wednesday</p>
-
-        <div class="foodCard">
-            <div class="fcSection">
-                <img class="fcIcon" src="" alt="">
-                <p class="fcTitle">Normal mat</p>
-            </div>
-            <div class="fcSection">
-                <img class="fcIcon" src="" alt="">
-                <p class="fcTitle">Veg mat</p>
-            </div>
-        </div>
-
-        <p class="title">Thursday</p>
-
-        <div class="foodCard">
-            <div class="fcSection">
-                <img class="fcIcon" src="" alt="">
-                <p class="fcTitle">Normal mat</p>
-            </div>
-            <div class="fcSection">
-                <img class="fcIcon" src="" alt="">
-                <p class="fcTitle">Veg mat</p>
-            </div>
-        </div>
-
-        <p class="title">Friday</p>
-
-        <div class="foodCard">
-            <div class="fcSection">
-                <img class="fcIcon" src="" alt="">
-                <p class="fcTitle">Normal mat</p>
-            </div>
-            <div class="fcSection">
-                <img class="fcIcon" src="" alt="">
-                <p class="fcTitle">Veg mat</p>
-            </div>
-        </div>
     </div>
 
     <?php 

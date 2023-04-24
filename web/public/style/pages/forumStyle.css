@@ -230,6 +230,7 @@ body {
 
 #questionCardFeed {
     grid-column: 2;
+    /* min-height: 40vh; */
 
     display: grid;
     grid-template-columns: repeat(2, minmax(270px , 1000px));
@@ -364,14 +365,17 @@ body {
 }
 
 #filterCon {
-    flex: 0.85;
+    flex-grow: 1;
+
+    /* flex: 0.85; */
     /* border-radius: 18px; */
 
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
     gap: 10px;
 
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
 }
 #filterCon::-webkit-scrollbar {
     display: none;

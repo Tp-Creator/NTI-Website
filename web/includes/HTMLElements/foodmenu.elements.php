@@ -19,12 +19,15 @@ function foodCards(){
         $week = $allFood[$w];
         $weekNum = $week[0];        //   Första index är veckonumret
 
-        // Visar vilken vecka det är
-        $cards .= " <div class='section'>
-                        <p class='sectionTitle'>Lunch</p>
-                        <p class='seactionMeta'>Week $weekNum</p>
-                    </div>";
+        $cards .= "
+                    <div class='weekLunchCard'>
+                        <p id='lcTitle'>Lunch, Week $weekNum</p>
 
+                        <!--Placeholder för medellande om det behös.-->
+                        <!-- <p id='lcMsg'>Message if needed</p> -->
+                    ";
+
+    
             // Vi börjar på andra index:et - Ett kort per dag
         for($d = 1; $d < sizeof($week); $d++){
             $day = $week[$d];
@@ -33,20 +36,28 @@ function foodCards(){
             $dayName = date("l", strtotime($day->dt));
             $food = $day->food;
             $vegFood = $day->vegFood;
-    
-            $cards .=  "<p class='title'>$dayName</p>
-            
-                            <div class='foodCard'>
-                                <div class='fcSection'>
-                                    <img class='fcIcon' src='' alt=''>
-                                    <p class='fcTitle'>Normal mat: $food</p>
-                                </div>
-                                <div class='fcSection'>
-                                    <img class='fcIcon' src='' alt=''>
-                                    <p class='fcTitle'>Veg mat: $vegFood</p>
-                                </div>
-                            </div>";
+
+            $cards .=  "
+                        <div class='lcCon'>
+                            <div class='lcLongLine'></div>
+                            <p class='lcDay'>$dayName</p>
+                            <div class='lcShortLine'></div>
+                        </div>
+                        <div class='lcCon'>
+                            <img class='lcIcon' src='/public/style/includes/icons/foodIcon.svg'>
+                            <p class='lcContent'>$food</p>
+                        </div>
+                        <div class='lcCon lcVeg'>
+                            <img class='lcIcon' src='public/style/includes/icons/foodVegIcon.svg'>
+                            <p class='lcContent'>$vegFood</p>
+                        </div>
+                        ";
         }
+
+        // Me are very sorry for this one...
+        $cards .=  "
+                    </div>
+                    ";
 
     }
 

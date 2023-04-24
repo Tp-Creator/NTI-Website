@@ -3,7 +3,7 @@
 
     display: flex;
     flex-direction: column;
-    gap: 18;
+    gap: 18px;
 }
 
 .section {
@@ -65,4 +65,75 @@
 .title {
     margin: 18px 0px 8px 18px;
     color: #d9d9d9;
+}
+
+
+
+
+.weekLunchCard {
+    padding: 18px;
+
+    border-radius: 18px;
+
+    background-color: #101014;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.lcCon { 
+    padding: 2px 6px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 18px;
+}
+
+.lcLongLine {
+    width: 86%;
+    border: 1px solid #20202c;
+}
+
+.lcShortLine {
+    flex: 1;
+    border: 1px solid #20202c;
+}
+
+#lcTitle {
+    margin: 6px 6px 12px 6px;
+    font-family: 'poppins-semibold';
+    color: #d9d9d9;
+    /* margin-bottom: 12px; */
+}
+
+#lcMsg {
+    color: #d9d9d9;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.lcContent {
+    color: #d9d9d9;
+    font-size: 14px;
+}
+
+.lcDay {
+    font-family: 'poppins-medium';
+    font-size: 14px;
+
+    color: #d9d9d9;
+}
+
+.lcIcon {
+    aspect-ratio: 1/1;
+}
+
+.lcVeg {
+    padding: 2px 6px;
+    margin-top: 8px;
+
+    border-radius: 8px;
+
+    background-color: #0F2218;
 }

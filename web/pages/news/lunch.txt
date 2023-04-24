@@ -1,0 +1,85 @@
+<div class="weekLunchCard">
+            <p id="lcTitle">Lunch, Week 17</p>
+
+            <!-- Placeholder for a message if it is needed -->
+            <p id="lcMsg">Message if needed</p>
+
+            <!-- MONDAY  -->
+            <div class="lcCon">
+                <div class="lcLongLine"></div>
+                <p class="lcDay">Monday</p>
+                <div class="lcShortLine"></div>
+            </div>
+            <div class="lcCon">
+                <img class="lcIcon" src="/public/style/includes/icons/foodIcon.svg" alt="">
+                <p class="lcContent">The name of the regular food</p>
+            </div>
+            <div class="lcCon">
+                <img class="lcIcon" src="public/style/includes/icons/foodVegIcon.svg" alt="">
+                <p class="lcContent">The name of the veg food</p>
+            </div>
+
+
+            <!-- THUESDAY -->
+            <div class="lcCon">
+                <div class="lcLongLine"></div>
+                <p class="lcDay">Tuesday</p>
+                <div class="lcShortLine"></div>
+            </div>
+            <div class="lcCon">
+                <img class="lcIcon" src="/public/style/includes/icons/foodIcon.svg" alt="">
+                <p class="lcContent">The name of the regular food</p>
+            </div>
+            <div class="lcCon">
+                <img class="lcIcon" src="public/style/includes/icons/foodVegIcon.svg" alt="">
+                <p class="lcContent">The name of the veg food</p>
+            </div>
+
+
+            <!-- WEDNESDAY -->
+            <div class="lcCon">
+                <div class="lcLongLine"></div>
+                <p class="lcDay">Wednesday</p>
+                <div class="lcShortLine"></div>
+            </div>
+            <div class="lcCon">
+                <img class="lcIcon" src="/public/style/includes/icons/foodIcon.svg" alt="">
+                <p class="lcContent">The name of the regular food</p>
+            </div>
+            <div class="lcCon">
+                <img class="lcIcon" src="public/style/includes/icons/foodVegIcon.svg" alt="">
+                <p class="lcContent">The name of the veg food</p>
+            </div>
+
+
+            <!-- THURSDAY -->
+            <div class="lcCon">
+                <div class="lcLongLine"></div>
+                <p class="lcDay">Thursday</p>
+                <div class="lcShortLine"></div>
+            </div>
+            <div class="lcCon">
+                <img class="lcIcon" src="/public/style/includes/icons/foodIcon.svg" alt="">
+                <p class="lcContent">The name of the regular food</p>
+            </div>
+            <div class="lcCon">
+                <img class="lcIcon" src="public/style/includes/icons/foodVegIcon.svg" alt="">
+                <p class="lcContent">The name of the veg food</p>
+            </div>
+
+
+            <!-- FRIDAY -->
+            <div class="lcCon">
+                <div class="lcLongLine"></div>
+                <p class="lcDay">Friday</p>
+                <div class="lcShortLine"></div>
+            </div>
+            <div class="lcCon">
+                <img class="lcIcon" src="/public/style/includes/icons/foodIcon.svg" alt="">
+                <p class="lcContent">The name of the regular food</p>
+            </div>
+            <div class="lcCon">
+                <img class="lcIcon" src="public/style/includes/icons/foodVegIcon.svg" alt="">
+                <p class="lcContent">The name of the veg food</p>
+            </div>
+        </div>
