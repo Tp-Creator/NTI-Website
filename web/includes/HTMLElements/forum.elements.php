@@ -78,15 +78,15 @@
         
 
         $card   =" 
-                    <div class='card'>
+                    <div class='fcCon'>
                         <div class='verticalWrap'>
-                            <p class='cardUsername'>$ansUser->Username</p>
+                            <p class='fcUserName'>$ansUser->Username</p>
                             <!-- <button class='meta replyButton'>Reply</button> -->
-                            <p class='cardInfoText'>$ansDate</p>
+                            <p class='fcContentDatetime'>$ansDate</p>
                         </div>
 
                         <!-- Card title/answer -->
-                        <p class='cardContentText'>$ansContent</p>
+                        <p class='fcDes'>$ansContent</p>
                     </div>
                 ";
 

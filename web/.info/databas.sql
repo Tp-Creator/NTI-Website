@@ -166,7 +166,7 @@ INSERT INTO food_menu (dt, food, vegFood, CO2, vegCO2)
 VALUES ('2023-05-11', 'Kyckling med annans och curry serveras med ris', 'Garbanzobönor med ananas och curry serveras med ris', 0.41, 0.09);
 
 INSERT INTO food_menu (dt, food, vegFood, CO2, vegCO2)
-VALUES ('2023-05-12', 'Grekisk pastagratäng med oliver, tomat och salladsost', 'Grekisk pastagratäng med oliver, tomat och salladsost', 0.3, 0.3);
+VALUES ('2023-05-12', 'Grekisk pastagratäng med oliver, tomat och salladsost', 'Tacoröra på sojafärs serveras med ris och kall vitlökssås', 0.3, 0.3);
 
 -- CREATE TABLE food_Calendar (
 --     DayID
@@ -240,89 +240,47 @@ VALUES (1, 1, 1, '2023-04-05 13:00:00', '2023-04-05 14:15:00', 2);  -- 1: dayly 
 
 --  Programmering
 INSERT INTO course (CourseName, CourseCode)
-VALUES ('Programering 1', 'PRRPRR01');
-
-INSERT INTO course (CourseName, CourseCode)
-VALUES ('Programering 2', 'PRRPRR02');
-
-INSERT INTO course (CourseName, CourseCode)
-VALUES ('Tillämpad programmering', 'TIATIL00S');
+VALUES ('Programering', 'PRRPRR');
 
 
 --  Webb...
 INSERT INTO course (CourseName, CourseCode)
-VALUES ('Webbutveckling 1', 'WEUWEB01');
-
-INSERT INTO course (CourseName, CourseCode)
-VALUES ('Webbserverprogrammering 1', 'WESWEB01');
-
-INSERT INTO course (CourseName, CourseCode)
-VALUES ('Gränssnittsdesign', 'GRÄGRÄ0');
+VALUES ('Webbutveckling', 'WEUWEB');
 
 
 -- Engelska
 INSERT INTO course (CourseName, CourseCode)
-VALUES ('Engelska 5', 'ENGENG05');
-
-INSERT INTO course (CourseName, CourseCode)
-VALUES ('Engelska 6', 'ENGENG06');
-
-INSERT INTO course (CourseName, CourseCode)
-VALUES ('Engelska 7', 'ENGENG07');
+VALUES ('Engelska', 'ENGENG');
 
 
 -- Svenska
 INSERT INTO course (CourseName, CourseCode)
-VALUES ('Svenska 1', 'SVESVE01');
-
-INSERT INTO course (CourseName, CourseCode)
-VALUES ('Svenska 2', 'SVESVE01');
-
-INSERT INTO course (CourseName, CourseCode)
-VALUES ('Svenska 3', 'SVESVE01');
+VALUES ('Svenska', 'SVESVE');
 
 
 -- Fysik
 INSERT INTO course (CourseName, CourseCode)
-VALUES ('Fysik 1', 'FYSFYS01');
-
-INSERT INTO course (CourseName, CourseCode)
-VALUES ('Fysik 2', 'SVESVE02');
+VALUES ('Fysik', 'FYSFYS');
 
 
 -- Matematik
 INSERT INTO course (CourseName, CourseCode)
-VALUES ('Matematik 1a', 'MATMAT01a');
-
-INSERT INTO course (CourseName, CourseCode)
-VALUES ('Matematik 1c', 'MATMAT01c');
-
-INSERT INTO course (CourseName, CourseCode)
-VALUES ('Matematik 2c', 'MATMAT02c');
-
-INSERT INTO course (CourseName, CourseCode)
-VALUES ('Matematik 3c', 'MATMAT03c');
-
-INSERT INTO course (CourseName, CourseCode)
-VALUES ('Matematik 4', 'MATMAT04');
-
-INSERT INTO course (CourseName, CourseCode)
-VALUES ('Matematik 5', 'MATMAT05');
+VALUES ('Matematik', 'MATMAT');
 
 
 -- Data
 INSERT INTO course (CourseName, CourseCode)
-VALUES ('Dator- och nätverksteknik', 'DAODAC0');
+VALUES ('Dator och nätverksteknik', 'DAODAC0');
 
 
 -- Teknik
 INSERT INTO course (CourseName, CourseCode)
-VALUES ('Teknik 1', 'TEKTEK01');
+VALUES ('Teknik', 'TEKTEK01');
 
 
 -- Kemi
 INSERT INTO course (CourseName, CourseCode)
-VALUES ('Kemi 1', 'KEMKEM01');
+VALUES ('Kemi', 'KEMKEM01');
 
 
 -- Övrigt

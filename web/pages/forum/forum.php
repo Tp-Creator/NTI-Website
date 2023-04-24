@@ -78,24 +78,22 @@
                         <!-- <textarea class="formInput formDescription" placeholder="Enter a description" rows="5" name="content" id="content"></textarea> -->
                         <div class="formInput formDescription" role="textbox" contenteditable style="min-height: 120px;" name="content" id="content"></div>
 
-                        <div id="formFotter">
-                            <select class="optionsCon formOptionsCon" name="courseID" id="courseID">  
-                                <option class="" value="">Choose a "Course"</option>
+                        <select class="optionsCon formOptionsCon" name="courseID" id="courseID">  
+                            <option class="" value="">Choose a "Course"</option>
 
-                                <?php 
-                                        //  Loops as many choices as there are courses in the db
-                                    for($i = 0; $i < sizeof($courses); $i++){
-                                ?>
-                                    <option class="" value="<?php echo $courses[$i]->CourseID ?>"><?php echo $courses[$i]->CourseName ?></option>
-                                <?php 
-                                    }
-                                ?>
-                            </select>
+                            <?php 
+                                    //  Loops as many choices as there are courses in the db
+                                for($i = 0; $i < sizeof($courses); $i++){
+                            ?>
+                                <option class="" value="<?php echo $courses[$i]->CourseID ?>"><?php echo $courses[$i]->CourseName ?></option>
+                            <?php 
+                                }
+                            ?>
+                        </select>
 
-                            <div class="devider"></div>
+                        <div class="devider"></div>
 
-                            <button id="postQuestionButton" type="submit">Post</button>
-                        </div>
+                        <button id="postQuestionButton" type="submit">Post</button>
                     </form>
             <?php
                 }

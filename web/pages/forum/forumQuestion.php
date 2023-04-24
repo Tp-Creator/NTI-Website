@@ -77,7 +77,7 @@
             <div class="devider"></div>
 
             <!-- Corse pill -->
-            <p class="meta"><?php echo $course->CourseName ?></p>
+            <p class="fcMeta"><?php echo $course->CourseName ?></p>
         </div>
 
 
@@ -85,19 +85,19 @@
 
         
         <!-- Question card  -->
-        <div class="card">
+        <div class="fcCon">
             <div class="verticalWrap">
                 <!-- Username -->
-                <p class="cardUsername"><?php echo $user->Username; ?></p>
+                <p class="fcUserName"><?php echo $user->Username; ?></p>
                 <!-- Date -->
-                <p class="cardInfoText"><?php echo timestampToRead($question->dt); ?></p>
+                <p class="fcContentDatetime"><?php echo timestampToRead($question->dt); ?></p>
             </div>
 
             <!-- Card title/question -->
-            <p class="cardTitleText"><?php echo $question->Title ?></p>
+            <p class="fcContentTitle"><?php echo $question->Title ?></p>
 
             <!-- Question description -->
-            <p class="cardContentText"><?php echo $question->Content ?></p>
+            <p class="fcDes"><?php echo $question->Content ?></p>
         </div>
 
 

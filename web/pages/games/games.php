@@ -47,15 +47,15 @@
             </div>
         </div>
 
-        <div class="gCard">
-            <img class="gcIMG" src="/public/style/includes/img/placeholder_16_9.svg" alt="">
+        <!-- <div class="gCard">
+            <img class="gcIMG" src="/public/img/gamesThumbnail/defendarOfUkraine_Oleksandr_S.png" alt="">
             <div class="gCardFooter">
-                <p class="gcTitle">Title</p>
-                <p class="gcDesc">publisher</p>
+                <p class="gcTitle">Defender of Ukraine</p>
+                <p class="gcDesc">Oleksandr S - TE21</p>
 
-                <a class="gcBtn" href="">Play</a>
+                <a class="gcBtn" href="/games/defenderOfUkraine">Play</a>
             </div>
-        </div>
+        </div> -->
     </div>
 
     <?php 

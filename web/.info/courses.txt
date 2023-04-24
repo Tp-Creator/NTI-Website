@@ -1,0 +1,78 @@
+--  Programmering
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Programering 1', 'PRRPRR01');
+
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Programering 2', 'PRRPRR02');
+
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Tillämpad programmering', 'TIATIL00S');
+
+
+
+
+--  Webb...
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Webbutveckling 1', 'WEUWEB01');
+
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Webbserverprogrammering 1', 'WESWEB01');
+
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Gränssnittsdesign', 'GRÄGRÄ0');
+
+
+
+
+-- Engelska
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Engelska 5', 'ENGENG05');
+
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Engelska 6', 'ENGENG06');
+
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Engelska 7', 'ENGENG07');
+
+
+
+-- Svenska
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Svenska 1', 'SVESVE01');
+
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Svenska 2', 'SVESVE01');
+
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Svenska 3', 'SVESVE01');
+
+
+
+-- Fysik
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Fysik 1', 'FYSFYS01');
+
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Fysik 2', 'SVESVE02');
+
+
+
+
+-- Matematik
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Matematik 1a', 'MATMAT01a');
+
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Matematik 1c', 'MATMAT01c');
+
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Matematik 2c', 'MATMAT02c');
+
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Matematik 3c', 'MATMAT03c');
+
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Matematik 4', 'MATMAT04');
+
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Matematik 5', 'MATMAT05');

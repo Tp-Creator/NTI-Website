@@ -9,85 +9,9 @@ body {
     grid-column: 2;
 }
 
-
-
-
-
-/* forumCard */
-.forumCard{
-    min-width: fit-content;
-    padding: 18px;
-    border-radius: 22px;
-    background-color: #101014;
-}
-
-.fcUsername {
-    font-size: 0.875rem;
-    color: var(--mc4);
-
-    display: flex;
-}
-
-.fcPFP {
-    aspect-ratio: 1/1;
-    width: 24px;
-    border-radius: 12px;
-}
-
-.fcInfoText {
-    flex-grow: 1;
-    text-align: right;
-    font-size: 0.75rem;
-    color: var(--mc4);
-}
-
-.fcTitleText {
-    font-family: 'poppins-semibold';
-    color: var(--mc4);
-}
-
-.meta {
-    width: max-content;
-    padding: 0.125rem 0.75rem;
-    border-radius: 2rem;
-    
-    font-size: 0.75rem;
-    font-family: 'poppins-medium';
-    color: var(--mc4);
-
-    background-color: var(--mc3);
-
-    display: grid;
-    place-items: center;
-}
-
 .replyButton:hover {
     cursor: pointer;
 }
-
-
-
-
-
-
-.forumCard2 {
-    padding: 1.25rem;
-    border-radius: 1.5rem;
-    background-color: var(--mC_dM_1);
-    display: flex;
-    flex-direction: row;
-}
-
-
-
-
-
-#pageInfo {
-    color: var(--mainColor_25);
-}
-
-
-
 
 .verticalWrapReverse {
     display: flex;
@@ -100,24 +24,14 @@ body {
 
 
 #addQuestionCard {
-    padding: 24px;
+    padding: 18px;
+    border-radius: 18px;
 
-    border-radius: 1.5rem;
-
-    background-color: var(--mc2);
+    background-color: #101014;
 
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    gap: 24px;
-}
-
-#formFotter {
-    width: max-content;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 24px;
+    gap: 18px;
 }
 
 #postQuestionButton {
@@ -130,8 +44,8 @@ body {
     font-size: 0.875rem;
     font-family: 'poppins-medium';
 
-    color: var(--mC_dM_4);
-    background-color: var(--mC_dM_5);
+    color: #101014;
+    background-color: #d9d9d9;
 }
 
 #postQuestionButton:hover {
@@ -139,12 +53,13 @@ body {
 }
 
 .formInput {
-    width: 100%;
+    flex: 1;
     min-height: 2rem;
+    padding: 4px 8px;
 
     border-radius: 0.25rem;
 
-    color: var(--mC_dM_4);
+    color: #d9d9d9;
     background: none;
 
     resize: vertical;
@@ -152,19 +67,28 @@ body {
 .formInput:hover {
     background-color: hsla(214 14% 90% / 15%);
 }
-
 .formTitel {
     font-size: 1rem;
     font-family: 'poppins-semibold';
 
-    color: var(--mc4);
+    color: #d9d9d9;
 }
 
 .formDescription {
     font-size: 0.875rem;
     font-family: 'poppins';
 
-    color: var(--mc4);
+    color: #d9d9d9;
+}
+
+.formOptionsCon {
+    color: #d9d9d9;
+}
+.formOptionsCon::focus {
+    color: #d9d9d9;
+}
+.formOptionsCon::selection {
+    color: #d9d9d9;
 }
 
 /* 
@@ -172,13 +96,13 @@ body {
     https://css-tricks.com/auto-growing-inputs-textareas/ 
 */
 .formDescription[contenteditable]:empty::before {
-    content: "Placeholder still possible";
+    content: "Enter a description";
     font-family: 'poppins';
-    color: grey;
+    color: #6d6d6d;
   }
 
 .formOption {
-    color: var(--mc4);
+    color: #d9d9d9;
     background-color: --mc2;
 }
 
@@ -197,8 +121,8 @@ body {
 }
 
 .sectiontitle {
-    font-family: 'poppins-medium';
-    color: var(--mC_dM_4);
+    font-family: 'poppins-semibold';
+    color: #d9d9d9;
 }
 
 #answerInput {
@@ -209,7 +133,9 @@ body {
 
     border-radius: 0.25rem;
 
-    color: var(--mC_dM_4);
+    font-size: 14px;
+
+    color: #d9d9d9;
     background: none;
 }
 #answerInput:hover {
@@ -217,11 +143,11 @@ body {
 }
 
 #answerQuestionCard {
-    padding: 24px;
+    padding: 18px;
 
     border-radius: 1.25rem;
 
-    border: 0.125rem solid var(--mC_dM_5);
+    background-color: #101014;
 
     display: flex;
     flex-wrap: wrap;
@@ -311,6 +237,12 @@ body {
     text-decoration: underline;
 }
 
+.fcDes {
+    color: #d9d9d9;
+    font-family: 'poppins-medium';
+    font-size: 14px;
+}
+
 .fcUserCon {
     display: flex;
     flex-direction: row;
@@ -339,6 +271,10 @@ body {
     color: #d9d9d9;
 }
 
+.callToAction {
+    color: #d9d9d9;
+}
+
 
 
 
@@ -351,17 +287,18 @@ body {
 }
 
 #askQuestion {
-    min-width: max-content;
-    flex: 0.15;
+    min-width: 144px;
+    height: min-content;
 
-    padding: 10px;
+    padding: 10px 18px;
 
     border-radius: 20px;
 
     font-size: 14px;
+    font-family: 'poppins-medium';
 
-    color: #d9d9d9;
-    background-color: #101014;
+    color: #101014;
+    background-color: #d9d9d9;
 }
 
 #filterCon {
@@ -389,8 +326,6 @@ body {
 
 .filterBut {
     min-width: max-content;
-
-    margin: 4px 0px;
     padding: 4px 12px;
     border-radius: 10px;
 
@@ -399,6 +334,11 @@ body {
 
     color: #d9d9d9;
     background-color: #101014;
+}
+.filterBut:hover {
+    cursor: pointer;
+    color: #101014;
+    background-color: #d9d9d9;
 }
 
 
