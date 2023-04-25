@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/public/style/pages/gamesStyle.css">
-    <title>Gradeless - Tic Tac Toe</title>
+    <title>Defender of Ukraine</title>
 </head>
 
 <!-- button to go back -->
@@ -69,7 +69,7 @@
         this.hvx = 9 //hard
 
         this.drawEnemy = function(){ //en functionen som ritar mina motståndare
-            picture(this.x, this.y, "/rhelicopter.png", this.b, this.h)
+            picture(this.x, this.y, "web/pages/games/allGames/DoU/rhelicopter.png", this.b, this.h)
         }
 
         this.moveEnemy = function(){ //en functionen som gör röreslen för mina motståndarna
@@ -120,7 +120,7 @@
         this.s = 10
 
         this.drawShot = function(){ //den del ritar skotten 
-            picture(this.x, this.y, "/bullet.png", this.b, this.h)
+            picture(this.x, this.y, "web/pages/games/allGames/DoU/bullet.png", this.b, this.h)
         }
         this.follow = function() { //den del gör att skotten kommer vara separata efter att du har skjutit(tryckt på space)
             this.x = player.x + player.b/2-15
@@ -146,7 +146,7 @@
                     enemys.splice(i, 1)
                     shots.splice(index, i)
                     
-                    picture(this.x-this.b, this.y, "/boom.png", 100, 100) 
+                    picture(this.x-this.b, this.y, "web/pages/games/allGames/DoU/boom.png", 100, 100) 
                     score += this.s
                     if(enemys.length == 0){
                         gamestate = 2
@@ -220,7 +220,7 @@
         switch(gamestate){ 
             /*          Startskärm           */
             case 0:
-                picture(0, 0, "/land.png", totalWidth, totalHeight)
+                picture(0, 0, "web/pages/games/allGames/DoU/land.png", totalWidth, totalHeight)
 
                 /*          Buttons         */
                 if(mouse.x>bStart.x && mouse.x<bStart.x+150 && mouse.y>bStart.y && mouse.y<bStart.y+65 && mouse.left){
@@ -273,7 +273,7 @@
 
             /*          Spelet börjas           */
             case 1:
-                picture(0, 0, "/landP.png", totalWidth, totalHeight)
+                picture(0, 0, "web/pages/games/allGames/DoU/landP.png", totalWidth, totalHeight)
                 text(100, totalHeight-30, 20, "Score:"+score, "white")
                 text(totalWidth-300, totalHeight-30, 25, "Restart: R", "white")
                 if(keyboard.r){
@@ -294,7 +294,7 @@
 
                 movement() //ropar på function movment
                 
-                picture(player.x, player.y, "/utank.png", player.b, player.h)
+                picture(player.x, player.y, "web/pages/games/allGames/DoU/utank.png", player.b, player.h)
 
                 /*          Hinder för motståndarna         */
                 //line(0, totalHeight/2+150, totalWidth, totalHeight/2+150, 5, "yellow")
@@ -342,7 +342,7 @@
 
             case "Instructions":
                 clearScreen()
-                picture(0, 0, "/settings.png", totalWidth, totalHeight)
+                picture(0, 0, "web/pages/games/allGames/DoU/settings.png", totalWidth, totalHeight)
 
                 /*          27 is escape            */
                 if(keyboard[27]){
@@ -356,7 +356,7 @@
             /*          GameOver, spelaren vinner          */
             case 2:
                 clearScreen()
-                picture(0, 0, "/win.png", 1536, 714)
+                picture(0, 0, "web/pages/games/allGames/DoU/win.png", 1536, 714)
                 
                 points()
 
@@ -375,7 +375,7 @@
             /*          GameOver, spelaren förlurar         */
             case 3: 
                 clearScreen()
-                picture(0, 0, "/lose.png", totalWidth, totalHeight)
+                picture(0, 0, "web/pages/games/allGames/DoU/lose.png", totalWidth, totalHeight)
                 picture(totalWidth-500, totalHeight-300, "lose.webp", 360, 245)
 
                 rectangle(totalWidth/2-200, totalHeight/2+125, 425, 70, "black")

@@ -1,18 +1,3 @@
-<!DOCTYPE html>
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/style/pages/gamesStyle.css">
-    <title>Gradeless - Tic Tac Toe</title>
-</head>
-
-<!-- button to go back -->
-<a id="returnBtn" href="/games">
-    <img id="returnIcon" src="/public/style/includes/icons/nav/login_‭icon.svg" alt="">
-</a>
-
-<script src="https://koda.nu/simple.js">
     //переменная для отслеживания состояния игры, нужная, по сути, только для выигрыша на последнем ходе для предотвращения двойного реузультата
     //по типу "ничья, победили зеленые"
     var gameState = 0;
@@ -368,5 +353,4 @@
         text(totalWidth/3, totalHeight/4, 30, "There is no winner!", "black");
             stopUpdate();
     }
-}    
-    </script>
+}

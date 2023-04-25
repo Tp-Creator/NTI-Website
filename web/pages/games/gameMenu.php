@@ -33,7 +33,7 @@
                 <p class="gcTitle">2Tetris</p>
                 <p class="gcDesc">Joel J - TE21</p>
 
-                <a class="gcBtn" href="/games/2Tetris">Play</a>
+                <a class="gcBtn" href="/game?game=2Tetris">Play</a>
             </div>
         </div>
 
@@ -43,19 +43,19 @@
                 <p class="gcTitle">Tic Tac Toe</p>
                 <p class="gcDesc">Kirill Y - TE21</p>
 
-                <a class="gcBtn" href="/games/tictactoe">Play</a>
+                <a class="gcBtn" href="/game?game=tictactoe">Play</a>
             </div>
         </div>
 
-        <!-- <div class="gCard">
+        <div class="gCard">
             <img class="gcIMG" src="/public/img/gamesThumbnail/defendarOfUkraine_Oleksandr_S.png" alt="">
             <div class="gCardFooter">
                 <p class="gcTitle">Defender of Ukraine</p>
                 <p class="gcDesc">Oleksandr S - TE21</p>
 
-                <a class="gcBtn" href="/games/defenderOfUkraine">Play</a>
+                <a class="gcBtn" href="/game?game=defenderOfUkraine">Play</a>
             </div>
-        </div> -->
+        </div>
     </div>
 
     <?php 
