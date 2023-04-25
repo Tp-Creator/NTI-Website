@@ -9,7 +9,7 @@
     function drawNavbar(){
 
         $navbuttons =   [
-            ["Lounge",      "/news"],
+            ["Lounge",      "/lunch"],
             ["Forum",       "/forum"],
             ["Schedule",    "/schedule"],
             ["Memes",       "/memes"],

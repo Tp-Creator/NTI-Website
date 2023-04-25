@@ -130,6 +130,9 @@
                 choice.push($(this).attr('id'));
             }
 
+            // Colors the button on active
+            
+
             updateQuestions();
         })
     });

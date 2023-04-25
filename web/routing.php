@@ -36,18 +36,17 @@ $routes = [
     "/sign-up"                  =>    [ "/pages/account/sign-up.php",                    0 ],
     "/account"                  =>    [ "/pages/account/account.php",                    1 ],
 
-    "/news"                     =>    [ "/pages/news/news.php",                         -1 ],
+    "/lunch"                    =>    [ "/pages/lunch/lunch.php",                        0 ],
 
     "/forum"                    =>    [ "/pages/forum/forum.php",                        0 ],
     "/forum/question"           =>    [ "/pages/forum/forumQuestion.php",                0 ],
 
-    "/games"                    =>    [ "/pages/games/games.php",                       -1 ],
+    "/games"                    =>    [ "/pages/games/games.php",                        0 ],
     "/games/2Tetris"            =>    [ "/pages/games/allGames/2Tetris.html",            0 ],
     "/games/tictactoe"          =>    [ "/pages/games/allGames/tictactoe.html",          0 ],
     "/games/defenderOfUkraine"  =>    [ "/pages/games/allGames/defenderOfUkraine/defenderOfUkraine.html",  0 ],
 
-    // "/schedule"         =>    [ "/pages/schedule/schedule.php",        -1 ],
-    "/schedule"                 =>    [ "/pages/eastereggs/503.php",                     0 ],
+    "/schedule"                 =>    [ "/pages/schedule/schedule.php",                 -1 ],
 
     "/memes"                    =>    [ "/pages/memes/memes.php",                       -1 ],
 

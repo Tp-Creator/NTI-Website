@@ -12,7 +12,7 @@ function foodCards(){
 
     $allFood = getFoodDay();
     
-    $cards = "";
+    $cards = "Lunch";
 
     
     for($w = 0; $w < sizeof($allFood); $w++){
@@ -21,7 +21,7 @@ function foodCards(){
 
         $cards .= "
                     <div class='weekLunchCard'>
-                        <p id='lcTitle'>Lunch, Week $weekNum</p>
+                        <p id='lcTitle'>Week $weekNum</p>
 
                         <!--Placeholder för medellande om det behös.-->
                         <p id='lcMsg'>Note! The information is provided by the organization delivering the food. Changes may occur.</p>
