@@ -42,7 +42,7 @@ $routes = [
     "/forum/question"           =>    [ "/pages/forum/forumQuestion.php",                0 ],
 
     "/games"                    =>    [ "/pages/games/gameMenu.php",                     0 ],
-    "/game"                     =>    [ "/pages/games/gameLauncher.php",                 0 ],
+    "/game"                     =>    [ "/pages/games/gameLauncher.php",                -1 ],
     "/games/2Tetris"            =>    [ "/pages/games/allGames/2Tetris.html",            0 ],
     "/games/tictactoe"          =>    [ "/pages/games/allGames/tictactoe.html",          0 ],
     "/games/defenderOfUkraine"  =>    [ "/pages/games/allGames/DoU/defenderOfUkraine.html",  0 ],
