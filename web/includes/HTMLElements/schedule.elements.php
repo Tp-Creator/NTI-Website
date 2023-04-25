@@ -8,11 +8,12 @@ function lessonCard($rawStart, $rawEnd, $courseID, $roomID, $classID){
         //  The course data
     $course = getCourseByID($courseID);
         $courseCode = $course->CourseCode;
-        $CourseName = $course->CourseName;
+        $courseName = $course->CourseName;
 
         //  begining and end
     $start = date("H:i", strtotime($rawStart));
     $end = date("H:i", strtotime($rawEnd));
+    $day = date("l", strtotime($rawStart));
 
         //  class name
     $class = getClassByID($classID);
@@ -24,12 +25,19 @@ function lessonCard($rawStart, $rawEnd, $courseID, $roomID, $classID){
 
 
         //  HTML
-    $HTML =    "<div class='subject $courseCode'>
-                    <p class='name'>$CourseName</p>
-                    <p class='start'>$start</p>
-                    <p class='end'>$end</p>
-                    <p class='class'>$className</p>
-                    <p class='room'>$roomName</p>
+    // $HTML =    "<div class='subject $courseCode'>
+    //                 <p class='name'>$CourseName</p>
+    //                 <p class='start'>$start</p>
+    //                 <p class='end'>$end</p>
+    //                 <p class='class'>$className</p>
+    //                 <p class='room'>$roomName</p>
+    //             </div>";
+
+    $HTML =    "<p class='title'>$day</p>
+                <div class='dayCard'>
+                    <p class='metaData'>$roomName</p>
+                    <p class='metaData'>$start - $end</p>
+                    <p class='metaData'>$courseName</p>
                 </div>";
 
     return $HTML;
