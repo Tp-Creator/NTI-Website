@@ -3,6 +3,8 @@
 seconds_per_hour=3600
 while true
 do
+    pacman -Syu
+
     git pull
     systemctl restart httpd
 
