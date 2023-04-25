@@ -44,7 +44,7 @@
     font-family: 'poppins-semibold';
 }
 
-.fe {
+.oth {
     /* outline: 1px solid #FF5722; */
     border-color: #FF5722;
     color: #FF5722;
@@ -58,7 +58,7 @@
     background-color: #FFF0D9;
 }
 
-.oth {
+.fe {
     /* outline: 1px solid #4CAF50; */
     border-color: #4CAF50;
     color: #4CAF50;
