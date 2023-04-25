@@ -58,6 +58,8 @@ $routes = [
     "/403"                      =>    [ "/pages/eastereggs/403.php",                     0 ],
     "/404"                      =>    [ "/pages/eastereggs/404.php",                     0 ],
     "/503"                      =>    [ "/pages/eastereggs/503.php",                     0 ],
+
+    "/helpGL"                   =>    [ "/pages/extra/helpGL/helpGL.php",                0 ],
 ];
 
 
