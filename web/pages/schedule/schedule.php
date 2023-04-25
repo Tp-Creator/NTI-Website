@@ -48,16 +48,175 @@
     </div>
 
     
-    <select name="class-select" id="class-select">
+    <!-- <select name="class-select" id="class-select">
         <?php
-            for($i = 0; $i < sizeof($classes); $i++){
-                $id = $classes[$i]->className;
-                echo "<option value='$id'>$id</option>";
-            }
+        //    for($i = 0; $i < sizeof($classes); $i++){
+        //        $id = $classes[$i]->className;
+        //        echo "<option value='$id'>$id</option>";
+        //    }
         ?>
-    </select>
+    </select> -->
     
-    <img id="schedule-img" src="/public/img/schedule/TE21.png" alt="">
+    <!-- <img id="schedule-img" src="/public/img/schedule/TE21.png" alt=""> -->
+
+
+
+
+    <div id="feed">
+        
+        <div class="weekCard">
+            <p class="title">Week 17</p>
+
+            <div class="day">
+                <p class="title">Mon 24</p>
+                <div class="dayCard">
+                    <p class="metaData">115</p>
+                    <p class="metaData">08:30 - 09:55</p>
+                    <p class="metaData">Fysik 1</p>
+                </div>
+                <div class="dayCard">
+                    <p class="metaData">105</p>
+                    <p class="metaData">10:05 - 11:10</p>
+                    <p class="metaData">Tillämpad programmering</p>
+                </div>
+                <div class="dayCard">
+                    <p class="metaData">105</p>
+                    <p class="metaData">11:15 - 11:45</p>
+                    <p class="metaData">Mentorstid</p>
+                </div>
+                <div class="dayCard">
+                    <p class="metaData">105</p>
+                    <p class="metaData">12:25 - 13:40</p>
+                    <p class="metaData">Svenska 2</p>
+                </div>
+                <div class="dayCard">
+                    <p class="metaData">105</p>
+                    <p class="metaData">13:50 - 14:55</p>
+                    <p class="metaData">Matematik 3c</p>
+                </div>
+            </div>
+
+            <div class="day">
+                <p class="title">Tue 25</p>
+                <div class="dayCard">
+                    <p class="metaData">105</p>
+                    <p class="metaData">00:00 - 00:00</p>
+                    <p class="metaData">Webbserverprogrammering</p>
+                </div>
+                <div class="dayCard">
+                    <p class="metaData">105</p>
+                    <p class="metaData">00:00 - 00:00</p>
+                    <p class="metaData">programmering</p>
+                </div>
+                <div class="dayCard">
+                    <p class="metaData">105</p>
+                    <p class="metaData">00:00 - 00:00</p>
+                    <p class="metaData">Webbserverprogrammering</p>
+                </div>
+                <div class="dayCard">
+                    <p class="metaData">105</p>
+                    <p class="metaData">00:00 - 00:00</p>
+                    <p class="metaData">Webbserverprogrammering</p>
+                </div>
+                <div class="dayCard">
+                    <p class="metaData">105</p>
+                    <p class="metaData">00:00 - 00:00</p>
+                    <p class="metaData">Webbserverprogrammering</p>
+                </div>
+            </div>
+
+            <div class="day">
+                <p class="title">Wed 26</p>
+                <div class="dayCard">
+                    <p class="metaData">105</p>
+                    <p class="metaData">00:00 - 00:00</p>
+                    <p class="metaData">Webbserverprogrammering</p>
+                </div>
+                <div class="dayCard">
+                    <p class="metaData">105</p>
+                    <p class="metaData">00:00 - 00:00</p>
+                    <p class="metaData">programmering</p>
+                </div>
+                <div class="dayCard">
+                    <p class="metaData">105</p>
+                    <p class="metaData">00:00 - 00:00</p>
+                    <p class="metaData">Webbserverprogrammering</p>
+                </div>
+                <div class="dayCard">
+                    <p class="metaData">105</p>
+                    <p class="metaData">00:00 - 00:00</p>
+                    <p class="metaData">Webbserverprogrammering</p>
+                </div>
+                <div class="dayCard">
+                    <p class="metaData">105</p>
+                    <p class="metaData">00:00 - 00:00</p>
+                    <p class="metaData">Webbserverprogrammering</p>
+                </div>
+            </div>
+
+            <div class="day">
+                <p class="title">Thu 27</p>
+                <div class="dayCard">
+                    <p class="metaData">105</p>
+                    <p class="metaData">00:00 - 00:00</p>
+                    <p class="metaData">Webbserverprogrammering</p>
+                </div>
+                <div class="dayCard">
+                    <p class="metaData">105</p>
+                    <p class="metaData">00:00 - 00:00</p>
+                    <p class="metaData">programmering</p>
+                </div>
+                <div class="dayCard">
+                    <p class="metaData">105</p>
+                    <p class="metaData">00:00 - 00:00</p>
+                    <p class="metaData">Webbserverprogrammering</p>
+                </div>
+                <div class="dayCard">
+                    <p class="metaData">105</p>
+                    <p class="metaData">00:00 - 00:00</p>
+                    <p class="metaData">Webbserverprogrammering</p>
+                </div>
+                <div class="dayCard">
+                    <p class="metaData">105</p>
+                    <p class="metaData">00:00 - 00:00</p>
+                    <p class="metaData">Webbserverprogrammering</p>
+                </div>
+            </div>
+
+            <div class="day">
+                <p class="title">Fri 28</p>
+                <div class="dayCard">
+                    <p class="metaData">105</p>
+                    <p class="metaData">00:00 - 00:00</p>
+                    <p class="metaData">Webbserverprogrammering</p>
+                </div>
+                <div class="dayCard">
+                    <p class="metaData">105</p>
+                    <p class="metaData">00:00 - 00:00</p>
+                    <p class="metaData">programmering</p>
+                </div>
+                <div class="dayCard">
+                    <p class="metaData">105</p>
+                    <p class="metaData">00:00 - 00:00</p>
+                    <p class="metaData">Webbserverprogrammering</p>
+                </div>
+                <div class="dayCard">
+                    <p class="metaData">105</p>
+                    <p class="metaData">00:00 - 00:00</p>
+                    <p class="metaData">Webbserverprogrammering</p>
+                </div>
+                <div class="dayCard">
+                    <p class="metaData">105</p>
+                    <p class="metaData">00:00 - 00:00</p>
+                    <p class="metaData">Webbserverprogrammering</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
 
     <?php 
         echo drawFooter();

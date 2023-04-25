@@ -12,7 +12,7 @@ function foodCards(){
 
     $allFood = getFoodDay();
     
-    $cards = "Lunch";
+    $cards = "";
 
     
     for($w = 0; $w < sizeof($allFood); $w++){
