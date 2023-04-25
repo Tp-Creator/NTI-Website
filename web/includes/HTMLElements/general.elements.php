@@ -82,7 +82,7 @@
                             <div class='footerSection'>
                                 <p class='footerTitle'>Support</p>
                                 <a class='footerSubject' href=''>Contact admin</a>
-                                <a class='footerSubject' href=''>Help Gradeless</a>
+                                <a class='footerSubject' href='/helpGL'>Help Gradeless</a>
                             </div>
 
                             <p id='footerHero'>2023・www.gradeless.se・V1</p>
