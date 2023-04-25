@@ -235,6 +235,10 @@ VALUES ('105');
 -- Skapar programmering 1 på onsdagar kl 10:05-11:10
 INSERT INTO lesson (courseID, classID, roomID, start, end, repeated)
 VALUES (1, 1, 1, '2023-04-05 13:00:00', '2023-04-05 14:15:00', 2);  -- 1: dayly 2: weekly, 3: monthly, 4: termin 5: yearly
+INSERT INTO lesson (courseID, classID, roomID, start, end, repeated)
+VALUES (1, 1, 1, '2023-04-06 13:00:00', '2023-04-06 14:15:00', 2);  -- 1: dayly 2: weekly, 3: monthly, 4: termin 5: yearly
+INSERT INTO lesson (courseID, classID, roomID, start, end, repeated)
+VALUES (1, 1, 1, '2023-04-07 13:00:00', '2023-04-07 14:15:00', 2);  -- 1: dayly 2: weekly, 3: monthly, 4: termin 5: yearly
 
 
 

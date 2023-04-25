@@ -25,8 +25,29 @@
             array_push($result, $finfo);
         }
 
+
+        //  Grouping all the lessons for each day
+        $dayResult = [];
+        $currDay = Null;
+        for($i = 0; $i < sizeof($result); $i++){
+            $dt = $result[$i]->start;
+            $dayNum = date("N", strtotime($dt));
+            $dayName = date("l", strtotime($dt));
+            
+            if($currDay != $dayNum){
+                //  pushing new array with current day
+                $currDay = $dayNum;
+                array_push($dayResult, [$dayName]);
+            }
+
+                //  Pushing the day into the correct array, the latest one
+            array_push($dayResult[sizeof($dayResult)-1], $result[$i]);
+
+        }
+
         //  return an array with all rows where you can reach the data by taking $result[i]
-        return $result;
+        // return $result;
+        return $dayResult;
     }
 
 

@@ -11,13 +11,8 @@ function lessonCard($rawStart, $rawEnd, $courseID, $roomID, $classID){
         $CourseName = $course->CourseName;
 
         //  begining and end
-    // $start = date("H:i", $mStart/1000);
-    $yes = new DateTime($rawStart);
-    $no = new DateTime($rawEnd);
-
-    $start = $yes->format('H:i');
-    $end = $no->format('H:i');
-    // $end = date("H:i", $mEnd/1000);
+    $start = date("H:i", strtotime($rawStart));
+    $end = date("H:i", strtotime($rawEnd));
 
         //  class name
     $class = getClassByID($classID);
@@ -45,20 +40,35 @@ function schedule($classID){
 
 
     $lessons = getLessons($classID, /*$day*/);
+    console_log($lessons);
     
     // Get all lessons for user or class 
 
     $HTML = "<div class='mainTopContainer'>";
 
 
+    for($d = 0; $d < sizeof($lessons); $d++){
+        $day = $lessons[$d];
 
-    for($i = 0; $i < 6; $i++){
-        continue;
+        for($l = 1; $l < sizeof($day); $l++){
+            $lesson = $day[$l];
+
+            $start = $lesson->start;
+            $end = $lesson->end;
+            $courseID = $lesson-> courseID;
+            $roomID = $lesson->roomID;
+    
+            $HTML .= lessonCard($start, $end, $courseID, $roomID, $classID);
+        }
+
+
     }
 
-    foreach($lessons as $lesson){
-        continue;
-    }
+    $HTML .= "</div>";
+
+    // foreach($lessons as $lesson){
+    //     continue;
+    // }
 
     //  for all lessons
         //  Get day and repeat, check when the lesson is repeated and how often
@@ -68,18 +78,21 @@ function schedule($classID){
         //  Sorting the lessons for each day
         //  create html for each day...
 
-        $mStart = $lessons[0]->start;
-        $mEnd = $lessons[0]->end;
-        $courseID = $lessons[0]-> courseID;
-        $roomID = $lessons[0]->roomID;
+    //     $mStart = $lessons[0]->start;
+    //     $mEnd = $lessons[0]->end;
+    //     $courseID = $lessons[0]-> courseID;
+    //     $roomID = $lessons[0]->roomID;
 
-    return lessonCard($mStart, $mEnd, $courseID, $roomID, $classID);
+    // return lessonCard($mStart, $mEnd, $courseID, $roomID, $classID);
 
     // $room = $lesson->room;
     // $course = getCourseByID($lesson->courseID);
     // $start = $lesson->starts;
     // $end = $lesson->ends;
     // $class = $lesson->classID;
+
+
+    return $HTML;
 
 
 
