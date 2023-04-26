@@ -297,17 +297,17 @@ INSERT INTO course (CourseName, CourseCode)
 VALUES ('Svenska 1', 'SVESVE01');
 
 INSERT INTO course (CourseName, CourseCode)
-VALUES ('Svenska 2', 'SVESVE01');
+VALUES ('Svenska 2', 'SVESVE02');
 
 INSERT INTO course (CourseName, CourseCode)
-VALUES ('Svenska 3', 'SVESVE01');
+VALUES ('Svenska 3', 'SVESVE03');
 
 -- Fysik
 INSERT INTO course (CourseName, CourseCode)
 VALUES ('Fysik 1', 'FYSFYS01');
 
 INSERT INTO course (CourseName, CourseCode)
-VALUES ('Fysik 2', 'SVESVE02');
+VALUES ('Fysik 2', 'FYSFYS02');
 
 -- Matematik
 INSERT INTO course (CourseName, CourseCode)
