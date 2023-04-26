@@ -12,7 +12,7 @@
     $lessons = getLessons(1);
     // $class = getClassById(1);
     $classes = getClasses();
-    console_log($classes);
+    // console_log($classes);
 
 ?>
 
@@ -46,177 +46,92 @@
             <?php echo drawNavbar() ?>
         </nav>
     </div>
-
     
-    <!-- <select name="class-select" id="class-select">
-        <?php
-        //    for($i = 0; $i < sizeof($classes); $i++){
-        //        $id = $classes[$i]->className;
-        //        echo "<option value='$id'>$id</option>";
-        //    }
-        ?>
-    </select> -->
-    
-    <!-- <img id="schedule-img" src="/public/img/schedule/TE21.png" alt=""> -->
-
-
-
-
     <div id="feed">
         
         <div class="weekCard">
-            <p class="title">Week 17</p>
+            <!-- <p class="title">TE21</p> -->
 
-            <div class="day">
-                <p class="title">Mon 24</p>
-                <div class="dayCard">
-                    <p class="metaData">115</p>
-                    <p class="metaData">08:30 - 09:55</p>
-                    <p class="metaData">Fysik 1</p>
-                </div>
-                <div class="dayCard">
-                    <p class="metaData">105</p>
-                    <p class="metaData">10:05 - 11:10</p>
-                    <p class="metaData">Tillämpad programmering</p>
-                </div>
-                <div class="dayCard">
-                    <p class="metaData">105</p>
-                    <p class="metaData">11:15 - 11:45</p>
-                    <p class="metaData">Mentorstid</p>
-                </div>
-                <div class="dayCard">
-                    <p class="metaData">105</p>
-                    <p class="metaData">12:25 - 13:40</p>
-                    <p class="metaData">Svenska 2</p>
-                </div>
-                <div class="dayCard">
-                    <p class="metaData">105</p>
-                    <p class="metaData">13:50 - 14:55</p>
-                    <p class="metaData">Matematik 3c</p>
-                </div>
+            <select name="class-select" id="class-select">
+                <?php
+                   for($i = 0; $i < sizeof($classes); $i++){
+                       $id = $classes[$i]->id;
+                       $name = $classes[$i]->className;
+                       echo "<option value='$id'>$name</option>";
+                   }
+                ?>
+            </select>
+        
+            <div id="lesson-feed">
+                <?php echo schedule(1) ?>
+            </div>
+        
+        </div>
+
+
+        <!-- <div class="dCard">
+            <p class="dayTitle">Mon 24</p>
+                   
+            <div class="row1">
+                <p class="cell g1">Room</p>
+                <p class="cell g1">Time</p>
+                <p class="cell g2">Course</p>
             </div>
 
-            <div class="day">
-                <p class="title">Tue 25</p>
-                <div class="dayCard">
-                    <p class="metaData">105</p>
-                    <p class="metaData">00:00 - 00:00</p>
-                    <p class="metaData">Webbserverprogrammering</p>
-                </div>
-                <div class="dayCard">
-                    <p class="metaData">105</p>
-                    <p class="metaData">00:00 - 00:00</p>
-                    <p class="metaData">programmering</p>
-                </div>
-                <div class="dayCard">
-                    <p class="metaData">105</p>
-                    <p class="metaData">00:00 - 00:00</p>
-                    <p class="metaData">Webbserverprogrammering</p>
-                </div>
-                <div class="dayCard">
-                    <p class="metaData">105</p>
-                    <p class="metaData">00:00 - 00:00</p>
-                    <p class="metaData">Webbserverprogrammering</p>
-                </div>
-                <div class="dayCard">
-                    <p class="metaData">105</p>
-                    <p class="metaData">00:00 - 00:00</p>
-                    <p class="metaData">Webbserverprogrammering</p>
-                </div>
+            <div class="gRow">
+                <p class="cell g1">105</p>
+                <p class="cell g1">00:00 - 00:00</p>
+                <p class="cell g2">Webbserverprogrammering</p>
             </div>
 
-            <div class="day">
-                <p class="title">Wed 26</p>
-                <div class="dayCard">
-                    <p class="metaData">105</p>
-                    <p class="metaData">00:00 - 00:00</p>
-                    <p class="metaData">Webbserverprogrammering</p>
-                </div>
-                <div class="dayCard">
-                    <p class="metaData">105</p>
-                    <p class="metaData">00:00 - 00:00</p>
-                    <p class="metaData">programmering</p>
-                </div>
-                <div class="dayCard">
-                    <p class="metaData">105</p>
-                    <p class="metaData">00:00 - 00:00</p>
-                    <p class="metaData">Webbserverprogrammering</p>
-                </div>
-                <div class="dayCard">
-                    <p class="metaData">105</p>
-                    <p class="metaData">00:00 - 00:00</p>
-                    <p class="metaData">Webbserverprogrammering</p>
-                </div>
-                <div class="dayCard">
-                    <p class="metaData">105</p>
-                    <p class="metaData">00:00 - 00:00</p>
-                    <p class="metaData">Webbserverprogrammering</p>
-                </div>
+            <div class="gRow">
+                <p class="cell g1">105</p>
+                <p class="cell g1">00:00 - 00:00</p>
+                <p class="cell g2">Webbserverprogrammering</p>
             </div>
 
-            <div class="day">
-                <p class="title">Thu 27</p>
-                <div class="dayCard">
-                    <p class="metaData">105</p>
-                    <p class="metaData">00:00 - 00:00</p>
-                    <p class="metaData">Webbserverprogrammering</p>
-                </div>
-                <div class="dayCard">
-                    <p class="metaData">105</p>
-                    <p class="metaData">00:00 - 00:00</p>
-                    <p class="metaData">programmering</p>
-                </div>
-                <div class="dayCard">
-                    <p class="metaData">105</p>
-                    <p class="metaData">00:00 - 00:00</p>
-                    <p class="metaData">Webbserverprogrammering</p>
-                </div>
-                <div class="dayCard">
-                    <p class="metaData">105</p>
-                    <p class="metaData">00:00 - 00:00</p>
-                    <p class="metaData">Webbserverprogrammering</p>
-                </div>
-                <div class="dayCard">
-                    <p class="metaData">105</p>
-                    <p class="metaData">00:00 - 00:00</p>
-                    <p class="metaData">Webbserverprogrammering</p>
-                </div>
+            <div class="gRow">
+                <p class="cell g1">105</p>
+                <p class="cell g1">00:00 - 00:00</p>
+                <p class="cell g2">Webbserverprogrammering</p>
             </div>
 
-            <div class="day">
-                <p class="title">Fri 28</p>
-                <div class="dayCard">
-                    <p class="metaData">105</p>
-                    <p class="metaData">00:00 - 00:00</p>
-                    <p class="metaData">Webbserverprogrammering</p>
-                </div>
-                <div class="dayCard">
-                    <p class="metaData">105</p>
-                    <p class="metaData">00:00 - 00:00</p>
-                    <p class="metaData">programmering</p>
-                </div>
-                <div class="dayCard">
-                    <p class="metaData">105</p>
-                    <p class="metaData">00:00 - 00:00</p>
-                    <p class="metaData">Webbserverprogrammering</p>
-                </div>
-                <div class="dayCard">
-                    <p class="metaData">105</p>
-                    <p class="metaData">00:00 - 00:00</p>
-                    <p class="metaData">Webbserverprogrammering</p>
-                </div>
-                <div class="dayCard">
-                    <p class="metaData">105</p>
-                    <p class="metaData">00:00 - 00:00</p>
-                    <p class="metaData">Webbserverprogrammering</p>
-                </div>
+            <div class="gRow">
+                <p class="cell g1">105</p>
+                <p class="cell g1">00:00 - 00:00</p>
+                <p class="cell g2">Webbserverprogrammering</p>
             </div>
+
+            <div class="gRow">
+                <p class="cell g1">105</p>
+                <p class="cell g1">00:00 - 00:00</p>
+                <p class="cell g2">Webbserverprogrammering</p>
+            </div>
+
+        </div> -->
+
+
+        <div class="dCard">
+
+            <p class="row1 g1">Room</p>
+            <p class="row2 g1">Time</p>
+            <p class="row3 g2">Course</p>
+
+            <p class="row1 g1">105</p>
+            <p class="row2 g1">08:30 - 09:05</p>
+            <p class="row3 g2">Fysik</p>
+
+            <p class="row1 g1">115</p>
+            <p class="row2 g1">09:15 - 11:00</p>
+            <p class="row3 g2">Mentorstid</p>
+
+            <p class="row1 g1">122</p>
+            <p class="row2 g1">17:20 - 20:00</p>
+            <p class="row3 g2">Webbserverprogrammering</p>
+            
         </div>
 
     </div>
-
-
-
 
     <?php 
         echo drawFooter();

@@ -2,6 +2,7 @@
 
 // require_once('includes/dbh.func/general/dbh.general.php');
 require_once('includes/dbh.func/schedule/dbh.schedule.php');
+require_once('includes/dbh.func/forum/dbh.forum.php');
 
 function lessonCard($rawStart, $rawEnd, $courseID, $roomID, $classID){
 
@@ -13,7 +14,6 @@ function lessonCard($rawStart, $rawEnd, $courseID, $roomID, $classID){
         //  begining and end
     $start = date("H:i", strtotime($rawStart));
     $end = date("H:i", strtotime($rawEnd));
-    $day = date("l", strtotime($rawStart));
 
         //  class name
     $class = getClassByID($classID);
@@ -33,8 +33,7 @@ function lessonCard($rawStart, $rawEnd, $courseID, $roomID, $classID){
     //                 <p class='room'>$roomName</p>
     //             </div>";
 
-    $HTML =    "<p class='title'>$day</p>
-                <div class='dayCard'>
+    $HTML =    "<div class='dayCard $courseCode'>
                     <p class='metaData'>$roomName</p>
                     <p class='metaData'>$start - $end</p>
                     <p class='metaData'>$courseName</p>
@@ -48,15 +47,19 @@ function schedule($classID){
 
 
     $lessons = getLessons($classID, /*$day*/);
-    console_log($lessons);
+    // console_log($lessons);
     
     // Get all lessons for user or class 
 
-    $HTML = "<div class='mainTopContainer'>";
+    $HTML = "";
 
 
     for($d = 0; $d < sizeof($lessons); $d++){
         $day = $lessons[$d];
+        $dayName = $day[0];
+
+        $HTML .= "<div class='day'>
+                    <p class='title'>$dayName</p>";
 
         for($l = 1; $l < sizeof($day); $l++){
             $lesson = $day[$l];
@@ -69,10 +72,10 @@ function schedule($classID){
             $HTML .= lessonCard($start, $end, $courseID, $roomID, $classID);
         }
 
+        $HTML .= "</div>";
 
     }
 
-    $HTML .= "</div>";
 
     // foreach($lessons as $lesson){
     //     continue;

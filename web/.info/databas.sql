@@ -227,65 +227,118 @@ VALUES ('IT20', 3);
 
 INSERT INTO room (name)
 VALUES ('105');
+INSERT INTO room (name)
+VALUES ('115');
 
 -- Skapar programmering 1 på onsdagar kl 10:05-11:10
 -- INSERT INTO lesson (courseID, classID, roomID, starts, ends, repeated)
 -- VALUES (1, 1, 1, 1680509100000, 1680513000000, 2); -- 1: dayly 2: weekly, 3: monthly, 4: termin 5: yearly
 
--- Skapar programmering 1 på onsdagar kl 10:05-11:10
+-- TE21 schema
+-- Måndagar:
+-- Fys 1
 INSERT INTO lesson (courseID, classID, roomID, start, end, repeated)
-VALUES (1, 1, 1, '2023-04-05 13:00:00', '2023-04-05 14:15:00', 2);  -- 1: dayly 2: weekly, 3: monthly, 4: termin 5: yearly
+VALUES (13, 2, 2, '2023-04-03 08:30:00', '2023-04-03 09:55:00', 2);  -- 1: dayly 2: weekly, 3: monthly, 4: termin 5: yearly
+-- Til. Prog.
 INSERT INTO lesson (courseID, classID, roomID, start, end, repeated)
-VALUES (1, 1, 1, '2023-04-06 13:00:00', '2023-04-06 14:15:00', 2);  -- 1: dayly 2: weekly, 3: monthly, 4: termin 5: yearly
+VALUES (3, 2, 1, '2023-04-03 10:05:00', '2023-04-03 11:10:00', 2);  -- 1: dayly 2: weekly, 3: monthly, 4: termin 5: yearly
+-- Mentor.
 INSERT INTO lesson (courseID, classID, roomID, start, end, repeated)
-VALUES (1, 1, 1, '2023-04-07 13:00:00', '2023-04-07 14:15:00', 2);  -- 1: dayly 2: weekly, 3: monthly, 4: termin 5: yearly
+VALUES (24, 2, 1, '2023-04-03 11:15:00', '2023-04-03 11:45:00', 2);  -- 1: dayly 2: weekly, 3: monthly, 4: termin 5: yearly
+-- Sve 2.
+INSERT INTO lesson (courseID, classID, roomID, start, end, repeated)
+VALUES (11, 2, 1, '2023-04-03 12:25:00', '2023-04-03 13:40:00', 2);  -- 1: dayly 2: weekly, 3: monthly, 4: termin 5: yearly
+-- Ma 3C.
+INSERT INTO lesson (courseID, classID, roomID, start, end, repeated)
+VALUES (18, 2, 1, '2023-04-03 12:25:00', '2023-04-03 13:40:00', 2);  -- 1: dayly 2: weekly, 3: monthly, 4: termin 5: yearly
 
+-- Tisdagar:
+-- Fys 1
+INSERT INTO lesson (courseID, classID, roomID, start, end, repeated)
+VALUES (13, 2, 2, '2023-04-03 08:30:00', '2023-04-03 09:55:00', 2);  -- 1: dayly 2: weekly, 3: monthly, 4: termin 5: yearly
+
+
+INSERT INTO lesson (courseID, classID, roomID, start, end, repeated)
+VALUES (1, 2, 1, '2023-04-05 13:00:00', '2023-04-05 14:15:00', 2);  -- 1: dayly 2: weekly, 3: monthly, 4: termin 5: yearly
 
 
 --  Programmering
 INSERT INTO course (CourseName, CourseCode)
-VALUES ('Programering', 'PRRPRR');
+VALUES ('Programering 1', 'PRRPRR01');
 
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Programering 2', 'PRRPRR02');
+
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Tillämpad programering', 'TIATIL00S');
 
 --  Webb...
 INSERT INTO course (CourseName, CourseCode)
-VALUES ('Webbutveckling', 'WEUWEB');
+VALUES ('Webbutveckling 1', 'WEUWEB01');
 
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Webbserverprogrammering 1', 'WESWEB01');
+
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Gränssnittsdesign', 'GRÄGRÄ0');
 
 -- Engelska
 INSERT INTO course (CourseName, CourseCode)
-VALUES ('Engelska', 'ENGENG');
+VALUES ('Engelska 5', 'ENGENG05');
 
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Engelska 6', 'ENGENG06');
+
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Engelska 7', 'ENGENG07');
 
 -- Svenska
 INSERT INTO course (CourseName, CourseCode)
-VALUES ('Svenska', 'SVESVE');
+VALUES ('Svenska 1', 'SVESVE01');
 
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Svenska 2', 'SVESVE01');
+
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Svenska 3', 'SVESVE01');
 
 -- Fysik
 INSERT INTO course (CourseName, CourseCode)
-VALUES ('Fysik', 'FYSFYS');
+VALUES ('Fysik 1', 'FYSFYS01');
 
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Fysik 2', 'SVESVE02');
 
 -- Matematik
 INSERT INTO course (CourseName, CourseCode)
-VALUES ('Matematik', 'MATMAT');
+VALUES ('Matematik 1a', 'MATMAT01a');
 
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Matematik 1c', 'MATMAT01c');
+
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Matematik 2c', 'MATMAT02c');
+
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Matematik 3c', 'MATMAT03c');
+
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Matematik 4', 'MATMAT04');
+
+INSERT INTO course (CourseName, CourseCode)
+VALUES ('Matematik 5', 'MATMAT05');
 
 -- Data
 INSERT INTO course (CourseName, CourseCode)
 VALUES ('Dator och nätverksteknik', 'DAODAC0');
 
-
 -- Teknik
 INSERT INTO course (CourseName, CourseCode)
-VALUES ('Teknik', 'TEKTEK01');
-
+VALUES ('Teknik1', 'TEKTEK01');
 
 -- Kemi
 INSERT INTO course (CourseName, CourseCode)
-VALUES ('Kemi', 'KEMKEM01');
-
+VALUES ('Kemi 1', 'KEMKEM01');
 
 -- Övrigt
 INSERT INTO course (CourseName, CourseCode)
