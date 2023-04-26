@@ -34,9 +34,9 @@ function lessonCard($rawStart, $rawEnd, $courseID, $roomID, $classID){
     //             </div>";
 
     $HTML =    "<div class='dayCard $courseCode'>
-                    <p class='metaData'>$roomName</p>
-                    <p class='metaData'>$start - $end</p>
-                    <p class='metaData'>$courseName</p>
+                    <p class='metaData room'>$roomName</p>
+                    <p class='metaData datetime'>$start - $end</p>
+                    <p class='metaData course'>$courseName</p>
                 </div>";
 
     return $HTML;
