@@ -1,10 +1,10 @@
 #class-select {
     width: max-content;
-    padding: 4px 8px;
-    border-radius: 8px;
+    padding: 8px 18px;
+    border-radius: 18px;
 
-    font-family: 'poppins-semibold';
-    font-size: 16px;
+    font-family: 'poppins-medium';
+    font-size: 14px;
 
     color: #d9d9d9;
     background-color: #101014;
@@ -74,6 +74,18 @@
     font-size: 14px;
     font-family: 'poppins-semibold';
     color: #d9d9d9;
+}
+
+.course {
+    grid-area: course;
+}
+
+.datetime {
+    grid-area: time;
+}
+
+.room {
+    grid-area: room;
 }
 
 @media screen and (max-width: 690px) {
