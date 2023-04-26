@@ -28,39 +28,37 @@ $errorPages = [
 
 // Negativa permission level i $routes fär 503
 $routes = [
-    // Fake path                     Real path               Permission level
-    ""                          =>    [ "/pages/index.php",                              0 ],
-     
-    "/login"                    =>    [ "/pages/account/login.php",                      0 ],
-    "/logout"                   =>    [ "/pages/account/logout.php",                     0 ],
-    "/sign-up"                  =>    [ "/pages/account/sign-up.php",                    0 ],
-    "/account"                  =>    [ "/pages/account/account.php",                    1 ],
+    // Fake path                      Real path                                                 Permission level
+    ""                          =>    [ "/pages/index.php",                                     0 ],
 
-    "/lunch"                    =>    [ "/pages/lunch/lunch.php",                        0 ],
+    "/login"                    =>    [ "/pages/account/login.php",                             0 ],
+    "/logout"                   =>    [ "/pages/account/logout.php",                            0 ],
+    "/sign-up"                  =>    [ "/pages/account/sign-up.php",                           0 ],
+    "/account"                  =>    [ "/pages/account/account.php",                           1 ],
 
-    "/forum"                    =>    [ "/pages/forum/forum.php",                        0 ],
-    "/forum/question"           =>    [ "/pages/forum/forumQuestion.php",                0 ],
+    "/lunch"                    =>    [ "/pages/lunch/lunch.php",                               0 ],
 
-    "/games"                    =>    [ "/pages/games/gameMenu.php",                     0 ],
-    "/game"                     =>    [ "/pages/games/gameLauncher.php",                -1 ],
-    "/games/2Tetris"            =>    [ "/pages/games/allGames/2Tetris.html",            0 ],
-    "/games/tictactoe"          =>    [ "/pages/games/allGames/tictactoe.html",          0 ],
-    "/games/defenderOfUkraine"  =>    [ "/pages/games/allGames/DoU/defenderOfUkraine.html",  0 ],
+    "/forum"                    =>    [ "/pages/forum/forum.php",                               0 ],
+    "/forum/question"           =>    [ "/pages/forum/forumQuestion.php",                       0 ],
 
-    "/schedule"                 =>    [ "/pages/schedule/schedule.php",                 -1 ],
-    "/debug"                    =>    [ "/pages/schedule/schedule future.php",          -1 ],
+    "/games"                    =>    [ "/pages/games/gameMenu.php",                            0 ],
+    "/game"                     =>    [ "/pages/games/gameLauncher.php",                       -1 ],
+    "/games/2Tetris"            =>    [ "/pages/games/allGames/2Tetris.html",                   0 ],
+    "/games/tictactoe"          =>    [ "/pages/games/allGames/tictactoe.html",                 0 ],
+    "/games/defenderOfUkraine"  =>    [ "/pages/games/allGames/DoU/defenderOfUkraine.html",     0 ],
 
-    "/memes"                    =>    [ "/pages/memes/memes.php",                       -1 ],
+    "/schedule"                 =>    [ "/pages/schedule/schedule.php",                        -1 ],
+    "/debug"                    =>    [ "/pages/schedule/schedule future.php",                 -1 ],
+
+    "/memes"                    =>    [ "/pages/memes/memes.php",                              -1 ],
 
 
-    "/google"                   =>    [ "/pages/account/googleLogin.php",                0 ],
-    "/gooIn"                    =>    [ "/pages/account/googleIndex.php",                0 ],
-     
-    "/403"                      =>    [ "/pages/eastereggs/403.php",                     0 ],
-    "/404"                      =>    [ "/pages/eastereggs/404.php",                     0 ],
-    "/503"                      =>    [ "/pages/eastereggs/503.php",                     0 ],
+    "/google"                   =>    [ "/pages/account/googleLogin.php",                       0 ],
+    "/gooIn"                    =>    [ "/pages/account/googleIndex.php",                       0 ],
 
-    "/helpGL"                   =>    [ "/pages/extra/helpGL/helpGL.php",                0 ],
+    "/403"                      =>    [ "/pages/eastereggs/403.php",                            0 ],
+    "/404"                      =>    [ "/pages/eastereggs/404.php",                            0 ],
+    "/503"                      =>    [ "/pages/eastereggs/503.php",                            0 ],
 ];
 
 

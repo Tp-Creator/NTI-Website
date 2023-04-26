@@ -27,17 +27,56 @@
     </div>
 
     <div id="contentFeed">
-        <div class="gCard">
-            <img class="gcIMG" src="/public/img/gamesThumbnail/2Tetris_Joel_J.png" alt="">
-            <div class="gCardFooter">
-                <p class="gcTitle">2Tetris</p>
-                <p class="gcDesc">Joel J - TE21</p>
 
-                <a class="gcBtn" href="/game?game=2Tetris">Play</a>
+
+
+        <div class="gcThumbnail Tetris2">
+            <div class="gameCard">
+                <div id="gcfooter">
+                    <p class="gcGameTitle">2Tetris</p>
+                    <p class="gcMeta">Joel J - TE21</p>
+                </div>
+
+                <a class="gcPlay" href="/game?game=2Tetris">
+                    <img src="/public/style/includes/icons/nav/gamepad_icon.svg" alt="">
+                    <p>Play</p>
+                </a>
             </div>
         </div>
 
-        <div class="gCard">
+        <div class="gcThumbnail TicTacToe">
+            <div class="gameCard">
+                <div id="gcfooter">
+                    <p class="gcGameTitle">Tic Tac Toe</p>
+                    <p class="gcMeta">Kirill Y - TE21</p>
+                </div>
+
+                <a class="gcPlay" href="/game?game=2Tetris">
+                    <img src="/public/style/includes/icons/nav/gamepad_icon.svg" alt="">
+                    <p>Play</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="gcThumbnail DOU">
+            <div class="gameCard">
+                <div id="gcfooter">
+                    <p class="gcGameTitle">Defender of Ukraine</p>
+                    <p class="gcMeta">Oleksandr S - TE21</p>
+                </div>
+
+                <a class="gcPlay" href="/game?game=2Tetris">
+                    <img src="/public/style/includes/icons/nav/gamepad_icon.svg" alt="">
+                    <p>Play</p>
+                </a>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- <div class="gCard">
             <img class="gcIMG" src="/public/img/gamesThumbnail/tictactoe_Kirill_Y.png" alt="">
             <div class="gCardFooter">
                 <p class="gcTitle">Tic Tac Toe</p>
@@ -55,7 +94,7 @@
 
                 <a class="gcBtn" href="/game?game=defenderOfUkraine">Play</a>
             </div>
-        </div>
+        </div> -->
     </div>
 
     <?php 
