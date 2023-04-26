@@ -48,11 +48,8 @@
     </div>
     
     <div id="feed">
-        
-        <div class="weekCard">
-            <!-- <p class="title">TE21</p> -->
 
-            <select name="class-select" id="class-select">
+    <select name="class-select" id="class-select">
                 <?php
                    for($i = 0; $i < sizeof($classes); $i++){
                        $id = $classes[$i]->id;
@@ -62,75 +59,14 @@
                 ?>
             </select>
         
+        <div class="weekCard">
+            <!-- <p class="title">TE21</p> -->
+        
             <div id="lesson-feed">
                 <?php echo schedule(1) ?>
             </div>
         
         </div>
-
-
-        <!-- <div class="dCard">
-            <p class="dayTitle">Mon 24</p>
-                   
-            <div class="row1">
-                <p class="cell g1">Room</p>
-                <p class="cell g1">Time</p>
-                <p class="cell g2">Course</p>
-            </div>
-
-            <div class="gRow">
-                <p class="cell g1">105</p>
-                <p class="cell g1">00:00 - 00:00</p>
-                <p class="cell g2">Webbserverprogrammering</p>
-            </div>
-
-            <div class="gRow">
-                <p class="cell g1">105</p>
-                <p class="cell g1">00:00 - 00:00</p>
-                <p class="cell g2">Webbserverprogrammering</p>
-            </div>
-
-            <div class="gRow">
-                <p class="cell g1">105</p>
-                <p class="cell g1">00:00 - 00:00</p>
-                <p class="cell g2">Webbserverprogrammering</p>
-            </div>
-
-            <div class="gRow">
-                <p class="cell g1">105</p>
-                <p class="cell g1">00:00 - 00:00</p>
-                <p class="cell g2">Webbserverprogrammering</p>
-            </div>
-
-            <div class="gRow">
-                <p class="cell g1">105</p>
-                <p class="cell g1">00:00 - 00:00</p>
-                <p class="cell g2">Webbserverprogrammering</p>
-            </div>
-
-        </div> -->
-
-
-        <div class="dCard">
-
-            <p class="row1 g1">Room</p>
-            <p class="row2 g1">Time</p>
-            <p class="row3 g2">Course</p>
-
-            <p class="row1 g1">105</p>
-            <p class="row2 g1">08:30 - 09:05</p>
-            <p class="row3 g2">Fysik</p>
-
-            <p class="row1 g1">115</p>
-            <p class="row2 g1">09:15 - 11:00</p>
-            <p class="row3 g2">Mentorstid</p>
-
-            <p class="row1 g1">122</p>
-            <p class="row2 g1">17:20 - 20:00</p>
-            <p class="row3 g2">Webbserverprogrammering</p>
-            
-        </div>
-
     </div>
 
     <?php 
