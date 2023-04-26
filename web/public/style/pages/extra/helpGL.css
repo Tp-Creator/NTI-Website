@@ -1,8 +1,10 @@
 #title {
     grid-column: 2;
 
+    margin-left: 18px;
+
     font-family: 'poppins-semibold';
-    font-size: 28px;
+    font-size: 22px;
 
     color: #d9d9d9;
 }
