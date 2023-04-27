@@ -85,12 +85,11 @@
                                 <a class='footerSubject' href='/helpGL'>Help Gradeless</a>
                             </div>
 
-                            <p id='footerHero'>2023・www.gradeless.se・V1</p>
+                            <p id='footerHero'>2023・www.gradeless.se・Alpha test</p>
                         </footer>
                     </div>";
 
         return $html;
-
     }
 
 ?>

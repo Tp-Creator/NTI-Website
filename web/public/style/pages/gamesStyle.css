@@ -10,56 +10,84 @@
     gap: 18px;
 }
 
-.gCard {
-    /* max-width: 325px; */
-    display: flex;
-    flex-direction: column;
 
+
+
+
+.gameCard {
     border-radius: 18px;
-
-    background-color: #101014;
-}
-
-.gCardFooter {
-    display: flex;
-    flex-direction: column;
+    aspect-ratio: 16/9;
 
     padding: 18px;
+
+    background-color: #101014;
+    background: linear-gradient(0deg, rgba(16,16,20,1) 25%, rgba(42,69,75,0) 100%);
+
+    display: flex;
+    flex-direction: row;
+    align-content: flex-end;
 }
 
-.gcIMG {
-    aspect-ratio: 16/9;
-    width: 100%;
 
-    border-radius: 18px 18px 0px 0px;
+.gcThumbnail {
+    border-radius: 18px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.gcTitle {
+.Tetris2 {
+    background-image: url(/public/img/gamesThumbnail/2Tetris_Joel_J.png);
+}
+
+.TicTacToe {
+    background-image: url(/public/img/gamesThumbnail/tictactoe_Kirill_Y.png);
+}
+
+.DOU {
+    background-image: url(/public/img/gamesThumbnail/defendarOfUkraine_Oleksandr_S.png);
+}
+
+.gcGameTitle {
     font-family: 'poppins-semibold';
-    font-size: 16px;
-
+    font-size: 18px;
     color: #d9d9d9;
 }
 
-.gcDesc {
-    font-size: 12px;
-
+.gcMeta {
+    font-size: 14px;
     color: #d9d9d9;
 }
 
-.gcBtn {
-    flex: 1;
-    margin-top: 18px;
-    padding: 6px 18px;
+.gcPlay {
+    align-self: flex-end;
+
+    padding: 8px;
 
     border-radius: 12px;
 
     text-align: center;
-    font-family: 'poppins-medium';
 
-    color: #101014;
-    background-color: #d9d9d9;
+    color: #d9d9d9;
+    background-color: #101014;
+
+    display: flex;
+    gap: 8px;
 }
+
+#gcfooter {
+    align-self: flex-end;
+
+    flex-grow: 1;
+
+    background: linear-gradient(0deg, rgba(16,16,20,1) 25%, rgba(42,69,75,0) 100%);
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
 
 #returnBtn {
     z-index: 1;
