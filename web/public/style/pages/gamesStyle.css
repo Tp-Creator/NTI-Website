@@ -1,12 +1,11 @@
 #contentFeed {
     grid-column: 2;
 
-    /* display: flex;
-    flex-wrap: wrap;
-    gap: 18px; */
+    min-height: 40vh;
 
-    display: grid;
-    grid-template-columns: repeat(3 , minmax(33% , 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 18px;
 }
 
@@ -15,10 +14,10 @@
 
 
 .gameCard {
-    border-radius: 18px;
     aspect-ratio: 16/9;
 
     padding: 18px;
+    border-radius: 18px;
 
     background-color: #101014;
     background: linear-gradient(0deg, rgba(16,16,20,1) 25%, rgba(42,69,75,0) 100%);
@@ -30,7 +29,12 @@
 
 
 .gcThumbnail {
+    flex: 1;
+    min-width: 286px;
+    height: max-content;
+
     border-radius: 18px;
+    aspect-ratio: 16/9;
     background-repeat: no-repeat;
     background-size: cover;
 }
