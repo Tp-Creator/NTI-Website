@@ -41,7 +41,10 @@ function foodCards(){
             $cards .=  "
                         <div class='lcCon'>
                             <div class='lcLongLine'></div>
-                            <p class='lcDay'>$dayName</p>
+                            <div class='lcDay'>
+                                <img id='lcDayIcon' src='/public/style/inc/icons/light/schedule_icon_light.svg'>
+                                <p>$dayName</p>
+                            </div>
                             <div class='lcShortLine'></div>
                         </div>
                         <div class='lcCon'>

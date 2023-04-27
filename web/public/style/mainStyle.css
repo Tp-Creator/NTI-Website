@@ -1,25 +1,30 @@
 @font-face {
     font-family: 'poppins';
-    src: url(includes/fonts/poppins/Poppins-Regular.ttf);
+    src: url(/public/style/inc/fonts/poppins/Poppins-Regular.ttf);
 }
 
 @font-face {
-    font-family: 'poppins-medium';
-    src: url(includes/fonts/poppins/Poppins-Medium.ttf);
+    font-family: 'poppins-italic';
+    src: url(/public/style/inc/fonts/poppins/Poppins-Italic.ttf);
 }
 
 @font-face {
-    font-family: 'poppins-semibold';
-    src: url(includes/fonts/poppins/Poppins-SemiBold.ttf);
+    font-family: 'poppins-bold';
+    src: url(/public/style/inc/fonts/poppins/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'poppins-black';
+    src: url(/public/style/inc/fonts/poppins/Poppins-Black.ttf);
 }
 
 body {
     /* background: linear-gradient(-45deg, rgba(57,45,105,1) 0%, rgba(181,123,238,1) 100%); */
-    background-color: #2B2B3B;
+    background-color: #666699;
 
     display: grid;
     grid-template-columns: 1fr minmax( 320px , 1100px ) 1fr;
-    gap: 18px;
+    column-gap: 18px;
 }
 
 * {
@@ -98,6 +103,10 @@ nav {
     gap: 4px;
 }
 
+#logo {
+    font-size: 18px;
+    font-family: 'poppins-bold';
+}
 
 
 #navHomeBut {
@@ -135,7 +144,7 @@ nav {
         /* Gets it from parent */
 
     /* OWN PARAMETERS */
-    padding: 2px 6px;
+    padding: 0px 4px;
     border-radius: 20px;
     border: 1px solid #101014;
     color: #d9d9d9;
@@ -160,7 +169,7 @@ nav {
     /* OWN PARAMETERS */
     margin: 6px;
     aspect-ratio: 1/1;
-    width: 21px;
+    width: 24px;
 
     /* CHILD PLACEMENT/BEHAVIOR */
         /* No childs */
@@ -214,22 +223,27 @@ footer {
 
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footerSection {
     width: max-content;
-    margin: 36px;
+    margin: 72px 36px 36px 36px;
 
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 12px;
 }
 
 .footerTitle {
     margin-bottom: 12px;
-    font-weight: 700;
-    color: #6666B2;
+
+    font-family: 'poppins-bold';
+    font-size: 18px;
+    
+    color: #666699;
 }
 
 .footerSubject {
@@ -243,10 +257,11 @@ footer {
 
 #footerHero {
     width: 100%;
-    margin: 18px 0px 36px 0px;
-    font-size: 13px;
+    margin: 36px 0px;
+    font-family: 'poppins-italic';
+    font-size: 14px;
     text-align: center;
-    color: #616185;
+    color: #666699;
 }
 
 
@@ -263,10 +278,6 @@ footer {
 
     .navBut {
         padding: 2px;
-    }
-
-    footer {
-        flex-direction: column;
     }
 
 }

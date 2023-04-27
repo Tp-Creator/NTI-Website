@@ -73,9 +73,6 @@
         </div>
 
 
-
-
-
         <!-- <div class="gCard">
             <img class="gcIMG" src="/public/img/gamesThumbnail/tictactoe_Kirill_Y.png" alt="">
             <div class="gCardFooter">

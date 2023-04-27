@@ -31,10 +31,10 @@
 
     <!-- Basic style links -->
     <link rel="stylesheet" href="/public/style/mainStyle.css">
-    <link rel="stylesheet" href="/public/style/commonStyle.css">
-    <link rel="stylesheet" href="/public/style/pages/scheduleStyle.css">
+    <link rel="icon" href="/public/style/inc/icons/gradeless_logo.svg">
     <!-- Page style links -->
-
+    <link rel="stylesheet" href="/public/style/pages/scheduleStyle.css">
+    <link rel="icon" href="/public/style/inc/icons/gradeless_logo.svg">
     <title>Schedule</title>
 </head>
 

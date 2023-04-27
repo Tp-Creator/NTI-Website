@@ -1,0 +1,92 @@
+header {
+    margin: 72px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#mainTitle {
+    font-family: 'poppins-semibold';
+    font-size: 44px;
+    color: #d9d9d9;
+}
+
+#mainP {
+    color: #d9d9d9;
+}
+
+#loginBut {
+    padding: 8px 18px 8px 12px;
+
+    border-radius: 30px;
+
+    background-color: #101014;
+
+    display: flex;
+    gap: 12px;
+}
+#loginBut:hover {
+    /* background-color: #2C2C32; */
+    outline: 1px solid #9898b4;
+}
+
+#loginIcon {
+    aspect-ratio: 1/1;
+    width: 24px;
+}
+
+#login {
+    color: #d9d9d9;
+    font-family: 'poppins-medium';
+}
+
+
+.infoSection {
+    grid-column: 2;
+    display: flex;
+}
+
+.infoSectionHeader {
+    padding: 18px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.infoTitle {
+    font-family: 'poppins-semibold';
+    font-size: 28px;
+    color: #d9d9d9;
+}
+
+.infoDes {
+    margin: 0px 18px 0px 18px;
+    font-family: 'poppins-medium';
+    font-size: 16px;
+    color: #d9d9d9;
+}
+
+.infoImg {
+    flex: 1;
+    aspect-ratio: 1/1;
+    width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+
+    .infoDes {
+        margin: 0%;
+    }
+
+    .infoSection {
+        flex-direction: column;
+    }
+    
+    .sectionReverse {
+        flex-direction: column-reverse;
+    }
+
+}

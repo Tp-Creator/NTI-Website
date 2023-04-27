@@ -9,18 +9,18 @@
     function drawNavbar(){
         
         $navbuttons =   [
-            ["Lunch",       "/lunch", "/public/style/includes/icons/foodIcon.svg"],
-            ["Schedule",    "/schedule", "/public/style/includes/icons/nav/event_icon.svg"],
-            ["Forum",       "/forum", "/public/style/includes/icons/nav/question_icon.svg"],
+            ["Lunch",       "/lunch", "/public/style/inc/icons/light/lunch_icon_light.svg"],
+            ["Schedule",    "/schedule", "/public/style/inc/icons/light/schedule_icon_light.svg"],
+            ["Forum",       "/forum", "/public/style/inc/icons/light/forum_icon_light.svg"],
             // ["Memes",       "/memes", "/public/style/includes/icons/nav/satisfied_icon.svg"],
-            ["Games",       "/games", "/public/style/includes/icons/nav/gamepad_icon.svg"]
+            ["Games",       "/games", "/public/style/inc/icons/light/games_icon_light.svg"]
         ];
 
 
             //  Logo
         $navbar =   "
                     <a id='navHomeBut' href='/'>
-                        <p>Gradeless</p>
+                        <p id='logo'>Gradeless</p>
                     </a>
                     ";
 
@@ -57,7 +57,7 @@
         else {
             $navbar .=  "
                         <a class='navBut' href='/google'>
-                            <img class='navIcon' src='public\style\includes\icons\google-icon.svg'>
+                            <img class='navIcon' src='/public/style/inc/icons/google_icon.svg'>
                             <p class='navText loginBut'>Login</p>
                         </a>
                         ";
@@ -76,16 +76,11 @@
                         <footer>
                             <div class='footerSection'>
                                 <p class='footerTitle'>Gradeless</p>
-                                <a class='footerSubject' href=''>Legacy</a>
-                                <a class='footerSubject' href=''>About us</a>
-                            </div>
-                            <div class='footerSection'>
-                                <p class='footerTitle'>Support</p>
                                 <a class='footerSubject' href=''>Contact admin</a>
-                                <a class='footerSubject' href='/helpGL'>Help Gradeless</a>
+                                <a class='footerSubject' href=''>Help Gradeless</a>
                             </div>
 
-                            <p id='footerHero'>2023・www.gradeless.se・Alpha test</p>
+                            <p id='footerHero'>2023・www.gradeless.se・Alpha-test</p>
                         </footer>
                     </div>";
 
