@@ -225,10 +225,59 @@ VALUES ('IT21', 2);
 INSERT INTO class (className, grade)
 VALUES ('IT20', 3);
 
+
+
+-- IT20 
+
+-- room 1
+INSERT INTO room (name)
+VALUES ('101');
+-- room 2
+INSERT INTO room (name)
+VALUES ('102');
+-- room 3
+INSERT INTO room (name)
+VALUES ('103');
+-- room 4
+INSERT INTO room (name)
+VALUES ('104');
+-- room 5
 INSERT INTO room (name)
 VALUES ('105');
+-- room 6
+INSERT INTO room (name)
+VALUES ('106');
+-- room 7
+INSERT INTO room (name)
+VALUES ('111');
+-- room 8
+INSERT INTO room (name)
+VALUES ('114');
+-- room 9
 INSERT INTO room (name)
 VALUES ('115');
+-- room 10
+INSERT INTO room (name)
+VALUES ('121');
+-- room 11
+INSERT INTO room (name)
+VALUES ('122');
+-- room 12
+INSERT INTO room (name)
+VALUES ('124');
+-- room 13
+INSERT INTO room (name)
+VALUES ('125');
+-- room 14
+INSERT INTO room (name)
+VALUES ('126');
+-- room 15
+INSERT INTO room (name)
+VALUES ('127');
+-- room 16
+INSERT INTO room (name)
+VALUES ('Lounge');
+
 
 -- Skapar programmering 1 på onsdagar kl 10:05-11:10
 -- INSERT INTO lesson (courseID, classID, roomID, starts, ends, repeated)
