@@ -30,6 +30,7 @@ function RoboroKeyboard()
   
   this.names =
   {
+    27: "esc",
     38: "up",
     40: "down",
     37: "left",
