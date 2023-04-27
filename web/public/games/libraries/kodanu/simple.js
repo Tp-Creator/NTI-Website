@@ -240,7 +240,7 @@ function init()
   };
   
   loadErrorConsole();
-  loadScript("public/js/libraries/kodanu/advanced.js", simplify);
+  loadScript("public/games/libraries/kodanu/advanced.js", simplify);
 }
 
 function loadErrorConsole() {

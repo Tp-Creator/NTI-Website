@@ -23,11 +23,6 @@
 //     //  Visar keycode på de tangenter man trycker på
 // keyboard.verbose = true
 
-    //  Mappar in esc i keyboard på key 27 vilket vi testat med raden ovan att det är esc blir då namnet på tangenten så vi kan skriva keyboard.esc
-// keyboard.names[27] = "esc"
-// keyboard.esc = false
-// keyboard[27] = false
-
 
 //  Variabler
 

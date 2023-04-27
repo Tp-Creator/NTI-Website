@@ -6,7 +6,7 @@
     if(isset($_GET["game"])){
         $game = $_GET["game"];
         
-        if(!file_exists("public/js/games/$game.js")){
+        if(!file_exists("public/games/games/$game/$game.js")){
             header("location:/games");
         }
     }
@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="/public/style/mainStyle.css">
     <link rel="stylesheet" href="/public/style/commonStyle.css">   <!--Erikas Kolla vilken css som behövs och ta bort den andra-->
     
-    <script src="https://koda.nu/simple.js"></script>
+    <script src="/public/games/libraries/kodanu/simple.js"></script>
 
     <title><?php echo ucwords($game); ?></title>
     
@@ -42,7 +42,7 @@
     </div>
 
 
-    <script src='/public/js/games/<?php echo $game; ?>.js'></script>
+    <script src='/public/games/games/<?php echo $game . "/". $game; ?>.js'></script>
 
     
 
