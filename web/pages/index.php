@@ -35,11 +35,19 @@
     <header>
         <h1 id="mainTitle">Gradeless</h1>
         <p id="mainP">A place for students by students.</p>
+        
+        <?php
+            if(getUserRank() == 0){
+        ?>
+            <a id="loginBut" href="/google">
+                <img id="loginIcon" src="/public/style/includes/icons/google-icon.svg" alt="">
+                <p id="login">Login</p>
+            </a>
 
-        <a id="loginBut" href="/google">
-            <img id="loginIcon" src="/public/style/includes/icons/google-icon.svg" alt="">
-            <p id="login">Login</p>
-        </a>
+        <?php
+            }
+        ?>
+        
     </header>
     
 

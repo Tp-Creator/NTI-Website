@@ -51,7 +51,7 @@
                     <p class="gcMeta">Kirill Y - TE21</p>
                 </div>
 
-                <a class="gcPlay" href="/game?game=2Tetris">
+                <a class="gcPlay" href="/game?game=tictactoe">
                     <img src="/public/style/includes/icons/nav/gamepad_icon.svg" alt="">
                     <p>Play</p>
                 </a>
@@ -65,7 +65,7 @@
                     <p class="gcMeta">Oleksandr S - TE21</p>
                 </div>
 
-                <a class="gcPlay" href="/game?game=2Tetris">
+                <a class="gcPlay" href="/game?game=defenderOfUkraine">
                     <img src="/public/style/includes/icons/nav/gamepad_icon.svg" alt="">
                     <p>Play</p>
                 </a>

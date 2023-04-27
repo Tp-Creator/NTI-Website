@@ -10,8 +10,8 @@
         
         $navbuttons =   [
             ["Lunch",       "/lunch", "/public/style/includes/icons/foodIcon.svg"],
-            ["Forum",       "/forum", "/public/style/includes/icons/nav/question_icon.svg"],
             ["Schedule",    "/schedule", "/public/style/includes/icons/nav/event_icon.svg"],
+            ["Forum",       "/forum", "/public/style/includes/icons/nav/question_icon.svg"],
             // ["Memes",       "/memes", "/public/style/includes/icons/nav/satisfied_icon.svg"],
             ["Games",       "/games", "/public/style/includes/icons/nav/gamepad_icon.svg"]
         ];

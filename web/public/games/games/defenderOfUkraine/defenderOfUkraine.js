@@ -3,6 +3,10 @@
 timmer = 0 //Timmer för cooldown
 gamestate = 0 //Startskärm
 
+// Vet inte varför detta behövde deffinieras men det gjorde det...
+totalWidth = window.innerWidth
+totalHeight = window.innerHeight
+
 var bStart =    {x: totalWidth/2-75,    y: totalHeight/2+50,  b:150, h:65, c:"grey"}
 var bInst =     {x: totalWidth/2-100,   y: totalHeight/2+120, b:200, h:65, c:"grey"}
 var bEasy =     {x: totalWidth/2-160,   y: totalHeight/2+190, b:100, h:40, c:"grey"}
@@ -53,7 +57,7 @@ function Enemy(x, y, b, h, evx, nv, evx, nvx, hvx){
     this.hvx = 9 //hard
 
     this.drawEnemy = function(){ //en functionen som ritar mina motståndare
-        picture(this.x, this.y, "/pages/games/allGames/DoU/rhelicopter.png", this.b, this.h)
+        picture(this.x, this.y, "/public/games/games/defenderOfUkraine/rhelicopter.png", this.b, this.h)
     }
 
     this.moveEnemy = function(){ //en functionen som gör röreslen för mina motståndarna
@@ -104,7 +108,7 @@ function Shot(x, y, b, h, d){
     this.s = 10
 
     this.drawShot = function(){ //den del ritar skotten 
-        picture(this.x, this.y, "/pages/games/allGames/DoU/bullet.png", this.b, this.h)
+        picture(this.x, this.y, "/public/games/games/defenderOfUkraine/bullet.png", this.b, this.h)
     }
     this.follow = function() { //den del gör att skotten kommer vara separata efter att du har skjutit(tryckt på space)
         this.x = player.x + player.b/2-15
@@ -130,8 +134,7 @@ function Shot(x, y, b, h, d){
                 enemys.splice(i, 1)
                 shots.splice(index, i)
                 
-                picture(this.x-this.b, this.y, "/pages/games/allGames/DoU/boom.png", 100, 100) 
-                picture(this.x-this.b, this.y, "web/pages/games/allGames/DoU/boom.png", 100, 100) 
+                picture(this.x-this.b, this.y, "/public/games/games/defenderOfUkraine/boom.png", 100, 100) 
                 score += this.s
                 if(enemys.length == 0){
                     gamestate = 2
@@ -205,7 +208,7 @@ function update(){
     switch(gamestate){ 
         /*          Startskärm           */
         case 0:
-            picture(0, 0, "/pages/games/allGames/DoU/land.png", totalWidth, totalHeight)
+            picture(0, 0, "/public/games/games/defenderOfUkraine/land.png", totalWidth, totalHeight)
 
             /*          Buttons         */
             if(mouse.x>bStart.x && mouse.x<bStart.x+150 && mouse.y>bStart.y && mouse.y<bStart.y+65 && mouse.left){
@@ -258,7 +261,7 @@ function update(){
 
         /*          Spelet börjas           */
         case 1:
-            picture(0, 0, "/pages/games/allGames/DoU/landP.png", totalWidth, totalHeight)
+            picture(0, 0, "/public/games/games/defenderOfUkraine/landP.png", totalWidth, totalHeight)
             text(100, totalHeight-30, 20, "Score:"+score, "white")
             text(totalWidth-300, totalHeight-30, 25, "Restart: R", "white")
             if(keyboard.r){
@@ -279,7 +282,7 @@ function update(){
 
             movement() //ropar på function movment
             
-            picture(player.x, player.y, "/pages/games/allGames/DoU/utank.png", player.b, player.h)
+            picture(player.x, player.y, "/public/games/games/defenderOfUkraine/utank.png", player.b, player.h)
 
             /*          Hinder för motståndarna         */
             //line(0, totalHeight/2+150, totalWidth, totalHeight/2+150, 5, "yellow")
@@ -327,7 +330,7 @@ function update(){
 
         case "Instructions":
             clearScreen()
-            picture(0, 0, "/pages/games/allGames/DoU/settings.png", totalWidth, totalHeight)
+            picture(0, 0, "/public/games/games/defenderOfUkraine/settings.png", totalWidth, totalHeight)
 
             /*          27 is escape            */
             if(keyboard[27]){
@@ -341,7 +344,7 @@ function update(){
         /*          GameOver, spelaren vinner          */
         case 2:
             clearScreen()
-            picture(0, 0, "/pages/games/allGames/DoU/win.png", 1536, 714)
+            picture(0, 0, "/public/games/games/defenderOfUkraine/win.png", 1536, 714)
             
             points()
 
@@ -360,8 +363,8 @@ function update(){
         /*          GameOver, spelaren förlurar         */
         case 3: 
             clearScreen()
-            picture(0, 0, "/pages/games/allGames/DoU/lose.png", totalWidth, totalHeight)
-            picture(totalWidth-500, totalHeight-300, "lose.webp", 360, 245)
+            picture(0, 0, "/public/games/games/defenderOfUkraine/lose.png", totalWidth, totalHeight)
+            picture(totalWidth-500, totalHeight-300, "/public/games/games/defenderOfUkraine/lose.webp", 360, 245)
 
             rectangle(totalWidth/2-200, totalHeight/2+125, 425, 70, "black")
                 text(totalWidth/2-175, totalHeight/2+170, 25, "Game over, you lose", "white")
