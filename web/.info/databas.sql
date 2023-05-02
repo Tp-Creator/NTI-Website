@@ -316,12 +316,47 @@ INSERT INTO lesson (courseID, classID, roomID, start, end, repeated)
 VALUES (18, 2, 5, '2023-04-04 13:10:00', '2023-04-04 14:30:00', 2);  -- 1: dayly 2: weekly, 3: monthly, 4: termin 5: yearly
 
 -- Onsdagar:
-
-
-
+-- Sve 2.
 INSERT INTO lesson (courseID, classID, roomID, start, end, repeated)
-VALUES (1, 2, 1, '2023-04-05 13:00:00', '2023-04-05 14:15:00', 2);  -- 1: dayly 2: weekly, 3: monthly, 4: termin 5: yearly
+VALUES (11, 2, 5, '2023-04-05 09:40:00', '2023-04-05 11:00:00', 2);  -- 1: dayly 2: weekly, 3: monthly, 4: termin 5: yearly
+-- Webb utv.
+INSERT INTO lesson (courseID, classID, roomID, start, end, repeated)
+VALUES (4, 2, 9, '2023-04-05 11:10:00', '2023-04-05 12:25:00', 2);  -- 1: dayly 2: weekly, 3: monthly, 4: termin 5: yearly
+-- Till. prog.
+INSERT INTO lesson (courseID, classID, roomID, start, end, repeated)
+VALUES (3, 2, 5, '2023-04-05 13:00:00', '2023-04-05 14:15:00', 2);  -- 1: dayly 2: weekly, 3: monthly, 4: termin 5: yearly
 
+
+-- INSERT INTO lesson (courseID, classID, roomID, start, end, repeated)
+-- VALUES (3, 2, 5, '2023-04-05 13:00:00', '2023-04-05 14:15:00', 2);  -- 1: dayly 2: weekly, 3: monthly, 4: termin 5: yearly
+
+-- Torsdagar:
+-- Kemi 1
+INSERT INTO lesson (courseID, classID, roomID, start, end, repeated)
+VALUES (23, 2, 10, '2023-04-06 09:20:00', '2023-04-06 10:10:00', 2);  -- 1: dayly 2: weekly, 3: monthly, 4: termin 5: yearly
+-- Eng 6
+INSERT INTO lesson (courseID, classID, roomID, start, end, repeated)
+VALUES (8, 2, 5, '2023-04-06 10:15:00', '2023-04-06 11:20:00', 2);  -- 1: dayly 2: weekly, 3: monthly, 4: termin 5: yearly
+-- Ma 3C
+INSERT INTO lesson (courseID, classID, roomID, start, end, repeated)
+VALUES (18, 2, 9, '2023-04-06 11:55:00', '2023-04-06 13:00:00', 2);  -- 1: dayly 2: weekly, 3: monthly, 4: termin 5: yearly
+-- Fy 1
+INSERT INTO lesson (courseID, classID, roomID, start, end, repeated)
+VALUES (13, 2, 9, '2023-04-06 13:05:00', '2023-04-06 14:10:00', 2);  -- 1: dayly 2: weekly, 3: monthly, 4: termin 5: yearly
+
+-- Fredagar:
+-- Till prog.
+INSERT INTO lesson (courseID, classID, roomID, start, end, repeated)
+VALUES (3, 2, 9, '2023-04-07 08:35:00', '2023-04-07 09:55:00', 2);  -- 1: dayly 2: weekly, 3: monthly, 4: termin 5: yearly
+-- Webb utv.
+INSERT INTO lesson (courseID, classID, roomID, start, end, repeated)
+VALUES (4, 2, 9, '2023-04-07 10:05:00', '2023-04-07 11:15:00', 2);  -- 1: dayly 2: weekly, 3: monthly, 4: termin 5: yearly
+-- Sv 2.
+INSERT INTO lesson (courseID, classID, roomID, start, end, repeated)
+VALUES (11, 2, 5, '2023-04-07 11:25:00', '2023-04-07 12:30:00', 2);  -- 1: dayly 2: weekly, 3: monthly, 4: termin 5: yearly
+-- Fys 1.
+INSERT INTO lesson (courseID, classID, roomID, start, end, repeated)
+VALUES (13, 2, 9, '2023-04-07 13:10:00', '2023-04-07 14:10:00', 2);  -- 1: dayly 2: weekly, 3: monthly, 4: termin 5: yearly
 
 
 
