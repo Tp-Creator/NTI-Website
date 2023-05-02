@@ -54,13 +54,9 @@
         </nav>
     </div>
 
-    <header>
-            <!-- "Aks a question" button  -->
-        <a class="callToAction" href="/forum">
-            Back to forum
-            <!-- <img src="" alt=""> -->
-        </a>
-    </header>
+    <a class="callToAction" href="/forum">
+        Back to forum
+    </a>
 
     <!-- Question card -->
     <section class="horizontalCon contentFeed">

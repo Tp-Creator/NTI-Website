@@ -1,9 +1,9 @@
 #class-select {
     width: max-content;
     padding: 8px 18px;
-    border-radius: 18px;
+    border-radius: 32px;
 
-    font-family: 'poppins-medium';
+    font-family: 'poppins';
     font-size: 14px;
 
     color: #d9d9d9;
@@ -65,7 +65,7 @@
     min-width: max-content;
 
     font-size: 14px;
-    font-family: 'poppins-medium';
+    font-family: 'poppins';
 
     color: #101014;
     /* text-align: center; */
@@ -74,7 +74,7 @@
 .title {
     margin:0px 0px 4px 12px;
     font-size: 14px;
-    font-family: 'poppins-semibold';
+    font-family: 'poppins-bold';
     color: #d9d9d9;
 }
 

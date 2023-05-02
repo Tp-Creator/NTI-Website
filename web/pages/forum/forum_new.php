@@ -31,40 +31,43 @@
 
     <title>Forum</title>
 </head>
-
 <body>
-
-    <!-- Navigationbar  -->
     <div class="container mainNavCon">
         <nav>
             <?php echo drawNavbar() ?>
         </nav>
     </div>
 
-
-    <div id="body">
-
+    <div id="feed">
         <!-- <div id="filterCon">
-            <p>Sort by course</p>
-            <button class="filterBut">Programmering</button>
+            <button class="filterBut">All courses</button>
+            <?php echo filterMenu(); ?>
         </div> -->
 
-
         <header>
-            <div id="header">
-                <div id="filterCon">
-                    <button class="filterBut">All courses</button>
-                    <?php echo filterMenu(); ?>
-                </div>
+            <?php
+                //  Removes the ask a question button if your not signed in
+                if(getUserRank() > 0){
+                    echo '<button id="askQuestion">Ask a question</button>';
+                } 
+            ?>
 
-                <?php
-                    //  Removes the ask a question button if your not signed in
-                    if(getUserRank() > 0){
-                        echo '<button id="askQuestion">Ask a question</button>';
-                    } 
-                ?>
-            </div>
+            <button class="selectedCourse">All Courses</button>
+        </header>
 
+        <div id="filters">
+            <button class="filterButton">Svenska</button>
+            <button class="filterButton">Engelska</button>
+            <button class="filterButton">Kemi</button>
+            <button class="filterButton">Fysik</button>
+            <button class="filterButton">Teknik</button>
+            <button class="filterButton">Mattematik</button>
+            <button class="filterButton">Programmering</button>
+            <button class="filterButton">Webbutveckling</button>
+            <button class="filterButton">Dator & Nätverksteknik</button>
+        </div>
+
+        <div id="questoinForm">
             <?php
                 //  Removes the ask a question menu if not signed in
                 if(getUserRank() > 0){
@@ -89,30 +92,26 @@
                             ?>
                         </select>
 
-                        <div class="devider"></div>
-
                         <button id="postQuestionButton" type="submit">Post</button>
                     </form>
             <?php
                 }
             ?>
-        <header>
+        </div>
 
-        <!-- Content feed -->
-        <section id="questionCardFeed">
+        <div id="questionCardFeed">
             <?php 
                 $questions = getQuestions();
-                        
+
                 //  Amount of cards is the amount of cards that will be displayed
                 for($current = sizeof($questions)-1; $current >= 0; $current--){
                     echo questionCard($questions[$current]);
 
                 }
             ?>
-        </section>
-
+        </div>
     </div>
-        
+
     <?php 
         echo drawFooter();
     ?>

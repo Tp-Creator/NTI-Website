@@ -33,7 +33,7 @@
     </div>
 
     <div class="infoSection">
-        <h1 class="infoSectionTitle IST1">A little bit about us...</h1>
+        <h2 class="infoSectionTitle IST1">A little bit about us...</h2>
         <p class="infoSectionContent">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
             Cum possimus sequi id culpa inventore modi? Exercitationem 
             nihil blanditiis odio, ex porro nemo esse, natus beatae 
@@ -42,28 +42,24 @@
 
     <div id="contentFeed">
         <div class="infoCard">
-            <h1 class="infoCardTitle">Lunch</h1>
+            <h2 class="infoCardTitle">Lunch</h2>
             <img class="infoCardIcon" src="/public/style/inc/icons/custom/lunch_icon_custom.svg" alt="">
-            <p class="infoCardContent">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Quis eaque ducimus repellat, cumque magnam doloribus ratione atque.</p>
+            <p class="infoCardContent">hi</p>
         </div>
         <div class="infoCard">
-            <h1 class="infoCardTitle">Schedule</h1>
+            <h2 class="infoCardTitle">Schedule</h2>
             <img class="infoCardIcon" src="/public/style/inc/icons/custom/schedule_icon_custom.svg" alt="">
-            <p class="infoCardContent">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Quis eaque ducimus repellat, cumque magnam doloribus ratione atque.</p>
+            <p class="infoCardContent">hi</p>
         </div>
         <div class="infoCard">
-            <h1 class="infoCardTitle">Forum</h1>
+            <h2 class="infoCardTitle">Forum</h2>
             <img class="infoCardIcon" src="/public/style/inc/icons/custom/forum_icon_custom.svg" alt="">
-            <p class="infoCardContent">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Quis eaque ducimus repellat, cumque magnam doloribus ratione atque.</p>
+            <p class="infoCardContent">hi</p>
         </div>
         <div class="infoCard">
-            <h1 class="infoCardTitle">Games</h1>
+            <h2 class="infoCardTitle">Games</h2>
             <img class="infoCardIcon" src="/public/style/inc/icons/custom/games_icon_custom.svg" alt="">
-            <p class="infoCardContent">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Quis eaque ducimus repellat, cumque magnam doloribus ratione atque.</p>
+            <p class="infoCardContent">hi</p>
         </div>
     </div>
 

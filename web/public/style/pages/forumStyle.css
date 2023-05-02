@@ -7,6 +7,7 @@ body {
 
 .contentFeed {
     grid-column: 2;
+    margin-bottom: 18px;
 }
 
 .replyButton:hover {
@@ -24,6 +25,7 @@ body {
 
 
 #addQuestionCard {
+    margin-bottom: 18px;
     padding: 18px;
     border-radius: 18px;
 
@@ -42,7 +44,7 @@ body {
     border-radius: 2rem;
 
     font-size: 0.875rem;
-    font-family: 'poppins-medium';
+    font-family: 'poppins-bold';
 
     color: #101014;
     background-color: #d9d9d9;
@@ -69,7 +71,7 @@ body {
 }
 .formTitel {
     font-size: 1rem;
-    font-family: 'poppins-semibold';
+    font-family: 'poppins-bold';
 
     color: #d9d9d9;
 }
@@ -83,6 +85,7 @@ body {
 
 .formOptionsCon {
     color: #d9d9d9;
+    background-color: #101014;
 }
 .formOptionsCon::focus {
     color: #d9d9d9;
@@ -121,7 +124,7 @@ body {
 }
 
 .sectiontitle {
-    font-family: 'poppins-semibold';
+    font-family: 'poppins-bold';
     color: #d9d9d9;
 }
 
@@ -212,7 +215,7 @@ body {
     border-radius: 18px;
 
     font-size: 12px;
-    font-family: 'poppins-medium';
+    font-family: 'poppins';
 
     color: #101014;
     background-color: #d9d9d9;
@@ -221,17 +224,17 @@ body {
 .fcStatus {
     flex-grow: 1;
 
-    font-size: 12px;
+    font-size: 14px;
 
     text-align: right;
-    font-family: 'poppins-semibold';
+    font-family: 'poppins-bold';
 
     color: #d9d9d9;
 }
 
 .fcContentTitle {
     /* font-size: 18px; */
-    font-family: 'poppins-semibold';
+    font-family: 'poppins-bold';
 
     color: #d9d9d9;
 }
@@ -241,7 +244,7 @@ body {
 
 .fcDes {
     color: #d9d9d9;
-    font-family: 'poppins-medium';
+    font-family: 'poppins';
     font-size: 14px;
 }
 
@@ -274,7 +277,15 @@ body {
 }
 
 .callToAction {
+    grid-column: 2;
+    margin-top: 18px;
+    padding: 8px 18px;
+    max-width: max-content;
+    border-radius: 32px;
+    font-size: 14px;
+    font-family: 'poppins-bold';
     color: #d9d9d9;
+    background-color: #101014;
 }
 
 
@@ -285,22 +296,26 @@ body {
 
 #header {
     display: flex;
-    gap: 18px;
+    flex-direction: column;
 }
 
 #askQuestion {
     min-width: 144px;
     height: min-content;
 
-    padding: 10px 18px;
+    margin-bottom: 18px;
+    padding: 8px 18px;
 
     border-radius: 20px;
 
     font-size: 14px;
-    font-family: 'poppins-medium';
+    font-family: 'poppins-bold';
 
     color: #101014;
     background-color: #d9d9d9;
+}
+#askQuestion:hover {
+    cursor: pointer;
 }
 
 #filterCon {
@@ -320,20 +335,22 @@ body {
 }
 #filterCon::-webkit-scrollbar {
     display: none;
-  }
-  
-  /* Hide scrollbar for IE, Edge and Firefox */
+}
+
+  /* Hide scrollbar for IE, Edge and Firefox */ */
 #filterCon {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-  }
+    /* IE and Edge */
+    -ms-overflow-style: none;
+    /* Firefox */
+    scrollbar-width: none;
+}
 
 .filterBut {
     min-width: max-content;
     padding: 4px 12px;
     border-radius: 10px;
 
-    font-family: 'poppins-medium';
+    font-family: 'poppins-bold';
     font-size: 14px;
 
     color: #d9d9d9;
