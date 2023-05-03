@@ -22,11 +22,11 @@
     <!-- random style links -->
     <link rel="stylesheet" href="/public/style/mainStyle.css">
     <link rel="stylesheet" href="/public/style/commonStyle.css">
+    <link rel="stylesheet" href="/public/style/pages/account.css">
 
     <title><?php echo $usr->Username; ?>'s account</title>
 </head>
 <body>
-    
     <!-- Navigationbar  -->
     <div class="container mainNavCon">
         <nav>
@@ -34,16 +34,16 @@
         </nav>
     </div>
 
-    <h1>Welcome <?php echo $usr->FirstName . " ". $usr->LastName; ?>!</h1>
-    <p>This is your profile page. On this page you can see you profile image and sign out</p>
+    <div id="feed">
+        <img src="public/img/pfp/<?php echo $usr->Email; ?>.png" alt="">
 
-    <img src="public/img/pfp/<?php echo $usr->Email; ?>.png" alt="">
 
-    <a href="/logout">Logout</a>
+        <h1><?php echo $usr->FirstName . " ". $usr->LastName; ?></h1>
 
+        <a id="logout" href="/logout">Logout</a>
+    </div>
     <?php 
         echo drawFooter();
     ?>
-
 </body>
 </html>
