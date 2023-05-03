@@ -24,7 +24,7 @@ function foodCards(){
                         <p id='lcTitle'>Week $weekNum</p>
 
                         <!--Placeholder för medellande om det behös.-->
-                        <p id='lcMsg'>Note! The information is provided by the organization delivering the food. Changes may occur.</p>
+                        <!--<p id='lcMsg'>Note! The information is provided by the organization delivering the food. Changes may occur.</p>-->
                     ";
 
     

@@ -34,40 +34,50 @@
 
     <div class="infoSection">
         <h2 class="infoSectionTitle IST1">A little bit about us...</h2>
-        <p class="infoSectionContent">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Cum possimus sequi id culpa inventore modi? Exercitationem 
-            nihil blanditiis odio, ex porro nemo esse, natus beatae 
-            veniam ad autem ipsum odit.</p>
+        <p class="infoSectionContent">
+        Gradeless is a not so innovative educational project led by a team of four students. 
+        Our platform enables students to share their knowledge and work seamlessly, 
+        while also providing access to essential information.
+        </p>
     </div>
-
+    
     <div id="contentFeed">
         <div class="infoCard">
             <h2 class="infoCardTitle">Lunch</h2>
             <img class="infoCardIcon" src="/public/style/inc/icons/custom/lunch_icon_custom.svg" alt="">
-            <p class="infoCardContent">hi</p>
+            <p class="infoCardContent">Here, you'll find a weekly lunch menu. Information is provided by the delivery company.</p>
         </div>
         <div class="infoCard">
             <h2 class="infoCardTitle">Schedule</h2>
             <img class="infoCardIcon" src="/public/style/inc/icons/custom/schedule_icon_custom.svg" alt="">
-            <p class="infoCardContent">hi</p>
+            <p class="infoCardContent">
+                Weekly schedule page provides you with a clear overview of your weekly schedule.
+            </p>
         </div>
         <div class="infoCard">
             <h2 class="infoCardTitle">Forum</h2>
             <img class="infoCardIcon" src="/public/style/inc/icons/custom/forum_icon_custom.svg" alt="">
-            <p class="infoCardContent">hi</p>
+            <p class="infoCardContent">
+            Ask and answer questions related to your studies, 
+            connect with other students, and share your knowledge.
+            </p>
         </div>
         <div class="infoCard">
             <h2 class="infoCardTitle">Games</h2>
             <img class="infoCardIcon" src="/public/style/inc/icons/custom/games_icon_custom.svg" alt="">
-            <p class="infoCardContent">hi</p>
+            <p class="infoCardContent">
+            Showcase the games you have created and explore games made by your fellow students.
+            </p>
         </div>
     </div>
 
     <div class="infoSection">
         <h1 class="infoSectionTitle IST2">Be the designer of gradeless!!!</h1>
-        <p class="infoSectionContent">Do not limit yourself to be just the user, when you also can be the designer!
+        <p class="infoSectionContent">
+            Do not limit yourself to be just the user, when you also can be the designer!
             Help design gradeless by telling us about your user experience, thoughts,
-            things you like and don't like or... you can just answer some questions we have for you, thanks :)</p>
+            things you like and don't like or... you can just answer some questions we have for you, thanks :)
+        </p>
         <a id="helpGradeless" href="">Google form・15 questions・8 min</a>
     </div>
 
