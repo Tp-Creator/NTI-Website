@@ -105,7 +105,8 @@
         ?>
                 <form id="answerQuestionCard" name="answerQuestionCard">
                     <!-- ( "Searchfield where user are able to type" )  The name of the user that asked the question -->
-                    <textarea id="answerInput" placeholder="Answer <?php echo $user->Username; ?>'s question" rows="1" type="text" name="newAnswerContent" id="newAnswerContent"></textarea>
+                    <div class="formInput formDescription" role="textbox" contenteditable style="min-height: 42px;" name="newAnswerContent" id="newAnswerContent"></div>
+                    <!-- <textarea id="answerInput" placeholder="Answer <?php echo $user->Username; ?>'s question" rows="1" type="text" name="newAnswerContent" id="newAnswerContent"></textarea> -->
             
                     <button id="postQuestionButton" type="submit">Post</button>
                     <!-- <button class="buttonType1 AQP2">Post</button> -->
