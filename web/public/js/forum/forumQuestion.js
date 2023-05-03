@@ -37,47 +37,44 @@
 
 //  När man submittar formen för att posta en answer kör functionen:
     $("#answerQuestionCard").submit(function(event){
-        //  Hindra formen från att ladda om sidan
-    event.preventDefault();
+            //  Hindra formen från att ladda om sidan
+        event.preventDefault();
 
-        //  Spara data i variabler
-    let formData = $("#answerQuestionCard").serialize();
+            //  Spara meddelandet i formData
+        let formData = $.trim($(".formInput").text());
 
-        //  Hämtar questionID:t från url:n och adderar den till formdata
-    let questionID = searchParams.get("question");
-    formData += '&questionID=' + questionID + "&function=1";
+            //  Hämtar questionID:t från url:n och skapar en sträng med informationen ifråm av url variabel
+        let questionID = searchParams.get("question");
+        data = 'newAnswerContent=' + formData + '&questionID=' + questionID + "&function=1";
 
-        //  Hämtar contentet så att vi kan kolla så att det inte är en tom sträng
-    let answerContent = $("#answerInput").val();
-    
 
-        //  Kolla om fälten är tomma eller om de innehåller info och stoppa annars post:en.
-    if(answerContent != ""){
-            //  Skapar ett anrop till en annan fil och skickar datan dit som i sin tur postar answer
-        $.ajax({
-        type: "POST",
-        url: "/public/OPA/forum/OPA.question.php",
-        data: formData,
-        success: function(response){
-            checkForNewMessages();
-            // $("#courseID").val('');
-            $("#answerInput").val('');
+            //  Kolla om fälten är tomma eller om de innehåller info och stoppa annars post:en.
+        if(formData != ""){
+                //  Skapar ett anrop till en annan fil och skickar datan dit som i sin tur postar answer
+            $.ajax({
+            type: "POST",
+            url: "/public/OPA/forum/OPA.question.php",
+            data: data,
+            success: function(response){
+                checkForNewMessages();
+                // $("#courseID").val('');
+                $(".formInput").text('');
 
-            // console.log(response);
-                //  Vid success:
-                //  Resetta alla fält i formen
-            
-            
+                // console.log(response);
+                    //  Vid success:
+                    //  Resetta alla fält i formen
+                
+                
 
-        },
-                //  Vid error skriv i konsolen
-        error: function(response){
-            console.log("Error posting new Answer!");
+            },
+                    //  Vid error skriv i konsolen
+            error: function(response){
+                console.log("Error posting new Answer!");
+            }
+            });
+        } else {
+            //  Code for handling uncompleted submit
         }
-        });
-    } else {
-        //  Code for handling uncompleted submit
-    }
 });
 
 

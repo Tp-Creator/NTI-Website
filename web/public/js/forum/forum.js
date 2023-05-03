@@ -61,6 +61,7 @@
         var formData = $("#addQuestionCard").serialize();
 
         formData += '&function=1'
+        console.log(formData);
 
         var courseID = $("#courseID").val();
         var title = $.trim($("#title").val());
