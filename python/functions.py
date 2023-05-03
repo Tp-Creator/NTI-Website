@@ -17,6 +17,6 @@ def log(msg):
     nowStr = nowDate.strftime("%Y-%m-%d, %H:%M:%S")
 
     with open("python/log.txt", 'a', encoding="utf8") as file:
-        file.write(f"\n{nowStr}  {str(msg)}")
+        file.write(f"\n{nowStr}  {msg}")
     
     return None
