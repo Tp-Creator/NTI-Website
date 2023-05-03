@@ -48,7 +48,7 @@ $routes = [
     "/games/defenderOfUkraine"  =>    [ "/pages/games/allGames/DoU/defenderOfUkraine.html",    -1 ],
 
     "/schedule"                 =>    [ "/pages/schedule/schedule.php",                         0 ],
-    "/debug"                    =>    [ "/pages/schedule/schedule future.php",                 -1 ],
+    "/debug"                    =>    [ "/pages/forum/forum_new.php",                 -1 ],
 
     "/memes"                    =>    [ "/pages/memes/memes.php",                              -1 ],
 
