@@ -1,7 +1,67 @@
-.area {}
+.area {
+    grid-column: 2;
+    margin: 18px 0px;
+}
 
-h3 {}
+h1 {
+    grid-column: 2;
 
-.person {}
+    text-align: center;
+    font-family: 'poppins-bold';
 
-.name {}
+    margin-top: 36px;
+}
+
+#subtitle {
+    grid-column: 2;
+    margin-bottom: 18px;
+
+    text-align: center;
+    font-family: 'poppins-italic';
+}
+
+h3 {
+    margin-left: 18px;
+    font-family: 'poppins-bold';
+    margin-bottom: 18px;
+}
+
+.person {
+    padding: 18px;
+    border-radius: 18px;
+    background-color: #101014;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+.person div {
+    margin-bottom: 8px;
+
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.person div p {
+    color: #d9d9d9;
+}
+
+.person img {
+    aspect-ratio: 1/1;
+    width: 32px;
+    border-radius: 32px;
+}
+
+.person a {
+    font-family: 'poppins-bold';
+    font-size: 14px;
+    color: #d9d9d9;
+}
+.person a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.person p {}
