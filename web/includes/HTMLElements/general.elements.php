@@ -76,7 +76,7 @@
                         <footer>
                             <div class='footerSection'>
                                 <p class='footerTitle'>Gradeless</p>
-                                <a class='footerSubject' href=''>Contact admin</a>
+                                <a class='footerSubject' href='/contact'>Contact admin</a>
                                 <a class='footerSubject' href=''>Help Gradeless</a>
                             </div>
 
