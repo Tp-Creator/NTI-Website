@@ -32,6 +32,7 @@
 
     // This function checks if the user is logged in by checking if the session
     // contains an userID. If not it directs the user to the login page.
+    // SKALL AVVECKLAS!!! - deprecated
     function loginCheck() {
             //  Måste startas direkt från den filen där den ska användas. Annars får man felmeddelande om att man startar session för sent.
         // session_start(); //start the PHP_session function 

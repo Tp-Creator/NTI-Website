@@ -47,7 +47,7 @@ function schedule($classID){
 
 
     $lessons = getLessons($classID, /*$day*/);
-    // console_log($lessons);
+    console_log($lessons);
     
     // Get all lessons for user or class 
 

@@ -27,13 +27,13 @@ if (isset($_GET['code'])) {
     // Image path
   $img = "public/img/pfp/$email.png";
 
-  if(!file_exists($img)){
+  // if(!file_exists($img)){
       // Save image 
     file_put_contents($img, file_get_contents($url));
-  }
+  // }
 
   $userID = validateGoogleUser($email, $first, $last);
-  console_log($userID);
+  // console_log($userID);
 
   $_SESSION['userID'] = $userID;
 

@@ -41,7 +41,7 @@
                         ";
         }
         
-        if (loginCheck()) {
+        if (getUserRank() != 0) {
             // array_push($navbuttons, ["Account", "/account"]);
             // array_push($navbuttons, ["Logout", "/logout"]);
 

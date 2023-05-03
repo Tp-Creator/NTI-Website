@@ -7,7 +7,7 @@
     function getLessons($class){
         global $conn;
 
-        $stmt = $conn->prepare("SELECT * FROM lesson WHERE classID = ? ORDER BY WEEKDAY(start);");
+        $stmt = $conn->prepare("SELECT * FROM lesson WHERE classID = ? ORDER BY WEEKDAY(start), start;");
         $stmt->bind_param("i", $class);
         $stmt->execute();
 

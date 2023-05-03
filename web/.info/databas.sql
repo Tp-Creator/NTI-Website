@@ -299,7 +299,7 @@ INSERT INTO lesson (courseID, classID, roomID, start, end, repeated)
 VALUES (11, 2, 5, '2023-04-03 12:25:00', '2023-04-03 13:40:00', 2);  -- 1: dayly 2: weekly, 3: monthly, 4: termin 5: yearly
 -- Ma 3C.
 INSERT INTO lesson (courseID, classID, roomID, start, end, repeated)
-VALUES (18, 2, 5, '2023-04-03 12:25:00', '2023-04-03 13:40:00', 2);  -- 1: dayly 2: weekly, 3: monthly, 4: termin 5: yearly
+VALUES (18, 2, 5, '2023-04-03 13:50:00', '2023-04-03 14:55:00', 2);  -- 1: dayly 2: weekly, 3: monthly, 4: termin 5: yearly
 
 -- Tisdagar:
 -- Eng 6
@@ -313,7 +313,7 @@ INSERT INTO lesson (courseID, classID, roomID, start, end, repeated)
 VALUES (13, 2, 9, '2023-04-04 13:10:00', '2023-04-04 14:30:00', 2);  -- 1: dayly 2: weekly, 3: monthly, 4: termin 5: yearly
 -- Ma 3c
 INSERT INTO lesson (courseID, classID, roomID, start, end, repeated)
-VALUES (18, 2, 5, '2023-04-04 13:10:00', '2023-04-04 14:30:00', 2);  -- 1: dayly 2: weekly, 3: monthly, 4: termin 5: yearly
+VALUES (18, 2, 5, '2023-04-04 14:40:00', '2023-04-04 15:55:00', 2);  -- 1: dayly 2: weekly, 3: monthly, 4: termin 5: yearly
 
 -- Onsdagar:
 -- Sve 2.
