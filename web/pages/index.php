@@ -40,7 +40,7 @@
         while also providing access to essential information.
         </p>
     </div>
-    
+
     <div id="contentFeed">
         <div class="infoCard">
             <h2 class="infoCardTitle">Lunch</h2>
@@ -78,7 +78,7 @@
             Help design gradeless by telling us about your user experience, thoughts,
             things you like and don't like or... you can just answer some questions we have for you, thanks :)
         </p>
-        <a id="helpGradeless" href="">Google form・15 questions・8 min</a>
+        <a id="helpGradeless" href="https://docs.google.com/forms/d/e/1FAIpQLSdqJ4KhR1785fesUoEO9veC98mggTP_vEsrqRanFgXtFRTIDQ/viewform?usp=sf_link">Google form・13 questions・8 min</a>
     </div>
 
     <?php 

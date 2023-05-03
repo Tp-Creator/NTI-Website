@@ -77,7 +77,7 @@
                             <div class='footerSection'>
                                 <p class='footerTitle'>Gradeless</p>
                                 <a class='footerSubject' href=''>Contact admin</a>
-                                <a class='footerSubject' href=''>Help Gradeless</a>
+                                <a class='footerSubject' href='https://docs.google.com/forms/d/e/1FAIpQLSdqJ4KhR1785fesUoEO9veC98mggTP_vEsrqRanFgXtFRTIDQ/viewform?usp=sf_link'>Help Gradeless</a>
                             </div>
 
                             <p id='footerHero'>2023・www.gradeless.se・Alpha-test</p>
