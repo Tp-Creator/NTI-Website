@@ -38,9 +38,9 @@ if (isset($_GET['code'])) {
 
   $_SESSION['userID'] = $userID;
 
-  // header('Location: /');
+  header('Location: /');
 
-  // die();
+  die();
 
 
 }
