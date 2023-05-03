@@ -1,3 +1,10 @@
+<?php
+
+    //  Includes php elements
+    include_once('includes/HTMLElements/general.elements.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +16,13 @@
     <title>Contact us!</title>
 </head>
 <body>
+
+    <!-- Navigationbar  -->
+    <div class="container mainNavCon">
+        <nav>
+            <?php echo drawNavbar() ?>
+        </nav>
+    </div>
     
     <h1>Contact - We would love to hear your feedback!</h1>
     <p>If you want to be part of our team just send a message. We need more knowledge and people in all areas of webdevlopment</p>
@@ -33,6 +47,10 @@
         </div>
     </div>
 
+
+    <?php 
+        echo drawFooter();
+    ?>
 
 </body>
 </html>
