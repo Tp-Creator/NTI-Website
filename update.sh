@@ -5,8 +5,8 @@ while true
 do
     pacman -Syu
 
-    git pull
-    systemctl restart httpd
+    # git pull
+    # systemctl restart httpd
 
     # Run python files
     python python/schoolfood.py
