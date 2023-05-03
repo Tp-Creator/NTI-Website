@@ -33,7 +33,7 @@
         <div class="person">
             <div>
                 <img src="public/img/pfp/erikas.janusauskas@elev.ga.ntig.se.png" alt="">
-                <p>Erikas Janusauskas - TE21</p>
+                <p class="subtext">Erikas Janusauskas - TE21</p>
             </div>
             <a href="mailto:erikas.janusauskas@elev.ga.ntig.se">Email: Erikas.Janusauskas@elev.ga.ntig.se</a>
         </div>
@@ -45,9 +45,17 @@
         <div class="person">
             <div>
                 <img src="public/img/pfp/joel.jagerskogh@elev.ga.ntig.se.png" alt="">
-                <p class="name">Joel Jägerskogh - TE21</p>
+                <p class="subtext">Joel Jägerskogh - TE21</p>
             </div>
             <a href="mailto:joel.jagerskogh@elev.ga.ntig.se">Email: Joel.Jagerskogh@elev.ga.ntig.se</a>
+        </div>
+    </div>
+
+    <div class="area">
+        <h3>Be a part of our team</h3>
+
+        <div class="person">
+            <p class="subtext">text goeas here</p>
         </div>
     </div>
 
