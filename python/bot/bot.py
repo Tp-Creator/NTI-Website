@@ -68,7 +68,7 @@ client = MyBot(intents=intents)
 if __name__ == "__main__":
     with open("logs/error.log", "a") as file:
         file.write("\n"*10)
-        # sys.stderr = file
+        sys.stderr = file
 
         token_number = input("Token number: ")
         client.run(loadToken(token_number if token_number.isdigit() else 0))
