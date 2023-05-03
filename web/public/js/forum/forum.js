@@ -161,18 +161,22 @@
 
             if (!hasClass){
                     //  Kalkylerar exakt hur långt frågan måste slida för att försvinna + 10 för marginal
-                let slideDistance =  ($(window).outerWidth() - $(this).outerWidth())/2 + $(this).outerWidth() + 10;
+                // let slideDistance =  ($(window).outerWidth() - $(this).outerWidth())/2 + $(this).outerWidth() + 10;
 
                     //  Flyttar ut frågan och gömmer den med animation
-                $(this).animate({right: -slideDistance}, 400, function() {
+                // $(this).animate({right: -slideDistance}, 400, function() {
                     $(this).hide();
-                });
+                // });
+                // $(this).animate({scale: 2}, 400, function() {
+                //     $(this).hide();
+                // });
 
             }
             else {
                 //  Flyttar tillbaka frågan så att man kan se den med animation
                 $(this).show();
-                $(this).animate({right: 0}, 400);
+                // $(this).animate({right: 0}, 400);
+                // $(this).animate({scale: 1}, 400);
             }
         });        
 
