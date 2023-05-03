@@ -29,6 +29,7 @@ if (isset($_GET['code'])) {
 
   if(!file_exists($img)){
       // Save image 
+
     file_put_contents($img, file_get_contents($url));
   }
 
