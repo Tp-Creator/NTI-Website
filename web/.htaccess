@@ -11,3 +11,4 @@ RewriteRule ^(.*)$ /routing.php [L]
 # Blocking access to fillesystem
 Options -Indexes
 ErrorDocument 403 /404
+ErrorDocument 404 /404

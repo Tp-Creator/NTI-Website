@@ -59,13 +59,13 @@ class MyBot(discord.Client):
             
             elif command == "mod":
                 if subcommands[0] == "add":
-                    self.moderators.append(int(subcommands[1]))
+                    self.moderators.append(int(subcommands[1][2:-1]))
 
                 elif subcommands[0] == "remove":
-                    self.moderators.remove(int(subcommands[1]))
+                    self.moderators.remove(int(subcommands[1][2:-1]))
 
                 elif subcommands[0] == "list":
-                    await message.channel.send(">>> " + "\n".join(self.moderators))
+                    await message.channel.send(">>> " + "\n".join(str(moderator) for moderator in self.moderators))
 
             elif command == "help":
                 await message.channel.send(">>> The only two commands this bot has is update and help.\nDo not contact the programer for more info.")
