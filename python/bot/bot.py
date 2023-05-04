@@ -29,34 +29,50 @@ def loadToken(token_number):
 
 
 class MyBot(discord.Client):
-    #first event :logging in
+    async def on_connect(self):
+        self.moderators = []
+        with open("moderators.txt", "r") as file:
+            for part in  file.read().split(","):
+                self.moderators.append(int(part))
+
     async def on_ready(self):
         print(f"\nSuccessful login as {self.user}")
         
-        await self.get_user(669981540406525991).send("Salve, ego sum in linea.")
+        await self.get_user(self.moderators[0]).send("Salve, ego sum in linea.")
 
     
     async def on_message(self, message):
         if message.author == self.user:
             return
         
+        command, *subcommands = message.content.split(" ")
 
 
         log(f"{message.channel}: {message.author}: {message.content}", log_type=0, colors=[0, "1;30", "1;34", 96, 0])
 
-        for guild in message.author.mutual_guilds:
-            if guild.id == 1027118229405040651:
-                log(f"{message.author}: Authorized", log_type=0, colors=[0, "1;30", 96, 32])
-                if message.content == "update" and message.author.id == 669981540406525991:
-                    system("git pull")
-                    system("systemctl restart httpd")
-                    await message.channel.send("Successfully updated gradeless")
+        if message.author.id in self.moderators:
+            log(f"{message.author}: Authorized", log_type=0, colors=[0, "1;30", 96, 32])
+            if command == "update":
+                system("git pull")
+                system("systemctl restart httpd")
+                await message.channel.send("Successfully updated gradeless")
+            
+            elif command == "mod":
+                if subcommands[0] == "add":
+                    self.moderators.append(int(subcommands[1]))
 
-                elif message.content == "help":
-                    await message.channel.send(">>> The only two commands this bot has is update and help.\nDo not contact the programer for more info.")
-                return
+                elif subcommands[0] == "remove":
+                    self.moderators.remove(int(subcommands[1]))
+
+                elif subcommands[0] == "list":
+                    await message.channel.send(">>> " + "\n".join(self.moderators))
+
+            elif command == "help":
+                await message.channel.send(">>> The only two commands this bot has is update and help.\nDo not contact the programer for more info.")
+            
         
-        log(f"{message.author}: Not Authorized", log_type=0, colors=[0, "1;30", 96, 31])
+        else:
+            log(f"{message.author}: Not Authorized", log_type=0, colors=[0, "1;30", 96, 31])
 
 
 intents = discord.Intents.default()
