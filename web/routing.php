@@ -48,7 +48,7 @@ $routes = [
     "/games/defenderOfUkraine"  =>    [ "/pages/games/allGames/DoU/defenderOfUkraine.html",    -1 ],
 
     "/schedule"                 =>    [ "/pages/schedule/schedule.php",                         0 ],
-    "/debug"                    =>    [ "/pages/forum/forum_new.php",                 -1 ],
+    "/debug"                    =>    [ "/pages/forum/forum_new.php",                          -1 ],
 
     "/memes"                    =>    [ "/pages/memes/memes.php",                              -1 ],
 
@@ -60,7 +60,8 @@ $routes = [
     "/404"                      =>    [ "/pages/eastereggs/404.php",                            0 ],
     "/503"                      =>    [ "/pages/eastereggs/503.php",                            0 ],
 
-    "/contact"                  =>    [ "/pages/contact.php",                                  0 ],
+    "/contact"                  =>    [ "/pages/contact.php",                                   0 ],
+    "/discord"                  =>    [ "/pages/discord/discord.php",                           0 ],
 ];
 
 
