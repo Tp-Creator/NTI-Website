@@ -18,7 +18,7 @@ console_log($_SERVER);
 <body>
     
     <h1>Enter this into your private chat with the bot:</h1>
-    <h3>class login <?php echo $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?></h3>
+    <h3>class login <?php echo $_SERVER['REQUEST_SCHEME'] . "://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?></h3>
 
 </body>
 </html>
