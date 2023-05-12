@@ -47,6 +47,7 @@ console_log($_SERVER);
             /* border: 2px solid pink; */
             background-color: pink;
             color: black;
+            max-width: 80%;
             margin-bottom: 30px;
             transition: all .1s;
         }
@@ -80,7 +81,7 @@ console_log($_SERVER);
     
 
     <div class="content">
-        <h1>Enter this into your private chat with the SkolBotYes:</h1>
+        <h1>Copy and Enter this into your <span style="background-color: rgb(200, 104, 114);padding:5px;">private chat</span> with SkolBotYes:</h1>
         <h3 title="Copy">class login <?php echo /*$_SERVER['REQUEST_SCHEME'] . "://" . $_SERVER['HTTP_HOST'] .*/ $_SERVER['QUERY_STRING']; ?></h3>
         <p class="copied">Copied!</p>
         <!-- <button id="btn" title="Copy Above Command">Copy Command</button> -->
