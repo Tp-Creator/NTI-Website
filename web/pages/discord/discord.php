@@ -49,6 +49,7 @@ console_log($_SERVER);
             color: black;
             max-width: 80%;
             margin-bottom: 30px;
+            line-break: anywhere;
             transition: all .1s;
         }
 
