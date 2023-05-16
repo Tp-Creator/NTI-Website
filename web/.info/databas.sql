@@ -168,6 +168,26 @@ VALUES ('2023-05-11', 'Kyckling med annans och curry serveras med ris', 'Garbanz
 INSERT INTO food_menu (dt, food, vegFood, CO2, vegCO2)
 VALUES ('2023-05-12', 'Grekisk pastagratäng med oliver, tomat och salladsost', 'Tacoröra på sojafärs serveras med ris och kall vitlökssås', 0.3, 0.3);
 
+
+
+
+INSERT INTO food_menu (dt, food, vegFood, CO2, vegCO2)
+VALUES ('2023-05-16', 'Vårrullar serveras med sötsursås och bulgur', 'Vårrullar serveras med sötsursås och bulgur', 0.26, 0.26);
+
+INSERT INTO food_menu (dt, food, vegFood, CO2, vegCO2)
+VALUES ('2023-05-17', 'Panerad fisk med kokt potatis och kall dillsås', 'Rotfruktsbiffar med kokt potatis och remouladsås', 0.52, 0.07);
+
+INSERT INTO food_menu (dt, food, vegFood, CO2, vegCO2)
+VALUES ('2023-05-18', 'Köttfärssås med pasta', 'Sojafärssås med pasta', 1.08, 0.16);
+
+INSERT INTO food_menu (dt, food, vegFood, CO2, vegCO2)
+VALUES ('2023-05-19', 'The Gradeless team wishes you a nice weekend/holiday', 'The Gradeless team wishes you a nice weekend/holiday', 0, 0);
+
+INSERT INTO food_menu (dt, food, vegFood, CO2, vegCO2)
+VALUES ('2023-05-20', 'The Gradeless team wishes you a nice weekend/holiday', 'The Gradeless team wishes you a nice weekend/holiday', 0, 0);
+
+
+
 -- CREATE TABLE food_Calendar (
 --     DayID
 
