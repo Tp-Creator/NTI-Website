@@ -27,8 +27,15 @@
         </nav>
     </div>
 
+
     <div id="contentFeed">
-        <?php
+        <?php 
+            // Lunchadmin
+            if(getUserRank() == 4){
+                echo '<a href="/lunchadmin">Add to menu (lunchadmin)</a>';
+            }
+            
+            // The Menu
             echo foodCards();
         ?>
     </div>

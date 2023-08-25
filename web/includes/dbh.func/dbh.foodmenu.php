@@ -52,4 +52,31 @@
         return $weekResult;
     }
 
+
+    function addFoodToMenu($date, $food, $vegfood, $co2=null, $vegco2=null){
+        global $conn;
+
+        // Prepares query
+        $stmt = $conn->prepare("INSERT INTO food_menu (dt, food, vegFood, CO2, vegCO2) VALUES (?, ?, ?, ?, ?)");
+        $stmt->bind_param("sssii", $date, $food, $vegfood, $co2, $vegco2);
+
+        // Executes the query and inserts the food data into the db
+        $stmt->execute();
+
+    }
+
+
+    function deleteFoodItem($id){
+        global $conn;
+
+        // Prepares query
+        $stmt = $conn->prepare("DELETE FROM food_menu WHERE id=?");
+        $stmt->bind_param("i", $id);
+
+        // Executes the query and inserts the food data into the db
+        $stmt->execute();
+
+
+    }
+
 ?>

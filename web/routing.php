@@ -37,6 +37,7 @@ $routes = [
     "/account"                  =>    [ "/pages/account/account.php",                           1 ],
 
     "/lunch"                    =>    [ "/pages/lunch/lunch.php",                               0 ],
+    "/lunchadmin"               =>    [ "/pages/lunch/lunchAdmin.php",                          4 ],     // New add lunch admin page
 
     "/forum"                    =>    [ "/pages/forum/forum.php",                               0 ],
     "/forum/question"           =>    [ "/pages/forum/forumQuestion.php",                       0 ],

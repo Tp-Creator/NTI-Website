@@ -188,6 +188,11 @@ VALUES ('2023-05-20', 'The Gradeless team wishes you a nice weekend/holiday', 'T
 
 
 
+
+INSERT INTO food_menu (dt, food, vegFood)
+VALUES ('2023-08-25', 'Fisktaco serveras med limesyrad kål och ris', 'Vegetarisk taco serveras med limesyrad kål och ris');
+
+
 -- CREATE TABLE food_Calendar (
 --     DayID
 
