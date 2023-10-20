@@ -29,26 +29,19 @@
 
         //  hämtar id:t på frågan och lägger till den i url:en
         $card = "
-                <div class='fcCon $courseCode'>
-                    <div class='fcElementCon'>
-                        <p class='fcMeta'>$courseName</p>
+                <a class='card' href='/forum/question?question=$id'>
+                    <div class='cardHeader'>
+                        <img class='publisherPfp' src='public/img/pfp/$usrMail.png' alt=''>
 
-                        <p class='fcStatus'>Status</p>
+                        <div class='publisherMeta'>
+                            <p class='publisher'>$username</p>
+                            <p class='publishDate'>$date</p>
+                        </div>
                     </div>
 
-                    <a class='fcContentTitle' href='/forum/question?question=$id'>$title</a>
-
-                    <div class='fcElementCon'>
-                        <a class='fcUserCon' href=''>
-                            <img class='fcUserPFP' src='public/img/pfp/$usrMail.png'>
-                            <p class='fcUserName'>$username</p>
-                        </a>
-
-                        <p class='fcContentDatetime'>$date</p>
-                    </div>
-                </div>
+                    <p class='cardContent'>$title</p>
+                </a>
                 ";
-
 
         return $card;
     }

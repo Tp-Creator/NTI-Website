@@ -1,11 +1,11 @@
 <?php 
-        //  Includes functions related to the db
+    //  Includes functions related to the db
     // include_once '../../../includes/loginCheck.php'; is not needed anymore
     // include_once 'includes/dbh.func/general/dbh.inc.php';
     // include_once 'includes/dbh.func/general/dbh.general.php';
     require_once('includes/dbh.func/forum/dbh.forum.php');
 
-        //  Includes php elements
+    //  Includes php elements
     require_once('includes/HTMLElements/general.elements.php');
     require_once('includes/HTMLElements/forum.elements.php');
 
@@ -25,7 +25,6 @@
 
     <!-- Basic style links -->
     <link rel="stylesheet" href="/public/style/mainStyle.css">
-    <link rel="stylesheet" href="/public/style/commonStyle.css">
     <!-- Page style links -->
     <link rel="stylesheet" href="/public/style/pages/forumStyle.css">
 
@@ -34,88 +33,60 @@
 
 <body>
 
-    <!-- Navigationbar  -->
-    <div class="container mainNavCon">
-        <nav>
-            <?php echo drawNavbar() ?>
-        </nav>
-    </div>
+    <h1>Gradeless</h1>
 
 
-    <div id="body">
+    <form id="addQuestionCard" action="">
+        <div class="formHeader">
+            <h2>Forum</h2>
+            <p>Welcome to the forum! Here you'll find questinos by other students and you can ask something yourself. <br> Give it a try, but remember to be kind!</p>
+        </div>
 
-        <!-- <div id="filterCon">
-            <p>Sort by course</p>
-            <button class="filterBut">Programmering</button>
-        </div> -->
+        <div class="formSection">
+            <h4 class="formSectionTitle">Title</h4>
+            <p class="formSectionDescription">Try to keep your title as short as possible</p>
+            <input
+                class="formInput"
+                placeholder="What's your question?"
+                type="text" 
+                name="title" 
+                id="title">
+        </div>
+
+        <div class="formSection">
+            <h4 class="formSectionTitle">Description</h4>
+            <p class="formSectionDescription">Tell the others the details they need to understand your situation.</p>
+            <textarea 
+                class="formInput"
+                placeholder="Give your question a description"
+                type="text"
+                name="content"
+                id="content"
+                ></textarea>
+        </div>
+
+        <div class="formFooter">
+            <button class="readyToPublishBtn" type="submit">Publish</button>
+        </div>
+    </form>
 
 
-        <header>
-            <div id="header">
-                <div id="filterCon">
-                    <button class="filterBut">All courses</button>
-                    <?php echo filterMenu(); ?>
-                </div>
+    <section id="forumFeed">
+        <?php 
+            $questions = getQuestions();
+                    
+            //  Amount of cards is the amount of cards that will be displayed
+            for($current = sizeof($questions)-1; $current >= 0; $current--){
+                echo questionCard($questions[$current]);
 
-                <?php
-                    //  Removes the ask a question button if your not signed in
-                    if(getUserRank() > 0){
-                        echo '<button id="askQuestion">Ask a question</button>';
-                    } 
-                ?>
-            </div>
+            }
+        ?>
+    </section>
 
-            <?php
-                //  Removes the ask a question menu if not signed in
-                if(getUserRank() > 0){
-            ?>
-                    <form id="addQuestionCard" style="display: none;">
-                        <input class="formInput formTitel" placeholder="Enter your question" name="title" id="title"></input>
 
-                        <!-- Input description -->
-                        <!-- <textarea class="formInput formDescription" placeholder="Enter a description" rows="5" name="content" id="content"></textarea> -->
-                        <div class="formInput formDescription" role="textbox" contenteditable style="min-height: 120px;" name="content" id="content"></div>
-
-                        <select class="optionsCon formOptionsCon" name="courseID" id="courseID">  
-                            <option class="" value="">Choose a "Course"</option>
-
-                            <?php 
-                                    //  Loops as many choices as there are courses in the db
-                                for($i = 0; $i < sizeof($courses); $i++){
-                            ?>
-                                <option class="" value="<?php echo $courses[$i]->CourseID ?>"><?php echo $courses[$i]->CourseName ?></option>
-                            <?php 
-                                }
-                            ?>
-                        </select>
-
-                        <div class="devider"></div>
-
-                        <button id="postQuestionButton" type="submit">Post</button>
-                    </form>
-            <?php
-                }
-            ?>
-        <header>
-
-        <!-- Content feed -->
-        <section id="questionCardFeed">
-            <?php 
-                $questions = getQuestions();
-                        
-                //  Amount of cards is the amount of cards that will be displayed
-                for($current = sizeof($questions)-1; $current >= 0; $current--){
-                    echo questionCard($questions[$current]);
-
-                }
-            ?>
-        </section>
-
-    </div>
-        
-    <?php 
-        echo drawFooter();
-    ?>
+    <nav>
+        <?php echo drawNavbar() ?>
+    </nav>
     
 </body>
 </html>

@@ -19,70 +19,20 @@
     <title>We're Gradeless</title>
 </head>
 <body>
-    
+    <h1>Gradeless</h1>
+
     <header>
-        <h1 id="mainHero">Gradeless</h1>
-        <p id="heroSub">A place for students by students</p>
+        <h2>Welcome to Gradeless</h2>
+        <p>A plattfrom for students by students</p>
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="128" viewBox="0 0 48 128" fill="none">
+            <path d="M1.64572 25.472V7.83545H4.41601V10.3314H6.88458V12.8H9.40801V20.2332H11.6023V7.83545H14.4V25.472H11.6023V23.0035H9.13372V20.5075H6.61029V13.0743H4.41601V25.472H1.64572ZM19.6774 25.472V23.0035H17.1814V15.296H19.6774V12.8H27.4124V15.296H29.9358V22.7292H32.4318V25.472H29.6615V23.0035H27.4124V25.472H19.6774ZM19.9517 22.7292H27.1381V15.5429H19.9517V22.7292ZM37.9973 25.472V23.0035H35.5013V18.0114H33.0053V12.8H35.7756V17.7372H38.2441V22.7292H40.4933V17.7372H42.9618V12.8H45.7596V18.0114H43.2361V23.0035H40.7676V25.472H37.9973Z" fill="#4BFBA2"/>
+            <path d="M26.2857 59.4286V58.2858H24V59.4286H26.2857ZM25.1429 126.857L31.7413 115.429H18.5446L25.1429 126.857ZM24 59.4286V116.571H26.2857V59.4286H24Z" fill="#4BFBA2"/>
+        </svg>
     </header>
 
-    <!-- Navigationbar  -->
-    <div class="container mainNavCon">
-        <nav>
-            <?php echo drawNavbar() ?>
-        </nav>
-    </div>
-
-    <div class="infoSection">
-        <h2 class="infoSectionTitle IST1">A little bit about us...</h2>
-        <p class="infoSectionContent">
-        Gradeless is a not so innovative educational project led by a team of four students. 
-        Our platform enables students to share their knowledge and work seamlessly, 
-        while also providing access to essential information.
-        </p>
-    </div>
-
-    <div id="contentFeed">
-        <div class="infoCard">
-            <h2 class="infoCardTitle">Lunch</h2>
-            <img class="infoCardIcon" src="/public/style/inc/icons/custom/lunch_icon_custom.svg" alt="">
-            <p class="infoCardContent">Here, you'll find a weekly lunch menu. Information is provided by the delivery company.</p>
-        </div>
-        <div class="infoCard">
-            <h2 class="infoCardTitle">Schedule</h2>
-            <img class="infoCardIcon" src="/public/style/inc/icons/custom/schedule_icon_custom.svg" alt="">
-            <p class="infoCardContent">
-                Weekly schedule page provides you with a clear overview of your weekly schedule.
-            </p>
-        </div>
-        <div class="infoCard">
-            <h2 class="infoCardTitle">Forum</h2>
-            <img class="infoCardIcon" src="/public/style/inc/icons/custom/forum_icon_custom.svg" alt="">
-            <p class="infoCardContent">
-            Ask and answer questions related to your studies, 
-            connect with other students, and share your knowledge.
-            </p>
-        </div>
-        <div class="infoCard">
-            <h2 class="infoCardTitle">Games</h2>
-            <img class="infoCardIcon" src="/public/style/inc/icons/custom/games_icon_custom.svg" alt="">
-            <p class="infoCardContent">
-            Showcase the games you have created and explore games made by your fellow students.
-            </p>
-        </div>
-    </div>
-
-    <div class="infoSection">
-        <h1 class="infoSectionTitle IST2">Be the designer of gradeless!!!</h1>
-        <p class="infoSectionContent">
-            Do not limit yourself to be just the user, when you also can be the designer!
-            Help design gradeless by telling us about your user experience, thoughts,
-            things you like and don't like or... you can just answer some questions we have for you, thanks :)
-        </p>
-        <a id="helpGradeless" href="https://docs.google.com/forms/d/e/1FAIpQLSdqJ4KhR1785fesUoEO9veC98mggTP_vEsrqRanFgXtFRTIDQ/viewform?usp=sf_link">Google form・13 questions・8 min</a>
-    </div>
-
-    <?php 
-        echo drawFooter();
-    ?>
+    <nav>
+        <?php echo drawNavbar() ?>
+    </nav>
 </body>
 </html>

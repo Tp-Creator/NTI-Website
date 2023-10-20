@@ -10,22 +10,18 @@
         
         $navbuttons =   [
             ["Lunch",       "/lunch", "/public/style/inc/icons/light/lunch_icon_light.svg"],
-            ["Schedule",    "/schedule", "/public/style/inc/icons/light/schedule_icon_light.svg"],
+            // ["Schedule",    "/schedule", "/public/style/inc/icons/light/schedule_icon_light.svg"],
             ["Forum",       "/forum", "/public/style/inc/icons/light/forum_icon_light.svg"],
             // ["Memes",       "/memes", "/public/style/includes/icons/nav/satisfied_icon.svg"],
-            ["Games",       "/games", "/public/style/inc/icons/light/games_icon_light.svg"]
+            // ["Games",       "/games", "/public/style/inc/icons/light/games_icon_light.svg"]
         ];
 
 
             //  Logo
         $navbar =   "
-                    <a id='navHomeBut' href='/'>
-                        <p id='logo'>Gradeless</p>
-                    </a>
+                    <a class='navBtn' href='/'>Home</a>
+                    <div class='navLine'></div>
                     ";
-
-            //  Start navButCon
-        $navbar .= "<div id='navCon'>";
         
         
         for($b = 0; $b < sizeof($navbuttons); $b++){
@@ -34,10 +30,7 @@
             $icon = $navbuttons[$b][2];
 
             $navbar .= "
-                        <a class='navBut' href='$url'>
-                            <img class='navIcon' src='$icon'>
-                            <p class='navText'>$content</p>
-                        </a>
+                        <a class='navBtn' href='$url'>$content</a>
                         ";
         }
         
@@ -49,22 +42,17 @@
             $usrMail = $usr->Email;
 
             $navbar .= "
-                        <a id='navPfpBut' href='/account'>
-                            <img id='navPfp' src='/public/img/pfp/$usrMail.png' alt='Profile picture'>
-                        </a>
+                        <div class='navLine'></div>
+                        <a class='navBtn' href=''>Account</a>
                         ";
         }
         else {
             $navbar .=  "
-                        <a class='navBut' href='/google'>
-                            <img class='navIcon' src='/public/style/inc/icons/google_icon.svg'>
-                            <p class='navText loginBut'>Login</p>
-                        </a>
+                        <div class='navLine'></div>
+                        <a class='navBtn' href='/google'>Login</a>
                         ";
         }
-
-        //  End navButCon
-        $navbar .= "</div>";
+        
 
         return $navbar;
     }

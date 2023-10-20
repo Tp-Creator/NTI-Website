@@ -42,13 +42,13 @@ $routes = [
     "/forum"                    =>    [ "/pages/forum/forum.php",                               0 ],
     "/forum/question"           =>    [ "/pages/forum/forumQuestion.php",                       0 ],
 
-    "/games"                    =>    [ "/pages/games/gameMenu.php",                            0 ],
-    "/game"                     =>    [ "/pages/games/gameLauncher.php",                        0 ],
+    "/games"                    =>    [ "/pages/games/gameMenu.php",                           -1 ],
+    "/game"                     =>    [ "/pages/games/gameLauncher.php",                       -1 ],
     "/games/2Tetris"            =>    [ "/pages/games/allGames/2Tetris.html",                  -1 ],
     "/games/tictactoe"          =>    [ "/pages/games/allGames/tictactoe.html",                -1 ],
     "/games/defenderOfUkraine"  =>    [ "/pages/games/allGames/DoU/defenderOfUkraine.html",    -1 ],
 
-    "/schedule"                 =>    [ "/pages/schedule/schedule.php",                         0 ],
+    "/schedule"                 =>    [ "/pages/schedule/schedule.php",                        -1 ],
     "/debug"                    =>    [ "/pages/forum/forum_new.php",                          -1 ],
 
     "/memes"                    =>    [ "/pages/memes/memes.php",                              -1 ],

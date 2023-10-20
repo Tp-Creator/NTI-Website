@@ -1,218 +1,97 @@
-@font-face {
-    font-family: 'poppins';
-    src: url(/public/style/inc/fonts/poppins/Poppins-Regular.ttf);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+:root {
+    --text: #FBFEFC;
+    --text-secondary: #7B7B84;
+    --background: #090A0B;
+    --primary: #121316;
+    --border: #25272D;
+    --main-color: #4BFBA2;
+    --secondary-color: #12261C;
+    --accent-color: #56AE82;
 }
 
-@font-face {
-    font-family: 'poppins-italic';
-    src: url(/public/style/inc/fonts/poppins/Poppins-Italic.ttf);
-}
-
-@font-face {
-    font-family: 'poppins-bold';
-    src: url(/public/style/inc/fonts/poppins/Poppins-Bold.ttf);
-}
-
-@font-face {
-    font-family: 'poppins-black';
-    src: url(/public/style/inc/fonts/poppins/Poppins-Black.ttf);
-}
-
-body {
-    /* background: linear-gradient(-45deg, rgba(57,45,105,1) 0%, rgba(181,123,238,1) 100%); */
-    background-color: #666699;
-
-    display: grid;
-    grid-template-columns: 1fr minmax( 320px , 1100px ) 1fr;
-    column-gap: 18px;
-}
 
 * {
-    margin: 0%;
-    padding: 0%;
+    margin: 0rem;
+    padding: 0rem;
+
     border: none;
+    outline: none;
+
     text-decoration: none;
-    font-family: 'poppins';
-    letter-spacing: 0.25px;
+
+    font-family: 'Poppins', sans-serif;
 }
 
 
+body {
+    background-color: var(--background);
 
+    height: 100svh;
 
-/*Flex containers*/
-.verticalCon {
-    display: flex;
-    flex-direction: row;
-    gap: 8px;
-}
-
-.verticalWrap {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 8px;
-}
-
-.horizontalCon {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-
-
-/* template */
-
-    /* PLACEMENT/BEHAVIOR */
-    /* OWN PARAMETERS */
-    /* CHILD PLACEMENT/BEHAVIOR */
-
-
-
-
-
-.container {
-    /* PLACEMENT/BEHAVIOR */
-    grid-column: 1 /span 3;
-
-    /* OWN PARAMETERS */
-    background-color: #101014;
-
-    /* CHILD PLACEMENT/BEHAVIOR */
     display: grid;
-    grid-template-columns: 1fr minmax( 300px , 1325px) 1fr;
+    grid-template-columns: minmax(8rem , 78.5rem);
+    justify-content: center;
 }
 
 
+h1 {
+    margin: 1.5rem 0rem;
 
-.mainNavCon {
-    top: 0px;
-    position: sticky;
+    text-align: center;
+
+    font-weight: 600;
+    font-size: 1.25rem;
+
+    color: var(--text);
 }
+
 
 nav {
-    /* PLACEMENT/BEHAVIOR */
-    grid-column: 2;
+    z-index: 1;
+    bottom: 1.5rem;
+    position: sticky;
+    align-self: end;
 
-    /* OWN PARAMETERS */
-    min-width: max-content;
-    padding: 11px 18px;
+    padding: 0.5rem;
 
-    /* CHILD PLACEMENT/BEHAVIOR */
-    display: flex;
-    gap: 4px;
-}
+    border-radius: 0.75rem;
+    border: 1px solid var(--border);
 
-#logo {
-    font-size: 18px;
-    font-family: 'poppins-bold';
-}
+    background-color: var(--primary);
 
-
-#navHomeBut {
-    /* PLACEMENT/BEHAVIOR */
-        /* Gets it from parent */
-
-    /* OWN PARAMETERS */
-    font-weight: 700;
-    color: #d9d9d9;
-    /* CHILD PLACEMENT/BEHAVIOR */
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr max-content repeat( 2 , 1fr ) max-content 1fr;
     align-items: center;
-    gap: 8px;
+    gap: 0.75rem;
 }
-#navHomeBut:hover {
+
+.navLine {
+    width: 1px;
+    height: 60%;
+
+    background-color: var(--main-color);
+}
+
+.navBtn {
+    padding: 0.5rem 0.75rem;
+
+    border-radius: 0.375rem;
+
+    text-align: center;
+
+    font-size: 0.875rem;
+
+    color: var(--text);
+}
+
+.navBtn:hover {
     cursor: pointer;
+
+    background-color: var(--border);
 }
-
-
-
-#navCon {
-    /* PLACEMENT/BEHAVIOR */
-    flex-grow: 1;
-
-    /* OWN PARAMETERS */
-    
-    /* CHILD PLACEMENT/BEHAVIOR */
-    display: flex;
-    justify-content: flex-end;
-    gap: 1px;
-}
-
-.navBut {
-    /* PLACEMENT/BEHAVIOR */
-        /* Gets it from parent */
-
-    /* OWN PARAMETERS */
-    padding: 0px 4px;
-    border-radius: 20px;
-    border: 1px solid #101014;
-    color: #d9d9d9;
-    background-color: #101014;
-
-    /* CHILD PLACEMENT/BEHAVIOR */
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-.navBut:hover {
-    /* background-color: #2d2d2d; */
-    background-color: #2C2C32;
-    /* border: 1px solid #9d9d9d; */
-    border: 1px solid #9898b4;
-}
-
-.navIcon {
-    /* PLACEMENT/BEHAVIOR */
-        /* Gets it from parent */
-
-    /* OWN PARAMETERS */
-    margin: 6px;
-    aspect-ratio: 1/1;
-    width: 24px;
-
-    /* CHILD PLACEMENT/BEHAVIOR */
-        /* No childs */
-}
-
-.navText {
-    /* PLACEMENT/BEHAVIOR */
-        /* Gets it from parent */
-
-    /* OWN PARAMETERS */
-    margin-right: 8px;
-    font-size: 14px;
-
-    /* CHILD PLACEMENT/BEHAVIOR */
-        /* No childs */
-}
-
-#navPfpBut {
-    /* PLACEMENT/BEHAVIOR */
-        /* Gets it from parent */
-
-    /* OWN PARAMETERS */
-
-    /* CHILD PLACEMENT/BEHAVIOR */
-    display: flex;
-    align-items: center;
-}
-
-#navPfp {
-    /* PLACEMENT/BEHAVIOR */
-        /* Gets it from parent */
-
-    /* OWN PARAMETERS */
-    outline: 1px solid #ffffff32;
-
-    border-radius: 20px;
-    aspect-ratio: 1/1;
-    width: 38px;
-
-    /* CHILD PLACEMENT/BEHAVIOR */
-   
-}
-
 
 
 footer {
@@ -265,19 +144,27 @@ footer {
 }
 
 
+@media screen and (min-width: 45rem) {
+    nav {
+        justify-self: center;
+    }
+}
 
 
+@media screen and (max-width: 45rem) {
 
+    nav {
+        bottom: 0rem;
+        position: sticky;
 
+        border-radius: 0rem;
+        border: none;
+        border-top: 1px solid var(--border);
 
-@media screen and (max-width: 690px) {
-    
-    .navText {
-        display: none;
+        gap: 0.375rem;
     }
 
-    .navBut {
-        padding: 2px;
+    .navBtn {
+        font-size: 0.75rem;
     }
-
 }

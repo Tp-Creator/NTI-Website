@@ -1,387 +1,202 @@
-body {
-    /* horizontal scroll tas bort på sidan
-       gör animeringen mer smooth för att tabort
-       frågor när man sorterar */
-    overflow-x: hidden;
-}
+/* card */
+.card {
+    padding: 20px 24px;
 
-.contentFeed {
-    grid-column: 2;
-    margin-bottom: 18px;
-}
+    border-radius: 12px;
+    border: 1px solid var(--border);
 
-.replyButton:hover {
-    cursor: pointer;
-}
-
-.verticalWrapReverse {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-
-
-
-
-#addQuestionCard {
-    margin-bottom: 18px;
-    padding: 18px;
-    border-radius: 18px;
-
-    background-color: #101014;
+    background-color: var(--primary);
 
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 24px;
+
+    transition: outline .15s;
 }
 
-#postQuestionButton {
-    align-self: flex-end;
-
-    padding: 0.4rem 1.25rem;
-
-    border-radius: 2rem;
-
-    font-size: 0.875rem;
-    font-family: 'poppins-bold';
-
-    color: #101014;
-    background-color: #d9d9d9;
+.card:hover {
+    border: 1px solid var(--secondary-color);
+    outline: 3px solid var(--main-color);
 }
 
-#postQuestionButton:hover {
+.card:focus {
+    border: 1px solid var(--main-color);
+    outline: 3px solid var(--main-color);
+}
+
+.cardHeader {
+    display: flex;
+    gap: 24px;
+}
+
+.publisherPfp {
+    aspect-ratio: 1/1;
+    width: 2.563rem;
+
+    border-radius: 24px;
+    border: 1px solid var(--border);
+}
+
+.publisherMeta {
+    display: flex;
+    flex-direction: column;
+}
+
+.publisher {
+    font-size: 14px;
+    color: var(--text);
+}
+
+.publishDate {
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.cardContent {
+    font-size: 14px;
+    font-weight: 500;
+
+    color: var(--text);
+}
+
+
+
+
+
+
+
+
+/* form */
+#forumFeed {
+    margin-top: 1rem;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    align-items: start;
+    gap: 1rem;
+}
+
+
+
+
+.formHeader {
+    padding:0px 24px 20px 24px;
+
+    border-bottom: 1px solid var(--border);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formHeader h2 {
+    margin-bottom: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.formHeader p {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+
+
+
+form {
+    height: max-content;
+    padding: 20px 0px;
+
+    border-radius: 12px;
+    border: 1px solid var(--border);
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.formSection {
+    padding: 0px 24px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.formSectionTitle {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text);
+}
+
+.formSectionDescription {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+.readyToPublish {
+    text-align: center;
+}
+
+.readyToPublishBtn {
+    align-self: center;
+
+    width: max-content;
+    padding: 8px 12px;
+
+    border-radius: 8px;
+    border: 1px solid var(--border);
+
+    font-size: 13px;
+
+    color: var(--text);
+    background-color: var(--background);
+
+    transition: outline .1s;
+}
+
+.readyToPublishBtn:hover {
     cursor: pointer;
+
+    color: var(--background);
+    background-color: var(--main-color);
+}
+
+.formFooter {
+    margin-top: 12px;
+
+    display: flex;
+    justify-content: space-around;
 }
 
 .formInput {
-    flex: 1;
-    min-height: 2rem;
-    padding: 4px 8px;
+    margin-top: 12px;
+    padding: 8px 18px;
+    
+    border-radius: 6px;
+    border: 1px solid var(--border);
 
-    border-radius: 0.25rem;
+    font-size: 14px;
 
-    color: #d9d9d9;
-    background: none;
+    color: var(--text);
+    background-color: var(--background);
 
+    transition: outline .15s;
+}
+
+.formInput:last-child {
     resize: vertical;
 }
+
 .formInput:hover {
-    background-color: hsla(214 14% 90% / 15%);
-}
-.formTitel {
-    font-size: 1rem;
-    font-family: 'poppins-bold';
-
-    color: #d9d9d9;
+    border: 1px solid var(--secondary-color);
+    outline: 3px solid var(--main-color);
 }
 
-.formDescription {
-    font-size: 0.875rem;
-    font-family: 'poppins';
-
-    color: #d9d9d9;
-}
-
-.formOptionsCon {
-    color: #d9d9d9;
-    background-color: #101014;
-}
-.formOptionsCon::focus {
-    color: #d9d9d9;
-}
-.formOptionsCon::selection {
-    color: #d9d9d9;
-}
-
-/* 
-    Detta lägger till en placeholder till diven, se:
-    https://css-tricks.com/auto-growing-inputs-textareas/ 
-*/
-.formDescription[contenteditable]:empty::before {
-    content: "Enter a description";
-    font-family: 'poppins';
-    color: #6d6d6d;
-  }
-
-.formOption {
-    color: #d9d9d9;
-    background-color: --mc2;
-}
-
-
-
-
-
-/* Forum question page, Titel for question and answers. */
-.sectionHeader {
-    margin: 1.24rem 0rem 0rem 1.25rem;
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 24px;
-}
-
-.sectiontitle {
-    font-family: 'poppins-bold';
-    color: #d9d9d9;
-}
-
-#answerInput {
-    flex-grow: 1;
-    min-height: 2rem;
-
-    resize: vertical;
-
-    border-radius: 0.25rem;
-
-    font-size: 14px;
-
-    color: #d9d9d9;
-    background: none;
-}
-#answerInput:hover {
-    background-color: hsla(214 14% 90% / 15%);
-}
-
-#answerQuestionCard {
-    padding: 18px;
-
-    border-radius: 1.25rem;
-
-    background-color: #101014;
-
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
-}
-
-#questionCardFeed {
-    grid-column: 2;
-    /* min-height: 40vh; */
-
-    margin-bottom: 1.125rem;
-
-    display: grid;
-    grid-template-columns: repeat(2, minmax(270px , 1000px));
-    gap: 18px;
-}
-
-#body {
-    grid-column: 2;
-
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
-
-
-
-
-
-
-
-
-.fcCon {
-    /* flex: 1; */
-    max-width: 100%;
-
-    padding: 16px;
-
-    border-radius: 16px;
-
-    background-color: #101014;
-
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-
-    /* Behövs för animation av questionCard när de går ut */
-    position: relative;
-}
-
-.fcElementCon {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.fcMeta {
-    padding: 2px 8px;
-
-    border-radius: 18px;
-
-    font-size: 12px;
-    font-family: 'poppins';
-
-    color: #101014;
-    background-color: #d9d9d9;
-}
-
-.fcStatus {
-    flex-grow: 1;
-
-    font-size: 14px;
-
-    text-align: right;
-    font-family: 'poppins-bold';
-
-    color: #d9d9d9;
-}
-
-.fcContentTitle {
-    /* font-size: 18px; */
-    font-family: 'poppins-bold';
-
-    color: #d9d9d9;
-}
-.fcContentTitle:hover {
-    text-decoration: underline;
-}
-
-.fcDes {
-    color: #d9d9d9;
-    font-family: 'poppins';
-    font-size: 14px;
-}
-
-.fcUserCon {
-    display: flex;
-    flex-direction: row;
-    gap: 8px;
-}
-
-.fcUserPFP {
-    border-radius: 12px;
-
-    aspect-ratio: 1/1;
-    width: 24px;
-}
-
-.fcUserName {
-    font-size: 14px;
-
-    color: #d9d9d9;
-}
-
-.fcContentDatetime {
-    flex-grow: 1;
-    text-align: right;
-
-    font-size: 12px;
-
-    color: #d9d9d9;
-}
-
-.callToAction {
-    grid-column: 2;
-    margin-top: 18px;
-    padding: 8px 18px;
-    max-width: max-content;
-    border-radius: 32px;
-    font-size: 14px;
-    font-family: 'poppins-bold';
-    color: #d9d9d9;
-    background-color: #101014;
-}
-
-
-
-
-
-
-
-#header {
-    display: flex;
-    flex-direction: column;
-}
-
-#askQuestion {
-    min-width: 144px;
-    height: min-content;
-
-    margin-bottom: 18px;
-    padding: 8px 18px;
-
-    border-radius: 20px;
-
-    font-size: 14px;
-    font-family: 'poppins-bold';
-
-    color: #101014;
-    background-color: #d9d9d9;
-}
-#askQuestion:hover {
-    cursor: pointer;
-}
-
-#filterCon {
-    flex-grow: 1;
-
-    padding: 1.125rem 0rem;
-
-    /* flex: 0.85; */
-    /* border-radius: 18px; */
-
-    display: flex;
-    /* flex-direction: row; */
-    flex-wrap: wrap;
-    gap: 10px;
-
-    /* overflow-x: scroll; */
-}
-#filterCon::-webkit-scrollbar {
-    display: none;
-}
-
-  /* Hide scrollbar for IE, Edge and Firefox */ */
-#filterCon {
-    /* IE and Edge */
-    -ms-overflow-style: none;
-    /* Firefox */
-    scrollbar-width: none;
-}
-
-.filterBut {
-    min-width: max-content;
-    padding: 4px 12px;
-    border-radius: 10px;
-
-    font-family: 'poppins-bold';
-    font-size: 14px;
-
-    color: #d9d9d9;
-    background-color: #101014;
-}
-.filterBut:hover {
-    cursor: pointer;
-    color: #101014;
-    background-color: #d9d9d9;
-}
-
-
-
-
-
-
-
-
-
-@media screen and (max-width: 690px) {
-
-    #header {
-        flex-direction: column;
-    }
-    
-    #questionCardFeed {
-        grid-column: 2;
-    
-        display: grid;
-        grid-template-columns: repeat(1, minmax(270px , 1000px));
-        gap: 18px;
-    }
-
+.formInput:focus {
+    border: 1px solid var(--main-color);
+    outline: 1px solid var(--main-color);
 }

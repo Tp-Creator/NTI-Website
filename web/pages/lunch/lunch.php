@@ -16,19 +16,17 @@
     <!-- Special style for page  -->
     <link rel="stylesheet" href="/public/style/pages/lunchStyle.css">
     <link rel="icon" href="/public/style/inc/icons/gradeless_logo.svg">
-    <title>Lounge</title>
+    <title>Lunch</title>
 </head>
 <body>
+
+    <h1>Gradeless</h1>
+
     
-    <!-- Navigationbar  -->
-    <div class="container mainNavCon">
-        <nav>
-            <?php echo drawNavbar() ?>
-        </nav>
-    </div>
+    <p class="lazyMessage">hi, no content right now :/</p>
 
 
-    <div id="contentFeed">
+    <div id="">
         <?php 
             // Lunchadmin
             if(getUserRank() == 4){
@@ -40,9 +38,10 @@
         ?>
     </div>
 
-    <?php 
-        echo drawFooter();
-    ?>
+
+    <nav>
+        <?php echo drawNavbar() ?>
+    </nav>
 
 </body>
 </html>
