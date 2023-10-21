@@ -78,7 +78,7 @@
 
                     <button class="readyToPublishBtn" id="postQuestionButton" type="submit">Publish</button>
                 </div>
-                
+
                 <textarea placeholder="The answer to your question..." id="newAnswerContent" name="newAnswerContent"></textarea>
             </div>
         </form>
@@ -87,7 +87,7 @@
     ?>
 
     
-    <div>     
+    <div class="answerFeed">     
         <?php 
             for($ans = 0; $ans < sizeof($answers); $ans++){
                 // if($answers[$ans]->CommentID == NULL){
@@ -95,6 +95,32 @@
                 // }
             }
         ?>
+
+        <div class='answerCard'>
+            <div class='cardHeader'>
+                <img class='publisherPfp' src='public/img/pfp/$usrMail.png' alt=''>
+
+                <div class='publisherMeta'>
+                    <p class='publisher'>$ansUser->Username</p>
+                    <p class='publishDate'>$ansDate</p>
+                </div>
+            </div>
+
+            <p class='answer'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod esse voluptate ipsa delectus nam et, nemo, accusantium praesentium sequi itaque placeat nostrum deserunt quos magni ipsam illo possimus hic ipsum?</p>
+        </div>
+
+        <div class='answerCard'>
+            <div class='cardHeader'>
+                <img class='publisherPfp' src='public/img/pfp/$usrMail.png' alt=''>
+
+                <div class='publisherMeta'>
+                    <p class='publisher'>$ansUser->Username</p>
+                    <p class='publishDate'>$ansDate</p>
+                </div>
+            </div>
+
+            <p class='answer'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
     </div>
     
     
