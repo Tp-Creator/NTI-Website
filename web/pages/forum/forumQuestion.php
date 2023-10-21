@@ -30,62 +30,64 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#101014">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-        <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="/public/js/forum/forumQuestion.js"></script>
 
-    <!-- style links -->
-    <link rel="stylesheet" href="/public/style/mainStyle.css">
-    <link rel="stylesheet" href="/public/style/commonStyle.css">
-    
+    <link rel="stylesheet" href="/public/style/mainStyle.css">    
     <link rel="stylesheet" href="/public/style/pages/forumStyle.css">
+    <link rel="stylesheet" href="/public/style/pages/question.css">
 
     <title><?php echo $question->Title ?></title>
 </head>
 <body>
+
+    <h1>Gradeless</h1>
+
+
+    <a class="returnBtn" href="/forum">Return</a>
+
     
-    <a class="callToAction" href="/forum">
-        Back to forum
-    </a>
-
-    <section class="horizontalCon contentFeed">
-
-        <div class="fcCon">
-            <div class="verticalWrap">
-                <!-- Username -->
-                <p class="fcUserName"><?php echo $user->Username; ?></p>
-                <!-- Date -->
-                <p class="fcContentDatetime"><?php echo timestampToRead($question->dt); ?></p>
+    <header>
+        <div class='cardHeader'>
+            <img class='publisherPfp' src='public/img/pfp/$usrMail.png' alt=''>
+    
+            <div class='publisherMeta'>
+                <p class='publisher'><?php echo $user->Username; ?></p>
+                <p class='publishDate'><?php echo timestampToRead($question->dt); ?></p>
             </div>
-
-            <!-- Card title/question -->
-            <p class="fcContentTitle"><?php echo $question->Title ?></p>
-
-            <!-- Question description -->
-            <p class="fcDes"><?php echo $question->Content ?></p>
         </div>
 
-
-        <?php
-            //  Only show the answer box if signed in
-            if(getUserRank() > 0){
-        ?>
-                <form id="answerQuestionCard" name="answerQuestionCard">
-                    <!-- ( "Searchfield where user are able to type" )  The name of the user that asked the question -->
-                    <div class="formInput formDescription" role="textbox" contenteditable style="min-height: 42px;" name="newAnswerContent" id="newAnswerContent"></div>
-                    <!-- <textarea id="answerInput" placeholder="Answer <?php echo $user->Username; ?>'s question" rows="1" type="text" name="newAnswerContent" id="newAnswerContent"></textarea> -->
-            
-                    <button id="postQuestionButton" type="submit">Post</button>
-                    <!-- <button class="buttonType1 AQP2">Post</button> -->
-                </form>
-        <?php 
-            }
-        ?>
+        <h4 class="title"><?php echo $question->Title ?></h4>
+        <p class="description"><?php echo $question->Content ?></p>
+    </header>
 
 
+    <?php
+        //  Only show the answer box if signed in
+        if(getUserRank() > 0){
+    ?>
+        <form id="answerQuestionCard" name="answerQuestionCard">
+            <div class="formSection">
+                <div class="sectionHeaderBtnCon">
+                    <div>
+                        <h4 class="formSectionTitle">Answer <?php echo $user->Username; ?> question</h4>
+                        <p class="formSectionDescription">Remember to be kind!</p>
+                    </div>
+
+                    <button class="readyToPublishBtn" id="postQuestionButton" type="submit">Publish</button>
+                </div>
+                
+                <textarea placeholder="The answer to your question..." id="newAnswerContent" name="newAnswerContent"></textarea>
+            </div>
+        </form>
+    <?php 
+        }
+    ?>
+
+    
+    <div>     
         <?php 
             for($ans = 0; $ans < sizeof($answers); $ans++){
                 // if($answers[$ans]->CommentID == NULL){
@@ -93,7 +95,8 @@
                 // }
             }
         ?>
-    </section>
+    </div>
+    
     
     <nav>
         <?php echo drawNavbar() ?>

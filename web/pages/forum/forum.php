@@ -44,8 +44,15 @@
         </div>
 
         <div class="formSection">
-            <h4 class="formSectionTitle">Title</h4>
-            <p class="formSectionDescription">Try to keep your title as short as possible</p>
+            <div class="sectionHeaderBtnCon">
+                <div>
+                    <h4 class="formSectionTitle">Title</h4>
+                    <p class="formSectionDescription">Try to keep your title as short as possible</p>
+                </div>
+
+                <button class="readyToPublishBtn" type="submit">Publish</button>
+            </div>
+
             <input
                 class="formInput"
                 placeholder="What's your question?"
@@ -64,10 +71,6 @@
                 name="content"
                 id="content"
                 ></textarea>
-        </div>
-
-        <div class="formFooter">
-            <button class="readyToPublishBtn" type="submit">Publish</button>
         </div>
     </form>
 

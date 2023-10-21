@@ -69,20 +69,20 @@
         $comments = getCommentsByAnswerID($answer->AnswerID);
 
         
+        $card = "
+                <div class='card'>
+                    <div class='cardHeader'>
+                        <img class='publisherPfp' src='public/img/pfp/$usrMail.png' alt=''>
 
-        $card   =" 
-                    <div class='fcCon'>
-                        <div class='verticalWrap'>
-                            <p class='fcUserName'>$ansUser->Username</p>
-                            <!-- <button class='meta replyButton'>Reply</button> -->
-                            <p class='fcContentDatetime'>$ansDate</p>
+                        <div class='publisherMeta'>
+                            <p class='publisher'>$ansUser->Username</p>
+                            <p class='publishDate'>$ansDate</p>
                         </div>
-
-                        <!-- Card title/answer -->
-                        <p class='fcDes'>$ansContent</p>
                     </div>
-                ";
 
+                    <p class='cardContent'>$ansContent</p>
+                </div>
+                ";
 
 
             if($comment){
@@ -101,7 +101,7 @@
                                     <button class='pill'>Reply</button>
                                     <p class='regularText QCP4'>$comContent</p>
                                 </div>
-                            ";    
+                            ";   
                 }
             }
 
