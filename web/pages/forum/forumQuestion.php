@@ -47,40 +47,12 @@
 </head>
 <body>
     
-    <!-- Navigationbar  -->
-    <div class="container mainNavCon">
-        <nav>
-            <?php echo drawNavbar() ?>
-        </nav>
-    </div>
-
     <a class="callToAction" href="/forum">
         Back to forum
     </a>
 
-    <!-- Question card -->
     <section class="horizontalCon contentFeed">
 
-
-
-
-
-
-        <div class="sectionHeader">
-            <!-- Section title -->
-            <p class="sectiontitle">Question</p>
-
-            <div class="devider"></div>
-
-            <!-- Corse pill -->
-            <p class="fcMeta"><?php echo $course->CourseName ?></p>
-        </div>
-
-
-
-
-        
-        <!-- Question card  -->
         <div class="fcCon">
             <div class="verticalWrap">
                 <!-- Username -->
@@ -95,8 +67,6 @@
             <!-- Question description -->
             <p class="fcDes"><?php echo $question->Content ?></p>
         </div>
-
-
 
 
         <?php
@@ -116,13 +86,6 @@
         ?>
 
 
-
-        <!-- Section title -->
-        <p class="sectionHeader sectiontitle">Answers</p>
-
-
-
-
         <?php 
             for($ans = 0; $ans < sizeof($answers); $ans++){
                 // if($answers[$ans]->CommentID == NULL){
@@ -130,12 +93,11 @@
                 // }
             }
         ?>
-
     </section>
     
-    <?php 
-        echo drawFooter();
-    ?>
+    <nav>
+        <?php echo drawNavbar() ?>
+    </nav>
 
 </body>
 </html>

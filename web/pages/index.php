@@ -9,13 +9,12 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#101014">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!-- basic style -->
     <link rel="stylesheet" href="/public/style/mainStyle.css">
     <!-- Special style for page  -->
     <link rel="stylesheet" href="/public/style/pages/indexStyle.css">
-    <link rel="icon" href="/public/style/inc/icons/gradeless_logo.svg">
+    <link rel="icon" href="/public/style/inc/icons/gl_logo.svg">
     <title>We're Gradeless</title>
 </head>
 <body>

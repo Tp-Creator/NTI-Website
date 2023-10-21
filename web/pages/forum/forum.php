@@ -17,7 +17,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -28,6 +28,7 @@
     <!-- Page style links -->
     <link rel="stylesheet" href="/public/style/pages/forumStyle.css">
 
+    <link rel="icon" href="/public/style/inc/icons/gl_logo.svg">
     <title>Forum</title>
 </head>
 
@@ -39,7 +40,7 @@
     <form id="addQuestionCard" action="">
         <div class="formHeader">
             <h2>Forum</h2>
-            <p>Welcome to the forum! Here you'll find questinos by other students and you can ask something yourself. <br> Give it a try, but remember to be kind!</p>
+            <p>Welcome to the forum! Here you'll find questinos by other students and you can ask something yourself.<br>Give it a try, remember to be kind!</p>
         </div>
 
         <div class="formSection">
