@@ -3,8 +3,6 @@
 require_once('includes/dbh.func/dbh.foodmenu.php');
 
 
-
-
 getFoodDay();
 
 
@@ -20,11 +18,10 @@ function foodCards(){
         $weekNum = $week[0];        //   Första index är veckonumret
 
         $cards .= "
-                    <div class='weekLunchCard'>
-                        <p id='lcTitle'>Week $weekNum</p>
-
-                        <!--Placeholder för medellande om det behös.-->
-                        <!--<p id='lcMsg'>Note! The information is provided by the organization delivering the food. Changes may occur.</p>-->
+                    <div class='menu'>
+                        <div class='week'>
+                            <p>Lunch v.$weekNum</p>
+                        </div>
                     ";
 
     
@@ -32,34 +29,40 @@ function foodCards(){
         for($d = 1; $d < sizeof($week); $d++){
             $day = $week[$d];
 
-            // $dt = $day->dt;
-            // $dayName = date("l", strtotime($day->dt));
-            $dayName = date("D j", strtotime($day->dt));
+            $dayName = date("l", strtotime($day->dt));
+            $date = date("j F Y", strtotime($day->dt));
+            
             $food = $day->food;
             $vegFood = $day->vegFood;
 
             $cards .=  "
-                        <div class='lcCon'>
-                            <div class='lcLongLine'></div>
-                            <div class='lcDay'>";
+                        <div class='day'>
+                            <div class='date'>               
+                        ";
 
             if ($day->dt == date("Y-m-d")){
-                $cards .=       "<img id='lcDayIcon' src='/public/style/inc/icons/light/schedule_icon_light.svg'>";
+                $cards .=   "
+                                    <p class='active'>$dayName</p>
+                                    <p class='active'>$date</p>
+                                </div>
+
+                                <p class='content'>$food</p>
+                                <p class='content'>$vegFood</p>
+                            </div>
+                            ";
+            }
+            else {
+                $cards .=   "
+                                    <p>$dayName</p>
+                                    <p>$date</p>
+                                </div>
+
+                                <p class='content'>$food</p>
+                                <p class='content'>$vegFood</p>
+                            </div>
+                            ";
             }
 
-            $cards .=           "<p>$dayName</p>
-                            </div>
-                            <div class='lcShortLine'></div>
-                        </div>
-                        <div class='lcCon'>
-                            <img class='lcIcon' src='/public/style/includes/icons/foodIcon.svg'>
-                            <p class='lcContent'>$food</p>
-                        </div>
-                        <div class='lcCon lcVeg'>
-                            <img class='lcIcon' src='public/style/includes/icons/foodVegIcon.svg'>
-                            <p class='lcContent'>$vegFood</p>
-                        </div>
-                        ";
         }
 
         // Me are very sorry for this one...

@@ -1,5 +1,6 @@
 
 <?php
+    include_once('includes/HTMLElements/general.elements.php');
     include_once('includes/dbh.func/general/dbh.inc.php');
     include_once('includes/dbh.func/dbh.foodmenu.php');
 ?>
@@ -14,29 +15,40 @@
     <script src="/public/js/lunch/lunchadmin.js"></script>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="/public/style/mainStyle.css">
+    <link rel="stylesheet" href="/public/style/pages/lunchAdmin.css">
+    <link rel="icon" href="/public/style/inc/icons/gl_logo.svg">
     <title>Lunch Admin</title>
 </head>
 <body>
     
-    <h1>Insert to menu:</h1>
+    <h1>Gradeless <span>Admin</span></h1>
+
+
     <form id="form" action="">
-        <label for="date">Date of food:</label>
+        <label for="date">Date</label>
         <input type="date" id="date" name="date">
-        <label for="food">Food:</label>
+
+        <label for="food">Regular</label>
         <input type="text" id="food" name="food">
-        <label for="vegfood">VegFood:</label>
+
+        <label for="vegfood">Veg</label>
         <input type="text" id="vegfood" name="vegfood">
-        <input type="submit" value="">
+
+        <div class="formFotter">
+            <button class="addBtn" type="submit" value="">Add</button>
+            <p class="lazyMessage">Reload to <span>Refresh</span></p>
+        </div>
     </form>
 
-    <h1>The menu (reload to refresh)</h1>
+
     <?php 
         $menu = getFoodDay();
         console_log($menu);
         for ($week = 0; $week < sizeof($menu); $week++){
             $weekNum = $menu[$week][0];
-            echo "<h2>Week $weekNum</h2>";
+            echo "<h2 class='week'>Week $weekNum</h2>";
 
             for ($day = 1; $day < sizeof($menu[$week]); $day++){
                 console_log($menu[$week][$day]);
@@ -50,25 +62,35 @@
 
                 console_log($dt);
 
-                echo "<div id='div$id'>
-                          <button class='menuitem' id='$id'>delete (id $id)</button><h4>$dt</h4>
-                          <p>$food</p>
-                          <p>$vegfood</p>
-                          <p>$co2</p>
-                          <p>$vegco2</p>
-                      </div>";
+                echo    "
+                        <div class='day' id='div$id'>
+                            <div class='date'>
+                                <p>$dt</p>
+                                <button class='menuitem' id='$id'>Delete id:$id</button>
+                            </div>
+                        
+                            <p class='content'>$food</p>
+                            <p class='content'>$vegfood</p>
+                            <p>$co2</p>
+                            <p>$vegco2</p>
+                        </div>
+                        ";
             }
         }
     ?>
 
-    <div>
+    <!-- <div>
         <h4>$id</h4>
         <h4>$dt</h4>
         <p>$food</p>
         <p>$vegfood</p>
         <p>$co2</p>
         <p>$vegco2</p>
-    </div>
+    </div> -->
+
+    <nav>
+        <?php echo drawNavbar() ?>
+    </nav>
 
 </body>
 </html>

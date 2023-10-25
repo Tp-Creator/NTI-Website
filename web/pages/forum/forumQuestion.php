@@ -39,6 +39,7 @@
     <link rel="stylesheet" href="/public/style/pages/forumStyle.css">
     <link rel="stylesheet" href="/public/style/pages/question.css">
 
+    <link rel="icon" href="/public/style/inc/icons/gl_logo.svg">
     <title><?php echo $question->Title ?></title>
 </head>
 <body>

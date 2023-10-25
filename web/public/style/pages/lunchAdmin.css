@@ -1,0 +1,116 @@
+.lazyMessage {
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.lazyMessage span {
+    color: var(--main-color);
+}
+
+form {
+    margin: 1rem;
+    padding: 20px 24px;
+
+    border-radius: 12px;
+    border: 1px solid var(--border);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.formFotter {
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+label {
+    margin: 12px 0px 4px 0px;
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+input {
+    padding: 8px 18px;
+    
+    border-radius: 6px;
+    border: 1px solid var(--border);
+
+    font-size: 14px;
+
+    color: var(--text);
+    background-color: var(--background);
+}
+
+.addBtn {
+    align-self: center;
+
+    padding: 8px 20px;
+
+    border-radius: 8px;
+    border: 1px solid var(--border);
+
+    font-size: 14px;
+
+    color: var(--text-secondary);
+    background-color: var(--background);
+}
+
+.addBtn:hover {
+    cursor: pointer;
+    color: var(--background);
+    background-color: var(--main-color);
+}
+
+
+.week {
+    padding-bottom: 12px;
+    margin: 24px 1rem 12px 1rem;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.day {
+    margin: 0rem 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.date {
+    margin-bottom: 4px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.date p {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.menuitem {
+    color: var(--text-secondary);
+    background-color: var(--background);
+}
+
+.menuitem:hover {
+    cursor: pointer;
+    color: var(--main-color);
+    background-color: var(--background);
+}
+
+.content {
+    font-size: 14px;
+}
+
+.content:nth-child(odd) {
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    border-bottom: 1px dashed var(--border);
+}
