@@ -9,7 +9,6 @@
 //The code doesn't display anything for the user to see.
 
 
-
 // Incluces database account, names and pwd:s
 $dbServername = "localhost";
 $dbUsername = "root";
